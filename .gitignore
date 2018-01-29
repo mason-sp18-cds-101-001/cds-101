@@ -4,9 +4,8 @@
 # BEGIN ignore project files
 # --------------------------
 
-# foundation compiled directory
+# pelican compiled directory
 output/
-static/
 
 # --------------------------
 # BEGIN ignore basic files
