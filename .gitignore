@@ -247,6 +247,4 @@ wheels/
 !default.pbxuser
 !default.perspectivev3
 !.github/
-!src/assets/scss/vendor/
-!src/assets/js/vendor/
-!src/assets/js/lib/
+!theme/**/vendor/
