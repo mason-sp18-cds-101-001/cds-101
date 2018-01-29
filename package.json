@@ -1,0 +1,25 @@
+{
+  "name": "mason-sp18-cds-101-001",
+  "version": "1.0.0",
+  "description": "Course website for Spring 2018 semester of CDS-101.",
+  "author": "James K. Glasbrenner <jglasbr2@gmu.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "minimist": "^1.2.0",
+    "pretty": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mason-sp18-cds-101-001/cds-101.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mason-sp18-cds-101-001/cds-101/issues",
+    "email": "jglasbr2@gmu.edu"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "private": true
+}
