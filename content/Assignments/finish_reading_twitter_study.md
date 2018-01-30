@@ -22,4 +22,5 @@ Then, post your answer to question 1 in the `#5-discussion` channel on [Slack][c
 Sign up for an account on Github: http://github.com using your `@gmu.edu` email address.
 *After you signup, send me your username in a Direct Message*.
 
-[cds101-slack]: https://masoncds101.slack.com
+[cds101-slack]:              https://masoncds101.slack.com
+[twitter-election-activity]: /materials/class-1-twitter-activity/
