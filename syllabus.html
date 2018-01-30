@@ -1,0 +1,522 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS-101: Introduction to Computational and Data Sciences</title>
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/cds101.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/katex/katex.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/highlightjs/default.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/fontawesome/fa-svg-with-js.css">
+    <link href="http://spring18.cds101.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CDS-101: Introduction to Computational and Data Sciences Full Atom Feed" />
+  </head>
+  <body>
+    <div class="header-grid-container">
+      <div class="banner-container">
+        <header>
+          <div class="banner">
+            <div class="course-logo">
+              <a href="http://spring18.cds101.com/">
+                <img src="http://spring18.cds101.com/theme/img/course-logo.svg">
+              </a>
+            </div>
+            <div class="university-logo">
+              <a href="https://gmu.edu">
+                <img src="http://spring18.cds101.com/theme/img/university-logo.svg">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-mobile" data-responsive-toggle="main-menu" data-hide-for="large">
+          <button type="button" data-toggle="main-menu">
+            <i class="fas fa-bars"></i><span class="navbar-mobile-title">Menu</span></button>
+        </div>
+        <div class="navbar-menu" id="main-menu">
+          <ul class="navbar-menu-list">
+            <li>
+              <a class="navbar-home-item" href="http://spring18.cds101.com/">
+                <i class="fas fa-home" data-fa-transform="grow-8"></i>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/materials.html">Materials</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/assignments.html">Assignments</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/datasets.html">Datasets</a>
+            </li>
+            <li class="navbar-social">
+              <ul class="navbar-social-list">
+                <li>
+                  <a class="navbar-social-item" href="https://github.com/mason-sp18-cds-101-001/cds-101">
+                    <i class="fab fa-github" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="http://masoncds101.slack.com">
+                    <i class="fab fa-slack" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content-grid-container">
+      <article class="static-page">
+        <header class="static-page-header">
+          <h1 class="static-page-title">Syllabus</h1>
+        </header>
+        <div class="static-page-body">
+          <div class="syllabus-body" id="syllabus-anchor">
+            <div class="syllabus-content">
+              <h2 id="course-description" data-magellan-target="course-description">Description</h2>
+              <p>During this course, students will develop basic skills for obtaining, cleaning, transforming, and visualizing real-world datasets using the R programming language and the RStudio integrated development environment. Statistical methods for
+                analyzing, interpreting, and predicting dataset trends are then introduced and approached from a computational point of view using randomization and simulation. Additional topics may be covered, such as an introduction to advanced or special
+                topics like cross-validation. Throughout the course emphasis is placed on documenting one’s scientific work using RStudio in conjunction with Github to fulfill the principles of reproducible research. Connections are highlighted between
+                statistical inference and the scientific method and how this is related to both the scientific method’s power and its limitations. These tools will also be used to critically examine statistical claims reported in mass media, demonstrating
+                how scientific literacy and a basic knowledge in statistics are indispensable tools to making sense of our modern&nbsp;world.</p>
+              <ul>
+                <li><strong>Classroom:</strong> 1004 Exploratory&nbsp;Hall</li>
+                <li><strong>Meeting times:</strong> Tues/Thurs 1:30pm –&nbsp;2:45pm</li>
+                <li><strong>University holidays:</strong> Spring break, Mar. 12 – Mar. 16 (no&nbsp;class)</li>
+                <li><strong>Credit hours:</strong> 3.0 credit&nbsp;hours</li>
+                <li><strong>Prerequisites:</strong> None, but a background in algebra is&nbsp;assumed.</li>
+                <li><strong>Mason Core:</strong> Natural science (+lab when taken with <span class="caps">CDS</span>&nbsp;102)</li>
+              </ul>
+              <h2 id="course-instructor" data-magellan-target="course-instructor">Instructor</h2>
+              <p>
+                <img src="https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e?s=128" />
+              </p>
+              <p>Dr. James K.&nbsp;Glasbrenner</p>
+              <ul>
+                <li><strong>Office</strong>: 253 Research&nbsp;Hall</li>
+                <li><strong>Phone:</strong> (703)&nbsp;993-4512</li>
+                <li><strong>Email:</strong>
+                  <a href="mailto:jglasbr2@gmu.edu">jglasbr2@gmu.edu</a>
+                </li>
+                <li><strong>Office hours:</strong> Tues. 3:00pm – 4:00pm and Fri. 11:00am – 12:00pm, or by&nbsp;appointment.</li>
+              </ul>
+              <h2 id="course-objectives" data-magellan-target="course-objectives">Objectives</h2>
+              <p>By the end of the course, students will be able&nbsp;to:</p>
+              <ul>
+                <li>Use Github for collaborating on a reproducible research&nbsp;document</li>
+                <li>Obtain, clean, transform, and visualize a dataset using the R programming&nbsp;language</li>
+                <li>Interpret, and predict dataset trends using statistical inference and&nbsp;models</li>
+                <li>Critically examine and interpret statistical claims reported in mass&nbsp;media</li>
+              </ul>
+              <h2 id="course-materials" data-magellan-target="course-materials">Materials</h2>
+              <h3 id="textbooks">Textbooks</h3>
+              <p>This course utilizes two free textbooks that are made available under Creative Commons&nbsp;licenses:</p>
+              <div class="textbook">
+                <ul>
+                  <li>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data
+                    <ul>
+                      <li>Hadley&nbsp;Wickham</li>
+                      <li>Garrett&nbsp;Grolemund</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <img src="/img/r4ds_cover.png" alt="R for Data Science textbook cover" />
+                </p>
+                <p>
+                  <a href="http://r4ds.had.co.nz/">Click here to read the textbook for free&nbsp;online.</a>
+                </p>
+                <p>This is the free,
+                  <a href="https://github.com/hadley/r4ds">open-source</a> data science textbook that we will use throughout the course. This textbook is available under a
+                  <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 United States License</a>.</p>
+                <p>If you would like a physical copy of the textbook, you can
+                  <a href="http://amzn.to/2aHLAQ1">order it from Amazon</a>.</p>
+              </div>
+              <div class="textbook">
+                <ul>
+                  <li>Introductory Statistics with Randomization and Simulation
+                    <ul>
+                      <li>David M&nbsp;Diez</li>
+                      <li>Christopher D&nbsp;Barr</li>
+                      <li>Mine&nbsp;Çetinkaya-Rundel</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <img src="/img/isrs_cover.png" alt="Introductory Statistics with Randomization and Simulation textbook cover" />
+                </p>
+                <p>
+                  <a href="/doc/Diez_Barr_%C3%87etinkaya-Rundel_IntroductoryStatisticsWithRandomizationAndSimulation.pdf">Click here to download a free <span class="caps">PDF</span> copy of the&nbsp;textbook.</a>
+                </p>
+                <p>This is the free,
+                  <a href="https://github.com/OpenIntroOrg/randomization-and-simulation">open-source</a> statistics textbook that we will use during the second half of the course. This textbook is available under a
+                  <a href="/doc/isrs_license.txt">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license (<span class="caps">CC</span> <span class="caps">BY</span>-<span class="caps">NC</span>-<span class="caps">SA</span>)</a>.</p>
+                <p>If you would like a physical copy of the textbook, you can
+                  <a href="http://a.co/ixGTX7R">order it from Amazon</a>.</p>
+              </div>
+              <h3 id="software">Software</h3>
+              <p>During the course, we will use the following free and open-source software to manipulate data, perform computations, and write&nbsp;documents:</p>
+              <ul>
+                <li>Programming language: R (
+                  <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a>)</li>
+                <li>Version control: Git (
+                  <a href="https://git-scm.com" class="uri">https://git-scm.com</a>)</li>
+                <li><span class="caps">PDF</span> export: LaTeX (
+                  <a href="https://www.latex-project.org" class="uri">https://www.latex-project.org</a>)</li>
+                <li>Programming software: RStudio (
+                  <a href="https://www.rstudio.com" class="uri">https://www.rstudio.com</a>)</li>
+              </ul>
+              <p>RStudio sits on top of R, Git, and LaTeX and provides a user-friendly interface to using these programs. You can think of R, Git, and LaTeX as plugins that activate RStudio’s main features. In practice, RStudio is the software application
+                that we will learn to use during the&nbsp;course.</p>
+              <p><em>Students are highly encouraged to use Anaconda (<a href="https://anaconda.com" class="uri">https://anaconda.com</a>) to install the latest version of R, RStudio, and its other&nbsp;dependencies.</em></p>
+              <h3 id="platforms">Platforms</h3>
+              <p>The course will be administered through the following online&nbsp;platforms:</p>
+              <ul>
+                <li>Course website (
+                  <a href="http://spring18.cds101.com" class="uri">http://spring18.cds101.com</a>)</li>
+                <li>Github (
+                  <a href="https://github.com/">https://github.com</a>)</li>
+                <li>Slack (
+                  <a href="https://masoncds101.slack.com" class="uri">https://masoncds101.slack.com</a>)</li>
+                <li>Blackboard (
+                  <a href="https://mymasonportal.gmu.edu/">https://mymasonportal.gmu.edu</a>)</li>
+              </ul>
+              <p>The course website operates as the central repository for course materials, including an up-to-date schedule and posted slides and handouts. Slack is the primary communication medium, replacing email (see the
+                <a href="#contact-policy">Contact policy</a> below) and serving as a discussion board. Github is used for storing your classroom files, distributing and collecting homework assignments, handing out example code, and for project collaborations.Blackboard will be
+                used for posting&nbsp;grades.</p>
+              <h2 id="course-policies" data-magellan-target="course-policies">Policies</h2>
+              <h3 id="contact-policy">Contact&nbsp;policy</h3>
+              <p><em>All</em> correspondence is to be done using the private, invite-only Slack workspace for the course. Direct messages on Slack are to be used for contacting me instead of emails. Your Slack username <em>must</em> be registered and associated
+                with your Mason <code>@gmu.edu</code> email address at all&nbsp;times.</p>
+              <p>My ground rules for direct messages are as&nbsp;follows:</p>
+              <ul>
+                <li>I check and respond to messages during normal university&nbsp;hours.</li>
+                <li>Allow up to approximately 24 hours for a response during normal&nbsp;hours.</li>
+                <li>Just because I view a message does not mean I will respond right&nbsp;away.</li>
+                <li>I generally don’t respond to messages over weekends and school&nbsp;holidays.</li>
+                <li>If your questions are involved enough, I will ask you to come to office hours or schedule a Skype&nbsp;chat.</li>
+                <li><em>On email:</em> During the first two weeks of the course, emails will be responded to, but I will send you my response on Slack. After two weeks, emails will be ignored.
+                  <a href="#fn1" class="footnote-ref" id="fnref1">
+                    <sup>1</sup>
+                  </a>
+                </li>
+              </ul>
+              <p><strong><span class="smallcaps">Please Note:</span></strong> the <span class="caps">CDS</span>-102 labs are a separate course from <span class="caps">CDS</span>-101. I do not answer questions for the lab. All correspondence regarding labs
+                are to be directed to the teaching&nbsp;assistant.</p>
+              <h3 id="attendance-policy">Attendance&nbsp;policy</h3>
+              <p>Students are expected to attend every class and are responsible for obtaining and understanding the material that they miss, including any examples that derive from resources not available online. Any missed work during an unexcused absence
+                cannot be made up. Unexcused absences, frequent tardiness, or leaving class early will reduce your participation&nbsp;grade.</p>
+              <p>Absences due to religious holidays, scheduled varsity sports trips, and short-term illnesses should be brought to my attention as early as possible. Any make-up work is to be completed within 24 hours. Exemptions may be granted at my&nbsp;discretion.</p>
+              <h3 id="late-work-policy">Late work&nbsp;policy</h3>
+              <p>Unless otherwise noted, assignments are to be submitted by 11:59pm on the due date. The following penalties apply for most assignments (please note that weekends count as&nbsp;days):</p>
+              <ul>
+                <li>First day late, by 11:59pm:&nbsp;-10%</li>
+                <li>Second day late, by 11:59pm:&nbsp;-20%</li>
+                <li>Third day late, by 11:59pm:&nbsp;-30%</li>
+                <li>Fourth day or later: no&nbsp;credit</li>
+              </ul>
+              <p>The writeup for the midterm project and your final course portfolio are exceptions and must be submitted by the due date. Late submissions will not be&nbsp;accepted.</p>
+              <p>Presentations, such as for the midterm project or the final interview, must be given on the scheduled date and cannot be made&nbsp;up.</p>
+              <p>Extensions or exemptions may be granted in the case of illness or a family emergency at my discretion, and it is the student’s responsibility to inform me about these kinds of circumstances as soon as&nbsp;possible.</p>
+              <h3 id="regrading-appeals-policy">Regrading appeals&nbsp;policy</h3>
+              <p>Regrade appeals need to be in writing, printed out, and hand delivered to me within 48 hours of receiving back an assignment (not including weekends). Appeals via Slack or email will not be accepted, no exceptions. Appeals are only to be
+                used for correct answers being marked as incorrect, misapplication of the grading rubric, or incorrectly tallied points. Submissions need to clearly state what you want regraded and to justify the request by citing evidence
+                <a href="#fn2"
+                  class="footnote-ref" id="fnref2">
+                  <sup>2</sup>
+                </a>. The number of points a question, exercise, or rubric category is worth or that were deducted for an incorrect answer or mistake cannot be appealed and are not up for debate or&nbsp;negotiation.</p>
+              <p>If I’m not available when delivering a request, please see Natalie Lapidot–Croitoru (231 Research Hall) or Karen Underwood (373 Research Hall). Ask them to initial the request, write down the date and time of receipt, and to hold it for
+                my&nbsp;pickup.</p>
+              <h3 id="extra-credit-and-grading-curves-policy">Extra credit and grading curves&nbsp;policy</h3>
+              <p>Individual requests for extra credit or a grading curve will not be granted, no exceptions. Any opportunities to earn extra points will be offered to the entire class. Grading curves are handled on a per-assignment basis and are applied
+                to all students&nbsp;equally.</p>
+              <h3 id="accommodations-policy">Accommodations&nbsp;policy</h3>
+              <p>Students with disabilities who need academic accommodations, please see me and contact the Office of Disability Services (<span class="caps">ODS</span>) at (703) 993-2474. All academic accommodations must be arranged through the <span class="caps">ODS</span>:
+                <a href="http://ods.gmu.edu/" class="uri">http://ods.gmu.edu/</a>.</p>
+              <h2 id="course-grading" data-magellan-target="course-grading">Grading</h2>
+              <h3 id="breakdown">Breakdown</h3>
+              <table>
+                <thead>
+                  <tr class="header">
+                    <th style="text-align: left;">Category</th>
+                    <th style="text-align: left;">Weight</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd">
+                    <td style="text-align: left;">Participation</td>
+                    <td style="text-align: left;">10%</td>
+                  </tr>
+                  <tr class="even">
+                    <td style="text-align: left;">Reading responses</td>
+                    <td style="text-align: left;">15%</td>
+                  </tr>
+                  <tr class="odd">
+                    <td style="text-align: left;">Homework</td>
+                    <td style="text-align: left;">25%</td>
+                  </tr>
+                  <tr class="even">
+                    <td style="text-align: left;">Midterm project</td>
+                    <td style="text-align: left;">25%</td>
+                  </tr>
+                  <tr class="odd">
+                    <td style="text-align: left;">Final project</td>
+                    <td style="text-align: left;">25%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="schema">Schema</h3>
+              <p>Based on the final total score, your final grade will be determined as&nbsp;follows:</p>
+              <table>
+                <thead>
+                  <tr class="header">
+                    <th style="text-align: left;">Score Range</th>
+                    <th style="text-align: left;">Final Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd">
+                    <td style="text-align: left;">97–100</td>
+                    <td style="text-align: left;">A+</td>
+                  </tr>
+                  <tr class="even">
+                    <td style="text-align: left;">93–96</td>
+                    <td style="text-align: left;">A</td>
+                  </tr>
+                  <tr class="odd">
+                    <td style="text-align: left;">90–92</td>
+                    <td style="text-align: left;">A-</td>
+                  </tr>
+                  <tr class="even">
+                    <td style="text-align: left;">87–89</td>
+                    <td style="text-align: left;">B+</td>
+                  </tr>
+                  <tr class="odd">
+                    <td style="text-align: left;">83–86</td>
+                    <td style="text-align: left;">B</td>
+                  </tr>
+                  <tr class="even">
+                    <td style="text-align: left;">80–82</td>
+                    <td style="text-align: left;">B-</td>
+                  </tr>
+                  <tr class="odd">
+                    <td style="text-align: left;">77–79</td>
+                    <td style="text-align: left;">C+</td>
+                  </tr>
+                  <tr class="even">
+                    <td style="text-align: left;">73–76</td>
+                    <td style="text-align: left;">C</td>
+                  </tr>
+                  <tr class="odd">
+                    <td style="text-align: left;">70–72</td>
+                    <td style="text-align: left;">C-</td>
+                  </tr>
+                  <tr class="even">
+                    <td style="text-align: left;">65–69</td>
+                    <td style="text-align: left;">D</td>
+                  </tr>
+                  <tr class="odd">
+                    <td style="text-align: left;">&lt;65</td>
+                    <td style="text-align: left;">F</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="course-expectations" data-magellan-target="course-expectations">Expectations</h2>
+              <h3 id="participation">Participation</h3>
+              <p>Students are expected to come to class prepared. Most course topics will require some amount of programming, which is a skill that’s best learned by doing. In-class activities and exercises will be provided to re-enforce these concepts,
+                which at times may be completed in pairs or in groups. Students are expected to give their full effort while completing an in-class exercise and to complete it within a reasonable timeframe. A combination of speed of completion and quality
+                of work will be factored into your participation grade. A student’s number of absences during the semester will also factor into his/her participation&nbsp;grade.</p>
+              <h3 id="readings">Readings</h3>
+              <p>Reading assignments will be regularly scheduled during the semester. They will be posted on the course schedule with reminders sent via Slack. Students are to complete the reading assignments by the specified date and be able to discuss
+                it in&nbsp;class.</p>
+              <p>To help foster discussion of the reading assignments, students will be required to post one question per reading on Slack. Posting more than one question per reading is encouraged. Students are also required to reply to at least 10 questions
+                during the semester and provide an answer. These replies need to be spread out so that questions are answered throughout the course. As such, a bare minimum of 5 answers need to be posted between January 23rd and March 9th, and another
+                minimum of 5 answers need to be posted between March 19th and May&nbsp;4th.</p>
+              <p>Some additional rules about the reading&nbsp;posts:</p>
+              <ul>
+                <li>All questions and answers for the reading are to be posted in the <code>#4-discussion</code> channel.</li>
+                <li>Your question and answer posts <strong>must</strong> be labeled to tell us which assignment they’re for.
+                  <ul>
+                    <li>For example, use <code>#reading2</code> if you’re posting about the 2nd assigned&nbsp;reading.</li>
+                    <li>Include <code>#question</code> for a question post and <code>#answer</code> for an answer&nbsp;post.</li>
+                  </ul>
+                </li>
+                <li>When responding to a question, use&nbsp;“reply”.</li>
+                <li>Questions must be posted by the due date to be eligible for full&nbsp;credit.</li>
+                <li>Answers can be posted up to 48 hours after the “read-by” due&nbsp;date.</li>
+                <li>Question and answer quality&nbsp;matters.</li>
+                <li>Avoid Q/A&nbsp;duplications</li>
+              </ul>
+              <h3 id="homework">Homework</h3>
+              <p>There will be 5 main homework assignments to complete during the semester. Smaller, shorter mini-assignments may also be distributed from time to time. Assignments will be submitted to Github as a new pull&nbsp;request.</p>
+              <p>Assignments submissions are documents consisting of interwoven segments of writing and code blocks. It is expected that you will write in full sentences and use proper grammar and punctuation. You will be expected to explain what you are
+                doing with each chunk of code and to interpret the meaning of what you calculate. The document’s style and formatting will also be taken into account during grading and should follow the course’s style guides for R and&nbsp;RMarkdown.</p>
+              <p>Students will be permitted to resubmit 1 of their assignments during the semester within a week of receiving their grade on the original assignment. The resubmissions are eligible to receive full credit and replace the lower grade. The updated
+                assignment is to be submitted as a new pull request with a title that begins with the word <strong>Resubmission</strong>.</p>
+              <p>Students may discuss homework assignments using the <code>sp18-homework</code> Slack channel. Take care to ensure that the final submission is in your own words. See the academic integrity section for&nbsp;specifics.</p>
+              <h3 id="midterm-project">Midterm&nbsp;project</h3>
+              <p>Students will complete a midterm project in assigned groups during the first half of the semester. For this project, you will perform an exploratory data analysis on a dataset, focusing on “wrangling” the data so that you can produce meaningful
+                visualizations and interpret basic trends. More detailed information about the project will be provided in the coming&nbsp;weeks.</p>
+              <h3 id="final-project">Final&nbsp;project</h3>
+              <p>In lieu of a traditional final exam, students will be building a portfolio containing both comprehensive notes on the major R functions used during the course and an overview of accomplishments demonstrating a student’s learning and growth
+                over the semester. Students will also be given a couple of simulations to run, and then compare and contrast. Templates for the format and content of the notes portion of the portfolio will be provided in the first few weeks and will be
+                gradually built throughout the semester. Students will then submit their portfolio about one week before the scheduled final&nbsp;exam.</p>
+              <p>During the scheduled final exam, I will conduct a brief 5-10 minute interview with each student based on their portfolio submission. The interview will also contain a short exercise to complete. More information on both the portfolio and
+                the final interview will be provided in the coming&nbsp;weeks.</p>
+              <h2 id="course-conduct" data-magellan-target="course-conduct">Conduct</h2>
+              <h3 id="academic-integrity">Academic&nbsp;integrity</h3>
+              <blockquote>
+                <p>Student members of the George Mason University community pledge not to cheat, plagiarize, steal, or lie in matters related to academic work.
+                  <a href="#fn3" class="footnote-ref" id="fnref3">
+                    <sup>3</sup>
+                  </a>
+                </p>
+              </blockquote>
+              <p>Students may discuss non-group work outside of class, however in all instances it is required that your submitted responses to assignments are written in your own words. Do not duplicate or paraphrase another person’s material or ideas and
+                represent them as your own. Content that comes from a resource or another student should be properly&nbsp;cited.</p>
+              <p>A note on sharing or reusing code found on other Github repos or on websites like <em>Wikipedia</em> or <em>Stack Overflow</em>. I am aware that there are solution sets, sample snippets of code, etc. that can be of use while working on your
+                assignments, projects and exercises during the course. It’s common knowledge that researchers in both industry and academia will use search engines while writing code. Being able to search for existing solutions so that you don’t “reinvent
+                the wheel” is a useful skill. Therefore, unless I specify otherwise, you are permitted to use these resources as long as you provide a&nbsp;citation.</p>
+              <p>Exceptions to this rule&nbsp;are:</p>
+              <ul>
+                <li>For individual assignments, you cannot reuse another student’s&nbsp;code</li>
+                <li>For group assignments, you cannot reuse another group’s&nbsp;code</li>
+                <li>You are not permitted to use solution sets for the two main textbooks we’re using during the&nbsp;course</li>
+              </ul>
+              <p><strong><span class="smallcaps">Any material that is taken in whole or in part from another source and not properly cited will be treated as a violation of Mason’s Academic Honor&nbsp;Code.</span></strong></p>
+              <p>Other violations of Mason’s Honor Code will be treated similarly. Suspected violations will be reported to the Office of Academic Integrity. Please see the Honor Code page for&nbsp;details.</p>
+              <h3 id="decorumdiscourse">Decorum/discourse</h3>
+              <p>Students are expected to be civil in their classroom conduct and respectful of their fellow classmates and the instructor for the duration of the course. Examples of expected behavior include, but are not limited&nbsp;to:</p>
+              <ul>
+                <li>Showing up to class on&nbsp;time</li>
+                <li>Not interrupting your classmates or the&nbsp;instructor</li>
+                <li>Silencing your cell&nbsp;phone</li>
+                <li>Refraining from&nbsp;texting/messaging</li>
+                <li>Refraining from using devices for anything other than coursework
+                  <a href="#fn4" class="footnote-ref" id="fnref4">
+                    <sup>4</sup>
+                  </a>
+                </li>
+                <li>Removing ear-buds/headphones and sunglasses when class&nbsp;begins</li>
+              </ul>
+              <p>The expectations of civil and respectful behavior still apply for all online discussions Students are expected to follow proper grammar and punctuation in online posts and to refrain from using internet slang, abbreviations, and&nbsp;sarcasm.</p>
+              <p>I will address violations of classroom decorum on a case-by-case basis and reserve the right to enact grade-based penalties for highly disruptive or repeat violations. Penalties for decorum violations cannot be negotiated or&nbsp;appealed.</p>
+              <h3 id="mason-diversity-statement">Mason diversity&nbsp;statement</h3>
+              <p>George Mason University promotes a living and learning environment for outstanding growth and productivity among its students, faculty and staff. An emphasis upon diversity and inclusion throughout the campus community is essential to achieve
+                these goals. Diversity is broadly defined to include such characteristics as, but not limited to, race, ethnicity, gender, religion, age, disability, and sexual orientation. Diversity also entails different viewpoints, philosophies, and
+                perspectives. Attention to these aspects of diversity will help promote a culture of inclusion and belonging, and an environment where diverse opinions, backgrounds and practices have the opportunity to be voiced, heard and&nbsp;respected.</p>
+              <h2 id="support-services">Support&nbsp;services</h2>
+              <p>The Math Tutoring Center is in 344 Johnson Center;
+                <a href="http://math.gmu.edu/tutor-center.php" class="uri">http://math.gmu.edu/tutor-center.php</a>. The Math Department also maintains a list of persons that have identified themselves as math tutors:
+                <a href="http://math.gmu.edu/tutor-list.php" class="uri">http://math.gmu.edu/tutor-list.php</a>
+              </p>
+              <p>Mason’s Writing Center is in A114 Robinson Hall; (703) 993-1200;
+                <a href="http://writingcenter.gmu.edu/" class="uri">http://writingcenter.gmu.edu/</a>
+              </p>
+              <p>George Mason provides Counseling and Psychological Services (<span class="caps">CAPS</span>) for students. Contact them at (703) 993-2380 or
+                <a href="http://caps.gmu.edu/" class="uri">http://caps.gmu.edu/</a>.</p>
+              <h2 id="course-disclaimer" data-magellan-target="course-disclaimer">Disclaimer</h2>
+              <p>The instructor reserves the right to modify this syllabus at any time during the course to improve the learning experience and classroom environment. These changes will either be announced during class or via Slack. The digital version of
+                the syllabus on the course website will be updated to reflect the changes. The pacing of the course and the list of covered topics may also be altered in response to student&nbsp;progress.</p>
+              <p>The course objectives reflect what a student is expected to understand by the end of the course after putting in the necessary time and effort both inside and outside the classroom and completing all assignments. These outcomes are not a
+                guarantee, and students will get more out of the course the more they put into it. Any acquired skills and knowledge can fade over time if not reviewed or practiced after the course&nbsp;concludes.</p>
+
+              <!-- Footnotes -->
+
+              <!-- Implicit links -->
+              <section class="footnotes">
+                <hr />
+                <ol>
+                  <li id="fn1">
+                    <p>If there are special circumstances requiring that we communicate via email, it is your responsibility to inform me about it as soon as possible.
+                      <a href="#fnref1" class="footnote-back">↩</a>
+                    </p>
+                  </li>
+                  <li id="fn2">
+                    <p>Acceptable evidence includes in-class notes (provide date of class), a reading passage (provide full citation), or another valid source (textbooks, official publications, etc).
+                      <a href="#fnref2" class="footnote-back">↩</a>
+                    </p>
+                  </li>
+                  <li id="fn3">
+                    <p>Office for Academic Integrity. <em>2017-2018 Honor Code and Honor System.</em> Web. 27 Aug. 2017.
+                      <a href="#fnref3" class="footnote-back">↩</a>
+                    </p>
+                  </li>
+                  <li id="fn4">
+                    <p>The term “devices” is meant to be broad and includes classroom computers, laptops, cell phones, tablets and e-readers, smart watches, etc. Exceptions can be made in cases of family or personal emergencies, please speak to me before
+                      class.
+                      <a href="#fnref4" class="footnote-back">↩</a>
+                    </p>
+                  </li>
+                </ol>
+              </section>
+            </div>
+            <div class="syllabus-magellan data-sticky-container">
+              <nav class="sticky" data-sticky data-anchor="syllabus-anchor" data-sticky-on="small">
+                <ul class="magellan-menu" data-magellan>
+                  <li class="magellan-menu-title">Syllabus</li>
+                  <li>
+                    <a href="#course-description">Description</a>
+                  </li>
+                  <li>
+                    <a href="#course-instructor">Instructor</a>
+                  </li>
+                  <li>
+                    <a href="#course-objectives">Objectives</a>
+                  </li>
+                  <li>
+                    <a href="#course-materials">Materials</a>
+                  </li>
+                  <li>
+                    <a href="#course-policies">Policies</a>
+                  </li>
+                  <li>
+                    <a href="#course-grading">Grading</a>
+                  </li>
+                  <li>
+                    <a href="#course-expectations">Expectations</a>
+                  </li>
+                  <li>
+                    <a href="#course-conduct">Conduct</a>
+                  </li>
+                  <li>
+                    <a href="#course-disclaimer">Disclaimer</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <footer>
+        </footer>
+      </article>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-grid-container">
+        Except where otherwise noted, site materials are created by
+        <a href="https://cos.gmu.edu/cds/faculty-profile-james-glasbrenner/">
+          James K. Glasbrenner
+        </a>
+        and licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </div>
+    </footer>
+    <script src="http://spring18.cds101.com/theme/js/cds101.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/highlightjs/highlight.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/katex.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/wookmark/wookmark.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/fontawesome/fontawesome-all.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/vendorInit.js"></script>
+  </body>
+</html>
