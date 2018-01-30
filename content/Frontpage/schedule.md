@@ -15,7 +15,7 @@ Week 1              1       Jan-23        Overview of Computational and Data Sci
 
 Week 2              3       Jan-30        The data scientist's toolbox II                                                         [Try R Tutorial]
 
-                    4       Feb-01        Introduction to data
+                    4       Feb-01        Introduction to data                                                                    [Reading 1]
 
 Week 3              5       Feb-06        Data visualization I
 
@@ -75,5 +75,6 @@ Week 14             27      May-01        *To be determined*
                                           *Time: 1:30pm -- 4:15pm*
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+[Reading 1]:             /assignments.html
 [Try R Tutorial]:        /assignments.html
 [Twitter Study Article]: /assignments.html

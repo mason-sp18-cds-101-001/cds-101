@@ -1,0 +1,41 @@
+Title: Reading 1
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-02-01 13:30
+Tags: reading
+Slug: reading-1
+Show_summary: false
+Show_link: false
+
+[[R for Data Science][r4ds-book]]{.h3}
+
+Read the following:
+
+*   All of [chapter 1][r4ds-ch-1]
+
+*   All of [chapter 26][r4ds-ch-26] (short)
+
+*   All of [chapter 27][r4ds-ch-27]
+
+[Reading discussion]{.h3}
+
+::::: {.callout .primary}
+**Discussion hashtag** \
+`#reading1`
+:::::
+
+::::: {.callout .secondary}
+Remember to post your question about it to the `#5-discussion` channel in [Slack][cds101-slack] by the due date.
+To receive an answer credit, reply to a posted question no later than 11:59pm on Saturday, February 3rd.
+:::::
+
+---
+
+[Posting guidelines can be found in the **Readings** section of the syllabus.][syllabus-readings]
+
+[r4ds-book]:         http://r4ds.had.co.nz
+[r4ds-ch-1]:         http://r4ds.had.co.nz/introduction.html
+[r4ds-ch-26]:        http://r4ds.had.co.nz/communicate-intro.html
+[r4ds-ch-27]:        http://r4ds.had.co.nz/r-markdown.html
+[cds101-slack]:      https://masoncds101.slack.com
+[syllabus-readings]: http://spring18.cds101.com/syllabus.html#readings
