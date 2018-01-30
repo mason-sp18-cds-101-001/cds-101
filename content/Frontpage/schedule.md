@@ -75,5 +75,5 @@ Week 14             27      May-01        *To be determined*
                                           *Time: 1:30pm -- 4:15pm*
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Try R Tutorial]: #
-[Twitter Study Article]: #
+[Try R Tutorial]:        /assignments.html
+[Twitter Study Article]: /assignments.html
