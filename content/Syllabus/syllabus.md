@@ -16,8 +16,8 @@ Connections are highlighted between statistical inference and the scientific met
 These tools will also be used to critically examine statistical claims reported in mass media, demonstrating how scientific literacy and a basic knowledge in statistics are indispensable tools to making sense of our modern world.
 
 *   **Classroom:** 1004 Exploratory Hall
-*   **Meeting times:** Tues/Thurs 1:30pm--2:45pm
-*   **University holidays:** Spring break, Mar. 12--Mar. 16 (no class)
+*   **Meeting times:** Tues/Thurs 1:30pm -- 2:45pm
+*   **University holidays:** Spring break, Mar. 12 -- Mar. 16 (no class)
 *   **Credit hours:** 3.0 credit hours
 *   **Prerequisites:** None, but a background in algebra is assumed.
 *   **Mason Core:** Natural science (+lab when taken with CDS 102)
@@ -31,7 +31,7 @@ Dr. James K. Glasbrenner
 *   **Office**: 253 Research Hall
 *   **Phone:** (703) 993-4512
 *   **Email:** [jglasbr2@gmu.edu](mailto:jglasbr2@gmu.edu)
-*   **Office hours:** Tues. 3:00pm--4:00pm and Fri. 11:00am--12:00pm, or by appointment.
+*   **Office hours:** Tues. 3:00pm -- 4:00pm and Fri. 11:00am -- 12:00pm, or by appointment.
 
 ## Objectives {#course-objectives data-magellan-target="course-objectives"}
 
@@ -127,9 +127,9 @@ My ground rules for direct messages are as follows:
 *   I generally don't respond to messages over weekends and school holidays.
 *   If your questions are involved enough, I will ask you to come to office hours or schedule a Skype chat.
 *   *On email:* During the first two weeks of the course, emails will be responded to, but I will send you my response on Slack.
-    After two weeks, emails will be ignored.[^1]
+    After two weeks, emails will be ignored.[^email-policy-footnote]
 
-**Please Note:** the CDS-102 labs are a separate course from CDS-101.
+**[Please Note:]{.smallcaps}** the CDS-102 labs are a separate course from CDS-101.
 I do not answer questions for the lab.
 All correspondence regarding labs are to be directed to the teaching assistant.
 
@@ -165,7 +165,7 @@ Extensions or exemptions may be granted in the case of illness or a family emerg
 Regrade appeals need to be in writing, printed out, and hand delivered to me within 48 hours of receiving back an assignment (not including weekends).
 Appeals via Slack or email will not be accepted, no exceptions.
 Appeals are only to be used for correct answers being marked as incorrect, misapplication of the grading rubric, or incorrectly tallied points.
-Submissions need to clearly state what you want regraded and to justify the request by citing evidence[^2].
+Submissions need to clearly state what you want regraded and to justify the request by citing evidence[^regrading-appeals-footnote].
 The number of points a question, exercise, or rubric category is worth or that were deducted for an incorrect answer or mistake cannot be appealed and are not up for debate or negotiation.
 
 If I'm not available when delivering a request, please see Natalie Lapidot--Croitoru (231 Research Hall) or Karen Underwood (373 Research Hall).
@@ -287,13 +287,13 @@ More information on both the portfolio and the final interview will be provided 
 
 ### Academic integrity
 
-> Student members of the George Mason University community pledge not to cheat, plagiarize, steal, or lie in matters related to academic work.[^3]
+> Student members of the George Mason University community pledge not to cheat, plagiarize, steal, or lie in matters related to academic work.[^mason-academic-integrity-reference]
 
 Students may discuss non-group work outside of class, however in all instances it is required that your submitted responses to assignments are written in your own words.
 Do not duplicate or paraphrase another person's material or ideas and represent them as your own.
 Content that comes from a resource or another student should be properly cited.
 
-A note on sharing or reusing code found on other Github repos or on websites like _Wikipedia_ or _Stack Overflow_.
+A note on sharing or reusing code found on other Github repos or on websites like *Wikipedia* or *Stack Overflow*.
 I am aware that there are solution sets, sample snippets of code, etc.
 that can be of use while working on your assignments, projects and exercises during the course.
 It's common knowledge that researchers in both industry and academia will use search engines while writing code.
@@ -306,7 +306,7 @@ Exceptions to this rule are:
 *   For group assignments, you cannot reuse another group's code
 *   You are not permitted to use solution sets for the two main textbooks we're using during the course
 
-**Any material that is taken in whole or in part from another source and not properly cited will be treated as a violation of Mason's Academic Honor Code.**
+**[Any material that is taken in whole or in part from another source and not properly cited will be treated as a violation of Mason's Academic Honor Code.]{.smallcaps}**
 
 Other violations of Mason's Honor Code will be treated similarly.
 Suspected violations will be reported to the Office of Academic Integrity.
@@ -321,7 +321,7 @@ Examples of expected behavior include, but are not limited to:
 *   Not interrupting your classmates or the instructor
 *   Silencing your cell phone
 *   Refraining from texting/messaging
-*   Refraining from using devices for anything other than coursework[^4]
+*   Refraining from using devices for anything other than coursework[^devices-definition-footnote]
 *   Removing ear-buds/headphones and sunglasses when class begins
 
 The expectations of civil and respectful behavior still apply for all online discussions Students are expected to follow proper grammar and punctuation in online posts and to refrain from using internet slang, abbreviations, and sarcasm.
@@ -360,10 +360,10 @@ Any acquired skills and knowledge can fade over time if not reviewed or practice
 
 <!-- Footnotes -->
 
-[^1]: If there are special circumstances requiring that we communicate via email, it is your responsibility to inform me about it as soon as possible.
-[^2]: Acceptable evidence includes in-class notes (provide date of class), a reading passage (provide full citation), or another valid source (textbooks, official publications, etc).
-[^3]: Office for Academic Integrity. _2017-2018 Honor Code and Honor System._ Web. 27 Aug. 2017.
-[^4]: The term "devices" is meant to be broad and includes classroom computers, laptops, cell phones, tablets and e-readers, smart watches, etc. Exceptions can be made in cases of family or personal emergencies, please speak to me before class.
+[^email-policy-footnote]: If there are special circumstances requiring that we communicate via email, it is your responsibility to inform me about it as soon as possible.
+[^regrading-appeals-footnote]: Acceptable evidence includes in-class notes (provide date of class), a reading passage (provide full citation), or another valid source (textbooks, official publications, etc).
+[^devices-definition-footnote]: The term "devices" is meant to be broad and includes classroom computers, laptops, cell phones, tablets and e-readers, smart watches, etc. Exceptions can be made in cases of family or personal emergencies, please speak to me before class.
+[^mason-academic-integrity-reference]: Office for Academic Integrity. *2017-2018 Honor Code and Honor System.* Web. 27 Aug. 2017.
 
 <!-- Implicit links -->
 
