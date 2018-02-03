@@ -368,7 +368,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content></entry><entry><title>CDS-001-001 Syllabus</title><link href="http://spring18.cds101.com/" rel="alternate"></link><published>2018-01-23T13:30:00-05:00</published><updated>2018-01-23T13:30:00-05:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-01-23:/</id><summary type="html">&lt;h2 id="course-description" data-magellan-target="course-description"&gt;Description&lt;/h2&gt;
+</content></entry><entry><title>CDS-001-001 Syllabus</title><link href="http://spring18.cds101.com/" rel="alternate"></link><published>2018-01-23T13:30:00-05:00</published><updated>2018-02-02T23:00:00-05:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-01-23:/</id><summary type="html">&lt;h2 id="course-description" data-magellan-target="course-description"&gt;Description&lt;/h2&gt;
 &lt;p&gt;During this course, students will develop basic skills for obtaining, cleaning, transforming, and visualizing real-world datasets using the R programming language and the RStudio integrated development environment. Statistical methods for analyzing, interpreting, and predicting dataset trends are then introduced and approached from a computational point of view using randomization …&lt;/p&gt;</summary><content type="html">&lt;h2 id="course-description" data-magellan-target="course-description"&gt;Description&lt;/h2&gt;
 &lt;p&gt;During this course, students will develop basic skills for obtaining, cleaning, transforming, and visualizing real-world datasets using the R programming language and the RStudio integrated development environment. Statistical methods for analyzing, interpreting, and predicting dataset trends are then introduced and approached from a computational point of view using randomization and simulation. Additional topics may be covered, such as an introduction to advanced or special topics like cross-validation. Throughout the course emphasis is placed on documenting one’s scientific work using RStudio in conjunction with Github to fulfill the principles of reproducible research. Connections are highlighted between statistical inference and the scientific method and how this is related to both the scientific method’s power and its limitations. These tools will also be used to critically examine statistical claims reported in mass media, demonstrating how scientific literacy and a basic knowledge in statistics are indispensable tools to making sense of our modern&amp;nbsp;world.&lt;/p&gt;
 &lt;ul&gt;
@@ -462,14 +462,14 @@
 &lt;p&gt;Students are expected to attend every class and are responsible for obtaining and understanding the material that they miss, including any examples that derive from resources not available online. Any missed work during an unexcused absence cannot be made up. Unexcused absences, frequent tardiness, or leaving class early will reduce your participation&amp;nbsp;grade.&lt;/p&gt;
 &lt;p&gt;Absences due to religious holidays, scheduled varsity sports trips, and short-term illnesses should be brought to my attention as early as possible. Any make-up work is to be completed within 24 hours. Exemptions may be granted at my&amp;nbsp;discretion.&lt;/p&gt;
 &lt;h3 id="late-work-policy"&gt;Late work&amp;nbsp;policy&lt;/h3&gt;
-&lt;p&gt;Unless otherwise noted, assignments are to be submitted by 11:59pm on the due date. The following penalties apply for most assignments (please note that weekends count as&amp;nbsp;days):&lt;/p&gt;
+&lt;p&gt;Unless otherwise noted, the main homework assignments are to be submitted by 11:59pm on the due date. The following penalties apply for most assignments (please note that weekends count as&amp;nbsp;days):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;First day late, by 11:59pm:&amp;nbsp;-10%&lt;/li&gt;
 &lt;li&gt;Second day late, by 11:59pm:&amp;nbsp;-20%&lt;/li&gt;
 &lt;li&gt;Third day late, by 11:59pm:&amp;nbsp;-30%&lt;/li&gt;
 &lt;li&gt;Fourth day or later: no&amp;nbsp;credit&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The writeup for the midterm project and your final course portfolio are exceptions and must be submitted by the due date. Late submissions will not be&amp;nbsp;accepted.&lt;/p&gt;
+&lt;p&gt;The above does not pertain to the reading questions and answers, which must be submitted before the posted date and time to receive credit. The writeup for the midterm project and your final course portfolio are also exceptions and must be submitted by the due date; late submissions will not be&amp;nbsp;accepted.&lt;/p&gt;
 &lt;p&gt;Presentations, such as for the midterm project or the final interview, must be given on the scheduled date and cannot be made&amp;nbsp;up.&lt;/p&gt;
 &lt;p&gt;Extensions or exemptions may be granted in the case of illness or a family emergency at my discretion, and it is the student’s responsibility to inform me about these kinds of circumstances as soon as&amp;nbsp;possible.&lt;/p&gt;
 &lt;h3 id="regrading-appeals-policy"&gt;Regrading appeals&amp;nbsp;policy&lt;/h3&gt;
@@ -582,7 +582,7 @@
 &lt;li&gt;Include &lt;code&gt;#question&lt;/code&gt; for a question post and &lt;code&gt;#answer&lt;/code&gt; for an answer&amp;nbsp;post.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;When responding to a question, use&amp;nbsp;“reply”.&lt;/li&gt;
-&lt;li&gt;Questions must be posted by the due date to be eligible for full&amp;nbsp;credit.&lt;/li&gt;
+&lt;li&gt;Questions must be posted by the due date to be eligible for&amp;nbsp;credit.&lt;/li&gt;
 &lt;li&gt;Answers can be posted up to 48 hours after the “read-by” due&amp;nbsp;date.&lt;/li&gt;
 &lt;li&gt;Question and answer quality&amp;nbsp;matters.&lt;/li&gt;
 &lt;li&gt;Avoid Q/A&amp;nbsp;duplications&lt;/li&gt;
