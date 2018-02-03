@@ -2,6 +2,7 @@ Title: CDS-001-001 Syllabus
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-23 13:30
+Modified: 2018-02-02 23:00
 Course_Title: Introduction to Computational and Data Sciences
 Course_Number: CDS-001-001
 Semester: Spring 2018
@@ -145,7 +146,7 @@ Exemptions may be granted at my discretion.
 
 ### Late work policy
 
-Unless otherwise noted, assignments are to be submitted by 11:59pm on the due date.
+Unless otherwise noted, the main homework assignments are to be submitted by 11:59pm on the due date.
 The following penalties apply for most assignments (please note that weekends count as days):
 
 *   First day late, by 11:59pm: -10%
@@ -153,8 +154,8 @@ The following penalties apply for most assignments (please note that weekends co
 *   Third day late, by 11:59pm: -30%
 *   Fourth day or later: no credit
 
-The writeup for the midterm project and your final course portfolio are exceptions and must be submitted by the due date.
-Late submissions will not be accepted.
+The above does not pertain to the reading questions and answers, which must be submitted before the posted date and time to receive credit.
+The writeup for the midterm project and your final course portfolio are also exceptions and must be submitted by the due date; late submissions will not be accepted.
 
 Presentations, such as for the midterm project or the final interview, must be given on the scheduled date and cannot be made up.
 
@@ -242,7 +243,7 @@ Some additional rules about the reading posts:
     *   For example, use `#reading2` if you're posting about the 2nd assigned reading.
     *   Include `#question` for a question post and `#answer` for an answer post.
 *   When responding to a question, use "reply".
-*   Questions must be posted by the due date to be eligible for full credit.
+*   Questions must be posted by the due date to be eligible for credit.
 *   Answers can be posted up to 48 hours after the "read-by" due date.
 *   Question and answer quality matters. 
 *   Avoid Q/A duplications
