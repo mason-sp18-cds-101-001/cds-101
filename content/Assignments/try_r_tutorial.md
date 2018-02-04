@@ -3,7 +3,7 @@ Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-30 13:30
 Tags: mini-assignment
-Slug: mini-assignment-1
+Slug: try-r-tutorial-mini-assignment
 Show_summary: false
 Show_link: false
 
