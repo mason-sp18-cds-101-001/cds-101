@@ -11,6 +11,10 @@
         <div class="card-guide"><i class="fas fa-map" data-fa-transform="grow-8"></i>&emsp;<strong>Guide</strong></div>
     {% elif "class notes" in tags %}
         <div class="card-class-notes"><i class="fas fa-file-alt" data-fa-transform="grow-8"></i>&emsp;<strong>Class Notes</strong></div>
+    {% elif "activity" in tags %}
+        <div class="card-activity"><i class="fas fa-laptop" data-fa-transform="grow-8"></i>&emsp;<strong>Activity</strong></div>
+    {% elif "mini-assignment" in tags %}
+        <div class="card-mini-assignment"><i class="fas fa-pen-square" data-fa-transform="grow-8"></i>&emsp;<strong>Mini-Assignment</strong></div>
     {% endif %}
     <div class="card-section">
       <h2>{{ title }}</h2>
@@ -20,7 +24,7 @@
     </div>
     <div class="card-section">
       {% if show_summary is equalto "true" %}
-        {{ summary }}
+        <p>{{ summary }}</p>
       {% else %}
         {{ content }}
       {% endif %}
