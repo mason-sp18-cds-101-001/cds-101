@@ -17,7 +17,8 @@ Week 2              3       Jan-30        The data scientist's toolbox II       
 
                     4       Feb-01        Introduction to data                                                                    [Reading 1]
 
-Week 3              5       Feb-06        Data visualization I                                                                    [Reading 2]
+Week 3              5       Feb-06        Data visualization I                                                                    [Reading 2]<br>
+                                                                                                                                  [RMarkdown mini-assignment]
 
                     6       Feb-08        Data visualization II
 
@@ -75,7 +76,8 @@ Week 14             27      May-01        *To be determined*
                                           *Time: 1:30pm -- 4:15pm*
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Reading 1]:             /assignments.html
-[Reading 2]:             /assignments.html
-[Try R Tutorial]:        /assignments.html
-[Twitter Study Article]: /assignments.html
+[Reading 1]:                 /assignments/reading-1/
+[Reading 2]:                 /assignments/reading-2/
+[Try R Tutorial]:            /assignments/try-r-tutorial-mini-assignment/
+[Twitter Study Article]:     /assignments/introductions-and-twitter-election-mini-assignment/
+[RMarkdown mini-assignment]: /assignments/rmarkdown-mini-assignment/
