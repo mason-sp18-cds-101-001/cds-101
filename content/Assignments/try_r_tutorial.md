@@ -2,8 +2,8 @@ Title: Try R Tutorial
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-30 13:30
-Tags: homework
-Slug: mini-homework-1
+Tags: mini-assignment
+Slug: mini-assignment-1
 Show_summary: false
 Show_link: false
 
