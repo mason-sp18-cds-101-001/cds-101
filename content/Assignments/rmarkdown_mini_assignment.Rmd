@@ -13,6 +13,8 @@ icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
 icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbsp;'
 ```
 
+[**Due:** February 6, 2018 @ 1:30pm]{.h3}
+
 ::: {.no-bullets}
 
 *   [`r icon_pdf` Offline copy of instructions][rmarkdown-mini-assignment-pdf]
@@ -28,9 +30,9 @@ icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbs
 [Obtain the Github repository you will use to complete the mini-assignment][github-classroom-repo], which contains a starter file named `rmarkdown_mini-assignment.Rmd`.
 Use this file to re-create the layout of [[rmarkdown_practice.pdf]{.monospace}][rmarkdown-recreate-doc] using Markdown.
 You will knit your file to the HTML format.
-When you're done, save your file, commit, push (upload) it to Github, and follow the **How to submit** section below to setup a Pull Request, which will be used for feedback.
+When you're done, save your file, commit, push (upload) it to Github, and follow the [**How to submit**](#submit-pull-request) section below to setup a Pull Request, which will be used for feedback.
 
-### How to submit  {#submit-pull-request}
+## How to submit  {#submit-pull-request}
 
 When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github.
 Then, navigate to **your copy** of the [Github repository][github-classroom-repo] you used for this assignment.
@@ -53,7 +55,19 @@ Confirm that your files are up-to-date, and then do the following:
 
 8.  Click "Create pull request" to lock in your submission.
 
-[github-classroom-repo]:         #
+## Cheatsheets
+
+You are encouraged to review and keep the following cheatsheets handy while working on this assignment:
+
+*   [RStudio cheatsheet][rstudio-cheatsheet]
+
+*   [RMarkdown cheatsheet][rmarkdown-cheatsheet]
+
+*   [RMarkdown reference][rmarkdown-reference]
+
+[rstudio-cheatsheet]:            /doc/rstudio-IDE-cheatsheet.pdf
+[rmarkdown-reference]:           /doc/rmarkdown-reference.pdf
+[rmarkdown-cheatsheet]:          /doc/rmarkdown-cheatsheet.pdf
+[github-classroom-repo]:         https://classroom.github.com/a/LD7Hgqkj
 [rmarkdown-recreate-doc]:        /doc/rmarkdown_practice.pdf
 [rmarkdown-mini-assignment-pdf]: /doc/cds101_rmarkdown_mini-assignment.pdf
-
