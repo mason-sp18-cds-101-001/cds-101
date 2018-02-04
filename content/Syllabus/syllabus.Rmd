@@ -7,6 +7,10 @@ Course_Title: Introduction to Computational and Data Sciences
 Course_Number: CDS-001-001
 Semester: Spring 2018
 
+```{r setup, include = FALSE}
+sp18_homework <- '<code><i class="fas fa-lock"></i>sp18-homework</code>'
+```
+
 ## Description {#course-description data-magellan-target="course-description"}
 
 During this course, students will develop basic skills for obtaining, cleaning, transforming, and visualizing real-world datasets using the R programming language and the RStudio integrated development environment.
@@ -31,7 +35,7 @@ Dr. James K. Glasbrenner
 
 *   **Office**: 253 Research Hall
 *   **Phone:** (703) 993-4512
-*   **Email:** [jglasbr2@gmu.edu](mailto:jglasbr2@gmu.edu)
+*   **Email:** [[jglasbr2@gmu.edu]{.monospace}](mailto:jglasbr2@gmu.edu)
 *   **Office hours:** Tues. 3:00pm -- 4:00pm and Fri. 11:00am -- 12:00pm, or by appointment.
 
 ## Objectives {#course-objectives data-magellan-target="course-objectives"}
@@ -263,7 +267,7 @@ Students will be permitted to resubmit 1 of their assignments during the semeste
 The resubmissions are eligible to receive full credit and replace the lower grade.
 The updated assignment is to be submitted as a new pull request with a title that begins with the word **Resubmission**.
 
-Students may discuss homework assignments using the `sp18-homework` Slack channel.
+Students may discuss homework assignments using the `r sp18_homework` Slack channel.
 Take care to ensure that the final submission is in your own words.
 See the academic integrity section for specifics.
 
