@@ -1,0 +1,59 @@
+Title: RMarkdown mini-assignment
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-02-06 13:30
+Tags: mini-assignment
+Slug: rmarkdown-mini-assignment
+Summary: Mini-assignment to practice editing RMarkdown files and saving to Github.
+Show_summary: true
+Show_link: true
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
+icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbsp;'
+```
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` Offline copy of instructions][rmarkdown-mini-assignment-pdf]
+
+*   [`r icon_pdf` [rmarkdown_practice.pdf]{.monospace}][rmarkdown-recreate-doc]
+
+*   [`r icon_github` Github Classroom repo for **RMarkdown mini-assignment**][github-classroom-repo]
+
+:::
+
+## Instructions
+
+[Obtain the Github repository you will use to complete the mini-assignment][github-classroom-repo], which contains a starter file named `rmarkdown_mini-assignment.Rmd`.
+Use this file to re-create the layout of [[rmarkdown_practice.pdf]{.monospace}][rmarkdown-recreate-doc] using Markdown.
+You will knit your file to the HTML format.
+When you're done, save your file, commit, push (upload) it to Github, and follow the **How to submit** section below to setup a Pull Request, which will be used for feedback.
+
+### How to submit  {#submit-pull-request}
+
+When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github.
+Then, navigate to **your copy** of the [Github repository][github-classroom-repo] you used for this assignment.
+You should see your repository, along with the updated files that you just synchronized to Github.
+Confirm that your files are up-to-date, and then do the following:
+
+1.  Click the *Pull Requests* tab near the top of the page.
+
+2.  Click the green button that says "New pull request".
+
+3.  Click the dropdown menu button labeled "base:", and select the option `starting`.
+
+4.  Confirm that the dropdown menu button labled "compare:" is set to `master`.
+
+5.  Click the green button that says "Create pull request".
+
+6.  Give the *pull request* the following title: `Submission: RMarkdown mini-assignment, FirstName LastName`, replacing `FirstName` and `LastName` with your actual first and last name.
+
+7.  In the messagebox, write `My RMarkdown mini-assignment is ready for grading @shuaibm @jkglasbrenner`.
+
+8.  Click "Create pull request" to lock in your submission.
+
+[github-classroom-repo]:         #
+[rmarkdown-recreate-doc]:        /doc/rmarkdown_practice.pdf
+[rmarkdown-mini-assignment-pdf]: /doc/cds101_rmarkdown_mini-assignment.pdf
+
