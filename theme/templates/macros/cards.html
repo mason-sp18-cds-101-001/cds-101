@@ -1,5 +1,5 @@
 {# -*- engine: django -*- #}
-{% macro wookmark_card(title, datetime, summary, content, url, tags, show_summary, show_link) %}
+{% macro wookmark_card(title, datetime, iso_datetime, summary, content, url, tags, show_summary, show_link) %}
   <li class="card-item">
     {% if "midterm" in tags or "final" in tags %}
         <div class="card-project"><i class="fas fa-rocket" data-fa-transform="grow-8"></i>&emsp;<strong>Project</strong></div>
@@ -19,7 +19,7 @@
     <div class="card-section">
       <h2>{{ title }}</h2>
       {% if "guide" not in tags %}
-        <p class="card-datetime">{{ datetime }}</p>
+        <p class="card-datetime"><time datetime="{{ iso_datetime }}">{{ datetime }}</time></p>
       {% endif %}
     </div>
     <div class="card-section">
