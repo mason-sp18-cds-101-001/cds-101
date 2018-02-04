@@ -7,6 +7,10 @@ Slug: reading-2
 Show_summary: false
 Show_link: false
 
+```{r setup, include = FALSE}
+icon_link <- '<i class="fas fa-link"></i>&nbsp;'
+```
+
 [[Introductory Statistics with Randomization and Simulation][isrs-book]]{.h3}
 
 Read the following:
@@ -27,7 +31,7 @@ To receive an answer credit, reply to a posted question no later than 11:59pm on
 
 ---
 
-[Posting guidelines can be found in the **Readings** section of the syllabus.][syllabus-readings]
+[`r icon_link` Posting guidelines can be found in the **Readings** section of the syllabus.][syllabus-readings]
 
 [isrs-book]:         http://spring18.cds101.com/doc/Diez_Barr_%C3%87etinkaya-Rundel_IntroductoryStatisticsWithRandomizationAndSimulation.pdf
 [cds101-slack]:      https://masoncds101.slack.com
