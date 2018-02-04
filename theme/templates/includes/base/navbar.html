@@ -41,6 +41,11 @@
                   <a class="navbar-social-item" href="{{ SLACK_URL }}"><i class="fab fa-slack" data-fa-transform="grow-8"></i></a>
                 </li>
               {% endif %}
+              {% if FEED_ALL_ATOM %}
+                <li>
+                  <a class="navbar-social-item" href="{{ FEED_ALL_ATOM }}"><i class="fas fa-rss-square" data-fa-transform="grow-8"></i></a>
+                </li>
+              {% endif %}
             </ul>
           </li>
         {% endif %}
