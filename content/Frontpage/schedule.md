@@ -6,9 +6,9 @@ Modified: 2018-02-06 16:15
 Index_save_as: index.html
 Url: /index.html
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Week                Class   Date          Topic                                                                                   Due Dates
-------------------- ------- ------------- --------------------------------------------------------------------------------------- --------------------------
+------------------- ------- ------------- --------------------------------------------------------------------------------------- -------------------------------
 Week 1              1       Jan-23        Overview of Computational and Data Sciences
 
                     2       Jan-25        The data scientist's toolbox I                                                          [Twitter Study Article]
@@ -22,6 +22,8 @@ Week 3              5       Feb-06        Data visualization I                  
                                                                                                                                   [RMarkdown mini-assignment]
 
                     6       Feb-08        Data visualization II                                                                   [Reading 3]
+                    
+                            Feb-09                                                                                                [Visualization mini-assignment]
 
 Week 4              7       Feb-13        Data visualization III
 
@@ -75,11 +77,12 @@ Week 14             27      May-01        *To be determined*
 
                             May-15        **[Final Interview]{.smallcaps}**<br>
                                           *Time: 1:30pm -- 4:15pm*
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Reading 1]:                 /assignments/reading-1/
-[Reading 2]:                 /assignments/reading-2/
-[Reading 3]:                 /assignments/reading-3/
-[Try R Tutorial]:            /assignments/try-r-tutorial-mini-assignment/
-[Twitter Study Article]:     /assignments/introductions-and-twitter-election-mini-assignment/
-[RMarkdown mini-assignment]: /assignments/rmarkdown-mini-assignment/
+[Reading 1]:                     /assignments/reading-1/
+[Reading 2]:                     /assignments/reading-2/
+[Reading 3]:                     /assignments/reading-3/
+[Try R Tutorial]:                /assignments/try-r-tutorial-mini-assignment/
+[Twitter Study Article]:         /assignments/introductions-and-twitter-election-mini-assignment/
+[RMarkdown mini-assignment]:     /assignments/rmarkdown-mini-assignment/
+[Visualization mini-assignment]: /assignments/visualization-mini-assignment/

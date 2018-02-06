@@ -1,0 +1,74 @@
+Title: Visualization mini-assignment
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-02-09 17:00
+Tags: mini-assignment
+Slug: visualization-mini-assignment
+Summary: Mini-assignment to practice using RStudio to run code blocks in RMarkdown files and to create visualizations using <code>ggplot2</code>.
+Show_summary: true
+Show_link: true
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
+icon_html5 <- '<i class="fab fa-html5" data-fa-transform="grow-8"></i>&nbsp;'
+icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbsp;'
+```
+
+[**Due:** February 9, 2018 @ 5:00pm]{.h3}
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` Offline copy of instructions][visualization-mini-assignment-pdf]
+
+*   [`r icon_html5` Offline, HTML-rendered copy of worksheet (code blocks left unevaluated)][mini-assignment-no-code-preview-html]
+
+*   [`r icon_github` Github Classroom repo for **Visualization mini-assignment**][github-classroom-repo]
+
+:::
+
+## Instructions
+
+[Obtain the Github repository you will use to complete the mini-assignment][github-classroom-repo], which contains a starter file named `visualization_mini-assignment.Rmd`.
+The demos and exercises you will be completing are written inside `visualization_mini-assignment.Rmd`, complete them within the indicated spaces.
+You should knit your file to the HTML format to check how it looks.
+When you're done, save your file, commit, push (upload) it to Github, and follow the [**How to submit**](#submit-pull-request) section below to setup a Pull Request, which will be used for feedback.
+
+## How to submit  {#submit-pull-request}
+
+When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github.
+Then, navigate to **your copy** of the [Github repository][github-classroom-repo] you used for this assignment.
+You should see your repository, along with the updated files that you just synchronized to Github.
+Confirm that your files are up-to-date, and then do the following:
+
+1.  Click the *Pull Requests* tab near the top of the page.
+
+2.  Click the green button that says "New pull request".
+
+3.  Click the dropdown menu button labeled "base:", and select the option `starting`.
+
+4.  Confirm that the dropdown menu button labled "compare:" is set to `master`.
+
+5.  Click the green button that says "Create pull request".
+
+6.  Give the *pull request* the following title: `Submission: Visualization mini-assignment, FirstName LastName`, replacing `FirstName` and `LastName` with your actual first and last name.
+
+7.  In the messagebox, write `My Visualization mini-assignment is ready for grading @shuaibm @jkglasbrenner`.
+
+8.  Click "Create pull request" to lock in your submission.
+
+## Cheatsheets
+
+You are encouraged to review and keep the following cheatsheets handy while working on this assignment:
+
+*   [RStudio cheatsheet][rstudio-cheatsheet]
+
+*   [RMarkdown cheatsheet][rmarkdown-cheatsheet]
+
+*   [RMarkdown reference][rmarkdown-reference]
+
+[rstudio-cheatsheet]:                   /doc/rstudio-IDE-cheatsheet.pdf
+[rmarkdown-reference]:                  /doc/rmarkdown-reference.pdf
+[rmarkdown-cheatsheet]:                 /doc/rmarkdown-cheatsheet.pdf
+[github-classroom-repo]:                https://classroom.github.com/a/U5FXsZVU
+[visualization-mini-assignment-pdf]:    /doc/cds101_visualization_mini-assignment.pdf
+[mini-assignment-no-code-preview-html]: /doc/mini-assignment-no-code-preview.html
