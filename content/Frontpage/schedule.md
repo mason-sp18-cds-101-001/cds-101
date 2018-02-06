@@ -2,6 +2,7 @@ Title: Spring 2018 Schedule
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-23 15:00
+Modified: 2018-02-06 16:15
 Index_save_as: index.html
 Url: /index.html
 
@@ -20,7 +21,7 @@ Week 2              3       Jan-30        The data scientist's toolbox II       
 Week 3              5       Feb-06        Data visualization I                                                                    [Reading 2]<br>
                                                                                                                                   [RMarkdown mini-assignment]
 
-                    6       Feb-08        Data visualization II
+                    6       Feb-08        Data visualization II                                                                   [Reading 3]
 
 Week 4              7       Feb-13        Data visualization III
 
@@ -78,6 +79,7 @@ Week 14             27      May-01        *To be determined*
 
 [Reading 1]:                 /assignments/reading-1/
 [Reading 2]:                 /assignments/reading-2/
+[Reading 3]:                 /assignments/reading-3/
 [Try R Tutorial]:            /assignments/try-r-tutorial-mini-assignment/
 [Twitter Study Article]:     /assignments/introductions-and-twitter-election-mini-assignment/
 [RMarkdown mini-assignment]: /assignments/rmarkdown-mini-assignment/
