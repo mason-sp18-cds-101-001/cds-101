@@ -7,7 +7,7 @@ Slug: reading-1
 Show_summary: false
 Show_link: false
 
-```{r setup, include=FALSE}
+```{r setup, include = FALSE}
 icon_link <- '<i class="fas fa-link"></i>&nbsp;'
 ```
 
