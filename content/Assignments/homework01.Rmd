@@ -74,6 +74,8 @@ The dataset contains the following variables:
 
 ## Questions
 
+When describing the contents of a visualization, follow the general ideas summarized here: <http://spring18.cds101.com/materials/describing-univariate-and-bivariate-data/>
+
 @describe-dataset.
     In the `rail_trail` dataset, how many rows are there?
     How many columns?
@@ -186,4 +188,3 @@ You are encouraged to review and keep the following cheatsheets handy while work
 [rmarkdown-reference]:             /doc/rmarkdown-reference.pdf
 [rmarkdown-cheatsheet]:            /doc/rmarkdown-cheatsheet.pdf
 [github-classroom-repo]:           #
-[univariate-distribution-summary]: /Materials/describing-univariate-and-bivariate-data.html
