@@ -35,7 +35,7 @@ icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbs
 
 ## Instructions
 
-[Obtain the Github repository you will use to complete the homework][github-classroom-repo], which contains a starter RMarkdown file named `homework_1.Rmd`, which you will use to do your work and write-up when completing the questions below.
+[Obtain the Github repository you will use to complete homework 1][github-classroom-repo], which contains a starter RMarkdown file named `homework_1.Rmd`, which you will use to do your work and write-up when completing the questions below.
 Be sure to save, commit, and push (upload) frequently to Github so that you have incremental snapshots of your work.
 When you're done, follow the [**How to submit** section](#how-to-submit) below to setup a Pull Request, which will be used for feedback.
 
