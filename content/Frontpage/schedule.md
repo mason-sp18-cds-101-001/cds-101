@@ -32,6 +32,8 @@ Week 4              7       Feb-13        Data visualization III
 Week 5              9       Feb-20        Data wrangling II
 
                     10      Feb-22        Data wrangling III
+                    
+                            Feb-23                                                                                                [Homework 1]
 
 Week 6              11      Feb-27        Exploratory data analysis I
 
@@ -82,7 +84,9 @@ Week 14             27      May-01        *To be determined*
 [Reading 1]:                     /assignments/reading-1/
 [Reading 2]:                     /assignments/reading-2/
 [Reading 3]:                     /assignments/reading-3/
+[Homework 1]:                    /assignments/homework-1/
 [Try R Tutorial]:                /assignments/try-r-tutorial-mini-assignment/
 [Twitter Study Article]:         /assignments/introductions-and-twitter-election-mini-assignment/
 [RMarkdown mini-assignment]:     /assignments/rmarkdown-mini-assignment/
 [Visualization mini-assignment]: /assignments/visualization-mini-assignment/
+ 
