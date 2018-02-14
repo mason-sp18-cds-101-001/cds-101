@@ -35,7 +35,7 @@ icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbs
 
 ## Instructions
 
-[Obtain the Github repository you will use to complete the mini-assignment][github-classroom-repo], which contains a starter RMarkdown file named `homework_1.Rmd`, which you will use to do your work and write-up when completing the questions below.
+[Obtain the Github repository you will use to complete the homework][github-classroom-repo], which contains a starter RMarkdown file named `homework_1.Rmd`, which you will use to do your work and write-up when completing the questions below.
 Be sure to save, commit, and push (upload) frequently to Github so that you have incremental snapshots of your work.
 When you're done, follow the [**How to submit** section](#how-to-submit) below to setup a Pull Request, which will be used for feedback.
 
@@ -169,7 +169,7 @@ Confirm that your files are up-to-date, and then do the following steps:
 4.  Confirm that the dropdown menu button labled "compare:" is set to `master`.
 5.  Click the green button that says "Create pull request".
 6.  Give the *pull request* the following title: `Submission: Homework 1, FirstName LastName`, replacing `FirstName` and `LastName` with your actual first and last name.
-7.  In the messagebox, write `My Visualization mini-assignment is ready for grading @shuaibm @jkglasbrenner`.
+7.  In the messagebox, write `My homework 1 submission is ready for grading @shuaibm @jkglasbrenner`.
 8.  Click "Create pull request" to lock in your submission.
 
 ## Cheatsheets
@@ -181,10 +181,10 @@ You are encouraged to review and keep the following cheatsheets handy while work
 *   [RMarkdown reference][rmarkdown-reference]
 *   [`ggplot2` cheatsheet][ggplot2-cheatsheet]
 
-[homework-pdf]:                    /doc/cds101_homework1.pdf
-[rail-trail-wiki]:                 https://wikipedia.org/wiki/Rail_trail
-[ggplot2-cheatsheet]:              /doc/ggplot2-cheatsheet.pdf
-[rstudio-cheatsheet]:              /doc/rstudio-IDE-cheatsheet.pdf
-[rmarkdown-reference]:             /doc/rmarkdown-reference.pdf
-[rmarkdown-cheatsheet]:            /doc/rmarkdown-cheatsheet.pdf
-[github-classroom-repo]:           #
+[homework-pdf]:          /doc/cds101_homework1.pdf
+[rail-trail-wiki]:       https://wikipedia.org/wiki/Rail_trail
+[ggplot2-cheatsheet]:    /doc/ggplot2-cheatsheet.pdf
+[rstudio-cheatsheet]:    /doc/rstudio-IDE-cheatsheet.pdf
+[rmarkdown-reference]:   /doc/rmarkdown-reference.pdf
+[rmarkdown-cheatsheet]:  /doc/rmarkdown-cheatsheet.pdf
+[github-classroom-repo]: https://classroom.github.com/a/tHjWBa6i
