@@ -1,0 +1,61 @@
+Title: Describing univariate and bivariate data
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-02-14 15:45
+Tags: guide
+Slug: describing-univariate-and-bivariate-data
+Summary: How to write about visualizations of univariate (one variable) and bivariate (two variables) data.
+Show_summary: true
+Show_link: true
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
+```
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` Download this guide][guide-pdf]
+
+:::
+
+Many of the figures that we will be creating and analyzing during the course will be representations of univariate (meaning one variable) and bivariate (meaning two variables) data.
+You will frequently be asked to write a description about a visualization, and you should aim to be precise and consistent in your terms.
+Use the short summaries below as a guide and a reminder when writing about the features contained in a univariate or bivariate plot.
+
+## Describing univariate data
+
+When describing the visual properties of univariate data, remember to discuss the following traits:
+
+*   shape:
+
+    *   right-skewed, left-skewed, symmetric (skew is to the side of the longer tail)
+
+    *   unimodal, bimodal, multimodal, uniform
+
+*   center: mean (`mean`), median (`median`), mode (not always useful)
+
+*   spread: range (`range`), standard deviation (`sd`), inter-quartile range (`IQR`)
+
+*   unusual observations
+
+For additional guidance, [follow this link for a summary of what the above terms mean][univariate-distribution-summary].
+
+## Describing bivariate data
+
+When describing the visual properties of univariate data, you will frequently be looking at a scatterplot.
+When describing the shapes of scatterplots we highlight:
+
+*   **Direction**: What direction is the data trending?
+    Positive direction or negative direction?
+
+*   **Form**: This is analogous to *shape* for univariate data.
+    Is the dataset linear?
+    Is is curved?
+    Does it not have a form?
+
+*   **Strength**: How clustered are the data points around the underlying form?
+    Stated another way, what are the strength of the correlations?
+    Typical descriptors are *strong*, *moderate*, or *weak*.
+
+[guide-pdf]:                       /doc/describing_univariate_and_bivariate_data.pdf
+[univariate-distribution-summary]: http://stattrek.com/statistics/charts/data-patterns.aspx
