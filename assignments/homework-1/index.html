@@ -1,0 +1,290 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS-101: Introduction to Computational and Data Sciences</title>
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/cds101.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/katex/katex.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/highlightjs/default.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/fontawesome/fa-svg-with-js.css">
+    <link href="http://spring18.cds101.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CDS-101: Introduction to Computational and Data Sciences Full Atom Feed" />
+  </head>
+  <body>
+    <div class="header-grid-container">
+      <div class="banner-container">
+        <header>
+          <div class="banner">
+            <div class="course-logo">
+              <a href="http://spring18.cds101.com/">
+                <img src="http://spring18.cds101.com/theme/img/course-logo.svg">
+              </a>
+            </div>
+            <div class="university-logo">
+              <a href="https://gmu.edu">
+                <img src="http://spring18.cds101.com/theme/img/university-logo.svg">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-mobile" data-responsive-toggle="main-menu" data-hide-for="large">
+          <button type="button" data-toggle="main-menu">
+            <i class="fas fa-bars"></i><span class="navbar-mobile-title">Menu</span></button>
+        </div>
+        <div class="navbar-menu" id="main-menu">
+          <ul class="navbar-menu-list">
+            <li>
+              <a class="navbar-home-item" href="http://spring18.cds101.com/">
+                <i class="fas fa-home" data-fa-transform="grow-8"></i>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/materials.html">Materials</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/assignments.html">Assignments</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/datasets.html">Datasets</a>
+            </li>
+            <li class="navbar-social">
+              <ul class="navbar-social-list">
+                <li>
+                  <a class="navbar-social-item" href="https://github.com/mason-sp18-cds-101-001/cds-101">
+                    <i class="fab fa-github" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="http://masoncds101.slack.com">
+                    <i class="fab fa-slack" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="feeds/all.atom.xml">
+                    <i class="fas fa-rss-square" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content-grid-container">
+      <article class="static-page">
+        <header class="static-page-header">
+          <h1 class="static-page-title">Homework&nbsp;1</h1>
+        </header>
+        <div class="static-page-body">
+          <p><span class="h3"><strong>Due:</strong> February 23, 2018 @&nbsp;11:59pm</span></p>
+          <div class="no-bullets">
+            <ul>
+              <li>
+                <p>
+                  <a href="/doc/cds101_homework1.pdf">
+                    <i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>  Offline copy of&nbsp;instructions</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://classroom.github.com/a/tHjWBa6i">
+                    <i class="fab fa-github-alt" data-fa-transform="grow-8"></i>  Github Classroom repo for <strong>Homework&nbsp;1</strong></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <h2 id="instructions">Instructions</h2>
+          <p>
+            <a href="https://classroom.github.com/a/tHjWBa6i">Obtain the Github repository you will use to complete homework 1</a>, which contains a starter RMarkdown file named <code>homework_1.Rmd</code>, which you will use to do your work and write-up when completing the questions below. Be sure to
+            save, commit, and push (upload) frequently to Github so that you have incremental snapshots of your work. When you’re done, follow the
+            <a href="#how-to-submit"><strong>How to submit</strong> section</a> below to setup a Pull Request, which will be used for&nbsp;feedback.</p>
+          <ul>
+            <li>
+              <p>Remember that the point of us using RMarkdown documents is to combine code and writeups! Each block of R code should have some sort of explanation or justification using full&nbsp;sentences.</p>
+            </li>
+            <li>
+              <p><strong>Your grade will take into account your code, your explanations, and whether your document looks nice when “knitted” to <span class="caps">HTML</span> or <span class="caps">PDF</span></strong>.</p>
+            </li>
+          </ul>
+          <h2 id="the-rail-trail-dataset">The rail trail&nbsp;dataset</h2>
+          <p>
+            <img src="/img/mass-central-logo.jpg" title="plot of chunk mass-central-logo" alt="plot of chunk mass-central-logo" width="300px" style="display: block; margin: auto;" />
+          </p>
+          <p>For this homework assignment, you will be working though a set of visualization problems based on the <code>rail_trail</code> dataset. The <code>rail_trail</code> dataset was collected by the Pioneer Valley Planning Commission (<span class="caps">PVPC</span>)
+            and counts the number of people that walked through a sensor on a <em>rail trail</em> during a ninety day period.
+            <a href="https://wikipedia.org/wiki/Rail_trail">A <em>rail trail</em> is a retired or abandoned railway that was converted into a walking trail</a>. The data was collected from April 5, 2005 to November 15, 2005 using a laser sensor placed at a location north of Chestnut Street in Florence,
+            <span class="caps">MA</span>.</p>
+          <p>
+            <img src="/img/florence-chestnut-street-rail-trail.png" title="plot of chunk florence-ma-chestnut" alt="plot of chunk florence-ma-chestnut" width="50%" style="display: block; margin: auto;" />
+          </p>
+          <p>The dataset contains the following&nbsp;variables:</p>
+          <table>
+            <colgroup>
+              <col style="width: 12%" />
+              <col style="width: 87%" />
+            </colgroup>
+            <thead>
+              <tr class="header">
+                <th style="text-align: left;">Variable</th>
+                <th style="text-align: left;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                <td style="text-align: left;"><code>hightemp</code></td>
+                <td style="text-align: left;">daily high temperature (in degrees Fahrenheit)</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><code>lowtemp</code></td>
+                <td style="text-align: left;">daily low temperature (in degrees Fahrenheit)</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><code>avgtemp</code></td>
+                <td style="text-align: left;">average of daily low and daily high temperature (in degrees Fahrenheit)</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><code>season</code></td>
+                <td style="text-align: left;">indicates whether the season was Spring, Summer, or Fall</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><code>cloudcover</code></td>
+                <td style="text-align: left;">measure of cloud cover (in oktas)</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><code>precip</code></td>
+                <td style="text-align: left;">measure of precipitation (in inches)</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><code>volume</code></td>
+                <td style="text-align: left;">estimated number of trail users that day (number of breaks recorded)</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><code>weekday</code></td>
+                <td style="text-align: left;">indicator of whether the day was a non-holiday weekday</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 id="questions">Questions</h2>
+          <p>When describing the contents of a visualization, follow the general ideas summarized here:
+            <a href="http://spring18.cds101.com/materials/describing-univariate-and-bivariate-data/" class="uri">http://spring18.cds101.com/materials/describing-univariate-and-bivariate-data/</a>
+          </p>
+          <ol class="example" type="1">
+            <li>
+              <p>In the <code>rail_trail</code> dataset, how many rows are there? How many columns? Which variables in the dataset are continuous/numerical and which are&nbsp;categorical?</p>
+            </li>
+            <li>
+              <p>Create a histogram of the variable <code>volume</code> using the following&nbsp;code:</p>
+              <pre class="r"><code>ggplot(data = rail_trail) +
+  geom_histogram(mapping = aes(x = volume))</code></pre>
+              <p>Describe the <em>shape</em> and <em>center</em> of the distribution. Afterward, try adjusting the size of the histogram bins by adding the <code>binwidth</code> input. To start with, use <code>binwidth = 21</code>. If you need help with
+                where to place <code>binwidth</code>, read the documentation by running <code>?geom_histogram</code> in your <em>Console</em> window. Then, find a binwidth that’s too narrow and another one that’s too wide to produce a meaningful&nbsp;histogram.</p>
+            </li>
+            <li>
+              <p>Create a histogram for each of the remaining numerical variables, and describe the <em>shape</em> and <em>center</em> of each distribution. Are there any distributions that are similar in <em>shape</em> to each&nbsp;other?</p>
+            </li>
+            <li>
+              <p>Use <code>geom_point()</code> to create a scatterplot that plots <code>weekday</code> versus <code>season</code>. Why is this plot not&nbsp;useful?</p>
+            </li>
+            <li>
+              <p>Create a <code>geom_count()</code> plot (an alternative to a mosaic plot) using the same variables you considered in question&nbsp;4:</p>
+              <pre class="r"><code>ggplot(data = rail_trail) +
+  geom_count(mapping = aes(x = season, y = weekday))</code></pre>
+              <p>Which circle in the plot takes up the most area? Explain the meaning of the different size circles in the plot and what information it contains that is missing in the previous scatter&nbsp;plot.</p>
+            </li>
+            <li>
+              <p>Run <code>?geom_bar</code> in the <em>Console</em> window and read the documentation for <code>geom_bar()</code>, and then look at the entry for it on the
+                <a href="/doc/ggplot2-cheatsheet.pdf">ggplot2 cheatsheet</a> Use <code>geom_bar()</code> to reproduce the following bar&nbsp;chart:</p>
+              <p>
+                <img src="/img/Assignments/homework01-seasons-bar-chart-1.svg" title="plot of chunk seasons-bar-chart" alt="plot of chunk seasons-bar-chart" width="70%" style="display: block; margin: auto;" />
+              </p>
+              <p>After reproducing the plot, explain what the height of each bar&nbsp;means.</p>
+            </li>
+            <li>
+              <p>Starting from the code snippet you deduced in question 6, create two more bar&nbsp;charts:</p>
+              <ul>
+                <li>
+                  <p>Create a bar chart by supplying the input <code>position = &quot;dodge&quot;</code> to <code>geom_bar()</code></p>
+                </li>
+                <li>
+                  <p>Create a bar chart by supplying the input <code>position = &quot;fill&quot;</code> to <code>geom_bar()</code>.</p>
+                </li>
+              </ul>
+              <p>After creating the visualizations, describe the feature that <code>position</code> controls.</p>
+            </li>
+            <li>
+              <p>Create a bar chart that maps its aesthetic <code>aes()</code> to <code>precip &gt; 0</code>. Interpret what this bar chart&nbsp;means.</p>
+            </li>
+            <li>
+              <p>Create a scatter plot of <code>volume</code> versus <code>hightemp</code> using <code>geom_point()</code>. Describe any trends that you&nbsp;see.</p>
+            </li>
+            <li>
+              <p>Take the code snippet you wrote for question 9 and map the <code>weekday</code> variable to <code>color</code>. Then create a second plot where, instead of mapping <code>weekday</code> to <code>color</code>, you <em>facet</em> over <code>weekday</code>                using either <code>facet_wrap()</code> or <code>facet_grid()</code>. Discuss the advantages and disadvantages to faceting instead of mapping to the <code>color</code> aesthetic. How might the balance change if you had a larger&nbsp;dataset?</p>
+            </li>
+            <li>
+              <p>Take the code snippet that you wrote down in question 10 that faceted over <code>weekday</code> and create a model for each facet panel using <code>geom_smooth()</code>. Discuss the trends in the number of rail trail users that <code>geom_smooth()</code>                picks&nbsp;up.</p>
+            </li>
+            <li>
+              <p>Copy the code snippet you deduced in question 11 and use the input <code>se = FALSE</code> for <code>geom_smooth()</code>. What does the <code>se</code> input option for <code>geom_smooth()</code> control?</p>
+            </li>
+          </ol>
+          <h2 id="how-to-submit">How to&nbsp;submit</h2>
+          <p>When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github. Then, navigate to <strong>your copy</strong> of the
+            <a href="https://classroom.github.com/a/tHjWBa6i">Github repository</a> you used for this assignment. You should see your repository, along with the updated files that you just synchronized to Github. Confirm that your files are up-to-date, and then do the following&nbsp;steps:</p>
+          <ol type="1">
+            <li>Click the <em>Pull Requests</em> tab near the top of the&nbsp;page.</li>
+            <li>Click the green button that says “New pull&nbsp;request”.</li>
+            <li>Click the dropdown menu button labeled “base:”, and select the option <code>starting</code>.</li>
+            <li>Confirm that the dropdown menu button labled “compare:” is set to <code>master</code>.</li>
+            <li>Click the green button that says “Create pull&nbsp;request”.</li>
+            <li>Give the <em>pull request</em> the following title: <code>Submission: Homework 1, FirstName LastName</code>, replacing <code>FirstName</code> and <code>LastName</code> with your actual first and last&nbsp;name.</li>
+            <li>In the messagebox, write <code>My homework 1 submission is ready for grading @shuaibm @jkglasbrenner</code>.</li>
+            <li>Click “Create pull request” to lock in your&nbsp;submission.</li>
+          </ol>
+          <h2 id="cheatsheets">Cheatsheets</h2>
+          <p>You are encouraged to review and keep the following cheatsheets handy while working on this&nbsp;assignment:</p>
+          <ul>
+            <li>
+              <a href="/doc/rstudio-IDE-cheatsheet.pdf">RStudio&nbsp;cheatsheet</a>
+            </li>
+            <li>
+              <a href="/doc/rmarkdown-cheatsheet.pdf">RMarkdown&nbsp;cheatsheet</a>
+            </li>
+            <li>
+              <a href="/doc/rmarkdown-reference.pdf">RMarkdown&nbsp;reference</a>
+            </li>
+            <li>
+              <a href="/doc/ggplot2-cheatsheet.pdf"><code>ggplot2</code> cheatsheet</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-grid-container">
+        Except where otherwise noted, site materials are created by
+        <a href="https://cos.gmu.edu/cds/faculty-profile-james-glasbrenner/">
+          James K. Glasbrenner
+        </a>
+        and licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </div>
+    </footer>
+    <script src="http://spring18.cds101.com/theme/js/cds101.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/highlightjs/highlight.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/katex.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/wookmark/wookmark.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/fontawesome/fontawesome-all.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/vendorInit.js"></script>
+  </body>
+</html>
