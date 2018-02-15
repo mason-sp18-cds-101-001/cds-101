@@ -15,7 +15,7 @@ icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-16"></i>&nbsp;'
 
 ::: {.no-bullets}
 
-*   [`r icon_pdf` [PDF]{.card-downloads-format}][slides-pdf]
+*   [`r icon_pdf` &nbsp; [PDF]{.card-downloads-format}][slides-pdf]
 
 :::
 
