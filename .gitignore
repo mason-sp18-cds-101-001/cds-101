@@ -4,8 +4,9 @@
 # BEGIN ignore project files
 # --------------------------
 
-# pelican compiled directory
+# pelican
 output/
+cache/
 
 # --------------------------
 # BEGIN ignore basic files
