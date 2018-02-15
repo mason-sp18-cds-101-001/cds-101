@@ -11,25 +11,28 @@ Week                Class   Date          Topic                                 
 ------------------- ------- ------------- --------------------------------------------------------------------------------------- -------------------------------
 Week 1              1       Jan-23        Overview of Computational and Data Sciences
 
-                    2       Jan-25        The data scientist's toolbox I                                                          [Twitter Study Article]
+                    2       Jan-25        [The data scientist's toolbox I]                                                        [Twitter Study Article]
                                           [<i class="fab fa-html5" data-fa-transform="grow-8"></i>](/doc/class02_slides.html)
 
 Week 2              3       Jan-30        The data scientist's toolbox II                                                         [Try R Tutorial]
 
-                    4       Feb-01        Introduction to data                                                                    [Reading 1]
+                    4       Feb-01        The data scientist's toolbox III                                                        [Reading 1]
 
-Week 3              5       Feb-06        Data visualization I                                                                    [Reading 2]<br>
+Week 3              5       Feb-06        Introduction to data/Data visualization I                                               [Reading 2]<br>
                                                                                                                                   [RMarkdown mini-assignment]
 
                     6       Feb-08        Data visualization II                                                                   [Reading 3]
                     
                             Feb-09                                                                                                [Visualization mini-assignment]
 
-Week 4              7       Feb-13        Data visualization III
+Week 4              7       Feb-13        [Data visualization III] &emsp;                                                         [Reading 4]
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class07_slides.pdf)
 
-                    8       Feb-15        Data wrangling I
+                    8       Feb-15        [Data wrangling I] &emsp;
+                                          [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-8-github], 
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class08_slides.pdf)
 
-Week 5              9       Feb-20        Data wrangling II
+Week 5              9       Feb-20        Data wrangling II                                                                       [Reading 5]
 
                     10      Feb-22        Data wrangling III
                     
@@ -81,12 +84,17 @@ Week 14             27      May-01        *To be determined*
                                           *Time: 1:30pm -- 4:15pm*
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Reading 1]:                     /assignments/reading-1/
-[Reading 2]:                     /assignments/reading-2/
-[Reading 3]:                     /assignments/reading-3/
-[Homework 1]:                    /assignments/homework-1/
-[Try R Tutorial]:                /assignments/try-r-tutorial-mini-assignment/
-[Twitter Study Article]:         /assignments/introductions-and-twitter-election-mini-assignment/
-[RMarkdown mini-assignment]:     /assignments/rmarkdown-mini-assignment/
-[Visualization mini-assignment]: /assignments/visualization-mini-assignment/
- 
+[Reading 1]:                      /assignments/reading-1/
+[Reading 2]:                      /assignments/reading-2/
+[Reading 3]:                      /assignments/reading-3/
+[Reading 4]:                      /assignments/reading-4/
+[Reading 5]:                      /assignments/reading-5/
+[Homework 1]:                     /assignments/homework-1/
+[Try R Tutorial]:                 /assignments/try-r-tutorial-mini-assignment/
+[Twitter Study Article]:          /assignments/introductions-and-twitter-election-mini-assignment/
+[RMarkdown mini-assignment]:      /assignments/rmarkdown-mini-assignment/
+[Visualization mini-assignment]:  /assignments/visualization-mini-assignment/
+[The data scientist's toolbox I]: /materials/class-2/ 
+[Data visualization III]:         /materials/class-7/
+[Data wrangling I]:               /materials/class-8/
+[cl-8-github]:                    https://classroom.github.com/a/xku1H3sP
