@@ -16,7 +16,7 @@ icon_html5 <- '<i class="fab fa-html5" data-fa-transform="grow-16"></i>&nbsp;'
 
 ::: {.no-bullets}
 
-*   [`r icon_html` [PDF]{.card-downloads-format}][slides-html]
+*   [`r icon_html5` &nbsp; [HTML]{.card-downloads-format}][slides-html]
 
 :::
 
