@@ -1,0 +1,41 @@
+Title: Reading 5
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-02-20 13:30
+Tags: reading
+Slug: reading-5
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_link <- '<i class="fas fa-link"></i>&nbsp;'
+```
+
+[[R for Data Science][r4ds-book]]{.h3}
+
+Read the following:
+
+*   All of [chapter 4][r4ds-ch-4] (short)
+*   All of [chapter 5][r4ds-ch-5]
+
+[Reading discussion]{.h3}
+
+::::: {.callout .primary}
+**Discussion hashtag** \
+`#reading5`
+:::::
+
+::::: {.callout .secondary}
+Remember to post your question about it to the `#5-discussion` channel in [Slack][cds101-slack] by the due date.
+To receive an answer credit, reply to a posted question no later than 11:59pm on Thursday, February 22th.
+:::::
+
+---
+
+[`r icon_link` Posting guidelines can be found in the **Readings** section of the syllabus.][syllabus-readings]
+
+[r4ds-ch-4]:         http://r4ds.had.co.nz/workflow-basics.html
+[r4ds-ch-5]:         http://r4ds.had.co.nz/transform.html
+[r4ds-book]:         http://r4ds.had.co.nz/
+[cds101-slack]:      https://masoncds101.slack.com
+[syllabus-readings]: http://spring18.cds101.com/syllabus.html#readings
