@@ -1,0 +1,41 @@
+Title: Reading 8
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-03-01 13:30
+Tags: reading
+Slug: reading-8
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_link <- '<i class="fas fa-link"></i>&nbsp;'
+```
+
+[[R for Data Science][r4ds-book]]{.h3}
+
+Read the following:
+
+*   From [chapter 12][r4ds-ch-12]: section [12.1][r4ds-ch-12.1] through to the end of section [12.3][r4ds-ch-12.3]
+
+[Reading discussion]{.h3}
+
+::::: {.callout .primary}
+**Discussion hashtag** \
+`#reading8`
+:::::
+
+::::: {.callout .secondary}
+Remember to post your question about it to the `#5-discussion` channel in [Slack][cds101-slack] by the due date.
+To receive an answer credit, reply to a posted question no later than 11:59pm on Saturday, March 3rd.
+:::::
+
+---
+
+[`r icon_link` Posting guidelines can be found in the **Readings** section of the syllabus.][syllabus-readings]
+
+[r4ds-book]:         http://r4ds.had.co.nz/
+[r4ds-ch-12]:        http://r4ds.had.co.nz/tidy-data.html
+[r4ds-ch-12.1]:      http://r4ds.had.co.nz/tidy-data.html#introduction-6
+[r4ds-ch-12.3]:      http://r4ds.had.co.nz/tidy-data.html#spreading-and-gathering
+[cds101-slack]:      https://masoncds101.slack.com
+[syllabus-readings]: http://spring18.cds101.com/syllabus.html#readings
