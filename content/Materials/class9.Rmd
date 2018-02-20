@@ -16,7 +16,7 @@ icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-16"></i>&nb
 
 ::: {.no-bullets}
 
-*   [`r icon_github` &nbsp; [**dplyr demo** repo (same as [Class 8][class-8-materials]]{.card-downloads-format}][github-classroom-repo]
+*   [`r icon_github` &nbsp; [**dplyr demo** repo]{.card-downloads-format}][github-classroom-repo]
 
 :::
 
@@ -29,6 +29,5 @@ icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-16"></i>&nb
 :::
 
 [slides-pdf]:            /doc/class09_slides.pdf
-[class-8-materials]:     /materials/class-8/
 [github-classroom-repo]: https://classroom.github.com/a/xku1H3sP
 
