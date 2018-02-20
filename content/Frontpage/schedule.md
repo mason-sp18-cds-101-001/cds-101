@@ -33,6 +33,7 @@ Week 4              7       Feb-13        [Data visualization III] &emsp;       
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class08_slides.pdf)
 
 Week 5              9       Feb-20        [Data wrangling II] &emsp;                                                              [Reading 5]
+                                          [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-8-github], 
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class09_slides.pdf)
 
                     10      Feb-22        Data wrangling III                                                                      [Reading 6]
