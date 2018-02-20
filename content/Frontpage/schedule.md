@@ -32,7 +32,8 @@ Week 4              7       Feb-13        [Data visualization III] &emsp;       
                                           [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-8-github], 
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class08_slides.pdf)
 
-Week 5              9       Feb-20        Data wrangling II                                                                       [Reading 5]
+Week 5              9       Feb-20        [Data wrangling II] &emsp;                                                              [Reading 5]
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class09_slides.pdf)
 
                     10      Feb-22        Data wrangling III                                                                      [Reading 6]
                     
@@ -100,4 +101,5 @@ Week 14             27      May-01        *To be determined*
 [The data scientist's toolbox I]: /materials/class-2/ 
 [Data visualization III]:         /materials/class-7/
 [Data wrangling I]:               /materials/class-8/
+[Data wrangling II]:              /materials/class-9/
 [cl-8-github]:                    https://classroom.github.com/a/xku1H3sP

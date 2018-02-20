@@ -1,0 +1,34 @@
+Title: Class 9
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-02-20 13:30
+Tags: class notes
+Slug: class-9
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-16"></i>&nbsp;'
+icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-16"></i>&nbsp;'
+```
+
+[Activity]{.h3}
+
+::: {.no-bullets}
+
+*   [`r icon_github` &nbsp; [**dplyr demo** repo (same as [Class 8][class-8-materials]]{.card-downloads-format}][github-classroom-repo]
+
+:::
+
+[Slides]{.h3}
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` &nbsp; [PDF]{.card-downloads-format}][slides-pdf]
+
+:::
+
+[slides-pdf]:            /doc/class09_slides.pdf
+[class-8-materials]:     /materials/class-8/
+[github-classroom-repo]: https://classroom.github.com/a/xku1H3sP
+
