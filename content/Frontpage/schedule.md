@@ -36,7 +36,8 @@ Week 5              9       Feb-20        [Data wrangling II] &emsp;            
                                           [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-8-github], 
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class09_slides.pdf)
 
-                    10      Feb-22        Data wrangling III                                                                      [Reading 6]
+                    10      Feb-22        [Data wrangling III]                                                                    [Reading 6]
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class10_slides.pdf)
                     
                             Feb-23                                                                                                [Homework 1]
 
@@ -103,4 +104,5 @@ Week 14             27      May-01        *To be determined*
 [Data visualization III]:         /materials/class-7/
 [Data wrangling I]:               /materials/class-8/
 [Data wrangling II]:              /materials/class-9/
+[Data wrangling III]:             /materials/class-10/
 [cl-8-github]:                    https://classroom.github.com/a/xku1H3sP
