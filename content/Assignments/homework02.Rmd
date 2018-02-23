@@ -222,7 +222,8 @@ You are encouraged to review and keep the following cheatsheets handy while work
 
 *   [Data import cheatsheet][data-import-cheatsheet]
 
-[^dataset]:                       http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic.html
+
+[^dataset]: http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic.html
 
 [homework-pdf]:                   /doc/cds101_homework2.pdf
 [r4ds-read-csv]:                  http://r4ds.had.co.nz/data-import.html#problems
