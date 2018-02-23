@@ -49,6 +49,8 @@ Week 7              13      Mar-06        Work on midterm projects
 
                     14      Mar-08        Midterm project presentations
 
+                            Mar-09                                                                                                [Homework 2]
+
                             Mar-13        **[Spring Break]{.smallcaps}** (no class)
 
                             Mar-15        **[Spring Break]{.smallcaps}** (no class)
@@ -96,6 +98,7 @@ Week 14             27      May-01        *To be determined*
 [Reading 7]:                      /assignments/reading-7/
 [Reading 8]:                      /assignments/reading-8/
 [Homework 1]:                     /assignments/homework-1/
+[Homework 2]:                     /assignments/homework-2/
 [Try R Tutorial]:                 /assignments/try-r-tutorial-mini-assignment/
 [Twitter Study Article]:          /assignments/introductions-and-twitter-election-mini-assignment/
 [RMarkdown mini-assignment]:      /assignments/rmarkdown-mini-assignment/
