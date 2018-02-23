@@ -1,0 +1,411 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS-101: Introduction to Computational and Data Sciences</title>
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/cds101.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/katex/katex.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/highlightjs/default.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/fontawesome/fa-svg-with-js.css">
+    <link href="http://spring18.cds101.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CDS-101: Introduction to Computational and Data Sciences Full Atom Feed" />
+  </head>
+  <body>
+    <div class="header-grid-container">
+      <div class="banner-container">
+        <header>
+          <div class="banner">
+            <div class="course-logo">
+              <a href="http://spring18.cds101.com/">
+                <img src="http://spring18.cds101.com/theme/img/course-logo.svg">
+              </a>
+            </div>
+            <div class="university-logo">
+              <a href="https://gmu.edu">
+                <img src="http://spring18.cds101.com/theme/img/university-logo.svg">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-mobile" data-responsive-toggle="main-menu" data-hide-for="large">
+          <button type="button" data-toggle="main-menu">
+            <i class="fas fa-bars"></i><span class="navbar-mobile-title">Menu</span></button>
+        </div>
+        <div class="navbar-menu" id="main-menu">
+          <ul class="navbar-menu-list">
+            <li>
+              <a class="navbar-home-item" href="http://spring18.cds101.com/">
+                <i class="fas fa-home" data-fa-transform="grow-8"></i>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/materials.html">Materials</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/assignments.html">Assignments</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/datasets.html">Datasets</a>
+            </li>
+            <li class="navbar-social">
+              <ul class="navbar-social-list">
+                <li>
+                  <a class="navbar-social-item" href="https://github.com/mason-sp18-cds-101-001/cds-101">
+                    <i class="fab fa-github" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="http://masoncds101.slack.com">
+                    <i class="fab fa-slack" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="feeds/all.atom.xml">
+                    <i class="fas fa-rss-square" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content-grid-container">
+      <article class="static-page">
+        <header class="static-page-header">
+          <h1 class="static-page-title">Homework&nbsp;2</h1>
+        </header>
+        <div class="static-page-body">
+          <p><span class="h3"><strong>Due:</strong> March 9, 2018 @&nbsp;11:59pm</span></p>
+          <div class="no-bullets">
+            <ul>
+              <li>
+                <p>
+                  <a href="/doc/cds101_homework2.pdf">
+                    <i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>  Offline copy of&nbsp;instructions</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://classroom.github.com/a/5gVLthTb">
+                    <i class="fab fa-github-alt" data-fa-transform="grow-8"></i>  Github Classroom repo for <strong>Homework&nbsp;2</strong></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <h2 id="instructions">Instructions</h2>
+          <p>
+            <a href="https://classroom.github.com/a/5gVLthTb">Obtain the Github repository you will use to complete homework 2</a> that contains a starter RMarkdown file named <code>homework_2.Rmd</code>, which you will use to do your work and write-up when completing the questions below. Remember to
+            fill in your name at the top of the RMarkdown document and be sure to save, commit, and push (upload) frequently to Github so that you have incremental snapshots of your work. When you?re done, follow the
+            <a href="#how-to-submit">How to submit</a> section below to setup a Pull Request, which will be used for&nbsp;feedback.</p>
+          <ul>
+            <li>
+              <p>Remember that the point of us using RMarkdown documents is to combine code and writeups! Each block of R code should have some sort of explanation or justification using full&nbsp;sentences.</p>
+            </li>
+            <li>
+              <p><strong>Your grade will take into account your code, your explanations, and whether your document looks nice when “knitted” to <span class="caps">HTML</span> or <span class="caps">PDF</span>.</strong></p>
+            </li>
+          </ul>
+          <h2 id="overview">Overview</h2>
+          <p>
+            <figure>
+              <img src="/img/titanic_photograph.jpg" width="300" style="display: block; margin: auto;" />
+              <figcaption style="text-align: center;">
+                A photograph of the <em>Titanic</em> leaving Southampton on April 10, 1912.
+              </figcaption>
+            </figure>
+          </p>
+          <p>For this homework assignment, you will be exploring a dataset about the passengers on the <em>Titanic</em>, the British passenger liner that crashed into an iceberg during its maiden voyage and sank early in the morning on April 15, 1912. The
+            tragedy stands out as one of the deadliest commercial maritime disasters during peacetime in history. More than half of the passengers and crew died, due in large part to poor safety standards, such as not having enough lifeboats or not ensuring
+            all lifeboats were filled to capacity during&nbsp;evacuation.</p>
+          <p>This dataset presents the most up-to-date knowledge about the passengers that were on the <em>Titanic</em>, including whether or not they survived. This dataset is frequently used to introduce using machine learning techniques that take multiple
+            inputs and use them to predict an outcome, in this case whether a passenger is likely to have survived. While we won’t be using a machine learning model in this assignment, there is still a lot of information that can be learned by exploring
+            the dataset using the <code>tidyverse</code> suite.</p>
+          <p>The dataset is included in your
+            <a href="https://classroom.github.com/a/5gVLthTb">Github starter code repository</a>.</p>
+          <h2 id="about-the-dataset">About the&nbsp;dataset</h2>
+          <p>The following are the variable (column) descriptions for the dataset:
+            <a href="#fn1" class="footnote-ref" id="fnref1">
+              <sup>1</sup>
+            </a>
+          </p>
+          <table>
+            <colgroup>
+              <col style="width: 14%" />
+              <col style="width: 85%" />
+            </colgroup>
+            <thead>
+              <tr class="header">
+                <th style="text-align: left;">Variable</th>
+                <th style="text-align: left;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">pclass</span></td>
+                <td style="text-align: left;">Passenger Class (1 = 1st; 2 = 2nd; 3 = 3rd)</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">survival</span></td>
+                <td style="text-align: left;">Survival (0 = No; 1 = Yes)</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">name</span></td>
+                <td style="text-align: left;">Name</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">sex</span></td>
+                <td style="text-align: left;">Sex</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">age</span></td>
+                <td style="text-align: left;">Age</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">sibsp</span></td>
+                <td style="text-align: left;">Number of Siblings/Spouses Aboard</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">parch</span></td>
+                <td style="text-align: left;">Number of Parents/Children Aboard</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">ticket</span></td>
+                <td style="text-align: left;">Ticket Number</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">fare</span></td>
+                <td style="text-align: left;">Passenger Fare (British pound)</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">cabin</span></td>
+                <td style="text-align: left;">Cabin</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">embarked</span></td>
+                <td style="text-align: left;">Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton)</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">boat</span></td>
+                <td style="text-align: left;">Lifeboat</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">body</span></td>
+                <td style="text-align: left;">Body Identification Number</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">home.dest</span></td>
+                <td style="text-align: left;">Home/Destination</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Also note that the following definitions were used for <code>sibsp</code> and <code>parch</code>:</p>
+          <table>
+            <colgroup>
+              <col style="width: 14%" />
+              <col style="width: 85%" />
+            </colgroup>
+            <thead>
+              <tr class="header">
+                <th style="text-align: left;">Label</th>
+                <th style="text-align: left;">Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                <td style="text-align: left;">Sibling</td>
+                <td style="text-align: left;">Brother, Sister, Stepbrother, or Stepsister of Passenger Aboard Titanic</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;">Spouse</td>
+                <td style="text-align: left;">Husband or Wife of Passenger Aboard Titanic (Mistresses and Fiances Ignored)</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;">Parent</td>
+                <td style="text-align: left;">Mother or Father of Passenger Aboard Titanic</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;">Child</td>
+                <td style="text-align: left;">Son, Daughter, Stepson, or Stepdaughter of Passenger Aboard Titanic</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 id="questions">Questions</h2>
+          <ol class="example" type="1">
+            <li>
+              <p>When reading in the dataset using <code>read_csv(file = &quot;titanic_dataset.csv&quot;)</code>, several of the columns are converted into inconvenient data types. Fix this so that your later analysis does not run into problems. Use the
+                <code>col_types = cols()</code> argument within <code>read_csv()</code>,
+                <a href="http://r4ds.had.co.nz/data-import.html#problems">see this section of <em>R for Data Science</em> for a review</a>, to change the data type defaults for the following&nbsp;columns:</p>
+              <ul>
+                <li>
+                  <p>Convert <code>survived</code> to the logical data&nbsp;type</p>
+                </li>
+                <li>
+                  <p>Convert <code>pclass</code> to the character data&nbsp;type</p>
+                </li>
+                <li>
+                  <p>Convert <code>sibsp</code> to the character data&nbsp;type</p>
+                </li>
+                <li>
+                  <p>Convert <code>parch</code> to the character data&nbsp;type</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>Compute how many known passengers were on the Titanic. <em>Do not just print the table, use a function to count the passengers</em>.</p>
+            </li>
+            <li>
+              <p>A famous directive for evacuating the <em>Titanic</em> was “women and children first”. Use your <code>dplyr</code> functions to verify the first part of this statement by counting the number of men and women that survived and that died.
+                Then, using those counts, calculate the fraction of women that survived, <span class="math display">\[\dfrac{\text{Number of female survivors}}{\text{Total number of female passengers}}\]</span> and the fraction of men that survived,
+                <span
+                  class="math display">\[\dfrac{\text{Number of male survivors}}{\text{Total number of male passengers}}\]</span> Do your computations support the idea that women were more likely to survive? Why or why&nbsp;not?</p>
+            </li>
+            <li>
+              <p>Verify the second part of the “women and children first” directive. This will not be as straightforward as it was in the previous question, as the dataset only contains people’s ages, which can take on many values. By default, there are
+                no columns with labels of <em>child</em> or <em>adult</em>, so you will need to create your&nbsp;own.</p>
+              <p>Create a new column named <code>child_or_adult</code> that uses the age data to label each passenger. For our purposes, we want to label anyone aged 0–9 as a child and anyone age 10 and up are as adults. If the age cell is blank (<code>NA</code>)
+                for a passenger, also label them as an “adult”. Assign this updated dataset to the variable <code>titanic_age_groups</code>.</p>
+              <p><strong>Hint:</strong> You will need to use the <code>ifelse()</code> function to complete this task. An example usage of <code>ifelse()</code> is the&nbsp;following:</p>
+              <pre class="r"><code>titanic %&gt;%
+  mutate(cheap_or_expensive = ifelse(test = fare &lt; 15,
+                                     yes = &quot;cheap ticket&quot;,
+                                     no = &quot;not cheap&quot;))</code></pre>
+              <p>To handle blank entries, you will also need to use <code>is.na()</code> somewhere inside your <code>ifelse()</code> test.</p>
+            </li>
+            <li>
+              <p>Using the <code>titanic_age_groups</code> dataset you created in the previous question, count the number of children that survived and the number that did not. Do your computations support the idea that children were also more likely to
+                survive? Why or why&nbsp;not?</p>
+            </li>
+            <li>
+              <p>A passenger’s age group and sex are not the only predictors of survival. For example, social standing and wealth can play a factor in survival. One of the parameters within this dataset acts as a proxy for distinguishing between the upper
+                and lower classes. Which parameter is it? How do you&nbsp;know?</p>
+            </li>
+            <li>
+              <p>Group your dataset by <code>sex</code> and the variable you determined in question 6 and count the number that survived and the number that did not. Create a bar chart that summarizes the data, where <code>survived</code> is along the horizontal
+                axis and the passenger counts are along the vertical axis. Use the bar chart <code>fill =</code> aesthetic to break the bar charts down by your variable from question 6. Additionally, facet over the <code>sex</code> variable. Interpret
+                this visualization and describe any survival patterns that you&nbsp;notice.</p>
+            </li>
+            <li>
+              <p>Create two&nbsp;visualizations:</p>
+              <ul>
+                <li>
+                  <p>The first visualization should be a bar chart displaying the fraction of the passengers that survived for different values of <code>parch</code>, <span class="math display">\[\dfrac{\text{For a given parch, the number of survivors}}{\text{Total number of passengers}}.\]</span>                    Doing this requires grouping your data properly, counting the number of passengers in each grouping, and then dividing this by the total number of passengers on the&nbsp;ship.</p>
+                </li>
+                <li>
+                  <p>The second visualization should be a bar chart displaying the fraction of the passengers that survived for different values of <code>sibsp</code>, <span class="math display">\[\dfrac{\text{For a given sibsp, the number of survivors}}{\text{Total number of passengers}}.\]</span>                    Like above, doing this requires grouping your data properly, counting the number of passengers in each grouping, and then dividing this by the total number of passengers on the&nbsp;ship.</p>
+                </li>
+              </ul>
+              <p>Interpret the patterns that you see in the&nbsp;visualizations.</p>
+            </li>
+            <li>
+              <p>Based on your analysis, write a list of the factors that affected the chances of survival for each passenger. You should be able to identify 4 different attributes that had a noticeable impact on survival. Justify each attribute that you
+                list by referencing back to a table or visualization you created in a previous&nbsp;question.</p>
+            </li>
+          </ol>
+          <h2 id="how-to-submit">How to&nbsp;submit</h2>
+          <p>When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github. Then, navigate to <strong>your copy</strong> of the
+            <a href="https://classroom.github.com/a/5gVLthTb">Github repository</a> you used for this assignment. You should see your repository, along with the updated files that you just synchronized to Github. Confirm that your files are up-to-date, and then do the following&nbsp;steps:</p>
+          <ol type="1">
+            <li>
+              <p>Click the <em>Pull Requests</em> tab near the top of the&nbsp;page.</p>
+            </li>
+            <li>
+              <p>Click the green button that says “New pull&nbsp;request”.</p>
+            </li>
+            <li>
+              <p>Click the dropdown menu button labeled “base:”, and select the option <code>starting</code>.</p>
+            </li>
+            <li>
+              <p>Confirm that the dropdown menu button labeled “compare:” is set to <code>master</code>.</p>
+            </li>
+            <li>
+              <p>Click the green button that says “Create pull&nbsp;request”.</p>
+            </li>
+            <li>
+              <p>Give the <em>pull request</em> the following title: <span class="monospace">Submission: Homework 2, FirstName LastName</span>, replacing <span class="monospace">FirstName</span> and <span class="monospace">LastName</span> with your actual
+                first and last&nbsp;name.</p>
+            </li>
+            <li>
+              <p>In the messagebox, write: <span class="monospace">My homework submission is ready for grading @shuaibm @jkglasbrenner</span>.</p>
+            </li>
+            <li>
+              <p>Click “Create pull request” to lock in your&nbsp;submission.</p>
+            </li>
+          </ol>
+          <h2 id="cheatsheets">Cheatsheets</h2>
+          <p>You are encouraged to review and keep the following cheatsheets handy while working on this&nbsp;assignment:</p>
+          <ul>
+            <li>
+              <p>
+                <a href="/doc/rstudio-IDE-cheatsheet.pdf">RStudio&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="/doc/rmarkdown-cheatsheet.pdf">RMarkdown&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="/doc/rmarkdown-reference.pdf">RMarkdown&nbsp;reference</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="/doc/ggplot2-cheatsheet.pdf"><span class="monospace">ggplot2</span>&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="/doc/data-transformation-cheatsheet.pdf">Data transformation&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="/doc/data-import-cheatsheet.pdf">Data import&nbsp;cheatsheet</a>
+              </p>
+            </li>
+          </ul>
+          <section class="footnotes">
+            <hr />
+            <ol>
+              <li id="fn1">
+                <p>
+                  <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic.html" class="uri">http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic.html</a>
+                  <a href="#fnref1" class="footnote-back">↩</a>
+                </p>
+              </li>
+            </ol>
+          </section>
+        </div>
+      </article>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-grid-container">
+        Except where otherwise noted, site materials are created by
+        <a href="https://cos.gmu.edu/cds/faculty-profile-james-glasbrenner/">
+          James K. Glasbrenner
+        </a>
+        and licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </div>
+    </footer>
+    <script src="http://spring18.cds101.com/theme/js/cds101.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/highlightjs/highlight.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/katex.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/wookmark/wookmark.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/fontawesome/fontawesome-all.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/vendorInit.js"></script>
+  </body>
+</html>
