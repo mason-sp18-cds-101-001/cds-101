@@ -2,7 +2,7 @@ Title: Spring 2018 Schedule
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-23 15:00
-Modified: 2018-02-06 16:15
+Modified: 2018-02-27 17:00
 Index_save_as: index.html
 Url: /index.html
 
@@ -41,7 +41,9 @@ Week 5              9       Feb-20        [Data wrangling II] &emsp;            
                     
                             Feb-23                                                                                                [Homework 1]
 
-Week 6              11      Feb-27        Exploratory data analysis I                                                             [Reading 7]
+Week 6              11      Feb-27        [Data wrangling IV]                                                                     [Reading 7]
+                                          [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-11-github], 
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class11_slides.pdf)
 
                     12      Mar-01        Exploratory data analysis II                                                            [Reading 8]
 
@@ -108,4 +110,7 @@ Week 14             27      May-01        *To be determined*
 [Data wrangling I]:               /materials/class-8/
 [Data wrangling II]:              /materials/class-9/
 [Data wrangling III]:             /materials/class-10/
+[Data wrangling IV]:              /materials/class-11/
 [cl-8-github]:                    https://classroom.github.com/a/xku1H3sP
+[cl-11-github]:                   https://masoncds101.slack.com/archives/C8WQJ0GTB/p1519755978000359
+
