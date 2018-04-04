@@ -1,0 +1,24 @@
+Title: SelectorGadget<br>Vignette
+Author: Hadley Wickham
+Date: 2018-04-04 14:25
+Tags: guide
+Slug: selectorgadget-vignette
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_html5 <- '<i class="fab fa-html5" data-fa-transform="grow-16"></i>&nbsp;'
+```
+
+Selectorgadget is a javascript bookmarklet that allows you to interactively figure out what css selector you need to extract desired components from a page.
+
+[Download]{.h3}
+
+::: {.no-bullets}
+
+*   [`r icon_html5` &nbsp; [HTML]{.card-downloads-format}][selectorgadget-vignette]
+
+:::
+
+[selectorgadget-vignette]: /doc/rvest-selectorgadget-vignette.html
+
