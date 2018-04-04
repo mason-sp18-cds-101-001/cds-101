@@ -2,7 +2,7 @@ Title: Spring 2018 Schedule
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-23 15:00
-Modified: 2018-04-03 21:45
+Modified: 2018-04-04 15:10
 Index_save_as: index.html
 Url: /index.html
 
@@ -72,31 +72,29 @@ Week 9              17      Mar-27        Midterm project presentations I/Web sc
 Week 10             19      Apr-03        [Introduction to Web Scraping II/Principles of Data Collection]
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class19_slides.pdf)
 
-Week 8              15      Mar-20        Summary statistics and univariate distributions I
+                    20      Apr-05        Statistical distributions I                                                             [Reading 9]
 
-Week 9              17      Mar-27        Normal distribution
+Week 11             21      Apr-10        Statistical distributions II
 
-                    18      Mar-29        Foundations for inference I
+                            Apr-13                                                                                                Homework 3
 
-Week 10             19      Apr-03        Foundations for inference II
+                    22      Apr-12        Inference and simulations I
 
-                    20      Apr-05        Foundations for inference III; p-hacking; effect size and similar measures
+Week 12             23      Apr-17        Inference and simulations II
 
-Week 11             21      Apr-10        Linear modeling I
+                    24      Apr-19        Inference and simulations III
 
-                    22      Apr-12        Linear modeling II
+                            Apr-20                                                                                                Homework 4
 
-Week 12             23      Apr-17        Linear modeling III
+Week 13             25      Apr-24        Statistical modeling I
 
-                    24      Apr-19        Cross-validation and model selection I
+                    26      Apr-26        Statistical modeling II
 
-Week 13             25      Apr-24        Cross-validation and model selection II
+Week 14             27      May-01        Statistical modeling III
 
-                    26      Apr-26        *To be determined*
-
-Week 14             27      May-01        *To be determined*
-
-                    28      May-03        *To be determined*
+                    28      May-03        Statistical modeling IV
+                    
+                            May-04                                                                                                Homework 5
 
                             May-08        **[Reading Day]{.smallcaps}**
 
@@ -112,6 +110,7 @@ Week 14             27      May-01        *To be determined*
 [Reading 6]:                                                     /assignments/reading-6/
 [Reading 7]:                                                     /assignments/reading-7/
 [Reading 8]:                                                     /assignments/reading-8/
+[Reading 9]:                                                     /assignments/reading-9/
 [Homework 1]:                                                    /assignments/homework-1/
 [Homework 2]:                                                    /assignments/homework-2/
 [Try R Tutorial]:                                                /assignments/try-r-tutorial-mini-assignment/
