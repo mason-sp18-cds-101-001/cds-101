@@ -1,0 +1,30 @@
+Title: Beginner’s Guide on Web Scraping in R (using rvest) with hands-on example
+Author: Saurav Kaushik
+Date: 2018-04-04 14:25
+Tags: guide
+Slug: beginners-guide-on-web-scraping-in-r
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
+icon_link <- '<i class="fas fa-link"></i>&nbsp;'
+```
+
+A beginner's guide on how to perform Web Scraping in R.
+
+[Download]{.h3}
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` &nbsp; [PDF]{.card-downloads-format}][analytics-vidha-rvest-pdf]
+
+:::
+
+---
+
+[`r icon_link` [LINK]{.card-downloads-format}][analytics-vidha-rvest]
+
+[analytics-vidha-rvest]:     https://www.analyticsvidhya.com/blog/2017/03/beginners-guide-on-web-scraping-in-r-using-rvest-with-hands-on-knowledge/
+[analytics-vidha-rvest-pdf]: /doc/saurav_kaushik__beginners_guide_on_web_scraping_in_r_with_hands-on_example.pdf
+
