@@ -1,0 +1,267 @@
+Title: Probability mass functions
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-04-05 15:00
+Tags: reading-nograyout
+Slug: representing-distributions-pmf
+Summary: Reading about how to connect probabilities with values in a dataset.
+Show_summary: true
+Show_link: true
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.width = 6, fig.alt = "",
+                      fig.asp = 0.618, dpi = 120, dev = "svg",
+                      out.width = "60%", fig.align = "center", cache = FALSE)
+library(tidyverse)
+county_complete <- read_rds(path = "../files/datasets/county_complete.rds")
+```
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` Download this reading][reading-pdf]
+
+:::
+
+```r
+library(tidyverse)
+county_complete <- read_rds(
+  path = url("http://spring18.cds101.com/files/datasets/county_complete.rds"))
+```
+
+## Statistical distributions
+
+During the first part of the course, we learned how to use visualizations to explore a dataset.
+Now we will extend this approach using concepts from probability and statistics to build a scientific foundation for interpreting data distributions.
+We start with discussing univariate (single variable) distributions, which we've previously visualized as frequency histograms (by default, `geom_histogram()` sorts data into different bins and tells you how many end up in each one).
+Frequency histograms are useful for examining the particulars of a single variable, but have limited utility when directly comparing distributions that contain different numbers of observations.
+Here we introduce the normalized version of the frequency histogram, the **probability mass function** (PMF).
+
+## Example dataset
+
+We use an example dataset of the average time it takes for people to commute to work across 3143 counties in the United States (collected between 2006-2010) to help illustrate the meaning and uses of the probability mass function.
+The frequency histogram for these times can be plotted using the following code snippet:
+
+```{r mean-travel-time-freq-hist, eval = FALSE}
+county_complete %>%
+  ggplot(mapping = aes(x = mean_work_travel)) +
+  geom_histogram(binwidth = 1)
+```
+
+```{r mean-travel-time-freq-hist-labeled, echo = FALSE}
+county_complete %>%
+  ggplot(mapping = aes(x = mean_work_travel)) +
+  geom_histogram(binwidth = 1) +
+  labs(
+    title = "Average work travel times across 3143 US counties, 2006-2010",
+    x = "Average work travel time (min)", y = "count")
+```
+
+## PMFs
+
+The **probability mass function** (PMF) represents a distribution by sorting the data into bins (much like the frequency histogram) and then associates a probability with each bin in the distribution.
+A **probability** is a frequency expressed as a fraction of the sample size *n*.
+Therefore we can directly convert a frequency histogram to a PMF by dividing the count in each bin by the sample size *n*.
+This process is called **normalization**.
+
+As an example, consider the following short sample,
+
+    1  2  2  3  5
+    
+If we choose a binwidth of 1, then we get a frequency histogram that looks like this:
+
+```{r simple-freq-hist, echo = FALSE, fig.width = 4, out.width = "60%"}
+tibble(example_variable = c(1, 2, 2, 3, 5)) %>%
+  ggplot() +
+  geom_histogram(mapping = aes(x = example_variable), binwidth = 1) +
+  labs(x = "x")
+```
+
+There are 5 observations in this sample.
+So, we can convert to a PMF by dividing the count within each bin by 5, getting a histogram that looks like this:
+
+```{r simple-pmf-hist, echo = FALSE, fig.width = 4, out.width = "60%"}
+tibble(example_variable = c(1, 2, 2, 3, 5)) %>%
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = example_variable, y = ..density..), binwidth = 1) +
+  labs(x = "x", y = "PMF")
+```
+
+The relative shape stays the same, but compare the values along the vertical axis between the two figures.
+You'll find that they are no longer integers and are instead probabilities.
+The normalization procedure (dividing by 5) guarantees that adding together the probabilities of all bins will equal 1.
+For this example, we find that the probability of drawing the number 1 is 0.2, drawing 2 is 0.4, drawing 3 is 0.2, drawing 4 is 0, and drawing 5 is 0.2.
+That is the biggest difference between a frequency histogram and a PMF, the frequency histogram maps from values to integer counters, while the PMF maps from values to fractional probabilities.
+
+## Plotting PMFs
+
+The syntax for plotting a PMF using `ggplot2` is nearly identical to what you would use to create a frequency histogram.
+The one modification is that you need to include `y = ..density..` inside `aes()`.
+As a simple example, let's take the full distribution of the average work travel times from earlier and plot it as a PMF:
+
+```{r mean-travel-time-pmf, eval = FALSE}
+county_complete %>%
+  ggplot(mapping = aes(x = mean_work_travel, y = ..density..)) +
+  geom_histogram(binwidth = 1)
+```
+
+```{r mean-travel-time-pmf-labeled, echo = FALSE}
+county_complete %>%
+  ggplot(mapping = aes(x = mean_work_travel, y = ..density..)) +
+  geom_histogram(binwidth = 1) +
+  labs(
+    title = "Average work travel times across 3143 US counties, 2006-2010",
+    x = "Average work travel time (min)", y = "PMF")
+```
+
+Let's do a comparison to show how one might use a PMF for analysis.
+For example, we could ask if two midwestern states such as Nebraska and Iowa have the same distribution of work travel times, or if there is a meaningful difference between the two.
+First, let's filter the dataset to only include these two states:
+
+```{r filter-ne-ia}
+nebraska_iowa <- county_complete %>%
+  filter(state == "Iowa" | state == "Nebraska")
+```
+
+Now let's plot the frequency histogram:
+
+```{r ia-ne-travel-times-freq-hist, eval = FALSE}
+nebraska_iowa %>%
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, fill = state, color = state),
+    position = "identity", alpha = 0.5, binwidth = 1)
+```
+
+```{r ia-ne-travel-times-freq-hist-labeled, echo = FALSE}
+nebraska_iowa %>%
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, fill = state, color = state),
+    position = "identity", alpha = 0.5, binwidth = 1) +
+  labs(
+    title = "Average work travel times in Iowa and Nebraska",
+    x = "Average work travel time (min)", y = "count")
+```
+
+The `position = "identity"` input overlaps the two distributions (instead of stacking them) and `alpha = 0.5` makes the distributions translucent, so that you can see both despite the overlap.
+On our first glance, it looks like the center of the Nebraska times is lower than the center of the Iowa times, and that both have a long tail on the right-hand side.
+However, if we do a count summary,
+
+```{r ia-ne-count-summary, eval = FALSE}
+nebraska_iowa %>%
+  count(state)
+```
+
+```{r ia-ne-count-summary-table, echo = FALSE}
+if (knitr::is_html_output()) {
+  nebraska_iowa %>%
+    count(state) %>%
+    knitr::kable(format = "html") %>%
+    kableExtra::kable_styling(
+      bootstrap_options = c("striped", "responsive"), full_width = FALSE)
+} else if (knitr::is_latex_output()) {
+  nebraska_iowa %>%
+    count(state) %>%
+    knitr::kable(format = "latex", booktabs = TRUE)
+}
+```
+
+we find that the two states do not have the exact same number of counties, although they are close in this particular example.
+Nonetheless, any comparisons should be done using a PMF in order to account for differences in the sample size.
+We use the following code to create a PMF plot:
+
+```{r ia-ne-travel-times-pmf, eval = FALSE}
+nebraska_iowa %>% 
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, y = ..density..,
+                  fill = state, color = state),
+    position = "identity", alpha = 0.5, binwidth = 1)
+```
+
+```{r ia-ne-travel-times-pmf-labeled, echo = FALSE}
+nebraska_iowa %>% 
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, y = ..density..,
+                  fill = state, color = state),
+    position = "identity", alpha = 0.5, binwidth = 1) +
+  labs(
+    title = "Average work travel times in Iowa and Nebraska",
+    x = "Average work travel time (min)", y = "PMF")
+```
+
+The trend that the center of the travel times in Nebraska is slightly smaller than in Iowa continues to hold even after converting to a PMF.
+
+To provide an example where a PMF is clearly necessary, what if we compare New Jersey with Virginia?
+Virginia has many more counties than New Jersey:
+
+```{r va-ne-count-summary, eval = FALSE}
+county_complete %>%
+  filter(state == "New Jersey" | state == "Virginia") %>%
+  count(state)
+```
+
+```{r va-ne-count-summary-table, echo = FALSE}
+if (knitr::is_html_output()) {
+  county_complete %>%
+    filter(state == "New Jersey" | state == "Virginia") %>%
+    count(state) %>%
+    knitr::kable(format = "html") %>%
+    kableExtra::kable_styling(
+      bootstrap_options = c("striped", "responsive"), full_width = FALSE)
+} else if (knitr::is_latex_output()) {
+  county_complete %>%
+    filter(state == "New Jersey" | state == "Virginia") %>%
+    count(state) %>%
+    knitr::kable(format = "latex", booktabs = TRUE)
+}
+```
+
+As a result, comparing their frequency histograms gives you this:
+
+```{r va-nj-travel-times-freq-hist, echo = FALSE}
+county_complete %>%
+  filter(state == "New Jersey" | state == "Virginia") %>%
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, fill = state, color = state),
+    position = "identity", alpha = 0.5, binwidth = 1) +
+  labs(
+    title = "Average work travel times in Virginia and New Jersey",
+    x = "Average work travel time (min)", y = "count")
+```
+
+The New Jersey distribution is dwarfed by the Virginia distribution and it makes it difficult to make comparisons.
+However, if we instead compare PMFs, we get this:
+
+```{r va-nj-travel-times-pmf, echo = FALSE}
+county_complete %>%
+  filter(state == "New Jersey" | state == "Virginia") %>%
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, y = ..density..,
+                  fill = state, color = state),
+    position = "identity", alpha = 0.5, binwidth = 1) +
+  labs(
+    title = "Average work travel times in Virginia and New Jersey",
+    x = "Average work travel time (min)", y = "PMF")
+```
+
+So, for example, we can now make statements like "a randomly selected resident in New Jersey is twice as likely as a randomly chosen resident in Virginia to have an average work travel time of 30 minutes."
+The PMF allows for an "apples-to-apples" comparison of the average travel times.
+
+## Credits
+
+::: {.license}
+
+This work, *Probability mass functions*, is a derivative of [Allen B. Downey, "Chapter 3 Probability mass functions" in *Think Stats: Exploratory Data Analysis*, 2nd ed. (O'Reilly Media, Sebastopol, CA, 2014)][think-stats-2], used under [CC BY-NC-SA 4.0][cc-4-by-nc-sa].
+*Probability mass functions* is licensed under [CC BY-NC-SA 4.0][cc-4-by-nc-sa] by James Glasbrenner.
+
+:::
+
+[reading-pdf]:   /doc/representing_distributions_pmf.pdf
+[think-stats-2]: http://a.co/grOJGrv 
+[cc-4-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
