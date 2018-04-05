@@ -1,0 +1,294 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS-101: Introduction to Computational and Data Sciences</title>
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/cds101.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/katex/katex.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/highlightjs/default.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/fontawesome/fa-svg-with-js.css">
+    <link href="http://spring18.cds101.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CDS-101: Introduction to Computational and Data Sciences Full Atom Feed" />
+  </head>
+
+  <body>
+    <div class="header-grid-container">
+      <div class="banner-container">
+        <header>
+          <div class="banner">
+            <div class="course-logo">
+              <a href="http://spring18.cds101.com/">
+                <img src="http://spring18.cds101.com/theme/img/course-logo.svg">
+              </a>
+            </div>
+            <div class="university-logo">
+              <a href="https://gmu.edu">
+                <img src="http://spring18.cds101.com/theme/img/university-logo.svg">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-mobile" data-responsive-toggle="main-menu" data-hide-for="large">
+          <button type="button" data-toggle="main-menu">
+            <i class="fas fa-bars"></i><span class="navbar-mobile-title">Menu</span></button>
+        </div>
+
+        <div class="navbar-menu" id="main-menu">
+          <ul class="navbar-menu-list">
+            <li>
+              <a class="navbar-home-item" href="http://spring18.cds101.com/">
+                <i class="fas fa-home" data-fa-transform="grow-8"></i>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/materials.html">Materials</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/assignments.html">Assignments</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/datasets.html">Datasets</a>
+            </li>
+            <li class="navbar-social">
+              <ul class="navbar-social-list">
+                <li>
+                  <a class="navbar-social-item" href="https://github.com/mason-sp18-cds-101-001/cds-101">
+                    <i class="fab fa-github" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="http://masoncds101.slack.com">
+                    <i class="fab fa-slack" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="feeds/all.atom.xml">
+                    <i class="fas fa-rss-square" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content-grid-container">
+      <article class="static-page">
+        <header class="static-page-header">
+          <h1 class="static-page-title">Cumulative distribution&nbsp;functions</h1>
+        </header>
+        <div class="static-page-body">
+          <div class="no-bullets">
+            <ul>
+              <li>
+                <a href="/doc/representing_distributions_cdf.pdf">
+                  <i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>  Download this&nbsp;reading</a>
+              </li>
+            </ul>
+          </div>
+          <pre class="r"><code>library(tidyverse)
+county_complete &lt;- read_rds(
+  path = url(&quot;http://spring18.cds101.com/files/datasets/county_complete.rds&quot;))</code></pre>
+          <h2 id="the-limits-of-probability-mass-functions">The limits of probability mass&nbsp;functions</h2>
+          <p>Probability mass functions (PMFs) work well if the number of unique values is small. But as the number of unique values increases, the probability associated with each value gets smaller and the effect of random noise&nbsp;increases.</p>
+          <p>Let’s recall that, in the previous reading, we plotted and compared PMFs of the average work travel time in Virginia and New Jersey, which resulted in this&nbsp;figure:</p>
+          <p>
+            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-va-nj-travel-times-pmf-1.svg" title="plot of chunk va-nj-travel-times-pmf" alt="plot of chunk va-nj-travel-times-pmf" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <p>What happens if we choose <code>binwidth = 0.1</code> for plotting the <code>mean_work_travel</code> distribution? The values in <code>mean_work_travel</code> are reported to the first decimal place, so <code>binwidth = 0.1</code> does not “smooth
+            out” the data. This increases the number of distinct values in <code>mean_work_travel</code> from 41 to 304. The comparison between the Virginia and New Jersey PMFs will then look like&nbsp;this:</p>
+          <p>
+            <img src="/img/Materials/representing_distributions_cdf-mean-work-travel-pmf-no-rounding-1.svg" title="plot of chunk mean-work-travel-pmf-no-rounding" alt="plot of chunk mean-work-travel-pmf-no-rounding" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <p>This visualization has a lot of spikes of similar heights, which makes this difficult to interpret and limits its usefulness. Also, it can be hard to see overall patterns; for example, what is the approximate difference in means between these
+            two&nbsp;distributions?</p>
+          <p>This illustrates the tradeoff when using histograms and PMFs for visualizing single variables. If we smooth things out by using larger bin sizes, then we can lose information that may be useful. On the other hand, using small bin sizes creates
+            plots like the one above, which is of limited (if any)&nbsp;utility.</p>
+          <p>An alternative that avoids these problems is the cumulative distribution function (<span class="caps">CDF</span>), which we turn to describing next. But before we discuss CDFs, we first have to understand the concept of&nbsp;percentiles.</p>
+          <h2 id="percentiles">Percentiles</h2>
+          <p>If you have taken a standardized test, you probably got your results in the form of a raw score and a <strong>percentile rank</strong>. In this context, the percentile rank is the fraction of people who scored lower than you (or the same). So
+            if you are “in the 90th percentile”, you did as well as or better than 90% of the people who took the&nbsp;exam.</p>
+          <p>As an example, say that you and 4 other people took a test and received the following&nbsp;scores:</p>
+          <pre><code>55  66  77  88  99</code></pre>
+          <p>If you received the score of 88, then what is your percentile rank? We can calculate it as&nbsp;follows:</p>
+          <pre class="r"><code>test_scores &lt;- tribble(
+  ~score,
+  55,
+  66,
+  77,
+  88,
+  99)
+  
+number_of_tests &lt;- test_scores %&gt;%
+  count() %&gt;%
+  pull(n)
+  
+number_of_lower_scores &lt;- test_scores %&gt;%
+  filter(score &lt;= 88) %&gt;%
+  count() %&gt;%
+  pull(n)
+  
+percentile_rank &lt;- 100.0 * number_of_lower_scores / number_of_tests</code></pre>
+          <p>From this, we find that the percentile rank for a score of 88 is 80. Mathematically, the calculation is <span class="math inline">\(100 \times \dfrac{4}{5} = 80\)</span>.</p>
+          <p>As you can see, if you are given a value, it is easy to find its percentile rank; going the other way is slightly harder. One way to do this is to sort the scores and find the row number that corresponds to a percentile rank. To find the row
+            number, divide the total number of scores by 100, multiply that number by the desired percentile rank, and then <em>round up</em> to the nearest integer value. The rounding up operation can be handled via the <code>ceiling()</code> function.
+            So, for our example, the value with percentile rank 55&nbsp;is:</p>
+          <pre class="r"><code>percentile_rank_row_number &lt;- ceiling(55 * number_of_tests / 100)
+
+test_scores %&gt;%
+  arrange(score) %&gt;%
+  slice(percentile_rank_row_number)</code></pre>
+          <p>The result of this calculation is called a <strong>percentile</strong>. So this means that, in the distribution of exam scores, the 55th percentile corresponds to a score of&nbsp;77.</p>
+          <p>In R, there is a function called <code>quantile()</code> that can do the above calculation automatically, although you need to take care with the inputs. Let’s first show what happens when we aren’t careful. We might think that we can calculate
+            the 55th percentile by&nbsp;running:</p>
+          <pre class="r"><code>test_scores %&gt;%
+  pull(score) %&gt;%
+  quantile(probs = c(0.55))</code></pre>
+          <p>We get a score of 79.2, which isn’t in our dataset. This happens because <code>quantile()</code> interpolates between the scores by default. Sometimes you will want this behavior, other times you will not. When the dataset is this small, it
+            doesn’t make as much sense to permit interpolation, as it can be based on rather aggressive assumptions about what intermediate scores might look like. To tell <code>quantile()</code> to compute scores in the same manner as we did above, add
+            the input <code>type = 1</code>:</p>
+          <pre class="r"><code>test_scores %&gt;%
+  pull(score) %&gt;%
+  quantile(probs = c(0.55), type = 1)</code></pre>
+          <p>This, as expected, agrees with the manual&nbsp;calculation.</p>
+          <p>It is worth emphasizing that the difference between “percentile” and “percentile rank” can be confusing, and people do not always use the terms precisely. To summarize, if we want to know the percentage of people obtained scores equal to or
+            lower than ours, then we are computing a percentile rank. If we start with a percentile, then we are computing the score in the distribution that corresponds with&nbsp;it.</p>
+          <h2 id="cdfs">CDFs</h2>
+          <p>Now that we understand percentiles and percentile ranks, we are ready to tackle the <strong>cumulative distribution function</strong> (<span class="caps">CDF</span>). The <span class="caps">CDF</span> is the function that maps from a value to
+            its percentile rank. To find the <span class="caps">CDF</span> for any particular value in our distribution, we compute the fraction of values in the distribution less than or equal to our selected value. Computing this is similar to how we
+            calculated the percentile rank, except that the result is a probability in the range 0–1 rather than a percentile rank in the range 0–100. For our test scores example, we can manually compute the <span class="caps">CDF</span> in the following&nbsp;way:</p>
+          <pre class="r"><code>test_scores_cdf &lt;- test_scores %&gt;%
+  arrange(score) %&gt;%
+  mutate(cdf = row_number() / n())</code></pre>
+          <p>The visualization of the <span class="caps">CDF</span> looks&nbsp;like:</p>
+          <p>
+            <img src="/img/Materials/representing_distributions_cdf-test-scores-cdf-plot-1.svg" title="plot of chunk test-scores-cdf-plot" alt="plot of chunk test-scores-cdf-plot" width="60%" style="display: block; margin: auto;" />
+          </p>
+          <p>As you can see, the <span class="caps">CDF</span> of a sample looks like a sequence of steps. Appropriately enough, this is called a step function, and the <span class="caps">CDF</span> of <em>any</em> sample is a step&nbsp;function.</p>
+          <p>Also note that we can evaluate the <span class="caps">CDF</span> for any value, not just values that appear in the sample. If we select a value that is less than the smallest value in the sample, then the <span class="caps">CDF</span> is 0.
+            If we select a value that is greater than the largest value, then the <span class="caps">CDF</span> is&nbsp;1.</p>
+          <h2 id="representing-cdfs">Representing&nbsp;CDFs</h2>
+          <p>While it’s good to know how to manually compute the <span class="caps">CDF</span>, R provides the <code>ecdf()</code> function, which constructs the <span class="caps">CDF</span> of a sample automatically. Let’s return to the average work travel
+            times dataset we used when discussing the <span class="caps">PMF</span> and compute the <span class="caps">CDF</span> of the full distribution (no grouping by states). We do this as&nbsp;follows:</p>
+          <pre class="r"><code>mean_work_travel_ecdf &lt;- county_complete %&gt;%
+  pull(mean_work_travel) %&gt;%
+  ecdf()</code></pre>
+          <p>Now we can input an arbitrary travel time and find the percentile. For example, the percentile for an average work travel time of 30 minutes&nbsp;is:</p>
+          <pre class="r"><code>mean_work_travel_ecdf(30)</code></pre>
+          <pre><code>## [1] 0.9045498</code></pre>
+          <p>Thus, 30 minutes corresponds to the 90th&nbsp;percentile.</p>
+          <p>We can also use this to create a plot. To do this, we need to generate a sequence of travel times and calculate the <span class="caps">CDF</span> for each. A recommended way to do this is to find the minimum and maximum values of the distribution
+            using <code>min()</code> and <code>max()</code>, and then use <code>seq()</code> to generate a long list of values that sit inbetween the minimum and maximum. Let’s show a couple examples so it’s clear what we’re doing. First we find the minimum
+            and&nbsp;maximum:</p>
+          <pre class="r"><code>mean_work_travel_min &lt;- county_complete %&gt;%
+  pull(mean_work_travel) %&gt;%
+  min()
+
+mean_work_travel_max &lt;- county_complete %&gt;%
+  pull(mean_work_travel) %&gt;%
+  max()</code></pre>
+          <p>By themselves, these correspond to two points along the horizontal axis, like&nbsp;so</p>
+          <p>
+            <img src="/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-plot-1.svg" title="plot of chunk min-max-mean-work-travel-plot" alt="plot of chunk min-max-mean-work-travel-plot" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <p>To generate horizontal values that increase by 1 between the minimum and maximum, we use <code>seq()</code> as&nbsp;follows:</p>
+          <pre class="r"><code>mean_work_travel_range1 &lt;- seq(
+  from = mean_work_travel_min, to = mean_work_travel_max, by = 1)</code></pre>
+          <p>Visually, this would look&nbsp;like</p>
+          <p>
+            <img src="/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-short-range-1.svg" title="plot of chunk min-max-mean-work-travel-short-range" alt="plot of chunk min-max-mean-work-travel-short-range" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <p>Generally, it’s better to use a smaller incremental value inside <code>seq()</code> in order to make smoother figures. Let’s use <code>by = 0.1</code>:</p>
+          <pre class="r"><code>mean_work_travel_range2 &lt;- seq(
+  from = mean_work_travel_min, to = mean_work_travel_max, by = 0.1)</code></pre>
+          <p>Next, we want to feed all these horizontal axis values into <code>mean_work_travel_ecdf()</code>, which we do as&nbsp;follows:</p>
+          <pre class="r"><code>mean_work_travel_computed_cdf &lt;- mean_work_travel_ecdf(mean_work_travel_range2)</code></pre>
+          <p>To create a plot, we combine <code>mean_work_travel_range2</code> and <code>mean_work_travel_computed_cdf</code> into a <code>tibble</code>:</p>
+          <pre class="r"><code>mean_work_travel_cdf_tibble &lt;- data_frame(
+  mean_work_travel = mean_work_travel_range2, cdf = mean_work_travel_computed_cdf)</code></pre>
+          <p>Now we can visualize&nbsp;it:</p>
+          <pre class="r"><code>mean_work_travel_cdf_tibble %&gt;%
+  ggplot() +
+  geom_line(mapping = aes(x = mean_work_travel, y = cdf))</code></pre>
+          <p>
+            <img src="/img/Materials/representing_distributions_cdf-mean-work-travel-cdf-visualization-labeled-1.svg" title="plot of chunk mean-work-travel-cdf-visualization-labeled" alt="plot of chunk mean-work-travel-cdf-visualization-labeled" width="60%"
+              style="display: block; margin: auto;" />
+          </p>
+          <p>Now we can easily specify an average work travel time percentile and read the associated time from the plot and&nbsp;vice-versa.</p>
+          <p>It takes some time to get used to CDFs, but over time it should become clear that they show more information, more clearly, than&nbsp;PMFs.</p>
+          <h2 id="comparing-cdfs">Comparing&nbsp;CDFs</h2>
+          <p>CDFs are especially useful for comparing distributions. Let’s revisit the comparison we made between the average work travel times in Nebraska and Iowa. Here is the full code that converts those distributions into&nbsp;CDFs:</p>
+          <pre class="r"><code>ia_travel_times_ecdf &lt;- county_complete %&gt;%
+  filter(state == &quot;Iowa&quot;) %&gt;%
+  pull(mean_work_travel) %&gt;%
+  ecdf
+
+ne_travel_times_ecdf &lt;- county_complete %&gt;%
+  filter(state == &quot;Nebraska&quot;) %&gt;%
+  pull(mean_work_travel) %&gt;%
+  ecdf
+
+mean_work_travel_range &lt;- seq(mean_work_travel_min, mean_work_travel_max, 0.1)
+
+ia_ne_mean_work_travel_cdfs &lt;- data_frame(
+  mean_work_travel = mean_work_travel_range,
+  cdf_iowa = ia_travel_times_ecdf(mean_work_travel),
+  cdf_nebraska = ne_travel_times_ecdf(mean_work_travel)) %&gt;%
+  gather(key = state, value = CDF, cdf_iowa:cdf_nebraska) %&gt;%
+  mutate(state = recode(state, cdf_iowa = &quot;Iowa&quot;, cdf_nebraska = &quot;Nebraska&quot;))</code></pre>
+          <p>and then plots them against each&nbsp;other:</p>
+          <pre class="r"><code>ggplot(data = ia_ne_mean_work_travel_cdfs,
+       mapping = aes(x = mean_work_travel, y = CDF)) +
+  geom_line(mapping = aes(color = state))</code></pre>
+          <p>
+            <img src="/img/Materials/representing_distributions_cdf-compare-cdf-of-ne-ia-travel-times-plot-labeled-1.svg" title="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" alt="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled"
+              width="60%" style="display: block; margin: auto;" />
+          </p>
+          <p>This visualization makes the shapes of the distributions and the relative differences between them much clearer. We see that Nebraska has shorter average work travel times for most of the distribution, at least until you reach an average time
+            of 25 minutes, after which the Nebraska and Iowa distributions become similar to one&nbsp;another.</p>
+          <h2 id="credits">Credits</h2>
+          <div class="license">
+            <p>This work, <em>Cumulative distribution functions</em>, is a derivative of
+              <a href="http://a.co/grOJGrv">Allen B. Downey, “Chapter 4 Cumulative distribution functions” in <em>Think Stats: Exploratory Data Analysis</em>, 2nd ed. (O’Reilly Media, Sebastopol, <span class="caps">CA</span>, 2014)</a>, used under
+              <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><span class="caps">CC</span> <span class="caps">BY</span>-<span class="caps">NC</span>-<span class="caps">SA</span> 4.0</a>. <em>Cumulative distribution functions</em> is licensed under
+              <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><span class="caps">CC</span> <span class="caps">BY</span>-<span class="caps">NC</span>-<span class="caps">SA</span> 4.0</a> by James&nbsp;Glasbrenner.</p>
+          </div>
+
+        </div>
+      </article>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-grid-container">
+        Except where otherwise noted, site materials are created by
+        <a href="https://cos.gmu.edu/cds/faculty-profile-james-glasbrenner/">
+          James K. Glasbrenner
+        </a>
+        and licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </div>
+    </footer>
+    <script src="http://spring18.cds101.com/theme/js/cds101.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/highlightjs/highlight.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/katex.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/wookmark/wookmark.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/fontawesome/fontawesome-all.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/vendorInit.js"></script>
+  </body>
+
+</html>

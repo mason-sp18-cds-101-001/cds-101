@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS-101: Introduction to Computational and Data Sciences</title>
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/cds101.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/katex/katex.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/highlightjs/default.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/fontawesome/fa-svg-with-js.css">
+    <link href="http://spring18.cds101.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CDS-101: Introduction to Computational and Data Sciences Full Atom Feed" />
+  </head>
+
+  <body>
+    <div class="header-grid-container">
+      <div class="banner-container">
+        <header>
+          <div class="banner">
+            <div class="course-logo">
+              <a href="http://spring18.cds101.com/">
+                <img src="http://spring18.cds101.com/theme/img/course-logo.svg">
+              </a>
+            </div>
+            <div class="university-logo">
+              <a href="https://gmu.edu">
+                <img src="http://spring18.cds101.com/theme/img/university-logo.svg">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-mobile" data-responsive-toggle="main-menu" data-hide-for="large">
+          <button type="button" data-toggle="main-menu">
+            <i class="fas fa-bars"></i><span class="navbar-mobile-title">Menu</span></button>
+        </div>
+
+        <div class="navbar-menu" id="main-menu">
+          <ul class="navbar-menu-list">
+            <li>
+              <a class="navbar-home-item" href="http://spring18.cds101.com/">
+                <i class="fas fa-home" data-fa-transform="grow-8"></i>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/materials.html">Materials</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/assignments.html">Assignments</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/datasets.html">Datasets</a>
+            </li>
+            <li class="navbar-social">
+              <ul class="navbar-social-list">
+                <li>
+                  <a class="navbar-social-item" href="https://github.com/mason-sp18-cds-101-001/cds-101">
+                    <i class="fab fa-github" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="http://masoncds101.slack.com">
+                    <i class="fab fa-slack" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="feeds/all.atom.xml">
+                    <i class="fas fa-rss-square" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content-grid-container">
+      <article class="static-page">
+        <header class="static-page-header">
+          <h1 class="static-page-title">Probability mass&nbsp;functions</h1>
+        </header>
+        <div class="static-page-body">
+          <div class="no-bullets">
+            <ul>
+              <li>
+                <a href="/doc/representing_distributions_pmf.pdf">
+                  <i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>  Download this&nbsp;reading</a>
+              </li>
+            </ul>
+          </div>
+          <pre class="r"><code>library(tidyverse)
+county_complete &lt;- read_rds(
+  path = url(&quot;http://spring18.cds101.com/files/datasets/county_complete.rds&quot;))</code></pre>
+          <h2 id="statistical-distributions">Statistical&nbsp;distributions</h2>
+          <p>During the first part of the course, we learned how to use visualizations to explore a dataset. Now we will extend this approach using concepts from probability and statistics to build a scientific foundation for interpreting data distributions.
+            We start with discussing univariate (single variable) distributions, which we’ve previously visualized as frequency histograms (by default, <code>geom_histogram()</code> sorts data into different bins and tells you how many end up in each
+            one). Frequency histograms are useful for examining the particulars of a single variable, but have limited utility when directly comparing distributions that contain different numbers of observations. Here we introduce the normalized version
+            of the frequency histogram, the <strong>probability mass function</strong> (<span class="caps">PMF</span>).</p>
+          <h2 id="example-dataset">Example&nbsp;dataset</h2>
+          <p>We use an example dataset of the average time it takes for people to commute to work across 3143 counties in the United States (collected between 2006-2010) to help illustrate the meaning and uses of the probability mass function. The frequency
+            histogram for these times can be plotted using the following code&nbsp;snippet:</p>
+          <pre class="r"><code>county_complete %&gt;%
+  ggplot(mapping = aes(x = mean_work_travel)) +
+  geom_histogram(binwidth = 1)</code></pre>
+          <p>
+            <img src="/img/Materials/representing_distributions_pmf-mean-travel-time-freq-hist-labeled-1.svg" title="plot of chunk mean-travel-time-freq-hist-labeled" alt="plot of chunk mean-travel-time-freq-hist-labeled" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <h2 id="pmfs">PMFs</h2>
+          <p>The <strong>probability mass function</strong> (<span class="caps">PMF</span>) represents a distribution by sorting the data into bins (much like the frequency histogram) and then associates a probability with each bin in the distribution. A
+            <strong>probability</strong> is a frequency expressed as a fraction of the sample size <em>n</em>. Therefore we can directly convert a frequency histogram to a <span class="caps">PMF</span> by dividing the count in each bin by the sample size
+            <em>n</em>. This process is called <strong>normalization</strong>.</p>
+          <p>As an example, consider the following short&nbsp;sample,</p>
+          <pre><code>1  2  2  3  5</code></pre>
+          <p>If we choose a binwidth of 1, then we get a frequency histogram that looks like&nbsp;this:</p>
+          <p>
+            <img src="/img/Materials/representing_distributions_pmf-simple-freq-hist-1.svg" title="plot of chunk simple-freq-hist" alt="plot of chunk simple-freq-hist" width="60%" style="display: block; margin: auto;" />
+          </p>
+          <p>There are 5 observations in this sample. So, we can convert to a <span class="caps">PMF</span> by dividing the count within each bin by 5, getting a histogram that looks like&nbsp;this:</p>
+          <p>
+            <img src="/img/Materials/representing_distributions_pmf-simple-pmf-hist-1.svg" title="plot of chunk simple-pmf-hist" alt="plot of chunk simple-pmf-hist" width="60%" style="display: block; margin: auto;" />
+          </p>
+          <p>The relative shape stays the same, but compare the values along the vertical axis between the two figures. You’ll find that they are no longer integers and are instead probabilities. The normalization procedure (dividing by 5) guarantees that
+            adding together the probabilities of all bins will equal 1. For this example, we find that the probability of drawing the number 1 is 0.2, drawing 2 is 0.4, drawing 3 is 0.2, drawing 4 is 0, and drawing 5 is 0.2. That is the biggest difference
+            between a frequency histogram and a <span class="caps">PMF</span>, the frequency histogram maps from values to integer counters, while the <span class="caps">PMF</span> maps from values to fractional&nbsp;probabilities.</p>
+          <h2 id="plotting-pmfs">Plotting&nbsp;PMFs</h2>
+          <p>The syntax for plotting a <span class="caps">PMF</span> using <code>ggplot2</code> is nearly identical to what you would use to create a frequency histogram. The one modification is that you need to include <code>y = ..density..</code> inside
+            <code>aes()</code>. As a simple example, let’s take the full distribution of the average work travel times from earlier and plot it as a <span class="caps">PMF</span>:</p>
+          <pre class="r"><code>county_complete %&gt;%
+  ggplot(mapping = aes(x = mean_work_travel, y = ..density..)) +
+  geom_histogram(binwidth = 1)</code></pre>
+          <p>
+            <img src="/img/Materials/representing_distributions_pmf-mean-travel-time-pmf-labeled-1.svg" title="plot of chunk mean-travel-time-pmf-labeled" alt="plot of chunk mean-travel-time-pmf-labeled" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <p>Let’s do a comparison to show how one might use a <span class="caps">PMF</span> for analysis. For example, we could ask if two midwestern states such as Nebraska and Iowa have the same distribution of work travel times, or if there is a meaningful
+            difference between the two. First, let’s filter the dataset to only include these two&nbsp;states:</p>
+          <pre class="r"><code>nebraska_iowa &lt;- county_complete %&gt;%
+  filter(state == &quot;Iowa&quot; | state == &quot;Nebraska&quot;)</code></pre>
+          <p>Now let’s plot the frequency&nbsp;histogram:</p>
+          <pre class="r"><code>nebraska_iowa %&gt;%
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, fill = state, color = state),
+    position = &quot;identity&quot;, alpha = 0.5, binwidth = 1)</code></pre>
+          <p>
+            <img src="/img/Materials/representing_distributions_pmf-ia-ne-travel-times-freq-hist-labeled-1.svg" title="plot of chunk ia-ne-travel-times-freq-hist-labeled" alt="plot of chunk ia-ne-travel-times-freq-hist-labeled" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <p>The <code>position = &quot;identity&quot;</code> input overlaps the two distributions (instead of stacking them) and <code>alpha = 0.5</code> makes the distributions translucent, so that you can see both despite the overlap. On our first glance,
+            it looks like the center of the Nebraska times is lower than the center of the Iowa times, and that both have a long tail on the right-hand side. However, if we do a count&nbsp;summary,</p>
+          <pre class="r"><code>nebraska_iowa %&gt;%
+  count(state)</code></pre>
+          <p>we find that the two states do not have the exact same number of counties, although they are close in this particular example. Nonetheless, any comparisons should be done using a <span class="caps">PMF</span> in order to account for differences
+            in the sample size. We use the following code to create a <span class="caps">PMF</span>&nbsp;plot:</p>
+          <pre class="r"><code>nebraska_iowa %&gt;% 
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, y = ..density..,
+                  fill = state, color = state),
+    position = &quot;identity&quot;, alpha = 0.5, binwidth = 1)</code></pre>
+          <p>
+            <img src="/img/Materials/representing_distributions_pmf-ia-ne-travel-times-pmf-labeled-1.svg" title="plot of chunk ia-ne-travel-times-pmf-labeled" alt="plot of chunk ia-ne-travel-times-pmf-labeled" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <p>The trend that the center of the travel times in Nebraska is slightly smaller than in Iowa continues to hold even after converting to a <span class="caps">PMF</span>.</p>
+          <p>To provide an example where a <span class="caps">PMF</span> is clearly necessary, what if we compare New Jersey with Virginia? Virginia has many more counties than New&nbsp;Jersey:</p>
+          <pre class="r"><code>county_complete %&gt;%
+  filter(state == &quot;New Jersey&quot; | state == &quot;Virginia&quot;) %&gt;%
+  count(state)</code></pre>
+          <p>As a result, comparing their frequency histograms gives you&nbsp;this:</p>
+          <p>
+            <img src="/img/Materials/representing_distributions_pmf-va-nj-travel-times-freq-hist-1.svg" title="plot of chunk va-nj-travel-times-freq-hist" alt="plot of chunk va-nj-travel-times-freq-hist" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <p>The New Jersey distribution is dwarfed by the Virginia distribution and it makes it difficult to make comparisons. However, if we instead compare PMFs, we get&nbsp;this:</p>
+          <p>
+            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-va-nj-travel-times-pmf-1.svg" title="plot of chunk va-nj-travel-times-pmf" alt="plot of chunk va-nj-travel-times-pmf" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <p>So, for example, we can now make statements like “a randomly selected resident in New Jersey is twice as likely as a randomly chosen resident in Virginia to have an average work travel time of 30 minutes.” The <span class="caps">PMF</span> allows
+            for an “apples-to-apples” comparison of the average travel&nbsp;times.</p>
+          <h2 id="credits">Credits</h2>
+          <div class="license">
+            <p>This work, <em>Probability mass functions</em>, is a derivative of
+              <a href="http://a.co/grOJGrv">Allen B. Downey, “Chapter 3 Probability mass functions” in <em>Think Stats: Exploratory Data Analysis</em>, 2nd ed. (O’Reilly Media, Sebastopol, <span class="caps">CA</span>, 2014)</a>, used under
+              <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><span class="caps">CC</span> <span class="caps">BY</span>-<span class="caps">NC</span>-<span class="caps">SA</span> 4.0</a>. <em>Probability mass functions</em> is licensed under
+              <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><span class="caps">CC</span> <span class="caps">BY</span>-<span class="caps">NC</span>-<span class="caps">SA</span> 4.0</a> by James&nbsp;Glasbrenner.</p>
+          </div>
+
+        </div>
+      </article>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-grid-container">
+        Except where otherwise noted, site materials are created by
+        <a href="https://cos.gmu.edu/cds/faculty-profile-james-glasbrenner/">
+          James K. Glasbrenner
+        </a>
+        and licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </div>
+    </footer>
+    <script src="http://spring18.cds101.com/theme/js/cds101.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/highlightjs/highlight.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/katex.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/wookmark/wookmark.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/fontawesome/fontawesome-all.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/vendorInit.js"></script>
+  </body>
+
+</html>
