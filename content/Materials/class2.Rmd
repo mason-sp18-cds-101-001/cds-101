@@ -1,4 +1,4 @@
-Title: Class 2
+Title: Class 2: The data scientist's toolbox I
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-25 13:30

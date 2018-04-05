@@ -1,0 +1,24 @@
+Title: Tidy gradebook
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-02-27 17:00
+Tags: activity
+Slug: tidy-gradebook-activity
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-16"></i>&nbsp;'
+```
+
+Interactive demonstration showing how to apply the [Tidy Data principles][tidy-data-principles] to a typical classroom gradebook.
+
+::: {.no-bullets}
+
+*   [`r icon_github` &nbsp; [**Tidy Gradebook** repo]{.card-downloads-format}][github-classroom-repo]
+
+:::
+
+[tidy-data-principles]:  http://r4ds.had.co.nz/tidy-data.html
+[github-classroom-repo]: https://masoncds101.slack.com/archives/C8WQJ0GTB/p1519755978000359
+
