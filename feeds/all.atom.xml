@@ -1799,7 +1799,7 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;tr class="odd"&gt;
 &lt;td style="text-align: center;"&gt;&lt;span class="monospace"&gt;county-complete&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;&lt;a href="/files/datasets/county_complete.rds"&gt;rds&lt;/a&gt;&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;Dataset of selected variables for 3143 counties taken from the United States Census &lt;br&gt; Dataset for &lt;a href="/Materials/representing-distributions-pmf/"&gt;&lt;span class="caps"&gt;PMF&lt;/span&gt;&lt;/a&gt; and &lt;a href="/Materials/representing-distributions-cdf/"&gt;&lt;span class="caps"&gt;CDF&lt;/span&gt;&lt;/a&gt; writeups&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;Dataset of selected variables for 3143 counties taken from the United States Census &lt;br&gt; Dataset for &lt;a href="/materials/representing-distributions-pmf/"&gt;&lt;span class="caps"&gt;PMF&lt;/span&gt;&lt;/a&gt; and &lt;a href="/materials/representing-distributions-cdf/"&gt;&lt;span class="caps"&gt;CDF&lt;/span&gt;&lt;/a&gt; writeups&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="even"&gt;
 &lt;td style="text-align: center;"&gt;&lt;span class="monospace"&gt;yawn&lt;/span&gt;&lt;/td&gt;
