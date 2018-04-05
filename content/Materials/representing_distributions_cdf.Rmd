@@ -12,7 +12,7 @@ Show_link: true
 icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
 knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.width = 6, fig.alt = "",
                       fig.asp = 0.618, dpi = 120, dev = "svg",
-                      out.width = "60%", fig.align = "center", cache = FALSE)
+                      out.width = "60%", fig.align = "center", cache = TRUE)
 library(tidyverse)
 county_complete <- read_rds(path = "../files/datasets/county_complete.rds")
 ```
