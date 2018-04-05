@@ -47,10 +47,10 @@ Week 6              11      Feb-27        [Data wrangling IV]                   
 
                     12      Mar-01        Midterm project brainstorming session                                                   [Reading 8]
 
-Week 7              13      Mar-06        [Exploratory data analysis I]
+Week 7              13      Mar-06        Exploratory data analysis I
                                           [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-13-github]
 
-                    14      Mar-08        [Exploratory data analysis II] 
+                    14      Mar-08        Exploratory data analysis II
                                           [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-13-github]
 
                             Mar-09                                                                                                [Homework 2]
@@ -66,7 +66,7 @@ Week 8              15      Mar-20        Midterm project group conferences
 
 Week 9              17      Mar-27        Midterm project presentations I/Web scraping group activity                             Midterm Project
 
-                    18      Mar-29        [Midterm project presentations II/Web scraping group activity]
+                    18      Mar-29        Midterm project presentations II/Web scraping group activity
                                           [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-18-github]
 
 Week 10             19      Apr-03        [Introduction to Web Scraping II/Principles of Data Collection]
@@ -125,10 +125,7 @@ Week 14             27      May-01        Statistical modeling III
 [Data wrangling II]:                                             /materials/class-9/
 [Data wrangling III]:                                            /materials/class-10/
 [Data wrangling IV]:                                             /materials/class-11/
-[Exploratory data analysis I]:                                   /materials/class-13/
-[Exploratory data analysis II]:                                  /materials/class-14/
 [Introduction to Web Scraping I]:                                /materials/class-16/
-[Midterm project presentations II/Web scraping group activity]:  /materials/class-18/
 [Introduction to Web Scraping II/Principles of Data Collection]: /materials/class-19/
 [Statistical distributions I]:                                   /materials/class-20/
 [cl-8-github]:                                                   https://classroom.github.com/a/xku1H3sP
