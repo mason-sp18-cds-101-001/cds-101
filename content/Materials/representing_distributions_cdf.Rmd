@@ -1,0 +1,414 @@
+Title: Cumulative distribution functions
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-04-05 15:00
+Tags: reading-nograyout
+Slug: representing-distributions-cdf
+Summary: Reading about how to use R to compute, visualize, and apply percentiles of a dataset.
+Show_summary: true
+Show_link: true
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.width = 6, fig.alt = "",
+                      fig.asp = 0.618, dpi = 120, dev = "svg",
+                      out.width = "60%", fig.align = "center", cache = FALSE)
+library(tidyverse)
+county_complete <- read_rds(path = "../files/datasets/county_complete.rds")
+```
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` Download this reading][reading-pdf]
+
+:::
+
+```r
+library(tidyverse)
+county_complete <- read_rds(
+  path = url("http://spring18.cds101.com/files/datasets/county_complete.rds"))
+```
+
+## The limits of probability mass functions
+
+Probability mass functions (PMFs) work well if the number of unique values is small.
+But as the number of unique values increases, the probability associated with each value gets smaller and the effect of random noise increases.
+
+Let's recall that, in the previous reading, we plotted and compared PMFs of the average work travel time in Virginia and New Jersey, which resulted in this figure:
+
+```{r va-nj-travel-times-pmf, echo = FALSE}
+county_complete %>%
+  filter(state == "New Jersey" | state == "Virginia") %>%
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, y = ..density.., fill = state,
+                  color = state),
+    position = "identity", alpha = 0.5, binwidth = 1) +
+  labs(
+    title = "Average work travel times in Virginia and New Jersey",
+    x = "Average work travel time (min)", y = "PMF")
+```
+
+What happens if we choose `binwidth = 0.1` for plotting the `mean_work_travel` distribution?
+The values in `mean_work_travel` are reported to the first decimal place, so `binwidth = 0.1` does not "smooth out" the data.
+This increases the number of distinct values in `mean_work_travel` from 41 to 304.
+The comparison between the Virginia and New Jersey PMFs will then look like this:
+
+```{r mean-work-travel-pmf-no-rounding, echo = FALSE}
+county_complete %>%
+  filter(state == "Virginia" | state == "New Jersey") %>%
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, y = ..density.., fill = state,
+                  color = state),
+    binwidth = 0.1, position = "identity", alpha = 0.5) +
+  labs(
+    title = "Average work travel times in Virginia and New Jersey",
+    x = "Average work travel time (min)", y = "PMF")
+```
+
+This visualization has a lot of spikes of similar heights, which makes this difficult to interpret and limits its usefulness.
+Also, it can be hard to see overall patterns; for example, what is the approximate difference in means between these two distributions?
+
+This illustrates the tradeoff when using histograms and PMFs for visualizing single variables.
+If we smooth things out by using larger bin sizes, then we can lose information that may be useful.
+On the other hand, using small bin sizes creates plots like the one above, which is of limited (if any) utility.
+
+An alternative that avoids these problems is the cumulative distribution function (CDF), which we turn to describing next.
+But before we discuss CDFs, we first have to understand the concept of percentiles.
+
+## Percentiles
+
+If you have taken a standardized test, you probably got your results in the form of a raw score and a **percentile rank**.
+In this context, the percentile rank is the fraction of people who scored lower than you (or the same).
+So if you are "in the 90th percentile", you did as well as or better than 90% of the people who took the exam.
+
+As an example, say that you and 4 other people took a test and received the following scores:
+
+    55  66  77  88  99
+    
+If you received the score of 88, then what is your percentile rank?
+We can calculate it as follows:
+
+```{r percentile-rank-simple-calc}
+test_scores <- tribble(
+  ~score,
+  55,
+  66,
+  77,
+  88,
+  99)
+  
+number_of_tests <- test_scores %>%
+  count() %>%
+  pull(n)
+  
+number_of_lower_scores <- test_scores %>%
+  filter(score <= 88) %>%
+  count() %>%
+  pull(n)
+  
+percentile_rank <- 100.0 * number_of_lower_scores / number_of_tests
+```
+
+From this, we find that the percentile rank for a score of 88 is `r percentile_rank`.
+Mathematically, the calculation is \\(100 \times \dfrac{4}{5} = 80\\).
+
+As you can see, if you are given a value, it is easy to find its percentile rank; going the other way is slightly harder.
+One way to do this is to sort the scores and find the row number that corresponds to a percentile rank.
+To find the row number, divide the total number of scores by 100, multiply that number by the desired percentile rank, and then *round up* to the nearest integer value.
+The rounding up operation can be handled via the `ceiling()` function.
+So, for our example, the value with percentile rank 55 is:
+
+```{r percentile-simple-calc, eval = FALSE}
+percentile_rank_row_number <- ceiling(55 * number_of_tests / 100)
+
+test_scores %>%
+  arrange(score) %>%
+  slice(percentile_rank_row_number)
+```
+
+```{r percentile-simple-calc-table, echo = FALSE}
+percentile_rank_row_number <- ceiling(55 * number_of_tests / 100)
+if (knitr::is_html_output()) {
+  test_scores %>%
+    arrange(score) %>%
+    slice(percentile_rank_row_number) %>%
+    knitr::kable(format = "html") %>%
+    kableExtra::kable_styling(
+      bootstrap_options = c("striped", "responsive"), full_width = FALSE)
+} else if (knitr::is_latex_output()) {
+  test_scores %>%
+    arrange(score) %>%
+    slice(percentile_rank_row_number) %>%
+    knitr::kable(format = "latex", booktabs = TRUE)
+}
+
+```
+
+The result of this calculation is called a **percentile**.
+So this means that, in the distribution of exam scores, the 55th percentile corresponds to a score of 77.
+
+In R, there is a function called `quantile()` that can do the above calculation automatically, although you need to take care with the inputs.
+Let's first show what happens when we aren't careful.
+We might think that we can calculate the 55th percentile by running:
+
+```{r quantile-naive, eval = FALSE}
+test_scores %>%
+  pull(score) %>%
+  quantile(probs = c(0.55))
+```
+
+```{r quantile-naive-table, echo = FALSE}
+if (knitr::is_html_output()) {
+  test_scores %>%
+    pull(score) %>%
+    quantile(probs = c(0.55)) %>%
+    knitr::kable(format = "html") %>%
+    kableExtra::kable_styling(
+      bootstrap_options = c("striped", "responsive"), full_width = FALSE)
+} else if (knitr::is_latex_output()) {
+  test_scores %>%
+    pull(score) %>%
+    quantile(probs = c(0.55)) %>%
+    knitr::kable(format = "latex", booktabs = TRUE)
+}
+```
+
+We get a score of 79.2, which isn't in our dataset.
+This happens because `quantile()` interpolates between the scores by default.
+Sometimes you will want this behavior, other times you will not.
+When the dataset is this small, it doesn't make as much sense to permit interpolation, as it can be based on rather aggressive assumptions about what intermediate scores might look like.
+To tell `quantile()` to compute scores in the same manner as we did above, add the input `type = 1`:
+
+```{r quantile-fixed, eval = FALSE}
+test_scores %>%
+  pull(score) %>%
+  quantile(probs = c(0.55), type = 1)
+```
+
+```{r quantile-fixed-table, echo = FALSE}
+if (knitr::is_html_output()) {
+  test_scores %>%
+    pull(score) %>%
+    quantile(probs = c(0.55), type = 1) %>%
+    knitr::kable(format = "html") %>%
+    kableExtra::kable_styling(
+      bootstrap_options = c("striped", "responsive"), full_width = FALSE)
+} else if (knitr::is_latex_output()) {
+  test_scores %>%
+    pull(score) %>%
+    quantile(probs = c(0.55), type = 1) %>%
+    knitr::kable(format = "latex", booktabs = TRUE)
+}
+```
+
+This, as expected, agrees with the manual calculation.
+
+It is worth emphasizing that the difference between "percentile" and "percentile rank" can be confusing, and people do not always use the terms precisely.
+To summarize, if we want to know the percentage of people obtained scores equal to or lower than ours, then we are computing a percentile rank.
+If we start with a percentile, then we are computing the score in the distribution that corresponds with it.
+
+## CDFs
+
+Now that we understand percentiles and percentile ranks, we are ready to tackle the **cumulative distribution function** (CDF).
+The CDF is the function that maps from a value to its percentile rank.
+To find the CDF for any particular value in our distribution, we compute the fraction of values in the distribution less than or equal to our selected value.
+Computing this is similar to how we calculated the percentile rank, except that the result is a probability in the range 0--1 rather than a percentile rank in the range 0--100.
+For our test scores example, we can manually compute the CDF in the following way:
+
+```{r test-scores-compute-cdf-manual}
+test_scores_cdf <- test_scores %>%
+  arrange(score) %>%
+  mutate(cdf = row_number() / n())
+```
+
+```{r test-scores-cdf-table, echo = FALSE}
+if (knitr::is_html_output()) {
+  test_scores_cdf %>%
+    knitr::kable(format = "html") %>%
+    kableExtra::kable_styling(
+      bootstrap_options = c("striped", "responsive"), full_width = FALSE)
+} else if (knitr::is_latex_output()) {
+  test_scores_cdf %>%
+    knitr::kable(format = "latex", booktabs = TRUE)
+}
+```
+
+The visualization of the CDF looks like:
+
+```{r test-scores-cdf-plot, echo = FALSE}
+test_scores_cdf %>%
+  bind_rows(data_frame(score = c(-10, 0, 100, 120), cdf = c(0, 0, 1, 1))) %>%
+  ggplot() +
+  geom_step(mapping = aes(x = score, y = cdf)) +
+  coord_cartesian(xlim = c(0, 100), ylim = c(0, 1)) +
+  labs(title = "CDF of test scores", x = "Test score", y = "CDF")
+```
+
+As you can see, the CDF of a sample looks like a sequence of steps.
+Appropriately enough, this is called a step function, and the CDF of *any* sample is a step function.
+
+Also note that we can evaluate the CDF for any value, not just values that appear in the sample.
+If we select a value that is less than the smallest value in the sample, then the CDF is 0.
+If we select a value that is greater than the largest value, then the CDF is 1.
+
+## Representing CDFs
+
+While it's good to know how to manually compute the CDF, R provides the `ecdf()` function, which constructs the CDF of a sample automatically.
+Let's return to the average work travel times dataset we used when discussing the PMF and compute the CDF of the full distribution (no grouping by states).
+We do this as follows:
+
+```{r mean-work-travel-ecdf}
+mean_work_travel_ecdf <- county_complete %>%
+  pull(mean_work_travel) %>%
+  ecdf()
+```
+
+Now we can input an arbitrary travel time and find the percentile.
+For example, the percentile for an average work travel time of 30 minutes is:
+
+```{r thirty-minutes-percentile}
+mean_work_travel_ecdf(30)
+```
+
+Thus, 30 minutes corresponds to the 90th percentile.
+
+We can also use this to create a plot.
+To do this, we need to generate a sequence of travel times and calculate the CDF for each.
+A recommended way to do this is to find the minimum and maximum values of the distribution using `min()` and `max()`, and then use `seq()` to generate a long list of values that sit inbetween the minimum and maximum.
+Let's show a couple examples so it's clear what we're doing.
+First we find the minimum and maximum:
+
+```{r min-max-mean-work-travel}
+mean_work_travel_min <- county_complete %>%
+  pull(mean_work_travel) %>%
+  min()
+
+mean_work_travel_max <- county_complete %>%
+  pull(mean_work_travel) %>%
+  max()
+```
+
+By themselves, these correspond to two points along the horizontal axis, like so
+
+```{r min-max-mean-work-travel-plot, echo = FALSE}
+data_frame(x = c(mean_work_travel_min, mean_work_travel_max)) %>%
+  ggplot() +
+  geom_dotplot(mapping = aes(x = x), binwidth = 1)
+```
+
+To generate horizontal values that increase by 1 between the minimum and maximum, we use `seq()` as follows:
+
+```{r min-max-mean-work-travel-small-range}
+mean_work_travel_range1 <- seq(
+  from = mean_work_travel_min, to = mean_work_travel_max, by = 1)
+```
+
+Visually, this would look like
+
+```{r min-max-mean-work-travel-short-range, echo = FALSE}
+data_frame(x = mean_work_travel_range1) %>%
+  ggplot() +
+  geom_dotplot(mapping = aes(x = x), binwidth = 1)
+```
+
+Generally, it's better to use a smaller incremental value inside `seq()` in order to make smoother figures.
+Let's use `by = 0.1`:
+
+```{r min-max-mean-work-travel-full-range}
+mean_work_travel_range2 <- seq(
+  from = mean_work_travel_min, to = mean_work_travel_max, by = 0.1)
+```
+
+Next, we want to feed all these horizontal axis values into `mean_work_travel_ecdf()`, which we do as follows:
+
+```{r mean-work-travel-full-cdf}
+mean_work_travel_computed_cdf <- mean_work_travel_ecdf(mean_work_travel_range2)
+```
+
+To create a plot, we combine `mean_work_travel_range2` and `mean_work_travel_computed_cdf` into a `tibble`:
+
+```{r mean-work-travel-cdf-tibble}
+mean_work_travel_cdf_tibble <- data_frame(
+  mean_work_travel = mean_work_travel_range2, cdf = mean_work_travel_computed_cdf)
+```
+
+Now we can visualize it:
+
+```{r mean-work-travel-cdf-visualization, eval = FALSE}
+mean_work_travel_cdf_tibble %>%
+  ggplot() +
+  geom_line(mapping = aes(x = mean_work_travel, y = cdf))
+```
+
+```{r mean-work-travel-cdf-visualization-labeled, echo = FALSE}
+mean_work_travel_cdf_tibble %>%
+  ggplot() +
+  geom_line(mapping = aes(x = mean_work_travel, y = cdf)) +
+  labs(title = "Computed CDF of average work travel times",
+       x = "Average work travel time (min)", y = "CDF")
+```
+
+Now we can easily specify an average work travel time percentile and read the associated time from the plot and vice-versa.
+
+It takes some time to get used to CDFs, but over time it should become clear that they show more information, more clearly, than PMFs.
+
+## Comparing CDFs
+
+CDFs are especially useful for comparing distributions.
+Let's revisit the comparison we made between the average work travel times in Nebraska and Iowa.
+Here is the full code that converts those distributions into CDFs:
+
+```{r compare-cdf-of-ne-ia-travel-times}
+ia_travel_times_ecdf <- county_complete %>%
+  filter(state == "Iowa") %>%
+  pull(mean_work_travel) %>%
+  ecdf
+
+ne_travel_times_ecdf <- county_complete %>%
+  filter(state == "Nebraska") %>%
+  pull(mean_work_travel) %>%
+  ecdf
+
+mean_work_travel_range <- seq(mean_work_travel_min, mean_work_travel_max, 0.1)
+
+ia_ne_mean_work_travel_cdfs <- data_frame(
+  mean_work_travel = mean_work_travel_range,
+  cdf_iowa = ia_travel_times_ecdf(mean_work_travel),
+  cdf_nebraska = ne_travel_times_ecdf(mean_work_travel)) %>%
+  gather(key = state, value = CDF, cdf_iowa:cdf_nebraska) %>%
+  mutate(state = recode(state, cdf_iowa = "Iowa", cdf_nebraska = "Nebraska"))
+```
+
+and then plots them against each other:
+
+```{r compare-cdf-of-ne-ia-travel-times-plot, eval = FALSE}
+ggplot(data = ia_ne_mean_work_travel_cdfs,
+       mapping = aes(x = mean_work_travel, y = CDF)) +
+  geom_line(mapping = aes(color = state))
+```
+
+```{r compare-cdf-of-ne-ia-travel-times-plot-labeled, echo = FALSE}
+ggplot(data = ia_ne_mean_work_travel_cdfs,
+       mapping = aes(x = mean_work_travel, y = CDF)) +
+  geom_line(mapping = aes(color = state)) +
+  labs(title = "Average work travel times in Iowa and Nebraska",
+       x = "Average work travel time (min)", y = "CDF")
+```
+
+This visualization makes the shapes of the distributions and the relative differences between them much clearer.
+We see that Nebraska has shorter average work travel times for most of the distribution, at least until you reach an average time of 25 minutes, after which the Nebraska and Iowa distributions become similar to one another.
+
+## Credits
+
+::: {.license}
+
+This work, *Cumulative distribution functions*, is a derivative of [Allen B. Downey, "Chapter 4 Cumulative distribution functions" in *Think Stats: Exploratory Data Analysis*, 2nd ed. (O'Reilly Media, Sebastopol, CA, 2014)][think-stats-2], used under [CC BY-NC-SA 4.0][cc-4-by-nc-sa].
+*Cumulative distribution functions* is licensed under [CC BY-NC-SA 4.0][cc-4-by-nc-sa] by James Glasbrenner.
+
+:::
+
+[reading-pdf]:   /doc/representing_distributions_cdf.pdf
+[think-stats-2]: http://a.co/grOJGrv 
+[cc-4-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
