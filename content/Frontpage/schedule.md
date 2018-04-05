@@ -72,9 +72,10 @@ Week 9              17      Mar-27        Midterm project presentations I/Web sc
 Week 10             19      Apr-03        [Introduction to Web Scraping II/Principles of Data Collection]
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class19_slides.pdf)
 
-                    20      Apr-05        Statistical distributions I                                                             [Reading 9]
+                    20      Apr-05        [Statistical distributions I]                                                           [Reading 9]
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class20_slides.pdf)
 
-Week 11             21      Apr-10        Statistical distributions II
+Week 11             21      Apr-10        Statistical distributions II                                                            [Reading 10]
 
                             Apr-13                                                                                                Homework 3
 
@@ -111,6 +112,7 @@ Week 14             27      May-01        Statistical modeling III
 [Reading 7]:                                                     /assignments/reading-7/
 [Reading 8]:                                                     /assignments/reading-8/
 [Reading 9]:                                                     /assignments/reading-9/
+[Reading 10]:                                                    /assignments/reading-10/
 [Homework 1]:                                                    /assignments/homework-1/
 [Homework 2]:                                                    /assignments/homework-2/
 [Try R Tutorial]:                                                /assignments/try-r-tutorial-mini-assignment/
@@ -128,6 +130,7 @@ Week 14             27      May-01        Statistical modeling III
 [Introduction to Web Scraping I]:                                /materials/class-16/
 [Midterm project presentations II/Web scraping group activity]:  /materials/class-18/
 [Introduction to Web Scraping II/Principles of Data Collection]: /materials/class-19/
+[Statistical distributions I]:                                   /materials/class-20/
 [cl-8-github]:                                                   https://classroom.github.com/a/xku1H3sP
 [cl-11-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1519755978000359
 [cl-13-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1520361454000399
