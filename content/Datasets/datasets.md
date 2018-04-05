@@ -18,5 +18,5 @@ Modified: 2018-04-05 15:00
 [yawn-csv]:            /files/datasets/yawn.csv
 [Homework 1]:          /assignments/homework-1/
 [Homework 2]:          /assignments/homework-2/
-[PMF]:                 /Materials/representing-distributions-pmf/
-[CDF]:                 /Materials/representing-distributions-cdf/
+[PMF]:                 /materials/representing-distributions-pmf/
+[CDF]:                 /materials/representing-distributions-cdf/
