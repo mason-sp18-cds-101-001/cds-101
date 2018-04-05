@@ -16,21 +16,22 @@ dependencies:
   - pydocstyle=2.1.1=py36_0
   - pylama=7.4.3=py_0
   - python-daemon=2.1.2=py36_0
-  - rpy2=2.9.0=py36r342h348380c_0
+  - rpy2=2.9.1=py36r343h7a9f3d7_0
   - ruamel.yaml=0.15.35=py36_0
+  - rstudio=1.1.423=hcfd39f1_0
   - smmap2=2.0.3=py36_0
   - tabulate=0.8.1=py_0
   - typogrify=2.0.7=py36_0
-  - r-base=3.4.2=haf99962_0
-  - r-commonmark=1.4=r342hce70d90_0
-  - r-devtools=1.13.3=r342h07c3d94_0
-  - r-essentials=1.7.0=r342hf65ed6a_0
-  - r-git2r=0.19.0=r342h646917d_0
-  - r-lintr=1.0.1=r342h22dd25e_0
-  - r-miniui=0.1.1=r342h33c7739_0
-  - r-nycflights13=0.2.2=r342h4f7b87b_0
-  - r-rjson=0.2.15=r342hb6a071e_4
-  - r-roxygen2=6.0.1=r342h258eac7_0
-  - r-shiny=1.0.5=r342hc0a01ce_0
-  - r-tidyverse=1.1.1=r342hf9e2102_0
-  - r-xml=3.98_1.9=r342hdbe88a4_0
+  - r-base=3.4.3=h290ecf8_0
+  - r-commonmark=1.4=r343h086d26f_0
+  - r-devtools=1.13.4=r343h599a50d_0
+  - r-essentials=3.4.3=r343_0
+  - r-git2r=0.20.0=r343h086d26f_0
+  - r-lintr=1.0.2=r343h889e2dd_0
+  - r-miniui=0.1.1=r343h889e2dd_0
+  - r-nycflights13=0.2.2=r343h889e2dd_0
+  - r-rjson=0.2.15=r343h599a50d_4
+  - r-roxygen2=6.0.1=r343h599a50d_0
+  - r-shiny=1.0.5=r343h889e2dd_0
+  - r-tidyverse=1.2.1=r343h889e2dd_0
+  - r-xml=3.98_1.9=r343h086d26f_0
