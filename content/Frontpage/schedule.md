@@ -77,9 +77,9 @@ Week 10             19      Apr-03        [Introduction to Web Scraping II/Princ
 
 Week 11             21      Apr-10        Statistical distributions II                                                            [Reading 10]
 
-                            Apr-13                                                                                                Homework 3
-
                     22      Apr-12        Inference and simulations I
+                            
+                            Apr-16                                                                                                [Homework 3]
 
 Week 12             23      Apr-17        Inference and simulations II
 
@@ -115,6 +115,7 @@ Week 14             27      May-01        Statistical modeling III
 [Reading 10]:                                                    /assignments/reading-10/
 [Homework 1]:                                                    /assignments/homework-1/
 [Homework 2]:                                                    /assignments/homework-2/
+[Homework 3]:                                                    /assignments/homework-3/
 [Try R Tutorial]:                                                /assignments/try-r-tutorial-mini-assignment/
 [Twitter Study Article]:                                         /assignments/introductions-and-twitter-election-mini-assignment/
 [RMarkdown mini-assignment]:                                     /assignments/rmarkdown-mini-assignment/
