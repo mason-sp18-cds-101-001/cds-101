@@ -1,0 +1,353 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS-101: Introduction to Computational and Data Sciences</title>
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/cds101.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/katex/katex.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/highlightjs/default.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/fontawesome/fa-svg-with-js.css">
+    <link href="http://spring18.cds101.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CDS-101: Introduction to Computational and Data Sciences Full Atom Feed" />
+  </head>
+
+  <body>
+    <div class="header-grid-container">
+      <div class="banner-container">
+        <header>
+          <div class="banner">
+            <div class="course-logo">
+              <a href="http://spring18.cds101.com/">
+                <img src="http://spring18.cds101.com/theme/img/course-logo.svg">
+              </a>
+            </div>
+            <div class="university-logo">
+              <a href="https://gmu.edu">
+                <img src="http://spring18.cds101.com/theme/img/university-logo.svg">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-mobile" data-responsive-toggle="main-menu" data-hide-for="large">
+          <button type="button" data-toggle="main-menu">
+            <i class="fas fa-bars"></i><span class="navbar-mobile-title">Menu</span></button>
+        </div>
+
+        <div class="navbar-menu" id="main-menu">
+          <ul class="navbar-menu-list">
+            <li>
+              <a class="navbar-home-item" href="http://spring18.cds101.com/">
+                <i class="fas fa-home" data-fa-transform="grow-8"></i>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/materials.html">Materials</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/assignments.html">Assignments</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/datasets.html">Datasets</a>
+            </li>
+            <li class="navbar-social">
+              <ul class="navbar-social-list">
+                <li>
+                  <a class="navbar-social-item" href="https://github.com/mason-sp18-cds-101-001/cds-101">
+                    <i class="fab fa-github" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="http://masoncds101.slack.com">
+                    <i class="fab fa-slack" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="feeds/all.atom.xml">
+                    <i class="fas fa-rss-square" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content-grid-container">
+      <article class="static-page">
+        <header class="static-page-header">
+          <h1 class="static-page-title">Homework&nbsp;3</h1>
+        </header>
+        <div class="static-page-body">
+          <p><span class="h3"><strong>Due:</strong> April 16, 2018 @&nbsp;11:59pm</span></p>
+          <div class="no-bullets">
+            <ul>
+              <li>
+                <p>
+                  <a href="/doc/cds101_homework3.pdf">
+                    <i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>  Offline copy of&nbsp;instructions</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://classroom.github.com/a/5GSCwIPV">
+                    <i class="fab fa-github-alt" data-fa-transform="grow-8"></i>  Github Classroom repo for <strong>Homework&nbsp;3</strong></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <h2 id="instructions">Instructions</h2>
+          <p>For this homework assignment, you will practice using the
+            <a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb"><span class="monospace">SelectorGadget</span> Chrome extension</a> to find the <span class="caps">CSS</span> selectors needed to scrape information from a webpage and use the <span class="monospace">rvest</span> package to scrape data from
+            the
+            <a href="http://gomason.com">official Mason Patriots sports website</a>.</p>
+          <p>
+            <a href="https://classroom.github.com/a/5GSCwIPV">Obtain the Github repository you will use to complete homework 3</a> that contains a starter RMarkdown file named <span class="monospace">homework_3.Rmd</span>, which you will use to do your work and write-up when completing the questions
+            below. Remember to fill in your name at the top of the RMarkdown document and be sure to save, commit, and push (upload) frequently to Github so that you have incremental snapshots of your work. When you’re done, follow the
+            <a href="#how-to-submit">How to submit</a> section below to setup a Pull Request, which will be used for&nbsp;feedback.</p>
+          <h2 id="part-1-selectorgadget-practice">Part 1 – <span class="monospace">SelectorGadget</span>&nbsp;practice</h2>
+          <p>One of the ways to target specific information on the webpage is through the use of <span class="caps">CSS</span> selectors, and becoming more comfortable with them will help you build more effective webscraping code. The
+            <a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb"><span class="monospace">SelectorGadget</span> Chrome extension</a> is a convenient tool for determining the <span class="caps">CSS</span> selectors you need for a webscraping task. For a refresher on how to use the extension,
+            <a href="http://spring18.cds101.com/doc/rvest-selectorgadget-vignette.html">review the <span class="monospace">SelectorGadget</span> vignette</a>.</p>
+          <p>For this part of the homework, use the <span class="monospace">SelectorGadget</span> tool to figure out the <span class="caps">CSS</span> selectors needed to scrape specific data from a linked page. <strong>You only need to report the <span class="caps">CSS</span> selectors needed to get the information and do not need to write <span class="monospace">rvest</span> code to formally extract it</strong>,
+            although you are welcome to write code to test the <span class="caps">CSS</span> selectors if you&nbsp;like.</p>
+          <ol class="example" type="1">
+            <li>
+              <p>Using the <span class="monospace">SelectorGadget</span> tool, find the <span class="caps">CSS</span> selectors for the following information on the <span class="caps">IMDB</span> page for the television show <em>The Office</em>,
+                <a href="https://www.imdb.com/title/tt0386676/"
+                  class="uri">https://www.imdb.com/title/tt0386676/</a>:</p>
+              <ul>
+                <li>
+                  <p>Number of&nbsp;episodes</p>
+                </li>
+                <li>
+                  <p>Certificate (<span class="caps">TV</span>&nbsp;Rating)</p>
+                </li>
+                <li>
+                  <p>First five plot&nbsp;keywords</p>
+                </li>
+                <li>
+                  <p>Genres</p>
+                </li>
+                <li>
+                  <p>Runtime</p>
+                </li>
+                <li>
+                  <p>Country</p>
+                </li>
+                <li>
+                  <p>Language</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>Using the <span class="monospace">SelectorGadget</span> tool, find the <span class="caps">CSS</span> selectors for the following information on the data.gov <em>Data Catalog</em>,
+                <a href="https://catalog.data.gov/dataset" class="uri">https://catalog.data.gov/dataset</a>:</p>
+              <ul>
+                <li>
+                  <p>Number of datasets&nbsp;found</p>
+                </li>
+                <li>
+                  <p>Dataset names (example: <em>Demographic Statistics By Zip Code</em>)</p>
+                </li>
+                <li>
+                  <p>Dataset organization (example: <em>City of New York</em>)</p>
+                </li>
+                <li>
+                  <p>Dataset description (example: “Demographic statistics broken down by zip&nbsp;code”)</p>
+                </li>
+                <li>
+                  <p>Dataset type (the ribbons on the upper-right of each row, for example: <em>Federal</em>, <em>City</em>)</p>
+                </li>
+              </ul>
+            </li>
+          </ol>
+          <h2 id="part-2-scraping-mason-patriots-scores">Part 2 – Scraping Mason Patriots&nbsp;Scores</h2>
+          <p>Webscrapers can be used for all kinds of purposes, such as building movie review databases, tracking prices for goods and services, and analyzing how a news story is reported on different news sites. Collecting sports data is another example,
+            which can be used to
+            <a href="https://nyti.ms/2FmQhgC">quantify how valuable players are</a> when
+            <a href="https://www.villanovau.com/resources/bi/how-to-use-big-data-in-fantasy-football/">putting together a fantasy sports team</a>. Actual sports teams also employ statistical methods when drafting players and developing strategies, with
+            <a href="https://en.wikipedia.org/wiki/Sabermetrics">Sabermetrics</a> (depicted in the movie
+            <a href="https://www.imdb.com/title/tt1210166/"><em>Moneyball</em></a>) being one of the better-known&nbsp;examples.</p>
+          <p>For this part of the homework, we will scrape the 2017 – 2018 season schedules and scores for the men’s and women’s basketball teams on the official
+            <a href="http://gomason.com">Mason Patriots sports site</a>. For reference, the 2017-2018 schedule and scores page for the men’s team should look like&nbsp;this:</p>
+          <p>
+            <img src="/img/gomason-2017-2018-mens-basketball.png" title="plot of chunk womens-basketball-17-18-season-page" alt="plot of chunk womens-basketball-17-18-season-page" width="70%" style="display: block; margin: auto;" />
+          </p>
+          <p>and the 2017 – 2018 schedule and scores page for the women’s team should look like&nbsp;this:</p>
+          <p>
+            <img src="/img/gomason-2017-2018-womens-basketball.png" title="plot of chunk mens-basketball-17-18-season-page" alt="plot of chunk mens-basketball-17-18-season-page" width="70%" style="display: block; margin: auto;" />
+          </p>
+          <p>The following questions will guide you through the process of scraping this data. You are encouraged to review the examples provided in the
+            <a href="https://masoncds101.slack.com/archives/C8WQJ0GTB/p1522347635000427">Web scraping activity</a>, the
+            <a href="http://spring18.cds101.com/doc/class16_slides.pdf">Class 16 slides</a>, and the
+            <a href="http://spring18.cds101.com/doc/class19_slides.pdf">Class 19 slides</a> while completing this part of the homework&nbsp;assignment.</p>
+          <h3 id="mens-basketball-schedule-and-scores">Men’s basketball schedule and&nbsp;scores</h3>
+          <ol start="3" class="example" type="1">
+            <li>
+              <p>To start, you need to load the men’s basketball schedule and scores page into R. Do this using one line of code, and assign the accessed page data to a variable called <code>mens_bb</code>.</p>
+            </li>
+            <li>
+              <p>Mason’s opponent for each game is listed on the left side of each row, just after a small box that says <em><span class="caps">VS</span></em> or <em><span class="caps">AT</span></em>. Use the <span class="monospace">SelectorGadget</span>                tool to determine the <span class="caps">CSS</span> selector needed to scrape this information, and then write the code that scrapes this information. Assign the scraped data to a variable called <code>mens_opponents</code>. If done right,
+                <code>mens_opponents</code> should be a character vector containing 33&nbsp;teams.</p>
+            </li>
+            <li>
+              <p>The location for each game is listed to the right of the opponent’s name. For games played in the United States it lists the city and state, for example “Fairfax, <span class="caps">VA</span>” is the location for home games. Use the
+                <span
+                  class="monospace">SelectorGadget</span> tool to determine the <span class="caps">CSS</span> selector needed to scrape this information, and then write the code that scrapes this information. Assign the scraped data to a variable called <code>mens_locations</code>.</p>
+            </li>
+            <li>
+              <p>The date for each game is listed above the opponent’s name, and has the format <em>Month Day (Day of the Week)</em>. For example, the first listed game has the date <em>Nov 10 (<span class="caps">FRI</span>)</em>. Use the <span class="monospace">SelectorGadget</span>                tool to determine the <span class="caps">CSS</span> selector needed to scrape this information, and then write the code that scrapes this information. Assign the scraped data to a variable called <code>mens_dates</code>.</p>
+            </li>
+            <li>
+              <p>The time for each game is listed to the right of the game date. For example, the first listed game has the time <em>7:00 <span class="caps">P.M.</span></em> Use the <span class="monospace">SelectorGadget</span> tool to determine the
+                <span
+                  class="caps">CSS</span> selector needed to scrape this information, and then write the code that scrapes this information. Assign the scraped data to a variable called <code>mens_times</code>.</p>
+            </li>
+            <li>
+              <p>The score for each game is listed on the right side of each row in the format <em>Mason’s score-Opponent’s score</em>. For example, the first listed game has the score <em>67-65</em>. Use the <span class="monospace">SelectorGadget</span>                tool to determine the <span class="caps">CSS</span> selector needed to scrape this information, and then write the code that scrapes this information. Assign the scraped data to a variable called <code>mens_scores</code>. Your <code>mens_scores</code>                vector should only have 33 pieces of data in it, if it has more or less then you need to try another <span class="caps">CSS</span>&nbsp;selector.</p>
+            </li>
+            <li>
+              <p>The <strong>W</strong> or <strong>L</strong> to the left of each game score indicates whether Mason won (<strong>W</strong>) or lost (<strong>L</strong>) the game. Use the <span class="monospace">SelectorGadget</span> tool to determine the
+                <span class="caps">CSS</span> selector needed to scrape this information, and then write the code that scrapes this information. You’ll note that for each game you’ll actually get <span class="monospace">W,</span> or <span class="monospace">L,</span>.
+                Pipe (<span class="monospace">%&gt;%</span>) your scraped data into the <code>str_remove()</code> function and tell it to get rid of the comma. Assign the scraped data to a variable called <code>mens_win_loss</code>.</p>
+            </li>
+            <li>
+              <p>Use the <code>data_frame()</code> function to create a tibble containing your scraped data. The columns should have the following names and be in this&nbsp;order:</p>
+              <ul>
+                <li><span class="monospace">date</span></li>
+                <li><span class="monospace">time</span></li>
+                <li><span class="monospace">opponent</span></li>
+                <li><span class="monospace">location</span></li>
+                <li><span class="monospace">score</span></li>
+                <li><span class="monospace">win_loss</span></li>
+              </ul>
+              <p>Assign the tibble to a variable called <code>mens_df</code>. This table should have 33&nbsp;rows.</p>
+            </li>
+          </ol>
+          <h3 id="womens-basketball-schedule-and-scores">Women’s basketball schedule and&nbsp;scores</h3>
+          <ol start="11" class="example" type="1">
+            <li>
+              <p>The code you created for scraping the men’s basketball team schedule and score should also work on the page for the women’s team with minimal changes. Copy the code you wrote in the blocks for the men’s page and paste it here. <strong>Change the prefix of the variable names you assign each output into from <code>mens_</code> to <code>womens_</code>, and the code so that it loads the women’s schedule and scores page</strong>.
+                The final result should be a tibble assigned to a variable called <code>womens_df</code>, which has the following columns in this&nbsp;order:</p>
+              <ul>
+                <li><span class="monospace">date</span></li>
+                <li><span class="monospace">time</span></li>
+                <li><span class="monospace">opponent</span></li>
+                <li><span class="monospace">location</span></li>
+                <li><span class="monospace">score</span></li>
+                <li><span class="monospace">win_loss</span></li>
+              </ul>
+              <p>This table should have 34&nbsp;rows.</p>
+            </li>
+          </ol>
+          <h3 id="quick-data-exploration">Quick data&nbsp;exploration</h3>
+          <p>Collecting data doesn’t serve much of a purpose if we don’t explore or analyze it. Create the summary reports and visualizations requested below to help you better understand the data you just&nbsp;collected.</p>
+          <ol start="12" class="example" type="1">
+            <li>
+              <p>What was the average score for the men’s team (Mason only) when they won a game and when they lost a game? What was the average score for the women’s team (Mason only) when they won a game and when they lost a&nbsp;game?</p>
+              <p><strong>Hint: To answer this, you will need to use the <code>separate()</code> function.</strong></p>
+            </li>
+            <li>
+              <p>Plot the men’s histogram of scores and the women’s histogram of scores (just for the Mason teams, not the opponents), and then compare the two histograms. Which histogram is centered at a higher score? Which histogram has the larger spread?
+                Are there any other notable&nbsp;differences?</p>
+            </li>
+          </ol>
+          <h2 id="how-to-submit">How to&nbsp;submit</h2>
+          <p>When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github. Then, navigate to <strong>your copy</strong> of the
+            <a href="https://classroom.github.com/a/5GSCwIPV">Github repository</a> you used for this assignment. You should see your repository, along with the updated files that you just synchronized to Github. Confirm that your files are up-to-date, and then do the following&nbsp;steps:</p>
+          <ol type="1">
+            <li>
+              <p>Click the <em>Pull Requests</em> tab near the top of the&nbsp;page.</p>
+            </li>
+            <li>
+              <p>Click the green button that says “New pull&nbsp;request”.</p>
+            </li>
+            <li>
+              <p>Click the dropdown menu button labeled “base:”, and select the option <code>starting</code>.</p>
+            </li>
+            <li>
+              <p>Confirm that the dropdown menu button labeled “compare:” is set to <code>master</code>.</p>
+            </li>
+            <li>
+              <p>Click the green button that says “Create pull&nbsp;request”.</p>
+            </li>
+            <li>
+              <p>Give the <em>pull request</em> the following title: <span class="monospace">Submission: Homework 2, FirstName LastName</span>, replacing <span class="monospace">FirstName</span> and <span class="monospace">LastName</span> with your actual
+                first and last&nbsp;name.</p>
+            </li>
+            <li>
+              <p>In the messagebox, write: <span class="monospace">My homework submission is ready for grading @shuaibm @jkglasbrenner</span>.</p>
+            </li>
+            <li>
+              <p>Click “Create pull request” to lock in your&nbsp;submission.</p>
+            </li>
+          </ol>
+          <h2 id="cheatsheets">Cheatsheets</h2>
+          <p>You are encouraged to review and keep the following cheatsheets handy while working on this&nbsp;assignment:</p>
+          <ul>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/rstudio-IDE-cheatsheet.pdf">RStudio&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/rmarkdown-cheatsheet.pdf">RMarkdown&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/rmarkdown-reference.pdf">RMarkdown&nbsp;reference</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/ggplot2-cheatsheet.pdf"><span class="monospace">ggplot2</span>&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/data-transformation-cheatsheet.pdf">Data transformation&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/data-import-cheatsheet.pdf">Data import&nbsp;cheatsheet</a>
+              </p>
+            </li>
+          </ul>
+
+        </div>
+      </article>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-grid-container">
+        Except where otherwise noted, site materials are created by
+        <a href="https://cos.gmu.edu/cds/faculty-profile-james-glasbrenner/">
+          James K. Glasbrenner
+        </a>
+        and licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </div>
+    </footer>
+    <script src="http://spring18.cds101.com/theme/js/cds101.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/highlightjs/highlight.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/katex.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/wookmark/wookmark.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/fontawesome/fontawesome-all.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/vendorInit.js"></script>
+  </body>
+
+</html>
