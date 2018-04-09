@@ -4,7 +4,7 @@ Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-04-16 23:59
 Tags: homework
 Slug: homework-3
-Summary: For this homework assignment, you will practice using the <span class="monospace">SelectorGadget</span> Chrome extension to find the CSS selectors needed to scrape information from a webpage and use the <span class="monospace">rvest</span> package to scrape data from the official Mason Patriots sports website.
+Summary: For this homework assignment, you will practice using the SelectorGadget Chrome extension to find the CSS selectors needed to scrape information from a webpage and use the rvest package to scrape data from the official Mason Patriots sports website.
 Show_summary: true
 Show_link: true
 
@@ -38,7 +38,7 @@ icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbs
 
 ## Instructions
 
-For this homework assignment, you will practice using the [[SelectorGadget]{.monospace} Chrome extension][selectorgadget-extension] to find the CSS selectors needed to scrape information from a webpage and use the `rvest` package to scrape data from the [official Mason Patriots sports website][mason-sports-site].
+For this homework assignment, you will practice using the [[SelectorGadget]{.monospace} Chrome extension][selectorgadget-extension] to find the CSS selectors needed to scrape information from a webpage and use the [rvest]{.monospace} package to scrape data from the [official Mason Patriots sports website][mason-sports-site].
 
 [Obtain the Github repository you will use to complete homework 3][github-classroom] that contains a starter RMarkdown file named [homework_3.Rmd]{.monospace}, which you will use to do your work and write-up when completing the questions below.
 Remember to fill in your name at the top of the RMarkdown document and be sure to save, commit, and push (upload) frequently to Github so that you have incremental snapshots of your work.
