@@ -1,0 +1,186 @@
+Title: Class size paradox
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-04-10 15:00
+Tags: reading-nograyout
+Slug: class-size-paradox
+Summary: A practical example that shows how to use PMFs to resolve a paradox.
+Show_summary: true
+Show_link: true
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.width = 6, fig.alt = "",
+                      fig.asp = 0.618, dpi = 120, dev = "svg",
+                      out.width = "60%", fig.align = "center", cache = TRUE)
+library(tidyverse)
+```
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` Download this reading][reading-pdf]
+
+:::
+
+```r
+library(tidyverse)
+```
+
+**The following example assumes you have already read the standard reading on [_Probability mass functions_][pmf-reading].**
+
+Let's consider another PMF computation that illustrates something that we may call the "class size paradox".
+
+At many American colleges and universities, the student-to-faculty ratio is about 10:1.
+But students are often surprised to discover that their average class size is bigger than 10.
+There are two reasons for the discrepancy:
+
+*   Students typically take 4 – 5 classes per semester, but professors often teach 1 or 2.
+*   The number of students who enjoy a small class is small, but the number of students in a large class is (unsurprisingly) large.
+
+The first effect is obvious, at least once it is pointed out; the second is more subtle.
+Let's look at an example.
+Suppose that a college offers 65 classes in a given semester, with the following distribution of sizes:
+
+| size      | count  |
+| --------- | ------ |
+| 5--9      | 8      |
+| 10--14    | 8      |
+| 15--19    | 14     |
+| 20--24    | 4      |
+| 25--29    | 6      |
+| 30--34    | 12     |
+| 35--39    | 8      |
+| 40--44    | 3      |
+| 45--49    | 2      |
+
+If you ask the Dean for the average class size, he or she would construct a PMF, compute the mean, and report that the average class size is 23.7.
+Here's the code:
+
+```{r class-sizes-setup-and-average, eval = FALSE}
+class_sizes <- tribble(
+  ~`class size`, ~count,
+  7, 8,
+  12, 8,
+  17, 14,
+  22, 4,
+  27, 6,
+  32, 12,
+  37, 8,
+  42, 3,
+  47, 2)
+
+class_sizes %>%
+  summarize(`Average class size` = round(weighted.mean(`class size`, count), 1))
+```
+
+```{r class-sizes-setup-and-average-table, echo = FALSE}
+class_sizes <- tribble(
+  ~`class size`, ~count,
+  7, 8,
+  12, 8,
+  17, 14,
+  22, 4,
+  27, 6,
+  32, 12,
+  37, 8,
+  42, 3,
+  47, 2)
+
+class_sizes %>%
+  summarize(
+    `Average class size` = round(weighted.mean(`class size`, count), 1)) %>%
+  knitr::kable(format = "html")
+```
+
+But if you survey a group of students, ask them how many students are in their classes, and compute the mean, you would think the average class was bigger.
+Let's see how much bigger.
+
+First, let's compute the distribution as observed by students, where the probability associated with each class size is "biased" by the number of students in the class.
+For each class size we multiply the probability by the number of students who observe that class size.
+The result is a new PMF that represents the biased distribution:
+
+```{r compute-observed-class-size}
+class_sizes2 <- class_sizes %>%
+  mutate(actual = count / sum(count)) %>%
+  mutate(observed = (actual * `class size`) / sum(actual * `class size`)) %>%
+  gather(key = distribution, value = PMF, actual:observed)
+```
+
+Now we can plot the actual and observed distributions together:
+
+```{r actual-vs-observed-class-size, eval = FALSE}
+class_sizes2 %>%
+  ggplot(
+    mapping = aes(x = `class size`, y = PMF, fill = distribution,
+                  color = distribution)) +
+  geom_col(position = "identity", alpha = 0.5)
+```
+
+```{r actual-vs-observed-class-size-labeled, echo = FALSE}
+class_sizes2 %>%
+  ggplot(
+    mapping = aes(x = `class size`, y = PMF, fill = distribution,
+                  color = distribution)) +
+  geom_col(position = "identity", alpha = 0.5) +
+  labs(
+    title = "Distributions of actual and observed class sizes",
+    x = "Class size", y = "PMF")
+```
+
+As we see in the above figure, the biased distribution corresponds to fewer small classes and more large ones.
+The mean of the biased distribution is,
+
+```{r observed-class-mean, eval = FALSE}
+class_sizes2 %>%
+  group_by(distribution) %>%
+  summarize(`Average class size` = round(weighted.mean(`class size`, `PMF`), 1))
+```
+
+```{r observed-class-mean-table, echo = FALSE}
+class_sizes2 %>%
+  group_by(distribution) %>%
+  summarize(
+    `Average class size` = round(weighted.mean(`class size`, `PMF`), 1)) %>%
+  knitr::kable(format = "html")
+```
+
+which is almost 25% higher than the actual mean.
+
+It is also possible to invert this operation.
+Suppose you want to find the distribution of class sizes at a college, but you can't get reliable data from the Dean.
+An alternative is to choose a random sample of students and ask how many students are in their classes.
+The result would be biased for the reasons we've just seen, but you can use it to estimate the actual distribution.
+Here's the code that can be used to unbias a PMF:
+
+```{r unbias-pmf, eval = FALSE}
+class_sizes2 %>%
+  spread(key = distribution, value = PMF) %>%
+  mutate(
+    unbiased = (observed * 1 / `class size`) /
+      sum(observed * 1 / `class size`)) %>%
+  select(`class size`, count, observed, unbiased, actual)
+```
+
+```{r unbias-pmf-table, echo = FALSE}
+class_sizes2 %>%
+  spread(key = distribution, value = PMF) %>%
+  mutate(
+    unbiased = (observed * 1 / `class size`) /
+      sum(observed * 1 / `class size`)) %>%
+  select(`class size`, count, observed, unbiased, actual) %>%
+  knitr::kable(format = "html")
+```
+
+It's similar to before; the only difference is that it divides each probability by the class size instead of multiplying.
+
+## Credits
+
+::: {.license}
+This work, *Class size paradox*, is a derivative of [Allen B. Downey, "Chapter 3 Probability mass functions" in *Think Stats: Exploratory Data Analysis*, 2nd ed. (O'Reilly Media, Sebastopol, CA, 2014)][think-stats-2], used under [CC BY-NC-SA 4.0][cc-4-by-nc-sa].
+*Class Size Paradox* is licensed under [CC BY-NC-SA 4.0][cc-4-by-nc-sa] by James Glasbrenner.
+:::
+
+[pmf-reading]:   /materials/representing-distributions-pmf/
+[reading-pdf]:   /doc/class_size_paradox.pdf
+[think-stats-2]: http://a.co/grOJGrv 
+[cc-4-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
