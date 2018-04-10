@@ -1,0 +1,50 @@
+Title: Reading 15
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-04-24 13:30
+Tags: reading
+Slug: reading-15
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_link <- '<i class="fas fa-link"></i>&nbsp;'
+```
+
+[[Introductory Statistics with Randomization and Simulation][isrs-book]]{.h3}
+
+Read the following:
+
+*   From chapter 5: from the beginning through to the end of section 5.1.4, section 5.4.1
+
+[[R for Data Science][r4ds-book]]{.h3}
+
+Read the following:
+
+*   All of [chapter 22][r4ds-ch-22] (short)
+*   From [chapter 23][r4ds-ch-23]: section [23.1][r4ds-ch-23.1] through to the end of section [23.3][r4ds-ch-23.3]
+
+[Reading discussion]{.h3}
+
+::::: {.callout .primary}
+**Discussion hashtag** \
+`#reading15`
+:::::
+
+::::: {.callout .secondary}
+Remember to post your question about it to the `#5-discussion` channel in [Slack][cds101-slack] by the due date.
+To receive an answer credit, reply to a posted question no later than 11:59pm on Thursday, April 26th.
+:::::
+
+---
+
+[`r icon_link` Posting guidelines can be found in the **Readings** section of the syllabus.][syllabus-readings]
+
+[isrs-book]:         http://spring18.cds101.com/doc/Diez_Barr_%C3%87etinkaya-Rundel_IntroductoryStatisticsWithRandomizationAndSimulation.pdf
+[r4ds-book]:         http://r4ds.had.co.nz/
+[r4ds-ch-22]:        http://r4ds.had.co.nz/model-intro.html
+[r4ds-ch-23]:        http://r4ds.had.co.nz/model-basics.html
+[r4ds-ch-23.1]:      http://r4ds.had.co.nz/model-basics.html#introduction-15
+[r4ds-ch-23.3]:      http://r4ds.had.co.nz/model-basics.html#visualising-models
+[cds101-slack]:      https://masoncds101.slack.com
+[syllabus-readings]: http://spring18.cds101.com/syllabus.html#readings

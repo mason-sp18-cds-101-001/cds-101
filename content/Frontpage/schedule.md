@@ -84,15 +84,15 @@ Week 11             21      Apr-10        [Statistical distributions II]        
 
                             Apr-16                                                                                                [Homework 3]
 
-Week 12             23      Apr-17        Inference and simulations II
+Week 12             23      Apr-17        Inference and simulations II                                                            [Reading 13]
 
-                    24      Apr-19        Inference and simulations III
+                    24      Apr-19        Inference and simulations III                                                           [Reading 14]
 
-                            Apr-20                                                                                                Homework 4
+Week 13             25      Apr-24        Statistical modeling I                                                                  [Reading 15]
 
-Week 13             25      Apr-24        Statistical modeling I
+                    26      Apr-26        Statistical modeling II                                                                 [Reading 16]
 
-                    26      Apr-26        Statistical modeling II
+                            Apr-27                                                                                                Homework 4
 
 Week 14             27      May-01        Statistical modeling III
 
@@ -118,6 +118,10 @@ Week 14             27      May-01        Statistical modeling III
 [Reading 10]:                                                    /assignments/reading-10/
 [Reading 11]:                                                    /assignments/reading-11/
 [Reading 12]:                                                    /assignments/reading-12/
+[Reading 13]:                                                    /assignments/reading-13/
+[Reading 14]:                                                    /assignments/reading-14/
+[Reading 15]:                                                    /assignments/reading-15/
+[Reading 16]:                                                    /assignments/reading-16/
 [Homework 1]:                                                    /assignments/homework-1/
 [Homework 2]:                                                    /assignments/homework-2/
 [Homework 3]:                                                    /assignments/homework-3/

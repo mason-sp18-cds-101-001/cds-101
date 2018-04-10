@@ -1,0 +1,54 @@
+Title: Reading 14
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-04-19 13:30
+Tags: reading
+Slug: reading-14
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_link <- '<i class="fas fa-link"></i>&nbsp;'
+```
+
+[*Nature* News Feature article]{.h3}
+
+Read the following article about *p* values:
+
+*   ["Scientific method: Statistical errors" by R. Nuzzo][nuzzo-article] ([PDF version][nuzzo-pdf])
+
+[Reading discussion]{.h3}
+
+Instead of posting a question as we've done for the other readings, please respond to the following prompts:
+
+1.  Had you ever heard of this situation concerning *p*-values before this class?
+
+    *   **If this is the first time you've heard this**, did you find this surprising, and does it affect how you feel about science?
+        Explain.
+    
+    *   **If you have heard about this situation before**, did the article change your perspective in any way?
+        Explain.
+        
+2.  Based on the article, what practical things can we do to make sure our claims are accurate and transparent?
+    Mention any quantities that we should compute and what kinds of details we should try to include in our RMarkdown notebooks. 
+
+::::: {.callout .secondary}
+**Students that write a full and thoughtful response that addresses both prompts will receive both a question and an answer credit.**
+A full response consists of a minimum of two paragraphs, one for the first prompt and one for the second prompt.
+Each paragraph must have a minimum of three full sentences, and the content must be substantive.
+Posts that don't fulfill these criteria will only be eligible for a question credit.
+:::::
+
+::::: {.callout .primary}
+**Discussion hashtag** \
+`#reading14`
+:::::
+
+---
+
+[`r icon_link` Posting guidelines can be found in the **Readings** section of the syllabus.][syllabus-readings]
+
+[nuzzo-pdf]:         https://www.nature.com/polopoly_fs/1.14700!/menu/main/topColumns/topLeftColumn/pdf/506150a.pdf
+[cds101-slack]:      https://masoncds101.slack.com
+[nuzzo-article]:     http://www.nature.com/news/scientific-method-statistical-errors-1.14700
+[syllabus-readings]: http://spring18.cds101.com/syllabus.html#readings
