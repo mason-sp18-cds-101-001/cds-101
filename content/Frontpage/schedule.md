@@ -80,6 +80,8 @@ Week 11             21      Apr-10        [Statistical distributions II]        
 
                     22      Apr-12        Inference and simulations I                                                             [Reading 11]
                             
+                            Apr-13                                                                                                [Reading 12]
+
                             Apr-16                                                                                                [Homework 3]
 
 Week 12             23      Apr-17        Inference and simulations II
@@ -115,6 +117,7 @@ Week 14             27      May-01        Statistical modeling III
 [Reading 9]:                                                     /assignments/reading-9/
 [Reading 10]:                                                    /assignments/reading-10/
 [Reading 11]:                                                    /assignments/reading-11/
+[Reading 12]:                                                    /assignments/reading-12/
 [Homework 1]:                                                    /assignments/homework-1/
 [Homework 2]:                                                    /assignments/homework-2/
 [Homework 3]:                                                    /assignments/homework-3/
