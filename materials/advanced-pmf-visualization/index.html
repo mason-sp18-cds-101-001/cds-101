@@ -1,0 +1,204 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS-101: Introduction to Computational and Data Sciences</title>
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/cds101.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/katex/katex.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/highlightjs/default.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/fontawesome/fa-svg-with-js.css">
+    <link href="http://spring18.cds101.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CDS-101: Introduction to Computational and Data Sciences Full Atom Feed" />
+  </head>
+
+  <body>
+    <div class="header-grid-container">
+      <div class="banner-container">
+        <header>
+          <div class="banner">
+            <div class="course-logo">
+              <a href="http://spring18.cds101.com/">
+                <img src="http://spring18.cds101.com/theme/img/course-logo.svg">
+              </a>
+            </div>
+            <div class="university-logo">
+              <a href="https://gmu.edu">
+                <img src="http://spring18.cds101.com/theme/img/university-logo.svg">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-mobile" data-responsive-toggle="main-menu" data-hide-for="large">
+          <button type="button" data-toggle="main-menu">
+            <i class="fas fa-bars"></i><span class="navbar-mobile-title">Menu</span></button>
+        </div>
+
+        <div class="navbar-menu" id="main-menu">
+          <ul class="navbar-menu-list">
+            <li>
+              <a class="navbar-home-item" href="http://spring18.cds101.com/">
+                <i class="fas fa-home" data-fa-transform="grow-8"></i>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/materials.html">Materials</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/assignments.html">Assignments</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/datasets.html">Datasets</a>
+            </li>
+            <li class="navbar-social">
+              <ul class="navbar-social-list">
+                <li>
+                  <a class="navbar-social-item" href="https://github.com/mason-sp18-cds-101-001/cds-101">
+                    <i class="fab fa-github" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="http://masoncds101.slack.com">
+                    <i class="fab fa-slack" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="feeds/all.atom.xml">
+                    <i class="fas fa-rss-square" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content-grid-container">
+      <article class="static-page">
+        <header class="static-page-header">
+          <h1 class="static-page-title">An advanced example of a <span class="caps">PMF</span>&nbsp;visualization</h1>
+        </header>
+        <div class="static-page-body">
+          <div class="no-bullets">
+            <ul>
+              <li>
+                <a href="/doc/advanced_pmf_example.pdf">
+                  <i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>  Download this&nbsp;reading</a>
+              </li>
+            </ul>
+          </div>
+          <pre class="r"><code>library(tidyverse)
+county_complete &lt;- read_rds(
+  path = url(&quot;http://spring18.cds101.com/files/datasets/county_complete.rds&quot;))
+nebraska_iowa &lt;- county_complete %&gt;%
+  filter(state == &quot;Iowa&quot; | state == &quot;Nebraska&quot;)</code></pre>
+          <p><strong>The following example assumes you have already read the standard reading on <a href="/materials/representing-distributions-pmf/"><em>Probability mass functions</em></a>.</strong></p>
+          <p>Histograms and PMFs are useful while you are exploring data and trying to identify patterns and relationships. Once you have an idea what is going on, a good next step is to design a visualization that makes the patterns you have identified
+            as clear as&nbsp;possible.</p>
+          <p>In our prior comparison of the average work travel times for Nebraska and Iowa, we saw that there was a large overlap in travel times between 11 and 29 minutes, but that the overlap wasn’t exact. So it makes sense to zoom in on that part of
+            the graph, and to transform the data to emphasize differences. To do this, we need the values of the <span class="caps">PMF</span> in each of the bins. The <code>ggplot_build()</code> function allows us to extract these numerical values, although
+            it takes a couple of steps to do. First, we need to create a histogram of the travel times in Iowa and Nebraska and assign it to a&nbsp;variable:</p>
+          <pre class="r"><code>nebraska_iowa_histogram &lt;- nebraska_iowa %&gt;%
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, fill = state), binwidth = 1)</code></pre>
+          <p>Next, we use <code>ggplot_build()</code> to convert the figure into a <code>list()</code> of information about the&nbsp;plot:</p>
+          <pre class="r"><code>nebraska_iowa_figure_list &lt;- ggplot_build(nebraska_iowa_histogram)</code></pre>
+          <p>A <code>list()</code> is a data type that we haven’t used in the course yet. It’s a convenient alternative to the <code>tibble</code> when you need to store uneven or very different kinds of information. Like the <code>tibble</code>, you can
+            label the entries in a list. Our list <code>nebraska_iowa_figure_list</code> has several labels containing metadata about the&nbsp;plot:</p>
+          <pre class="r"><code>names(nebraska_iowa_figure_list)</code></pre>
+          <pre><code>## [1] &quot;data&quot;   &quot;layout&quot; &quot;plot&quot;</code></pre>
+          <p>The one that we want to use is named <code>data</code>. To get the information inside of the <code>data</code> label, we use the <code>pluck()</code> function from <code>tidyverse</code>.</p>
+          <pre class="r"><code>nebraska_iowa_figure_df &lt;- nebraska_iowa_figure_list %&gt;%
+  pluck(&quot;data&quot;, 1) %&gt;%
+  as_tibble()</code></pre>
+          <p>The <code>1</code> inside of <code>pluck()</code> is necessary to get the data table stored inside of <code>data</code> (without it, we just get a <code>list()</code> data type back, which isn’t helpful). We’ve also converted the data table
+            into a <code>tibble</code> for&nbsp;convenience.</p>
+          <p>There are 17 columns in <code>nebraska_iowa_figure_df</code>. Let’s use <code>glimpse()</code> to get a list of the variable names and previews of the first few&nbsp;entries:</p>
+          <pre class="r"><code>nebraska_iowa_figure_df %&gt;%
+  glimpse()</code></pre>
+          <pre><code>## Observations: 38
+## Variables: 17
+## $ fill     &lt;chr&gt; &quot;#00BFC4&quot;, &quot;#F8766D&quot;, &quot;#00BFC4&quot;, &quot;#F8766D&quot;, &quot;#00BFC4&quot;...
+## $ y        &lt;dbl&gt; 1, 1, 2, 3, 5, 7, 10, 14, 12, 19, 8, 17, 8, 19, 11, 2...
+## $ count    &lt;dbl&gt; 1, 0, 2, 1, 5, 2, 10, 4, 12, 7, 8, 9, 8, 11, 11, 17, ...
+## $ x        &lt;dbl&gt; 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 1...
+## $ xmin     &lt;dbl&gt; 10.5, 10.5, 11.5, 11.5, 12.5, 12.5, 13.5, 13.5, 14.5,...
+## $ xmax     &lt;dbl&gt; 11.5, 11.5, 12.5, 12.5, 13.5, 13.5, 14.5, 14.5, 15.5,...
+## $ density  &lt;dbl&gt; 0.01075269, 0.00000000, 0.02150538, 0.01010101, 0.053...
+## $ ncount   &lt;dbl&gt; 0.08333333, 0.00000000, 0.16666667, 0.05882353, 0.416...
+## $ ndensity &lt;dbl&gt; 7.750000, 0.000000, 15.500000, 5.823529, 38.750000, 1...
+## $ PANEL    &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+## $ group    &lt;int&gt; 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1,...
+## $ ymin     &lt;dbl&gt; 0, 1, 0, 2, 0, 5, 0, 10, 0, 12, 0, 8, 0, 8, 0, 11, 0,...
+## $ ymax     &lt;dbl&gt; 1, 1, 2, 3, 5, 7, 10, 14, 12, 19, 8, 17, 8, 19, 11, 2...
+## $ colour   &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N...
+## $ size     &lt;dbl&gt; 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5...
+## $ linetype &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+## $ alpha    &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N...</code></pre>
+          <p>For our purposes, we want the <code>x</code> (values along horizontal axis), <code>density</code> (same as <span class="caps">PMF</span>), and <code>group</code> (created by <code>fill = state</code>) columns. We extract those using <code>select()</code>            and then use <code>rename()</code> and <code>recode()</code> to give better names to the columns and categorical&nbsp;labels:</p>
+          <pre class="r"><code>nebraska_iowa_pmf &lt;- nebraska_iowa_figure_df %&gt;%
+  select(x, density, group) %&gt;%
+  rename(mean_travel_time = x, pmf = density, state = group) %&gt;%
+  mutate(state = recode(state, `1` = &quot;Iowa&quot;, `2` = &quot;Nebraska&quot;))</code></pre>
+          <p>With all of that work done, we can now calculate the difference in the Iowa and Nebraska PMFs. To do that, we need to <code>spread()</code> the <code>state</code> column into separate <code>Nebraska</code> and <code>Iowa</code> columns, then
+            use <code>mutate()</code> to subtract the <code>Nebraska</code> <span class="caps">PMF</span> from the <code>Iowa</code> <span class="caps">PMF</span>:</p>
+          <pre class="r"><code>nebraska_iowa_percent_difference &lt;- nebraska_iowa_pmf %&gt;%
+  spread(key = state, value = pmf) %&gt;%
+  mutate(percent_difference = 100 * (Iowa - Nebraska)) %&gt;%
+  select(-Iowa, -Nebraska)</code></pre>
+          <p>We remove the <code>Iowa</code> and <code>Nebraska</code> columns afterward, as we no longer need them after taking the difference. Now we can create a bar chart of the differences between Nebraska and Iowa travel times, which was the goal of
+            this&nbsp;procedure:</p>
+          <pre class="r"><code>nebraska_iowa_percent_difference %&gt;%
+  ggplot() +
+  geom_col(mapping = aes(x = mean_travel_time, y = percent_difference)) +
+  coord_cartesian(xlim = c(9.5, 30), ylim = c(-7, 7))</code></pre>
+          <p>
+            <img src="/img/Materials/advanced_pmf_example-ia-ne-travel-times-percent-diff-labeled-1.svg" title="plot of chunk ia-ne-travel-times-percent-diff-labeled" alt="plot of chunk ia-ne-travel-times-percent-diff-labeled" width="60%" style="display: block; margin: auto;"
+            />
+          </p>
+          <p>The arrows indicate that a taller bar in the <span class="math inline">\(y &gt; 0\)</span> region means the travel time is greater in Iowa, while a taller bar in the <span class="math inline">\(y &lt; 0\)</span> region means the travel time
+            is greater in Nebraska. This figure makes the pattern clearer: longer work travel times are more common in Iowa than in Nebraska. For now we should hold this conclusion only tentatively. We used the same dataset to identify an apparent difference
+            and then chose a visualization that makes the difference apparent. We can’t be sure this effect is real; it might be due to random variation. When we learn about statistical inference later on, we’ll have the tools necessary to better answer
+            that&nbsp;question.</p>
+          <h2 id="credits">Credits</h2>
+          <div class="license">
+            <p>This work, <em>An advanced example of a <span class="caps">PMF</span> visualization</em>, is a derivative of
+              <a href="http://a.co/grOJGrv">Allen B. Downey, “Chapter 3 Probability mass functions” in <em>Think Stats: Exploratory Data Analysis</em>, 2nd ed. (O’Reilly Media, Sebastopol, <span class="caps">CA</span>, 2014)</a>, used under
+              <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><span class="caps">CC</span> <span class="caps">BY</span>-<span class="caps">NC</span>-<span class="caps">SA</span> 4.0</a>. <em>An Advanced Example of a <span class="caps">PMF</span> Visualization</em> is licensed under
+              <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><span class="caps">CC</span> <span class="caps">BY</span>-<span class="caps">NC</span>-<span class="caps">SA</span> 4.0</a> by James&nbsp;Glasbrenner.</p>
+          </div>
+
+        </div>
+      </article>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-grid-container">
+        Except where otherwise noted, site materials are created by
+        <a href="https://cos.gmu.edu/cds/faculty-profile-james-glasbrenner/">
+          James K. Glasbrenner
+        </a>
+        and licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </div>
+    </footer>
+    <script src="http://spring18.cds101.com/theme/js/cds101.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/highlightjs/highlight.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/katex.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/wookmark/wookmark.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/fontawesome/fontawesome-all.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/vendorInit.js"></script>
+  </body>
+
+</html>
