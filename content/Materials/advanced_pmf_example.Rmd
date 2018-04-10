@@ -1,0 +1,154 @@
+Title: An advanced example of a PMF visualization
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-04-10 15:00
+Tags: reading-nograyout
+Slug: advanced-pmf-visualization
+Summary: Reading showing an example for how to use PMFs to compare the difference between two data distributions.
+Show_summary: true
+Show_link: true
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.width = 6, fig.alt = "",
+                      fig.asp = 0.618, dpi = 120, dev = "svg",
+                      out.width = "60%", fig.align = "center", cache = TRUE)
+library(tidyverse)
+county_complete <- read_rds(path = "../files/datasets/county_complete.rds")
+nebraska_iowa <- county_complete %>%
+  filter(state == "Iowa" | state == "Nebraska")
+```
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` Download this reading][reading-pdf]
+
+:::
+
+```r
+library(tidyverse)
+county_complete <- read_rds(
+  path = url("http://spring18.cds101.com/files/datasets/county_complete.rds"))
+nebraska_iowa <- county_complete %>%
+  filter(state == "Iowa" | state == "Nebraska")
+```
+
+**The following example assumes you have already read the standard reading on [_Probability mass functions_][pmf-reading].**
+
+Histograms and PMFs are useful while you are exploring data and trying to identify patterns and relationships.
+Once you have an idea what is going on, a good next step is to design a visualization that makes the patterns you have identified as clear as possible.
+
+In our prior comparison of the average work travel times for Nebraska and Iowa, we saw that there was a large overlap in travel times between 11 and 29 minutes, but that the overlap wasn't exact.
+So it makes sense to zoom in on that part of the graph, and to transform the data to emphasize differences.
+To do this, we need the values of the PMF in each of the bins.
+The `ggplot_build()` function allows us to extract these numerical values, although it takes a couple of steps to do.
+First, we need to create a histogram of the travel times in Iowa and Nebraska and assign it to a variable:
+
+```{r ia-ne-freq-hist-data}
+nebraska_iowa_histogram <- nebraska_iowa %>%
+  ggplot() +
+  geom_histogram(
+    mapping = aes(x = mean_work_travel, fill = state), binwidth = 1)
+```
+
+Next, we use `ggplot_build()` to convert the figure into a `list()` of information about the plot:
+
+```{r ia-ne-ggplot-build}
+nebraska_iowa_figure_list <- ggplot_build(nebraska_iowa_histogram)
+```
+
+A `list()` is a data type that we haven't used in the course yet.
+It's a convenient alternative to the `tibble` when you need to store uneven or very different kinds of information.
+Like the `tibble`, you can label the entries in a list.
+Our list `nebraska_iowa_figure_list` has several labels containing metadata about the plot:
+
+```{r ia-ne-figure-list-labels}
+names(nebraska_iowa_figure_list)
+```
+
+The one that we want to use is named `data`.
+To get the information inside of the `data` label, we use the `pluck()` function from `tidyverse`.
+
+```{r ia-ne-figure-df}
+nebraska_iowa_figure_df <- nebraska_iowa_figure_list %>%
+  pluck("data", 1) %>%
+  as_tibble()
+```
+
+The `1` inside of `pluck()` is necessary to get the data table stored inside of `data` (without it, we just get a `list()` data type back, which isn't helpful).
+We've also converted the data table into a `tibble` for convenience.
+
+There are 17 columns in `nebraska_iowa_figure_df`.
+Let's use `glimpse()` to get a list of the variable names and previews of the first few entries:
+
+```{r ia-ne-figure-df-glimpse}
+nebraska_iowa_figure_df %>%
+  glimpse()
+```
+
+For our purposes, we want the `x` (values along horizontal axis), `density` (same as PMF), and `group` (created by `fill = state`) columns.
+We extract those using `select()` and then use `rename()` and `recode()` to give better names to the columns and categorical labels:
+
+```{r ia-ne-pmf-extract-1}
+nebraska_iowa_pmf <- nebraska_iowa_figure_df %>%
+  select(x, density, group) %>%
+  rename(mean_travel_time = x, pmf = density, state = group) %>%
+  mutate(state = recode(state, `1` = "Iowa", `2` = "Nebraska"))
+```
+
+With all of that work done, we can now calculate the difference in the Iowa and Nebraska PMFs.
+To do that, we need to `spread()` the `state` column into separate `Nebraska` and `Iowa` columns, then use `mutate()` to subtract the `Nebraska` PMF from the `Iowa` PMF:
+
+```{r ia-ne-pmf-difference}
+nebraska_iowa_percent_difference <- nebraska_iowa_pmf %>%
+  spread(key = state, value = pmf) %>%
+  mutate(percent_difference = 100 * (Iowa - Nebraska)) %>%
+  select(-Iowa, -Nebraska)
+```
+
+We remove the `Iowa` and `Nebraska` columns afterward, as we no longer need them after taking the difference.
+Now we can create a bar chart of the differences between Nebraska and Iowa travel times, which was the goal of this procedure:
+
+```{r ia-ne-travel-times-percent-diff, eval = FALSE}
+nebraska_iowa_percent_difference %>%
+  ggplot() +
+  geom_col(mapping = aes(x = mean_travel_time, y = percent_difference)) +
+  coord_cartesian(xlim = c(9.5, 30), ylim = c(-7, 7))
+```
+
+```{r ia-ne-travel-times-percent-diff-labeled, echo = FALSE}
+nebraska_iowa_percent_difference %>%
+  ggplot() +
+  geom_col(mapping = aes(x = mean_travel_time, y = percent_difference)) +
+  labs(
+    title = "Difference in average work travel times in Iowa and Nebraska",
+    x = "Average work travel time (min)", y = "Percentage points") +
+  coord_cartesian(xlim = c(9.5, 30), ylim = c(-7, 7)) +
+  annotate(
+    geom = "segment", x = 10, xend = 10, y = 3, yend = 6, color = "indianred3",
+    size=0.5, alpha=1, arrow=arrow()) +
+  annotate(
+    geom = "segment", x = 10, xend = 10, y = -3, yend = -6,
+    color = "indianred3", size=0.5, alpha=1, arrow=arrow()) +
+  annotate(geom = "text", x = 10, y = 6.5, label = "Iowa") +
+  annotate(geom = "text", x = 10, y = -6.5, label = "Nebraska")
+```
+
+The arrows indicate that a taller bar in the \\(y > 0\\) region means the travel time is greater in Iowa, while a taller bar in the \\(y < 0\\) region means the travel time is greater in Nebraska.
+This figure makes the pattern clearer: longer work travel times are more common in Iowa than in Nebraska.
+For now we should hold this conclusion only tentatively.
+We used the same dataset to identify an apparent difference and then chose a visualization that makes the difference apparent.
+We can't be sure this effect is real; it might be due to random variation.
+When we learn about statistical inference later on, we'll have the tools necessary to better answer that question.
+
+## Credits
+
+::: {.license}
+This work, *An advanced example of a PMF visualization*, is a derivative of [Allen B. Downey, "Chapter 3 Probability mass functions" in *Think Stats: Exploratory Data Analysis*, 2nd ed. (O'Reilly Media, Sebastopol, CA, 2014)][think-stats-2], used under [CC BY-NC-SA 4.0][cc-4-by-nc-sa].
+*An Advanced Example of a PMF Visualization* is licensed under [CC BY-NC-SA 4.0][cc-4-by-nc-sa] by James Glasbrenner.
+:::
+
+[pmf-reading]:   /materials/representing-distributions-pmf/
+[reading-pdf]:   /doc/advanced_pmf_example.pdf
+[think-stats-2]: http://a.co/grOJGrv 
+[cc-4-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
