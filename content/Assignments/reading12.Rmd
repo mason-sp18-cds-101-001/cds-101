@@ -46,4 +46,4 @@ To receive an answer credit, reply to a posted question no later than 11:59pm on
 [reading-10-link]:                    /assignments/reading10.html
 [syllabus-readings]:                  http://spring18.cds101.com/syllabus.html#readings
 [class-size-paradox-reading]:         /materials/class-size-paradox/
-[advanced-pmf-visualization-reading]: /materials/advanced-pmf-example/
+[advanced-pmf-visualization-reading]: /materials/advanced-pmf-visualization/
