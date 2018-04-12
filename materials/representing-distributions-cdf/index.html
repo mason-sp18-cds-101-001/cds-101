@@ -108,8 +108,8 @@ county_complete &lt;- read_rds(
           <p>What happens if we choose <code>binwidth = 0.1</code> for plotting the <code>mean_work_travel</code> distribution? The values in <code>mean_work_travel</code> are reported to the first decimal place, so <code>binwidth = 0.1</code> does not “smooth
             out” the data. This increases the number of distinct values in <code>mean_work_travel</code> from 41 to 304. The comparison between the Virginia and New Jersey PMFs will then look like&nbsp;this:</p>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-mean-work-travel-pmf-no-rounding-1.svg" title="plot of chunk mean-work-travel-pmf-no-rounding" alt="plot of chunk mean-work-travel-pmf-no-rounding" width="60%"
-              style="display: block; margin: auto;" />
+            <img src="/img/Materials/representing_distributions_cdf-mean-work-travel-pmf-no-rounding-1.svg" title="plot of chunk mean-work-travel-pmf-no-rounding" alt="plot of chunk mean-work-travel-pmf-no-rounding" width="60%" style="display: block; margin: auto;"
+            />
           </p>
           <p>This visualization has a lot of spikes of similar heights, which makes this difficult to interpret and limits its usefulness. Also, it can be hard to see overall patterns; for example, what is the approximate difference in means between these
             two&nbsp;distributions?</p>
@@ -173,8 +173,7 @@ test_scores %&gt;%
   mutate(cdf = row_number() / n())</code></pre>
           <p>The visualization of the <span class="caps">CDF</span> looks&nbsp;like:</p>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-test-scores-cdf-plot-1.svg" title="plot of chunk test-scores-cdf-plot" alt="plot of chunk test-scores-cdf-plot" width="60%" style="display: block; margin: auto;"
-            />
+            <img src="/img/Materials/representing_distributions_cdf-test-scores-cdf-plot-1.svg" title="plot of chunk test-scores-cdf-plot" alt="plot of chunk test-scores-cdf-plot" width="60%" style="display: block; margin: auto;" />
           </p>
           <p>As you can see, the <span class="caps">CDF</span> of a sample looks like a sequence of steps. Appropriately enough, this is called a step function, and the <span class="caps">CDF</span> of <em>any</em> sample is a step&nbsp;function.</p>
           <p>Also note that we can evaluate the <span class="caps">CDF</span> for any value, not just values that appear in the sample. If we select a value that is less than the smallest value in the sample, then the <span class="caps">CDF</span> is 0.
@@ -201,7 +200,7 @@ mean_work_travel_max &lt;- county_complete %&gt;%
   max()</code></pre>
           <p>By themselves, these correspond to two points along the horizontal axis, like&nbsp;so</p>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-plot-1.svg" title="plot of chunk min-max-mean-work-travel-plot" alt="plot of chunk min-max-mean-work-travel-plot" width="60%" style="display: block; margin: auto;"
+            <img src="/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-plot-1.svg" title="plot of chunk min-max-mean-work-travel-plot" alt="plot of chunk min-max-mean-work-travel-plot" width="60%" style="display: block; margin: auto;"
             />
           </p>
           <p>To generate horizontal values that increase by 1 between the minimum and maximum, we use <code>seq()</code> as&nbsp;follows:</p>
@@ -209,8 +208,8 @@ mean_work_travel_max &lt;- county_complete %&gt;%
   from = mean_work_travel_min, to = mean_work_travel_max, by = 1)</code></pre>
           <p>Visually, this would look&nbsp;like</p>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-short-range-1.svg" title="plot of chunk min-max-mean-work-travel-short-range" alt="plot of chunk min-max-mean-work-travel-short-range"
-              width="60%" style="display: block; margin: auto;" />
+            <img src="/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-short-range-1.svg" title="plot of chunk min-max-mean-work-travel-short-range" alt="plot of chunk min-max-mean-work-travel-short-range" width="60%" style="display: block; margin: auto;"
+            />
           </p>
           <p>Generally, it’s better to use a smaller incremental value inside <code>seq()</code> in order to make smoother figures. Let’s use <code>by = 0.1</code>:</p>
           <pre class="r"><code>mean_work_travel_range2 &lt;- seq(
@@ -225,8 +224,8 @@ mean_work_travel_max &lt;- county_complete %&gt;%
   ggplot() +
   geom_line(mapping = aes(x = mean_work_travel, y = cdf))</code></pre>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-mean-work-travel-cdf-visualization-labeled-1.svg" title="plot of chunk mean-work-travel-cdf-visualization-labeled" alt="plot of chunk mean-work-travel-cdf-visualization-labeled"
-              width="60%" style="display: block; margin: auto;" />
+            <img src="/img/Materials/representing_distributions_cdf-mean-work-travel-cdf-visualization-labeled-1.svg" title="plot of chunk mean-work-travel-cdf-visualization-labeled" alt="plot of chunk mean-work-travel-cdf-visualization-labeled" width="60%"
+              style="display: block; margin: auto;" />
           </p>
           <p>Now we can easily specify an average work travel time percentile and read the associated time from the plot and&nbsp;vice-versa.</p>
           <p>It takes some time to get used to CDFs, but over time it should become clear that they show more information, more clearly, than&nbsp;PMFs.</p>
@@ -255,7 +254,7 @@ ia_ne_mean_work_travel_cdfs &lt;- data_frame(
        mapping = aes(x = mean_work_travel, y = CDF)) +
   geom_line(mapping = aes(color = state))</code></pre>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-compare-cdf-of-ne-ia-travel-times-plot-labeled-1.svg" title="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" alt="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled"
+            <img src="/img/Materials/representing_distributions_cdf-compare-cdf-of-ne-ia-travel-times-plot-labeled-1.svg" title="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" alt="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled"
               width="60%" style="display: block; margin: auto;" />
           </p>
           <p>This visualization makes the shapes of the distributions and the relative differences between them much clearer. We see that Nebraska has shorter average work travel times for most of the distribution, at least until you reach an average time

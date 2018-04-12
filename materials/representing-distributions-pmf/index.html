@@ -110,8 +110,8 @@ county_complete &lt;- read_rds(
   ggplot(mapping = aes(x = mean_work_travel)) +
   geom_histogram(binwidth = 1)</code></pre>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-mean-travel-time-freq-hist-labeled-1.svg" title="plot of chunk mean-travel-time-freq-hist-labeled" alt="plot of chunk mean-travel-time-freq-hist-labeled" width="60%"
-              style="display: block; margin: auto;" />
+            <img src="/img/Materials/representing_distributions_pmf-mean-travel-time-freq-hist-labeled-1.svg" title="plot of chunk mean-travel-time-freq-hist-labeled" alt="plot of chunk mean-travel-time-freq-hist-labeled" width="60%" style="display: block; margin: auto;"
+            />
           </p>
           <h2 id="pmfs">PMFs</h2>
           <p>The <strong>probability mass function</strong> (<span class="caps">PMF</span>) represents a distribution by sorting the data into bins (much like the frequency histogram) and then associates a probability with each bin in the distribution. A
@@ -121,11 +121,11 @@ county_complete &lt;- read_rds(
           <pre><code>1  2  2  3  5</code></pre>
           <p>If we choose a binwidth of 1, then we get a frequency histogram that looks like&nbsp;this:</p>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-simple-freq-hist-1.svg" title="plot of chunk simple-freq-hist" alt="plot of chunk simple-freq-hist" width="60%" style="display: block; margin: auto;" />
+            <img src="/img/Materials/representing_distributions_pmf-simple-freq-hist-1.svg" title="plot of chunk simple-freq-hist" alt="plot of chunk simple-freq-hist" width="60%" style="display: block; margin: auto;" />
           </p>
           <p>There are 5 observations in this sample. So, we can convert to a <span class="caps">PMF</span> by dividing the count within each bin by 5, getting a histogram that looks like&nbsp;this:</p>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-simple-pmf-hist-1.svg" title="plot of chunk simple-pmf-hist" alt="plot of chunk simple-pmf-hist" width="60%" style="display: block; margin: auto;" />
+            <img src="/img/Materials/representing_distributions_pmf-simple-pmf-hist-1.svg" title="plot of chunk simple-pmf-hist" alt="plot of chunk simple-pmf-hist" width="60%" style="display: block; margin: auto;" />
           </p>
           <p>The relative shape stays the same, but compare the values along the vertical axis between the two figures. You’ll find that they are no longer integers and are instead probabilities. The normalization procedure (dividing by 5) guarantees that
             adding together the probabilities of all bins will equal 1. For this example, we find that the probability of drawing the number 1 is 0.2, drawing 2 is 0.4, drawing 3 is 0.2, drawing 4 is 0, and drawing 5 is 0.2. That is the biggest difference
@@ -137,7 +137,7 @@ county_complete &lt;- read_rds(
   ggplot(mapping = aes(x = mean_work_travel, y = ..density..)) +
   geom_histogram(binwidth = 1)</code></pre>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-mean-travel-time-pmf-labeled-1.svg" title="plot of chunk mean-travel-time-pmf-labeled" alt="plot of chunk mean-travel-time-pmf-labeled" width="60%" style="display: block; margin: auto;"
+            <img src="/img/Materials/representing_distributions_pmf-mean-travel-time-pmf-labeled-1.svg" title="plot of chunk mean-travel-time-pmf-labeled" alt="plot of chunk mean-travel-time-pmf-labeled" width="60%" style="display: block; margin: auto;"
             />
           </p>
           <p>Let’s do a comparison to show how one might use a <span class="caps">PMF</span> for analysis. For example, we could ask if two midwestern states such as Nebraska and Iowa have the same distribution of work travel times, or if there is a meaningful
@@ -151,8 +151,8 @@ county_complete &lt;- read_rds(
     mapping = aes(x = mean_work_travel, fill = state, color = state),
     position = &quot;identity&quot;, alpha = 0.5, binwidth = 1)</code></pre>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-ia-ne-travel-times-freq-hist-labeled-1.svg" title="plot of chunk ia-ne-travel-times-freq-hist-labeled" alt="plot of chunk ia-ne-travel-times-freq-hist-labeled"
-              width="60%" style="display: block; margin: auto;" />
+            <img src="/img/Materials/representing_distributions_pmf-ia-ne-travel-times-freq-hist-labeled-1.svg" title="plot of chunk ia-ne-travel-times-freq-hist-labeled" alt="plot of chunk ia-ne-travel-times-freq-hist-labeled" width="60%" style="display: block; margin: auto;"
+            />
           </p>
           <p>The <code>position = &quot;identity&quot;</code> input overlaps the two distributions (instead of stacking them) and <code>alpha = 0.5</code> makes the distributions translucent, so that you can see both despite the overlap. On our first glance,
             it looks like the center of the Nebraska times is lower than the center of the Iowa times, and that both have a long tail on the right-hand side. However, if we do a count&nbsp;summary,</p>
@@ -167,7 +167,7 @@ county_complete &lt;- read_rds(
                   fill = state, color = state),
     position = &quot;identity&quot;, alpha = 0.5, binwidth = 1)</code></pre>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-ia-ne-travel-times-pmf-labeled-1.svg" title="plot of chunk ia-ne-travel-times-pmf-labeled" alt="plot of chunk ia-ne-travel-times-pmf-labeled" width="60%" style="display: block; margin: auto;"
+            <img src="/img/Materials/representing_distributions_pmf-ia-ne-travel-times-pmf-labeled-1.svg" title="plot of chunk ia-ne-travel-times-pmf-labeled" alt="plot of chunk ia-ne-travel-times-pmf-labeled" width="60%" style="display: block; margin: auto;"
             />
           </p>
           <p>The trend that the center of the travel times in Nebraska is slightly smaller than in Iowa continues to hold even after converting to a <span class="caps">PMF</span>.</p>
@@ -177,7 +177,7 @@ county_complete &lt;- read_rds(
   count(state)</code></pre>
           <p>As a result, comparing their frequency histograms gives you&nbsp;this:</p>
           <p>
-            <img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-va-nj-travel-times-freq-hist-1.svg" title="plot of chunk va-nj-travel-times-freq-hist" alt="plot of chunk va-nj-travel-times-freq-hist" width="60%" style="display: block; margin: auto;"
+            <img src="/img/Materials/representing_distributions_pmf-va-nj-travel-times-freq-hist-1.svg" title="plot of chunk va-nj-travel-times-freq-hist" alt="plot of chunk va-nj-travel-times-freq-hist" width="60%" style="display: block; margin: auto;"
             />
           </p>
           <p>The New Jersey distribution is dwarfed by the Virginia distribution and it makes it difficult to make comparisons. However, if we instead compare PMFs, we get&nbsp;this:</p>
