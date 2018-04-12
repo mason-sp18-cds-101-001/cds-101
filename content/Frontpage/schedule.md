@@ -78,7 +78,8 @@ Week 10             19      Apr-03        [Introduction to Web Scraping II/Princ
 Week 11             21      Apr-10        [Statistical distributions II]                                                          [Reading 10]
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class21_slides.pdf)
 
-                    22      Apr-12        Inference and simulations I                                                             [Reading 11]
+                    22      Apr-12        [Inference and simulations I]                                                           [Reading 11]
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class22_slides.pdf)
                             
                             Apr-13                                                                                                [Reading 12]
 
@@ -139,6 +140,7 @@ Week 14             27      May-01        Statistical modeling III
 [Introduction to Web Scraping II/Principles of Data Collection]: /materials/class-19/
 [Statistical distributions I]:                                   /materials/class-20/
 [Statistical distributions II]:                                  /materials/class-21/
+[Inference and simulations I]:                                   /materials/class-22/
 [cl-8-github]:                                                   https://classroom.github.com/a/xku1H3sP
 [cl-11-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1519755978000359
 [cl-13-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1520361454000399
