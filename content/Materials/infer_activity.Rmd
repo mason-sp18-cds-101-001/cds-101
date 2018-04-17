@@ -1,0 +1,24 @@
+Title: <span class="monospace">infer</span> activity
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-04-17 13:30
+Tags: activity
+Slug: infer-activity
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-16"></i>&nbsp;'
+icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-16"></i>&nbsp;'
+```
+
+Activity using a dataset from the *Mythbusters* television show to practice building hypothesis tests with the `infer` package
+
+::: {.no-bullets}
+
+*   [`r icon_github` &nbsp; [**infer activity** repo]{.card-downloads-format}][github-classroom-repo]
+
+:::
+
+[github-classroom-repo]: https://classroom.github.com/a/o-KntOw5
+

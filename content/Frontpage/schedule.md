@@ -80,12 +80,14 @@ Week 11             21      Apr-10        [Statistical distributions II]        
 
                     22      Apr-12        [Inference and simulations I]                                                           [Reading 11]
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class22_slides.pdf)
-                            
+
                             Apr-13                                                                                                [Reading 12]
 
                             Apr-16                                                                                                [Homework 3]
 
-Week 12             23      Apr-17        Inference and simulations II                                                            [Reading 13]
+Week 12             23      Apr-17        [Inference and simulations II]                                                          [Reading 13]
+                                          [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-23-github]
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class23_slides.pdf)
 
                     24      Apr-19        Inference and simulations III                                                           [Reading 14]
 
@@ -141,7 +143,9 @@ Week 14             27      May-01        Statistical modeling III
 [Statistical distributions I]:                                   /materials/class-20/
 [Statistical distributions II]:                                  /materials/class-21/
 [Inference and simulations I]:                                   /materials/class-22/
+[Inference and simulations II]:                                  /materials/class-23/
 [cl-8-github]:                                                   https://classroom.github.com/a/xku1H3sP
 [cl-11-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1519755978000359
 [cl-13-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1520361454000399
 [cl-18-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1522347635000427
+[cl-23-github]:                                                  https://classroom.github.com/a/o-KntOw5
