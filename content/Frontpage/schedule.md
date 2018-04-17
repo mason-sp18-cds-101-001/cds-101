@@ -86,7 +86,7 @@ Week 11             21      Apr-10        [Statistical distributions II]        
                             Apr-16                                                                                                [Homework 3]
 
 Week 12             23      Apr-17        [Inference and simulations II]                                                          [Reading 13]
-                                          [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-23-github]
+                                          [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-23-github], 
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class23_slides.pdf)
 
                     24      Apr-19        Inference and simulations III                                                           [Reading 14]
