@@ -33,29 +33,29 @@ icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbs
 
 For this homework assignment, you will use statistical inference to answer a question about the National Survey of Family Growth, Cycle 6 dataset published by the National Center for Health Statistics.
 
-[Obtain the Github repository you will use to complete homework 4][github-classroom] that contains a starter RMarkdown file named [homework_3.Rmd]{.monospace}, which you will use to do your work and write-up when completing the questions below.
+[Obtain the Github repository you will use to complete homework 4][github-classroom] that contains a starter RMarkdown file named [homework_4.Rmd]{.monospace}, which you will use to do your work and write-up when completing the questions below.
 Remember to fill in your name at the top of the RMarkdown document and be sure to save, commit, and push (upload) frequently to Github so that you have incremental snapshots of your work.
 When you're done, follow the [How to submit](#how-to-submit) section below to setup a Pull Request, which will be used for feedback.
 
 ## About the dataset
 
-This homework uses the *National Survey of Family Growth, Cycle 6* dataset in the file `2002FemPreg.rds`, published by the National Center for Health Statistics.
+This homework uses the *National Survey of Family Growth, Cycle 6* dataset in the file [2002FemPreg.rds]{.monospace}, published by the National Center for Health Statistics.
 Complete descriptions of all the variables can be found in the [NSFG Cycle 6: Female Pregnancy File Codebook][nsfg-cycle-6].
 Below are selected descriptions of variables that will be used for this homework assignment:
 
-----------------------------------------------------------------------------------------------------
-Variable        Description
---------------- ------------------------------------------------------------------------------------
-`caseid`        integer ID of the respondent
+----------------------------------------------------------------------------------------------------------------
+Variable                Description
+----------------------  ----------------------------------------------------------------------------------------
+[caseid]{.monospace}    integer ID of the respondent
 
-`prglngth`      integer duration of the pregnancy in weeks
+[prglngth]{.monospace}  integer duration of the pregnancy in weeks
 
-`outcome`       integer code for the outcome of the pregnancy, with a 1 indicating a live birth
+[outcome]{.monospace}   integer code for the outcome of the pregnancy, with a 1 indicating a live birth
 
-`birthord`      serial number for live births; the code for a respondent's first child is 1, and
-                so on. For outcomes other than live birth, this field is blank
+[birthord]{.monospace}  serial number for live births; the code for a respondent's first child is 1, and
+                        so on. For outcomes other than live birth, this field is blank
 
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
 
 ## Questions
 
