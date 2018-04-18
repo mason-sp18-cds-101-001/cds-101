@@ -1,0 +1,354 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS-101: Introduction to Computational and Data Sciences</title>
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/cds101.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/katex/katex.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/highlightjs/default.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/fontawesome/fa-svg-with-js.css">
+    <link href="http://spring18.cds101.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CDS-101: Introduction to Computational and Data Sciences Full Atom Feed" />
+  </head>
+
+  <body>
+    <div class="header-grid-container">
+      <div class="banner-container">
+        <header>
+          <div class="banner">
+            <div class="course-logo">
+              <a href="http://spring18.cds101.com/">
+                <img src="http://spring18.cds101.com/theme/img/course-logo.svg">
+              </a>
+            </div>
+            <div class="university-logo">
+              <a href="https://gmu.edu">
+                <img src="http://spring18.cds101.com/theme/img/university-logo.svg">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-mobile" data-responsive-toggle="main-menu" data-hide-for="large">
+          <button type="button" data-toggle="main-menu">
+            <i class="fas fa-bars"></i><span class="navbar-mobile-title">Menu</span></button>
+        </div>
+
+        <div class="navbar-menu" id="main-menu">
+          <ul class="navbar-menu-list">
+            <li>
+              <a class="navbar-home-item" href="http://spring18.cds101.com/">
+                <i class="fas fa-home" data-fa-transform="grow-8"></i>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/materials.html">Materials</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/assignments.html">Assignments</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/datasets.html">Datasets</a>
+            </li>
+            <li class="navbar-social">
+              <ul class="navbar-social-list">
+                <li>
+                  <a class="navbar-social-item" href="https://github.com/mason-sp18-cds-101-001/cds-101">
+                    <i class="fab fa-github" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="http://masoncds101.slack.com">
+                    <i class="fab fa-slack" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="feeds/all.atom.xml">
+                    <i class="fas fa-rss-square" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content-grid-container">
+      <article class="static-page">
+        <header class="static-page-header">
+          <h1 class="static-page-title">Homework&nbsp;4</h1>
+        </header>
+        <div class="static-page-body">
+          <p><span class="h3"><strong>Due:</strong> April 27, 2018 @&nbsp;11:59pm</span></p>
+          <div class="no-bullets">
+            <ul>
+              <li>
+                <p>
+                  <a href="/doc/cds101_homework4.pdf">
+                    <i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>  Offline copy of&nbsp;instructions</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://classroom.github.com/a/6qDS86I0">
+                    <i class="fab fa-github-alt" data-fa-transform="grow-8"></i>  Github Classroom repo for <strong>Homework&nbsp;4</strong></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <h2 id="instructions">Instructions</h2>
+          <p>For this homework assignment, you will use statistical inference to answer a question about the National Survey of Family Growth, Cycle 6 dataset published by the National Center for Health&nbsp;Statistics.</p>
+          <p>
+            <a href="https://classroom.github.com/a/6qDS86I0">Obtain the Github repository you will use to complete homework 4</a> that contains a starter RMarkdown file named <span class="monospace">homework_4.Rmd</span>, which you will use to do your work and write-up when completing the questions
+            below. Remember to fill in your name at the top of the RMarkdown document and be sure to save, commit, and push (upload) frequently to Github so that you have incremental snapshots of your work. When you’re done, follow the
+            <a href="#how-to-submit">How to submit</a> section below to setup a Pull Request, which will be used for&nbsp;feedback.</p>
+          <h2 id="about-the-dataset">About the&nbsp;dataset</h2>
+          <p>This homework uses the <em>National Survey of Family Growth, Cycle 6</em> dataset in the file <span class="monospace">2002FemPreg.rds</span>, published by the National Center for Health Statistics. Complete descriptions of all the variables
+            can be found in the
+            <a href="http://www.icpsr.umich.edu/nsfg6/Controller?displayPage=codeBook&amp;fileCode=PREG&amp;section=&amp;subSec="><span class="caps">NSFG</span> Cycle 6: Female Pregnancy File Codebook</a>. Below are selected descriptions of variables that will be used for this homework&nbsp;assignment:</p>
+          <table>
+            <colgroup>
+              <col style="width: 21%" />
+              <col style="width: 78%" />
+            </colgroup>
+            <thead>
+              <tr class="header">
+                <th style="text-align: left;">Variable</th>
+                <th style="text-align: left;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">caseid</span></td>
+                <td style="text-align: left;">integer <span class="caps">ID</span> of the respondent</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">prglngth</span></td>
+                <td style="text-align: left;">integer duration of the pregnancy in weeks</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">outcome</span></td>
+                <td style="text-align: left;">integer code for the outcome of the pregnancy, with a 1 indicating a live birth</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">birthord</span></td>
+                <td style="text-align: left;">serial number for live births; the code for a respondent’s first child is 1, and so on. For outcomes other than live birth, this field is blank</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 id="questions">Questions</h2>
+          <p>This homework assignment revolves around answering the following question using this&nbsp;dataset:</p>
+          <blockquote>
+            <p>Do first born children either arrive early or late when compared with&nbsp;non-first-borns?</p>
+          </blockquote>
+          <p>The questions in this assignment will guide you through the process of answering this question using statistical&nbsp;inference.</p>
+          <ol class="example" type="1">
+            <li>
+              <p>Addressing the question <em>“do first born children either arrive early or late when compared with non-first-borns?”</em> means that we should only consider live births in the dataset. Filter the dataset so that it only contains outcomes
+                with live births and assign this result to the variable <code>live_births</code>.</p>
+              <p>Next, we need to label all births in <code>live_births</code> as either “first” or “other” so that we can easily find the children that are first borns and the ones that are not. There are a couple of different ways that you can label the&nbsp;births:</p>
+              <ul>
+                <li>
+                  <p>Split the dataset into two parts, a <code>first_births</code> dataset and an <code>other_births</code> dataset. Do this by applying a filter to extract the first births, then use <code>mutate()</code> to create a new column called <code>birth_order</code>                    that labels these rows as “first”. Then repeat this process, except apply a filter to extract all other births and label those as “other” in <code>birth_order</code>. To recombine the datasets into one, use <code>bind_rows()</code>.</p>
+                </li>
+                <li>
+                  <p>Use <code>ifelse()</code> with <code>mutate()</code> to create the <code>birth_order</code> column and the “first” and “other” labels. You can also try using <code>case_when()</code> instead of <code>ifelse()</code> to accomplish this.
+                    If you do it this way, you won’t need to use <code>bind_rows()</code>.</p>
+                </li>
+              </ul>
+              <p>After labeling the births, remove the extraneous variables from the <code>tibble</code> leaving just the <code>prglngth</code> and <code>birth_order</code> columns. Assign the resulting <code>tibble</code> to a variable named <code>pregnancy_length</code>.</p>
+            </li>
+            <li>
+              <p>Take the <code>pregnancy_length</code> dataset and plot a probability mass function (<span class="caps">PMF</span>) histogram of the pregnancy length in weeks that shows “first” births and “other” births on the same plot. Choose a reasonable
+                binwidth for the histogram and add <code>coord_cartesian(xlim = c(27, 46))</code> to your plot so that the window focuses where most of the data is. <strong>After creating the plot, describe the shape, center, and spread of the two distributions</strong>.
+                Based on the visualization, do you think the data looks like it supports the statement that “first born children either arrive early or arrive late when compared with&nbsp;non-first-borns”?</p>
+            </li>
+            <li>
+              <p>Group the variable <code>prglngth</code> into “first” and “other” births and compute the summary statistics (mean, median, standard deviation, inter-quartile range, minimum, maximum) for each group. How do the different summary statistics
+                compare between the two distributions? Does it look like there may be a notable difference between the two distributions?&nbsp;Explain.</p>
+            </li>
+            <li>
+              <p>Create theoretical quantile-quantile (q-q) plots to determine whether the pregnancy length distributions for “first” and “other” births are nearly normal. You should make <strong>separate</strong> q-q plots for “first” births and “other”
+                births (i.e. you should end up with two&nbsp;plots).</p>
+              <p>Each q-q plot should include a reference line that shows what the theoretical normal distribution looks like so that we can observe deviations from normality. You’ll need to compute this line manually. Adapt the following code to compute
+                the slope and intercept for the theoretical line (you will need to do this twice, once for “first” births and again for “other”&nbsp;births):</p>
+              <pre class="r"><code>qq_x &lt;- qnorm(p = c(0.25, 0.75))
+qq_y &lt;- quantile(x = pull(dataset, variable), probs = c(0.25, 0.75), type = 1)
+qq_slope &lt;- diff(qq_y) / diff(qq_x)
+qq_int &lt;- pluck(qq_y, 1) - qq_slope * pluck(qq_x, 1)</code></pre>
+              <p><strong>“Adapting the code” means you will have to change the <code>dataset</code> and <code>variable</code> parameters.</strong> Once you have found <code>qq_slope</code> and <code>qq_int</code> for “first” and “other” births, use <code>geom_abline()</code>                to include the theoretical reference line in your q-q&nbsp;plots.</p>
+              <p>Based on your plots, does it appear that the pregnancy length distribution is nearly normal for both “first” and “other” births? Why or why&nbsp;not?</p>
+            </li>
+            <li>
+              <p>Returning back to the question of whether or not “first babies arrive early or arrive late when compared with non-first-borns”, plot the cumulative distribution functions (CDFs) of the pregnancy lengths for “first” and “other” births. Plot
+                the <span class="caps">CDF</span> for both distributions on the same figure so that we can directly compare them. How do the distributions compare? Does it look like there is there a meaningful difference between the two&nbsp;distributions?</p>
+            </li>
+            <li>
+              <p>If we want to determine whether or not the difference between two distributions is statistically significant, we need to run a hypothesis test. Formalize your analysis by writing down the null hypothesis for the question of whether first
+                babies arrive early or arrive late when compared with non-first-borns. It should be clear from how you write your null hypothesis whether you’re conducting a <strong>one-sided</strong> or <strong>two-sided</strong> hypothesis test. You
+                should also restate what the <strong>observed value</strong> is (this will be a number) that you will be comparing against the null&nbsp;distribution.</p>
+            </li>
+            <li>
+              <p>Use a simulation to generate the null distribution so that you can perform the hypothesis test. Do this using the functions provided in the <code>infer</code> package, <code>specify()</code>, <code>hypothesize()</code>, <code>generate()</code>,
+                and <code>calculate()</code>. To collect enough statistics, you should set the simulation to repeat 10,000&nbsp;times.</p>
+              <p>Once you’ve obtained the null distribution, use it to compute the <em>p</em>-value for your hypothesis test. Assuming a significance level of <span class="math inline">\(\alpha = 0.05\)</span>, state whether we can we reject the null&nbsp;hypothesis.</p>
+              <p>Finally, visualize the simulated null distribution as a histogram and use <code>geom_vline()</code> to show where the <strong>observed value</strong> sits relative to&nbsp;it.</p>
+            </li>
+            <li>
+              <p>Use a bootstrap simulation to calculate the 95% confidence interval for your <strong>observed value</strong>. Do this using the following functions from the <code>infer</code> package, <code>specify()</code>, `<code>generate()</code>, and
+                <code>calculate()</code>. To collect enough statistics, you should set the bootstrap simulation to repeat 10,000&nbsp;times.</p>
+              <p>Once you’ve obtained the bootstrap distribution, use <code>quantile()</code> to find the upper and lower bounds of the 95% confidence interval. Does the value corresponding to the null result fall within the range of the 95% confidence&nbsp;interval?</p>
+              <p>Finally, visualize the bootstrap distribution as a histogram and use two <code>geom_vline()</code>s to show the region corresponding to the 95% confidence&nbsp;interval.</p>
+            </li>
+            <li>
+              <p>In addition to hypothesis tests and confidence intervals, we should also consider the <strong>effect size</strong>, which measures the relative difference between two distributions. The effect size helps us better know how important a given
+                result actually is, not just whether or not we can reject the null hypothesis. One measure of the effect size is called
+                <a href="https://en.wikipedia.org/wiki/Effect_size#Cohen.27s_d">Cohen’s <em>d</em></a> (
+                <a href="https://en.wikipedia.org/wiki/Effect_size#Cohen.27s_d" class="uri">https://en.wikipedia.org/wiki/Effect_size#Cohen.27s_d</a>), which we will use to compute the effect size between the pregnancy lengths for “first” and “other” births. The different ranges of <em>d</em> can be interpreted using the following&nbsp;table:</p>
+              <table>
+                <thead>
+                  <tr class="header">
+                    <th style="text-align: left;">Effect size</th>
+                    <th style="text-align: left;">d</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd">
+                    <td style="text-align: left;">Very small</td>
+                    <td style="text-align: left;">0.01</td>
+                  </tr>
+                  <tr class="even">
+                    <td style="text-align: left;">Small</td>
+                    <td style="text-align: left;">0.20</td>
+                  </tr>
+                  <tr class="odd">
+                    <td style="text-align: left;">Medium</td>
+                    <td style="text-align: left;">0.50</td>
+                  </tr>
+                  <tr class="even">
+                    <td style="text-align: left;">Large</td>
+                    <td style="text-align: left;">0.80</td>
+                  </tr>
+                  <tr class="odd">
+                    <td style="text-align: left;">Very large</td>
+                    <td style="text-align: left;">1.20</td>
+                  </tr>
+                  <tr class="even">
+                    <td style="text-align: left;">Huge</td>
+                    <td style="text-align: left;">2.00</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>The following set of functions should also be preloaded for you: <code>cohens_d_bootstrap()</code>, <code>bootstrap_report()</code>, and <code>plot_ci()</code>. These functions will use bootstrap simulations to compute the confidence interval
+                for the Cohen’s <em>d</em> parameter. Run the bootstrap simulation as&nbsp;follows:</p>
+              <pre class="r"><code>cohens_d_bootstrap(data = pregnancy_length, model = prglngth ~ birth_order)</code></pre>
+              <p><strong>Be sure to assign the results to a variable</strong>, for example <code>bootstrap_results</code>.</p>
+              <p>To print a report for the bootstrap simulation,&nbsp;run:</p>
+              <pre class="r"><code>bootstrap_report(bootstrap_results)</code></pre>
+              <p>To visualize the bootstrap distribution and confidence interval,&nbsp;run:</p>
+              <pre class="r"><code>plot_ci(bootstrap_results)</code></pre>
+              <p>Using the provided table, report how large the effect size is for the difference in pregnancy lengths for “first” and “other”&nbsp;births.</p>
+            </li>
+            <li>
+              <p>Having completed your analysis, write a paragraph that summarizes your results and answers the question “do first born children arrive early or late compared to other children?” Write the summary as if you are an academic or scientific journalist,
+                focusing on how you can answer the question clearly, precisely, and&nbsp;honestly.</p>
+            </li>
+          </ol>
+          <h2 id="how-to-submit">How to&nbsp;submit</h2>
+          <p>When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github. Then, navigate to <strong>your copy</strong> of the
+            <a href="https://classroom.github.com/a/6qDS86I0">Github repository</a> you used for this assignment. You should see your repository, along with the updated files that you just synchronized to Github. Confirm that your files are up-to-date, and then do the following&nbsp;steps:</p>
+          <ol type="1">
+            <li>
+              <p>Click the <em>Pull Requests</em> tab near the top of the&nbsp;page.</p>
+            </li>
+            <li>
+              <p>Click the green button that says “New pull&nbsp;request”.</p>
+            </li>
+            <li>
+              <p>Click the dropdown menu button labeled “base:”, and select the option <code>starting</code>.</p>
+            </li>
+            <li>
+              <p>Confirm that the dropdown menu button labeled “compare:” is set to <code>master</code>.</p>
+            </li>
+            <li>
+              <p>Click the green button that says “Create pull&nbsp;request”.</p>
+            </li>
+            <li>
+              <p>Give the <em>pull request</em> the following title: <span class="monospace">Submission: Homework 4, FirstName LastName</span>, replacing <span class="monospace">FirstName</span> and <span class="monospace">LastName</span> with your actual
+                first and last&nbsp;name.</p>
+            </li>
+            <li>
+              <p>In the messagebox, write: <span class="monospace">My homework submission is ready for grading @shuaibm @jkglasbrenner</span>.</p>
+            </li>
+            <li>
+              <p>Click “Create pull request” to lock in your&nbsp;submission.</p>
+            </li>
+          </ol>
+          <h2 id="cheatsheets">Cheatsheets</h2>
+          <p>You are encouraged to review and keep the following cheatsheets handy while working on this&nbsp;assignment:</p>
+          <ul>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/rstudio-IDE-cheatsheet.pdf">RStudio&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/rmarkdown-cheatsheet.pdf">RMarkdown&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/rmarkdown-reference.pdf">RMarkdown&nbsp;reference</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/ggplot2-cheatsheet.pdf"><span class="monospace">ggplot2</span>&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/data-transformation-cheatsheet.pdf">Data transformation&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/data-import-cheatsheet.pdf">Data import&nbsp;cheatsheet</a>
+              </p>
+            </li>
+          </ul>
+
+        </div>
+      </article>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-grid-container">
+        Except where otherwise noted, site materials are created by
+        <a href="https://cos.gmu.edu/cds/faculty-profile-james-glasbrenner/">
+          James K. Glasbrenner
+        </a>
+        and licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </div>
+    </footer>
+    <script src="http://spring18.cds101.com/theme/js/cds101.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/highlightjs/highlight.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/katex.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/wookmark/wookmark.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/fontawesome/fontawesome-all.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/vendorInit.js"></script>
+  </body>
+
+</html>

@@ -1,5 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>CDS-101: Introduction to Computational and Data Sciences</title><link href="http://spring18.cds101.com/" rel="alternate"></link><link href="http://spring18.cds101.com/feeds/all.atom.xml" rel="self"></link><id>http://spring18.cds101.com/</id><updated>2018-04-26T13:30:00-04:00</updated><entry><title>Reading 16</title><link href="http://spring18.cds101.com/assignments/reading-16/" rel="alternate"></link><published>2018-04-26T13:30:00-04:00</published><updated>2018-04-26T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-26:/assignments/reading-16/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;&lt;a href="http://r4ds.had.co.nz/"&gt;R for Data&amp;nbsp;Science&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CDS-101: Introduction to Computational and Data Sciences</title><link href="http://spring18.cds101.com/" rel="alternate"></link><link href="http://spring18.cds101.com/feeds/all.atom.xml" rel="self"></link><id>http://spring18.cds101.com/</id><updated>2018-04-27T23:59:00-04:00</updated><entry><title>Homework 4</title><link href="http://spring18.cds101.com/assignments/homework-4/" rel="alternate"></link><published>2018-04-27T23:59:00-04:00</published><updated>2018-04-27T23:59:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-27:/assignments/homework-4/</id><summary type="html">For this homework assignment, you will use statistical inference to answer a question about the National Survey of Family Growth, Cycle 6 dataset published by the National Center for Health&amp;nbsp;Statistics.</summary><content type="html">&lt;p&gt;&lt;span class="h3"&gt;&lt;strong&gt;Due:&lt;/strong&gt; April 27, 2018 @&amp;nbsp;11:59pm&lt;/span&gt;&lt;/p&gt;
+&lt;div class="no-bullets"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="/doc/cds101_homework4.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-8"&gt;&lt;/i&gt;  Offline copy of&amp;nbsp;instructions&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://classroom.github.com/a/6qDS86I0"&gt;&lt;i class="fab fa-github-alt" data-fa-transform="grow-8"&gt;&lt;/i&gt;  Github Classroom repo for &lt;strong&gt;Homework&amp;nbsp;4&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="instructions"&gt;Instructions&lt;/h2&gt;
+&lt;p&gt;For this homework assignment, you will use statistical inference to answer a question about the National Survey of Family Growth, Cycle 6 dataset published by the National Center for Health&amp;nbsp;Statistics.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://classroom.github.com/a/6qDS86I0"&gt;Obtain the Github repository you will use to complete homework 4&lt;/a&gt; that contains a starter RMarkdown file named &lt;span class="monospace"&gt;homework_4.Rmd&lt;/span&gt;, which you will use to do your work and write-up when completing the questions below. Remember to fill in your name at the top of the RMarkdown document and be sure to save, commit, and push (upload) frequently to Github so that you have incremental snapshots of your work. When you’re done, follow the &lt;a href="#how-to-submit"&gt;How to submit&lt;/a&gt; section below to setup a Pull Request, which will be used for&amp;nbsp;feedback.&lt;/p&gt;
+&lt;h2 id="about-the-dataset"&gt;About the&amp;nbsp;dataset&lt;/h2&gt;
+&lt;p&gt;This homework uses the &lt;em&gt;National Survey of Family Growth, Cycle 6&lt;/em&gt; dataset in the file &lt;span class="monospace"&gt;2002FemPreg.rds&lt;/span&gt;, published by the National Center for Health Statistics. Complete descriptions of all the variables can be found in the &lt;a href="http://www.icpsr.umich.edu/nsfg6/Controller?displayPage=codeBook&amp;amp;fileCode=PREG&amp;amp;section=&amp;amp;subSec="&gt;&lt;span class="caps"&gt;NSFG&lt;/span&gt; Cycle 6: Female Pregnancy File Codebook&lt;/a&gt;. Below are selected descriptions of variables that will be used for this homework&amp;nbsp;assignment:&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 21%" /&gt;
+&lt;col style="width: 78%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class="header"&gt;
+&lt;th style="text-align: left;"&gt;Variable&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="odd"&gt;
+&lt;td style="text-align: left;"&gt;&lt;span class="monospace"&gt;caseid&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;integer &lt;span class="caps"&gt;ID&lt;/span&gt; of the respondent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td style="text-align: left;"&gt;&lt;span class="monospace"&gt;prglngth&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;integer duration of the pregnancy in weeks&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="odd"&gt;
+&lt;td style="text-align: left;"&gt;&lt;span class="monospace"&gt;outcome&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;integer code for the outcome of the pregnancy, with a 1 indicating a live birth&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td style="text-align: left;"&gt;&lt;span class="monospace"&gt;birthord&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;serial number for live births; the code for a respondent’s first child is 1, and so on. For outcomes other than live birth, this field is blank&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="questions"&gt;Questions&lt;/h2&gt;
+&lt;p&gt;This homework assignment revolves around answering the following question using this&amp;nbsp;dataset:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do first born children either arrive early or late when compared with&amp;nbsp;non-first-borns?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The questions in this assignment will guide you through the process of answering this question using statistical&amp;nbsp;inference.&lt;/p&gt;
+&lt;ol class="example" type="1"&gt;
+&lt;li&gt;&lt;p&gt;Addressing the question &lt;em&gt;“do first born children either arrive early or late when compared with non-first-borns?”&lt;/em&gt; means that we should only consider live births in the dataset. Filter the dataset so that it only contains outcomes with live births and assign this result to the variable &lt;code&gt;live_births&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Next, we need to label all births in &lt;code&gt;live_births&lt;/code&gt; as either “first” or “other” so that we can easily find the children that are first borns and the ones that are not. There are a couple of different ways that you can label the&amp;nbsp;births:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Split the dataset into two parts, a &lt;code&gt;first_births&lt;/code&gt; dataset and an &lt;code&gt;other_births&lt;/code&gt; dataset. Do this by applying a filter to extract the first births, then use &lt;code&gt;mutate()&lt;/code&gt; to create a new column called &lt;code&gt;birth_order&lt;/code&gt; that labels these rows as “first”. Then repeat this process, except apply a filter to extract all other births and label those as “other” in &lt;code&gt;birth_order&lt;/code&gt;. To recombine the datasets into one, use &lt;code&gt;bind_rows()&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use &lt;code&gt;ifelse()&lt;/code&gt; with &lt;code&gt;mutate()&lt;/code&gt; to create the &lt;code&gt;birth_order&lt;/code&gt; column and the “first” and “other” labels. You can also try using &lt;code&gt;case_when()&lt;/code&gt; instead of &lt;code&gt;ifelse()&lt;/code&gt; to accomplish this. If you do it this way, you won’t need to use &lt;code&gt;bind_rows()&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After labeling the births, remove the extraneous variables from the &lt;code&gt;tibble&lt;/code&gt; leaving just the &lt;code&gt;prglngth&lt;/code&gt; and &lt;code&gt;birth_order&lt;/code&gt; columns. Assign the resulting &lt;code&gt;tibble&lt;/code&gt; to a variable named &lt;code&gt;pregnancy_length&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Take the &lt;code&gt;pregnancy_length&lt;/code&gt; dataset and plot a probability mass function (&lt;span class="caps"&gt;PMF&lt;/span&gt;) histogram of the pregnancy length in weeks that shows “first” births and “other” births on the same plot. Choose a reasonable binwidth for the histogram and add &lt;code&gt;coord_cartesian(xlim = c(27, 46))&lt;/code&gt; to your plot so that the window focuses where most of the data is. &lt;strong&gt;After creating the plot, describe the shape, center, and spread of the two distributions&lt;/strong&gt;. Based on the visualization, do you think the data looks like it supports the statement that “first born children either arrive early or arrive late when compared with&amp;nbsp;non-first-borns”?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Group the variable &lt;code&gt;prglngth&lt;/code&gt; into “first” and “other” births and compute the summary statistics (mean, median, standard deviation, inter-quartile range, minimum, maximum) for each group. How do the different summary statistics compare between the two distributions? Does it look like there may be a notable difference between the two distributions?&amp;nbsp;Explain.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create theoretical quantile-quantile (q-q) plots to determine whether the pregnancy length distributions for “first” and “other” births are nearly normal. You should make &lt;strong&gt;separate&lt;/strong&gt; q-q plots for “first” births and “other” births (i.e. you should end up with two&amp;nbsp;plots).&lt;/p&gt;
+&lt;p&gt;Each q-q plot should include a reference line that shows what the theoretical normal distribution looks like so that we can observe deviations from normality. You’ll need to compute this line manually. Adapt the following code to compute the slope and intercept for the theoretical line (you will need to do this twice, once for “first” births and again for “other”&amp;nbsp;births):&lt;/p&gt;
+&lt;pre class="r"&gt;&lt;code&gt;qq_x &amp;lt;- qnorm(p = c(0.25, 0.75))
+qq_y &amp;lt;- quantile(x = pull(dataset, variable), probs = c(0.25, 0.75), type = 1)
+qq_slope &amp;lt;- diff(qq_y) / diff(qq_x)
+qq_int &amp;lt;- pluck(qq_y, 1) - qq_slope * pluck(qq_x, 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;“Adapting the code” means you will have to change the &lt;code&gt;dataset&lt;/code&gt; and &lt;code&gt;variable&lt;/code&gt; parameters.&lt;/strong&gt; Once you have found &lt;code&gt;qq_slope&lt;/code&gt; and &lt;code&gt;qq_int&lt;/code&gt; for “first” and “other” births, use &lt;code&gt;geom_abline()&lt;/code&gt; to include the theoretical reference line in your q-q&amp;nbsp;plots.&lt;/p&gt;
+&lt;p&gt;Based on your plots, does it appear that the pregnancy length distribution is nearly normal for both “first” and “other” births? Why or why&amp;nbsp;not?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Returning back to the question of whether or not “first babies arrive early or arrive late when compared with non-first-borns”, plot the cumulative distribution functions (CDFs) of the pregnancy lengths for “first” and “other” births. Plot the &lt;span class="caps"&gt;CDF&lt;/span&gt; for both distributions on the same figure so that we can directly compare them. How do the distributions compare? Does it look like there is there a meaningful difference between the two&amp;nbsp;distributions?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If we want to determine whether or not the difference between two distributions is statistically significant, we need to run a hypothesis test. Formalize your analysis by writing down the null hypothesis for the question of whether first babies arrive early or arrive late when compared with non-first-borns. It should be clear from how you write your null hypothesis whether you’re conducting a &lt;strong&gt;one-sided&lt;/strong&gt; or &lt;strong&gt;two-sided&lt;/strong&gt; hypothesis test. You should also restate what the &lt;strong&gt;observed value&lt;/strong&gt; is (this will be a number) that you will be comparing against the null&amp;nbsp;distribution.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use a simulation to generate the null distribution so that you can perform the hypothesis test. Do this using the functions provided in the &lt;code&gt;infer&lt;/code&gt; package, &lt;code&gt;specify()&lt;/code&gt;, &lt;code&gt;hypothesize()&lt;/code&gt;, &lt;code&gt;generate()&lt;/code&gt;, and &lt;code&gt;calculate()&lt;/code&gt;. To collect enough statistics, you should set the simulation to repeat 10,000&amp;nbsp;times.&lt;/p&gt;
+&lt;p&gt;Once you’ve obtained the null distribution, use it to compute the &lt;em&gt;p&lt;/em&gt;-value for your hypothesis test. Assuming a significance level of &lt;span class="math inline"&gt;\(\alpha = 0.05\)&lt;/span&gt;, state whether we can we reject the null&amp;nbsp;hypothesis.&lt;/p&gt;
+&lt;p&gt;Finally, visualize the simulated null distribution as a histogram and use &lt;code&gt;geom_vline()&lt;/code&gt; to show where the &lt;strong&gt;observed value&lt;/strong&gt; sits relative to&amp;nbsp;it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use a bootstrap simulation to calculate the 95% confidence interval for your &lt;strong&gt;observed value&lt;/strong&gt;. Do this using the following functions from the &lt;code&gt;infer&lt;/code&gt; package, &lt;code&gt;specify()&lt;/code&gt;, `&lt;code&gt;generate()&lt;/code&gt;, and &lt;code&gt;calculate()&lt;/code&gt;. To collect enough statistics, you should set the bootstrap simulation to repeat 10,000&amp;nbsp;times.&lt;/p&gt;
+&lt;p&gt;Once you’ve obtained the bootstrap distribution, use &lt;code&gt;quantile()&lt;/code&gt; to find the upper and lower bounds of the 95% confidence interval. Does the value corresponding to the null result fall within the range of the 95% confidence&amp;nbsp;interval?&lt;/p&gt;
+&lt;p&gt;Finally, visualize the bootstrap distribution as a histogram and use two &lt;code&gt;geom_vline()&lt;/code&gt;s to show the region corresponding to the 95% confidence&amp;nbsp;interval.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In addition to hypothesis tests and confidence intervals, we should also consider the &lt;strong&gt;effect size&lt;/strong&gt;, which measures the relative difference between two distributions. The effect size helps us better know how important a given result actually is, not just whether or not we can reject the null hypothesis. One measure of the effect size is called &lt;a href="https://en.wikipedia.org/wiki/Effect_size#Cohen.27s_d"&gt;Cohen’s &lt;em&gt;d&lt;/em&gt;&lt;/a&gt; (&lt;a href="https://en.wikipedia.org/wiki/Effect_size#Cohen.27s_d" class="uri"&gt;https://en.wikipedia.org/wiki/Effect_size#Cohen.27s_d&lt;/a&gt;), which we will use to compute the effect size between the pregnancy lengths for “first” and “other” births. The different ranges of &lt;em&gt;d&lt;/em&gt; can be interpreted using the following&amp;nbsp;table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class="header"&gt;
+&lt;th style="text-align: left;"&gt;Effect size&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;d&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="odd"&gt;
+&lt;td style="text-align: left;"&gt;Very small&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;0.01&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td style="text-align: left;"&gt;Small&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;0.20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="odd"&gt;
+&lt;td style="text-align: left;"&gt;Medium&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;0.50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td style="text-align: left;"&gt;Large&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;0.80&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="odd"&gt;
+&lt;td style="text-align: left;"&gt;Very large&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;1.20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td style="text-align: left;"&gt;Huge&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;2.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The following set of functions should also be preloaded for you: &lt;code&gt;cohens_d_bootstrap()&lt;/code&gt;, &lt;code&gt;bootstrap_report()&lt;/code&gt;, and &lt;code&gt;plot_ci()&lt;/code&gt;. These functions will use bootstrap simulations to compute the confidence interval for the Cohen’s &lt;em&gt;d&lt;/em&gt; parameter. Run the bootstrap simulation as&amp;nbsp;follows:&lt;/p&gt;
+&lt;pre class="r"&gt;&lt;code&gt;cohens_d_bootstrap(data = pregnancy_length, model = prglngth ~ birth_order)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Be sure to assign the results to a variable&lt;/strong&gt;, for example &lt;code&gt;bootstrap_results&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To print a report for the bootstrap simulation,&amp;nbsp;run:&lt;/p&gt;
+&lt;pre class="r"&gt;&lt;code&gt;bootstrap_report(bootstrap_results)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To visualize the bootstrap distribution and confidence interval,&amp;nbsp;run:&lt;/p&gt;
+&lt;pre class="r"&gt;&lt;code&gt;plot_ci(bootstrap_results)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using the provided table, report how large the effect size is for the difference in pregnancy lengths for “first” and “other”&amp;nbsp;births.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Having completed your analysis, write a paragraph that summarizes your results and answers the question “do first born children arrive early or late compared to other children?” Write the summary as if you are an academic or scientific journalist, focusing on how you can answer the question clearly, precisely, and&amp;nbsp;honestly.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="how-to-submit"&gt;How to&amp;nbsp;submit&lt;/h2&gt;
+&lt;p&gt;When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github. Then, navigate to &lt;strong&gt;your copy&lt;/strong&gt; of the &lt;a href="https://classroom.github.com/a/6qDS86I0"&gt;Github repository&lt;/a&gt; you used for this assignment. You should see your repository, along with the updated files that you just synchronized to Github. Confirm that your files are up-to-date, and then do the following&amp;nbsp;steps:&lt;/p&gt;
+&lt;ol type="1"&gt;
+&lt;li&gt;&lt;p&gt;Click the &lt;em&gt;Pull Requests&lt;/em&gt; tab near the top of the&amp;nbsp;page.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click the green button that says “New pull&amp;nbsp;request”.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click the dropdown menu button labeled “base:”, and select the option &lt;code&gt;starting&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Confirm that the dropdown menu button labeled “compare:” is set to &lt;code&gt;master&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click the green button that says “Create pull&amp;nbsp;request”.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Give the &lt;em&gt;pull request&lt;/em&gt; the following title: &lt;span class="monospace"&gt;Submission: Homework 4, FirstName LastName&lt;/span&gt;, replacing &lt;span class="monospace"&gt;FirstName&lt;/span&gt; and &lt;span class="monospace"&gt;LastName&lt;/span&gt; with your actual first and last&amp;nbsp;name.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In the messagebox, write: &lt;span class="monospace"&gt;My homework submission is ready for grading @shuaibm @jkglasbrenner&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click “Create pull request” to lock in your&amp;nbsp;submission.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="cheatsheets"&gt;Cheatsheets&lt;/h2&gt;
+&lt;p&gt;You are encouraged to review and keep the following cheatsheets handy while working on this&amp;nbsp;assignment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://spring18.cds101.com/doc/rstudio-IDE-cheatsheet.pdf"&gt;RStudio&amp;nbsp;cheatsheet&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://spring18.cds101.com/doc/rmarkdown-cheatsheet.pdf"&gt;RMarkdown&amp;nbsp;cheatsheet&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://spring18.cds101.com/doc/rmarkdown-reference.pdf"&gt;RMarkdown&amp;nbsp;reference&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://spring18.cds101.com/doc/ggplot2-cheatsheet.pdf"&gt;&lt;span class="monospace"&gt;ggplot2&lt;/span&gt;&amp;nbsp;cheatsheet&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://spring18.cds101.com/doc/data-transformation-cheatsheet.pdf"&gt;Data transformation&amp;nbsp;cheatsheet&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://spring18.cds101.com/doc/data-import-cheatsheet.pdf"&gt;Data import&amp;nbsp;cheatsheet&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="homework"></category></entry><entry><title>Reading 16</title><link href="http://spring18.cds101.com/assignments/reading-16/" rel="alternate"></link><published>2018-04-26T13:30:00-04:00</published><updated>2018-04-26T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-26:/assignments/reading-16/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;&lt;a href="http://r4ds.had.co.nz/"&gt;R for Data&amp;nbsp;Science&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Read the&amp;nbsp;following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;From &lt;a href="http://r4ds.had.co.nz/model-basics.html"&gt;chapter 23&lt;/a&gt;: section &lt;a href="http://r4ds.had.co.nz/model-basics.html#formulas-and-model-families"&gt;23.4&lt;/a&gt; through to the end of section &lt;a href="http://r4ds.had.co.nz/model-basics.html#other-model-families"&gt;23.6&lt;/a&gt;&lt;/li&gt;
@@ -377,7 +518,7 @@ nebraska_iowa &amp;lt;- county_complete %&amp;gt;%
   ggplot() +
   geom_col(mapping = aes(x = mean_travel_time, y = percent_difference)) +
   coord_cartesian(xlim = c(9.5, 30), ylim = c(-7, 7))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="/img/Materials/advanced_pmf_example-ia-ne-travel-times-percent-diff-labeled-1.svg" title="plot of chunk ia-ne-travel-times-percent-diff-labeled" alt="plot of chunk ia-ne-travel-times-percent-diff-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/advanced_pmf_example-ia-ne-travel-times-percent-diff-labeled-1.svg" title="plot of chunk ia-ne-travel-times-percent-diff-labeled" alt="plot of chunk ia-ne-travel-times-percent-diff-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The arrows indicate that a taller bar in the &lt;span class="math inline"&gt;\(y &amp;gt; 0\)&lt;/span&gt; region means the travel time is greater in Iowa, while a taller bar in the &lt;span class="math inline"&gt;\(y &amp;lt; 0\)&lt;/span&gt; region means the travel time is greater in Nebraska. This figure makes the pattern clearer: longer work travel times are more common in Iowa than in Nebraska. For now we should hold this conclusion only tentatively. We used the same dataset to identify an apparent difference and then chose a visualization that makes the difference apparent. We can’t be sure this effect is real; it might be due to random variation. When we learn about statistical inference later on, we’ll have the tools necessary to better answer that&amp;nbsp;question.&lt;/p&gt;
 &lt;h2 id="credits"&gt;Credits&lt;/h2&gt;
 &lt;div class="license"&gt;
@@ -486,7 +627,7 @@ Average class size
     mapping = aes(x = `class size`, y = PMF, fill = distribution,
                   color = distribution)) +
   geom_col(position = &amp;quot;identity&amp;quot;, alpha = 0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="/img/Materials/class_size_paradox-actual-vs-observed-class-size-labeled-1.svg" title="plot of chunk actual-vs-observed-class-size-labeled" alt="plot of chunk actual-vs-observed-class-size-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/class_size_paradox-actual-vs-observed-class-size-labeled-1.svg" title="plot of chunk actual-vs-observed-class-size-labeled" alt="plot of chunk actual-vs-observed-class-size-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;As we see in the above figure, the biased distribution corresponds to fewer small classes and more large ones. The mean of the biased distribution&amp;nbsp;is,&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;class_sizes2 %&amp;gt;%
   group_by(distribution) %&amp;gt;%
@@ -783,7 +924,7 @@ county_complete &amp;lt;- read_rds(
 &lt;p&gt;Let’s recall that, in the previous reading, we plotted and compared PMFs of the average work travel time in Virginia and New Jersey, which resulted in this&amp;nbsp;figure:&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-va-nj-travel-times-pmf-1.svg" title="plot of chunk va-nj-travel-times-pmf" alt="plot of chunk va-nj-travel-times-pmf" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;What happens if we choose &lt;code&gt;binwidth = 0.1&lt;/code&gt; for plotting the &lt;code&gt;mean_work_travel&lt;/code&gt; distribution? The values in &lt;code&gt;mean_work_travel&lt;/code&gt; are reported to the first decimal place, so &lt;code&gt;binwidth = 0.1&lt;/code&gt; does not “smooth out” the data. This increases the number of distinct values in &lt;code&gt;mean_work_travel&lt;/code&gt; from 41 to 304. The comparison between the Virginia and New Jersey PMFs will then look like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-mean-work-travel-pmf-no-rounding-1.svg" title="plot of chunk mean-work-travel-pmf-no-rounding" alt="plot of chunk mean-work-travel-pmf-no-rounding" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-mean-work-travel-pmf-no-rounding-1.svg" title="plot of chunk mean-work-travel-pmf-no-rounding" alt="plot of chunk mean-work-travel-pmf-no-rounding" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;This visualization has a lot of spikes of similar heights, which makes this difficult to interpret and limits its usefulness. Also, it can be hard to see overall patterns; for example, what is the approximate difference in means between these two&amp;nbsp;distributions?&lt;/p&gt;
 &lt;p&gt;This illustrates the tradeoff when using histograms and PMFs for visualizing single variables. If we smooth things out by using larger bin sizes, then we can lose information that may be useful. On the other hand, using small bin sizes creates plots like the one above, which is of limited (if any)&amp;nbsp;utility.&lt;/p&gt;
 &lt;p&gt;An alternative that avoids these problems is the cumulative distribution function (&lt;span class="caps"&gt;CDF&lt;/span&gt;), which we turn to describing next. But before we discuss CDFs, we first have to understand the concept of&amp;nbsp;percentiles.&lt;/p&gt;
@@ -834,7 +975,7 @@ test_scores %&amp;gt;%
   arrange(score) %&amp;gt;%
   mutate(cdf = row_number() / n())&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The visualization of the &lt;span class="caps"&gt;CDF&lt;/span&gt; looks&amp;nbsp;like:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-test-scores-cdf-plot-1.svg" title="plot of chunk test-scores-cdf-plot" alt="plot of chunk test-scores-cdf-plot" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-test-scores-cdf-plot-1.svg" title="plot of chunk test-scores-cdf-plot" alt="plot of chunk test-scores-cdf-plot" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;As you can see, the &lt;span class="caps"&gt;CDF&lt;/span&gt; of a sample looks like a sequence of steps. Appropriately enough, this is called a step function, and the &lt;span class="caps"&gt;CDF&lt;/span&gt; of &lt;em&gt;any&lt;/em&gt; sample is a step&amp;nbsp;function.&lt;/p&gt;
 &lt;p&gt;Also note that we can evaluate the &lt;span class="caps"&gt;CDF&lt;/span&gt; for any value, not just values that appear in the sample. If we select a value that is less than the smallest value in the sample, then the &lt;span class="caps"&gt;CDF&lt;/span&gt; is 0. If we select a value that is greater than the largest value, then the &lt;span class="caps"&gt;CDF&lt;/span&gt; is&amp;nbsp;1.&lt;/p&gt;
 &lt;h2 id="representing-cdfs"&gt;Representing&amp;nbsp;CDFs&lt;/h2&gt;
@@ -855,12 +996,12 @@ mean_work_travel_max &amp;lt;- county_complete %&amp;gt;%
   pull(mean_work_travel) %&amp;gt;%
   max()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;By themselves, these correspond to two points along the horizontal axis, like&amp;nbsp;so&lt;/p&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-plot-1.svg" title="plot of chunk min-max-mean-work-travel-plot" alt="plot of chunk min-max-mean-work-travel-plot" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-plot-1.svg" title="plot of chunk min-max-mean-work-travel-plot" alt="plot of chunk min-max-mean-work-travel-plot" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;To generate horizontal values that increase by 1 between the minimum and maximum, we use &lt;code&gt;seq()&lt;/code&gt; as&amp;nbsp;follows:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;mean_work_travel_range1 &amp;lt;- seq(
   from = mean_work_travel_min, to = mean_work_travel_max, by = 1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Visually, this would look&amp;nbsp;like&lt;/p&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-short-range-1.svg" title="plot of chunk min-max-mean-work-travel-short-range" alt="plot of chunk min-max-mean-work-travel-short-range" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-short-range-1.svg" title="plot of chunk min-max-mean-work-travel-short-range" alt="plot of chunk min-max-mean-work-travel-short-range" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;Generally, it’s better to use a smaller incremental value inside &lt;code&gt;seq()&lt;/code&gt; in order to make smoother figures. Let’s use &lt;code&gt;by = 0.1&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;mean_work_travel_range2 &amp;lt;- seq(
   from = mean_work_travel_min, to = mean_work_travel_max, by = 0.1)&lt;/code&gt;&lt;/pre&gt;
@@ -873,7 +1014,7 @@ mean_work_travel_max &amp;lt;- county_complete %&amp;gt;%
 &lt;pre class="r"&gt;&lt;code&gt;mean_work_travel_cdf_tibble %&amp;gt;%
   ggplot() +
   geom_line(mapping = aes(x = mean_work_travel, y = cdf))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-mean-work-travel-cdf-visualization-labeled-1.svg" title="plot of chunk mean-work-travel-cdf-visualization-labeled" alt="plot of chunk mean-work-travel-cdf-visualization-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-mean-work-travel-cdf-visualization-labeled-1.svg" title="plot of chunk mean-work-travel-cdf-visualization-labeled" alt="plot of chunk mean-work-travel-cdf-visualization-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;Now we can easily specify an average work travel time percentile and read the associated time from the plot and&amp;nbsp;vice-versa.&lt;/p&gt;
 &lt;p&gt;It takes some time to get used to CDFs, but over time it should become clear that they show more information, more clearly, than&amp;nbsp;PMFs.&lt;/p&gt;
 &lt;h2 id="comparing-cdfs"&gt;Comparing&amp;nbsp;CDFs&lt;/h2&gt;
@@ -900,7 +1041,7 @@ ia_ne_mean_work_travel_cdfs &amp;lt;- data_frame(
 &lt;pre class="r"&gt;&lt;code&gt;ggplot(data = ia_ne_mean_work_travel_cdfs,
        mapping = aes(x = mean_work_travel, y = CDF)) +
   geom_line(mapping = aes(color = state))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-compare-cdf-of-ne-ia-travel-times-plot-labeled-1.svg" title="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" alt="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-compare-cdf-of-ne-ia-travel-times-plot-labeled-1.svg" title="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" alt="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;This visualization makes the shapes of the distributions and the relative differences between them much clearer. We see that Nebraska has shorter average work travel times for most of the distribution, at least until you reach an average time of 25 minutes, after which the Nebraska and Iowa distributions become similar to one&amp;nbsp;another.&lt;/p&gt;
 &lt;h2 id="credits"&gt;Credits&lt;/h2&gt;
 &lt;div class="license"&gt;
@@ -921,22 +1062,22 @@ county_complete &amp;lt;- read_rds(
 &lt;pre class="r"&gt;&lt;code&gt;county_complete %&amp;gt;%
   ggplot(mapping = aes(x = mean_work_travel)) +
   geom_histogram(binwidth = 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-mean-travel-time-freq-hist-labeled-1.svg" title="plot of chunk mean-travel-time-freq-hist-labeled" alt="plot of chunk mean-travel-time-freq-hist-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-mean-travel-time-freq-hist-labeled-1.svg" title="plot of chunk mean-travel-time-freq-hist-labeled" alt="plot of chunk mean-travel-time-freq-hist-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;h2 id="pmfs"&gt;PMFs&lt;/h2&gt;
 &lt;p&gt;The &lt;strong&gt;probability mass function&lt;/strong&gt; (&lt;span class="caps"&gt;PMF&lt;/span&gt;) represents a distribution by sorting the data into bins (much like the frequency histogram) and then associates a probability with each bin in the distribution. A &lt;strong&gt;probability&lt;/strong&gt; is a frequency expressed as a fraction of the sample size &lt;em&gt;n&lt;/em&gt;. Therefore we can directly convert a frequency histogram to a &lt;span class="caps"&gt;PMF&lt;/span&gt; by dividing the count in each bin by the sample size &lt;em&gt;n&lt;/em&gt;. This process is called &lt;strong&gt;normalization&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;As an example, consider the following short&amp;nbsp;sample,&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1  2  2  3  5&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If we choose a binwidth of 1, then we get a frequency histogram that looks like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-simple-freq-hist-1.svg" title="plot of chunk simple-freq-hist" alt="plot of chunk simple-freq-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-simple-freq-hist-1.svg" title="plot of chunk simple-freq-hist" alt="plot of chunk simple-freq-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;There are 5 observations in this sample. So, we can convert to a &lt;span class="caps"&gt;PMF&lt;/span&gt; by dividing the count within each bin by 5, getting a histogram that looks like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-simple-pmf-hist-1.svg" title="plot of chunk simple-pmf-hist" alt="plot of chunk simple-pmf-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-simple-pmf-hist-1.svg" title="plot of chunk simple-pmf-hist" alt="plot of chunk simple-pmf-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The relative shape stays the same, but compare the values along the vertical axis between the two figures. You’ll find that they are no longer integers and are instead probabilities. The normalization procedure (dividing by 5) guarantees that adding together the probabilities of all bins will equal 1. For this example, we find that the probability of drawing the number 1 is 0.2, drawing 2 is 0.4, drawing 3 is 0.2, drawing 4 is 0, and drawing 5 is 0.2. That is the biggest difference between a frequency histogram and a &lt;span class="caps"&gt;PMF&lt;/span&gt;, the frequency histogram maps from values to integer counters, while the &lt;span class="caps"&gt;PMF&lt;/span&gt; maps from values to fractional&amp;nbsp;probabilities.&lt;/p&gt;
 &lt;h2 id="plotting-pmfs"&gt;Plotting&amp;nbsp;PMFs&lt;/h2&gt;
 &lt;p&gt;The syntax for plotting a &lt;span class="caps"&gt;PMF&lt;/span&gt; using &lt;code&gt;ggplot2&lt;/code&gt; is nearly identical to what you would use to create a frequency histogram. The one modification is that you need to include &lt;code&gt;y = ..density..&lt;/code&gt; inside &lt;code&gt;aes()&lt;/code&gt;. As a simple example, let’s take the full distribution of the average work travel times from earlier and plot it as a &lt;span class="caps"&gt;PMF&lt;/span&gt;:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;county_complete %&amp;gt;%
   ggplot(mapping = aes(x = mean_work_travel, y = ..density..)) +
   geom_histogram(binwidth = 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-mean-travel-time-pmf-labeled-1.svg" title="plot of chunk mean-travel-time-pmf-labeled" alt="plot of chunk mean-travel-time-pmf-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-mean-travel-time-pmf-labeled-1.svg" title="plot of chunk mean-travel-time-pmf-labeled" alt="plot of chunk mean-travel-time-pmf-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;Let’s do a comparison to show how one might use a &lt;span class="caps"&gt;PMF&lt;/span&gt; for analysis. For example, we could ask if two midwestern states such as Nebraska and Iowa have the same distribution of work travel times, or if there is a meaningful difference between the two. First, let’s filter the dataset to only include these two&amp;nbsp;states:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;nebraska_iowa &amp;lt;- county_complete %&amp;gt;%
   filter(state == &amp;quot;Iowa&amp;quot; | state == &amp;quot;Nebraska&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -946,7 +1087,7 @@ county_complete &amp;lt;- read_rds(
   geom_histogram(
     mapping = aes(x = mean_work_travel, fill = state, color = state),
     position = &amp;quot;identity&amp;quot;, alpha = 0.5, binwidth = 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-ia-ne-travel-times-freq-hist-labeled-1.svg" title="plot of chunk ia-ne-travel-times-freq-hist-labeled" alt="plot of chunk ia-ne-travel-times-freq-hist-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-ia-ne-travel-times-freq-hist-labeled-1.svg" title="plot of chunk ia-ne-travel-times-freq-hist-labeled" alt="plot of chunk ia-ne-travel-times-freq-hist-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;position = &amp;quot;identity&amp;quot;&lt;/code&gt; input overlaps the two distributions (instead of stacking them) and &lt;code&gt;alpha = 0.5&lt;/code&gt; makes the distributions translucent, so that you can see both despite the overlap. On our first glance, it looks like the center of the Nebraska times is lower than the center of the Iowa times, and that both have a long tail on the right-hand side. However, if we do a count&amp;nbsp;summary,&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;nebraska_iowa %&amp;gt;%
   count(state)&lt;/code&gt;&lt;/pre&gt;
@@ -957,14 +1098,14 @@ county_complete &amp;lt;- read_rds(
     mapping = aes(x = mean_work_travel, y = ..density..,
                   fill = state, color = state),
     position = &amp;quot;identity&amp;quot;, alpha = 0.5, binwidth = 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-ia-ne-travel-times-pmf-labeled-1.svg" title="plot of chunk ia-ne-travel-times-pmf-labeled" alt="plot of chunk ia-ne-travel-times-pmf-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-ia-ne-travel-times-pmf-labeled-1.svg" title="plot of chunk ia-ne-travel-times-pmf-labeled" alt="plot of chunk ia-ne-travel-times-pmf-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The trend that the center of the travel times in Nebraska is slightly smaller than in Iowa continues to hold even after converting to a &lt;span class="caps"&gt;PMF&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;To provide an example where a &lt;span class="caps"&gt;PMF&lt;/span&gt; is clearly necessary, what if we compare New Jersey with Virginia? Virginia has many more counties than New&amp;nbsp;Jersey:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;county_complete %&amp;gt;%
   filter(state == &amp;quot;New Jersey&amp;quot; | state == &amp;quot;Virginia&amp;quot;) %&amp;gt;%
   count(state)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;As a result, comparing their frequency histograms gives you&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-va-nj-travel-times-freq-hist-1.svg" title="plot of chunk va-nj-travel-times-freq-hist" alt="plot of chunk va-nj-travel-times-freq-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-va-nj-travel-times-freq-hist-1.svg" title="plot of chunk va-nj-travel-times-freq-hist" alt="plot of chunk va-nj-travel-times-freq-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The New Jersey distribution is dwarfed by the Virginia distribution and it makes it difficult to make comparisons. However, if we instead compare PMFs, we get&amp;nbsp;this:&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-va-nj-travel-times-pmf-1.svg" title="plot of chunk va-nj-travel-times-pmf" alt="plot of chunk va-nj-travel-times-pmf" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;So, for example, we can now make statements like “a randomly selected resident in New Jersey is twice as likely as a randomly chosen resident in Virginia to have an average work travel time of 30 minutes.” The &lt;span class="caps"&gt;PMF&lt;/span&gt; allows for an “apples-to-apples” comparison of the average travel&amp;nbsp;times.&lt;/p&gt;
@@ -2146,7 +2287,7 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;td style="text-align: left;"&gt;&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;Apr-27&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;Homework 4&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;a href="/assignments/homework-4/"&gt;Homework 4&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="odd"&gt;
 &lt;td style="text-align: left;"&gt;Week 14&lt;/td&gt;
@@ -2495,7 +2636,7 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;/ol&gt;
 &lt;h2 id="credits"&gt;Credits&lt;/h2&gt;
 &lt;p&gt;This classroom activity is licensed under a &lt;a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;. Adapted by James Glasbrenner for &lt;span class="caps"&gt;CDS&lt;/span&gt;-101 from &lt;a href="https://github.com/mine-cetinkaya-rundel/sta112_f15/blob/8e70667fc8db04f3a65b1c01a57ff747a6c9ed0a/application-exercises/app_Twitter_election_results.Rmd"&gt;the following activity&lt;/a&gt; by &lt;a href="https://stat.duke.edu/~mc301"&gt;Mine Çetinkaya-Rundel&lt;/a&gt;. Credit for the dataset example belongs to &lt;a href="http://www.math.smith.edu/~bbaumer/"&gt;Ben Baumer&lt;/a&gt;.&lt;/p&gt;
-</content><category term="activity"></category></entry><entry><title>Datasets</title><link href="http://spring18.cds101.com/" rel="alternate"></link><published>2018-01-23T13:30:00-05:00</published><updated>2018-04-05T15:00:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-01-23:/</id><summary type="html">&lt;table&gt;
+</content><category term="activity"></category></entry><entry><title>Datasets</title><link href="http://spring18.cds101.com/" rel="alternate"></link><published>2018-01-23T13:30:00-05:00</published><updated>2018-04-18T00:00:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-01-23:/</id><summary type="html">&lt;table&gt;
 &lt;colgroup&gt;
 &lt;col style="width: 13%" /&gt;
 &lt;col style="width: 26%" /&gt;
@@ -2555,6 +2696,11 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;td style="text-align: center;"&gt;&lt;span class="monospace"&gt;yawn&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;&lt;a href="/files/datasets/yawn.csv"&gt;csv&lt;/a&gt;&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;Dataset of yawning experiment performed on &lt;em&gt;Mythbusters&lt;/em&gt; television show&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="odd"&gt;
+&lt;td style="text-align: center;"&gt;&lt;span class="monospace"&gt;2002FemPreg&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: center;"&gt;&lt;a href="/files/datasets/2002FemPreg.rds"&gt;rds&lt;/a&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;Dataset from the &lt;em&gt;National Survey of Family Growth, Cycle 6&lt;/em&gt; &lt;br&gt; Dataset for &lt;a href="/assignments/homework-4/"&gt;Homework 4&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
