@@ -10,16 +10,9 @@ Show_link: true
 
 ```{r setup, include = FALSE}
 # DO NOT ALTER THIS CHUNK
-knitr::opts_chunk$set(echo = FALSE, eval = TRUE, fig.width = 5,
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, fig.width = 5, dev = "svg",
                       fig.asp = 0.618, out.width = "70%", dpi = 120,
                       fig.align = "center", cache = TRUE)
-if (knitr::is_latex_output()) {
-  knitr::opts_chunk$set(dev = "pdf")
-} else if (knitr::is_html_output()) {
-  knitr::opts_chunk$set(dev = "svg")
-} else {
-  knitr::opts_chunk$set(dev = "png")
-}
 
 icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
 icon_html5 <- '<i class="fab fa-html5" data-fa-transform="grow-8"></i>&nbsp;'
