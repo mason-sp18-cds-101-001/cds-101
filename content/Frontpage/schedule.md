@@ -95,7 +95,7 @@ Week 13             25      Apr-24        Statistical modeling I                
 
                     26      Apr-26        Statistical modeling II                                                                 [Reading 16]
 
-                            Apr-27                                                                                                Homework 4
+                            Apr-27                                                                                                [Homework 4]
 
 Week 14             27      May-01        Statistical modeling III
 
@@ -128,6 +128,7 @@ Week 14             27      May-01        Statistical modeling III
 [Homework 1]:                                                    /assignments/homework-1/
 [Homework 2]:                                                    /assignments/homework-2/
 [Homework 3]:                                                    /assignments/homework-3/
+[Homework 4]:                                                    /assignments/homework-4/
 [Try R Tutorial]:                                                /assignments/try-r-tutorial-mini-assignment/
 [Twitter Study Article]:                                         /assignments/introductions-and-twitter-election-mini-assignment/
 [RMarkdown mini-assignment]:                                     /assignments/rmarkdown-mini-assignment/
