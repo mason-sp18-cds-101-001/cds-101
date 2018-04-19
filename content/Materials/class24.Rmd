@@ -1,0 +1,23 @@
+Title: Class 24: Inference and simulations III
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-04-19 13:30
+Tags: class notes
+Slug: class-24
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-16"></i>&nbsp;'
+```
+
+[Slides]{.h3}
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` &nbsp; [PDF]{.card-downloads-format}][slides-pdf]
+
+:::
+
+[slides-pdf]: /doc/class24_slides.pdf
+
