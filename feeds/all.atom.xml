@@ -196,7 +196,19 @@ qq_int &amp;lt;- pluck(qq_y, 1) - qq_slope * pluck(qq_x, 1)&lt;/code&gt;&lt;/pre
 &lt;/div&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;a href="http://spring18.cds101.com/syllabus.html#readings"&gt;&lt;i class="fas fa-link"&gt;&lt;/i&gt;  Posting guidelines can be found in the &lt;strong&gt;Readings&lt;/strong&gt; section of the&amp;nbsp;syllabus.&lt;/a&gt;&lt;/p&gt;
-</content><category term="reading"></category></entry><entry><title>Reading 14</title><link href="http://spring18.cds101.com/assignments/reading-14/" rel="alternate"></link><published>2018-04-19T13:30:00-04:00</published><updated>2018-04-19T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-19:/assignments/reading-14/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;&lt;em&gt;Nature&lt;/em&gt; News Feature&amp;nbsp;article&lt;/span&gt;&lt;/p&gt;
+</content><category term="reading"></category></entry><entry><title>Class 24: Inference and simulations III</title><link href="http://spring18.cds101.com/materials/class-24/" rel="alternate"></link><published>2018-04-19T13:30:00-04:00</published><updated>2018-04-19T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-19:/materials/class-24/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;Slides&lt;/span&gt;&lt;/p&gt;
+&lt;div class="no-bullets"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/doc/class24_slides.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-16"&gt;&lt;/i&gt;    &lt;span class="card-downloads-format"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><content type="html">&lt;p&gt;&lt;span class="h3"&gt;Slides&lt;/span&gt;&lt;/p&gt;
+&lt;div class="no-bullets"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/doc/class24_slides.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-16"&gt;&lt;/i&gt;    &lt;span class="card-downloads-format"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="class notes"></category></entry><entry><title>Reading 14</title><link href="http://spring18.cds101.com/assignments/reading-14/" rel="alternate"></link><published>2018-04-19T13:30:00-04:00</published><updated>2018-04-19T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-19:/assignments/reading-14/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;&lt;em&gt;Nature&lt;/em&gt; News Feature&amp;nbsp;article&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Read the following article about &lt;em&gt;p&lt;/em&gt;&amp;nbsp;values:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.nature.com/news/scientific-method-statistical-errors-1.14700"&gt;“Scientific method: Statistical errors” by R. Nuzzo&lt;/a&gt; (&lt;a href="https://www.nature.com/polopoly_fs/1.14700!/menu/main/topColumns/topLeftColumn/pdf/506150a.pdf"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt; version&lt;/a&gt;)&lt;/li&gt;
@@ -316,9 +328,9 @@ qq_int &amp;lt;- pluck(qq_y, 1) - qq_slope * pluck(qq_x, 1)&lt;/code&gt;&lt;/pre
 &lt;h2 id="part-2-scraping-mason-patriots-scores"&gt;Part 2 – Scraping Mason Patriots&amp;nbsp;Scores&lt;/h2&gt;
 &lt;p&gt;Webscrapers can be used for all kinds of purposes, such as building movie review databases, tracking prices for goods and services, and analyzing how a news story is reported on different news sites. Collecting sports data is another example, which can be used to &lt;a href="https://nyti.ms/2FmQhgC"&gt;quantify how valuable players are&lt;/a&gt; when &lt;a href="https://www.villanovau.com/resources/bi/how-to-use-big-data-in-fantasy-football/"&gt;putting together a fantasy sports team&lt;/a&gt;. Actual sports teams also employ statistical methods when drafting players and developing strategies, with &lt;a href="https://en.wikipedia.org/wiki/Sabermetrics"&gt;Sabermetrics&lt;/a&gt; (depicted in the movie &lt;a href="https://www.imdb.com/title/tt1210166/"&gt;&lt;em&gt;Moneyball&lt;/em&gt;&lt;/a&gt;) being one of the better-known&amp;nbsp;examples.&lt;/p&gt;
 &lt;p&gt;For this part of the homework, we will scrape the 2017 – 2018 season schedules and scores for the men’s and women’s basketball teams on the official &lt;a href="http://gomason.com"&gt;Mason Patriots sports site&lt;/a&gt;. For reference, the 2017-2018 schedule and scores page for the men’s team should look like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/img/gomason-2017-2018-mens-basketball.png" title="plot of chunk womens-basketball-17-18-season-page" alt="plot of chunk womens-basketball-17-18-season-page" width="70%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/gomason-2017-2018-mens-basketball.png" title="plot of chunk womens-basketball-17-18-season-page" alt="plot of chunk womens-basketball-17-18-season-page" width="70%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;and the 2017 – 2018 schedule and scores page for the women’s team should look like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/img/gomason-2017-2018-womens-basketball.png" title="plot of chunk mens-basketball-17-18-season-page" alt="plot of chunk mens-basketball-17-18-season-page" width="70%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/gomason-2017-2018-womens-basketball.png" title="plot of chunk mens-basketball-17-18-season-page" alt="plot of chunk mens-basketball-17-18-season-page" width="70%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The following questions will guide you through the process of scraping this data. You are encouraged to review the examples provided in the &lt;a href="https://masoncds101.slack.com/archives/C8WQJ0GTB/p1522347635000427"&gt;Web scraping activity&lt;/a&gt;, the &lt;a href="http://spring18.cds101.com/doc/class16_slides.pdf"&gt;Class 16 slides&lt;/a&gt;, and the &lt;a href="http://spring18.cds101.com/doc/class19_slides.pdf"&gt;Class 19 slides&lt;/a&gt; while completing this part of the homework&amp;nbsp;assignment.&lt;/p&gt;
 &lt;h3 id="mens-basketball-schedule-and-scores"&gt;Men’s basketball schedule and&amp;nbsp;scores&lt;/h3&gt;
 &lt;ol start="3" class="example" type="1"&gt;
@@ -518,7 +530,7 @@ nebraska_iowa &amp;lt;- county_complete %&amp;gt;%
   ggplot() +
   geom_col(mapping = aes(x = mean_travel_time, y = percent_difference)) +
   coord_cartesian(xlim = c(9.5, 30), ylim = c(-7, 7))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/advanced_pmf_example-ia-ne-travel-times-percent-diff-labeled-1.svg" title="plot of chunk ia-ne-travel-times-percent-diff-labeled" alt="plot of chunk ia-ne-travel-times-percent-diff-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/advanced_pmf_example-ia-ne-travel-times-percent-diff-labeled-1.svg" title="plot of chunk ia-ne-travel-times-percent-diff-labeled" alt="plot of chunk ia-ne-travel-times-percent-diff-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The arrows indicate that a taller bar in the &lt;span class="math inline"&gt;\(y &amp;gt; 0\)&lt;/span&gt; region means the travel time is greater in Iowa, while a taller bar in the &lt;span class="math inline"&gt;\(y &amp;lt; 0\)&lt;/span&gt; region means the travel time is greater in Nebraska. This figure makes the pattern clearer: longer work travel times are more common in Iowa than in Nebraska. For now we should hold this conclusion only tentatively. We used the same dataset to identify an apparent difference and then chose a visualization that makes the difference apparent. We can’t be sure this effect is real; it might be due to random variation. When we learn about statistical inference later on, we’ll have the tools necessary to better answer that&amp;nbsp;question.&lt;/p&gt;
 &lt;h2 id="credits"&gt;Credits&lt;/h2&gt;
 &lt;div class="license"&gt;
@@ -627,7 +639,7 @@ Average class size
     mapping = aes(x = `class size`, y = PMF, fill = distribution,
                   color = distribution)) +
   geom_col(position = &amp;quot;identity&amp;quot;, alpha = 0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/class_size_paradox-actual-vs-observed-class-size-labeled-1.svg" title="plot of chunk actual-vs-observed-class-size-labeled" alt="plot of chunk actual-vs-observed-class-size-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/class_size_paradox-actual-vs-observed-class-size-labeled-1.svg" title="plot of chunk actual-vs-observed-class-size-labeled" alt="plot of chunk actual-vs-observed-class-size-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;As we see in the above figure, the biased distribution corresponds to fewer small classes and more large ones. The mean of the biased distribution&amp;nbsp;is,&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;class_sizes2 %&amp;gt;%
   group_by(distribution) %&amp;gt;%
@@ -924,7 +936,7 @@ county_complete &amp;lt;- read_rds(
 &lt;p&gt;Let’s recall that, in the previous reading, we plotted and compared PMFs of the average work travel time in Virginia and New Jersey, which resulted in this&amp;nbsp;figure:&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-va-nj-travel-times-pmf-1.svg" title="plot of chunk va-nj-travel-times-pmf" alt="plot of chunk va-nj-travel-times-pmf" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;What happens if we choose &lt;code&gt;binwidth = 0.1&lt;/code&gt; for plotting the &lt;code&gt;mean_work_travel&lt;/code&gt; distribution? The values in &lt;code&gt;mean_work_travel&lt;/code&gt; are reported to the first decimal place, so &lt;code&gt;binwidth = 0.1&lt;/code&gt; does not “smooth out” the data. This increases the number of distinct values in &lt;code&gt;mean_work_travel&lt;/code&gt; from 41 to 304. The comparison between the Virginia and New Jersey PMFs will then look like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-mean-work-travel-pmf-no-rounding-1.svg" title="plot of chunk mean-work-travel-pmf-no-rounding" alt="plot of chunk mean-work-travel-pmf-no-rounding" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-mean-work-travel-pmf-no-rounding-1.svg" title="plot of chunk mean-work-travel-pmf-no-rounding" alt="plot of chunk mean-work-travel-pmf-no-rounding" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;This visualization has a lot of spikes of similar heights, which makes this difficult to interpret and limits its usefulness. Also, it can be hard to see overall patterns; for example, what is the approximate difference in means between these two&amp;nbsp;distributions?&lt;/p&gt;
 &lt;p&gt;This illustrates the tradeoff when using histograms and PMFs for visualizing single variables. If we smooth things out by using larger bin sizes, then we can lose information that may be useful. On the other hand, using small bin sizes creates plots like the one above, which is of limited (if any)&amp;nbsp;utility.&lt;/p&gt;
 &lt;p&gt;An alternative that avoids these problems is the cumulative distribution function (&lt;span class="caps"&gt;CDF&lt;/span&gt;), which we turn to describing next. But before we discuss CDFs, we first have to understand the concept of&amp;nbsp;percentiles.&lt;/p&gt;
@@ -975,7 +987,7 @@ test_scores %&amp;gt;%
   arrange(score) %&amp;gt;%
   mutate(cdf = row_number() / n())&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The visualization of the &lt;span class="caps"&gt;CDF&lt;/span&gt; looks&amp;nbsp;like:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-test-scores-cdf-plot-1.svg" title="plot of chunk test-scores-cdf-plot" alt="plot of chunk test-scores-cdf-plot" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-test-scores-cdf-plot-1.svg" title="plot of chunk test-scores-cdf-plot" alt="plot of chunk test-scores-cdf-plot" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;As you can see, the &lt;span class="caps"&gt;CDF&lt;/span&gt; of a sample looks like a sequence of steps. Appropriately enough, this is called a step function, and the &lt;span class="caps"&gt;CDF&lt;/span&gt; of &lt;em&gt;any&lt;/em&gt; sample is a step&amp;nbsp;function.&lt;/p&gt;
 &lt;p&gt;Also note that we can evaluate the &lt;span class="caps"&gt;CDF&lt;/span&gt; for any value, not just values that appear in the sample. If we select a value that is less than the smallest value in the sample, then the &lt;span class="caps"&gt;CDF&lt;/span&gt; is 0. If we select a value that is greater than the largest value, then the &lt;span class="caps"&gt;CDF&lt;/span&gt; is&amp;nbsp;1.&lt;/p&gt;
 &lt;h2 id="representing-cdfs"&gt;Representing&amp;nbsp;CDFs&lt;/h2&gt;
@@ -996,12 +1008,12 @@ mean_work_travel_max &amp;lt;- county_complete %&amp;gt;%
   pull(mean_work_travel) %&amp;gt;%
   max()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;By themselves, these correspond to two points along the horizontal axis, like&amp;nbsp;so&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-plot-1.svg" title="plot of chunk min-max-mean-work-travel-plot" alt="plot of chunk min-max-mean-work-travel-plot" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-plot-1.svg" title="plot of chunk min-max-mean-work-travel-plot" alt="plot of chunk min-max-mean-work-travel-plot" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;To generate horizontal values that increase by 1 between the minimum and maximum, we use &lt;code&gt;seq()&lt;/code&gt; as&amp;nbsp;follows:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;mean_work_travel_range1 &amp;lt;- seq(
   from = mean_work_travel_min, to = mean_work_travel_max, by = 1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Visually, this would look&amp;nbsp;like&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-short-range-1.svg" title="plot of chunk min-max-mean-work-travel-short-range" alt="plot of chunk min-max-mean-work-travel-short-range" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-min-max-mean-work-travel-short-range-1.svg" title="plot of chunk min-max-mean-work-travel-short-range" alt="plot of chunk min-max-mean-work-travel-short-range" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;Generally, it’s better to use a smaller incremental value inside &lt;code&gt;seq()&lt;/code&gt; in order to make smoother figures. Let’s use &lt;code&gt;by = 0.1&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;mean_work_travel_range2 &amp;lt;- seq(
   from = mean_work_travel_min, to = mean_work_travel_max, by = 0.1)&lt;/code&gt;&lt;/pre&gt;
@@ -1014,7 +1026,7 @@ mean_work_travel_max &amp;lt;- county_complete %&amp;gt;%
 &lt;pre class="r"&gt;&lt;code&gt;mean_work_travel_cdf_tibble %&amp;gt;%
   ggplot() +
   geom_line(mapping = aes(x = mean_work_travel, y = cdf))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-mean-work-travel-cdf-visualization-labeled-1.svg" title="plot of chunk mean-work-travel-cdf-visualization-labeled" alt="plot of chunk mean-work-travel-cdf-visualization-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-mean-work-travel-cdf-visualization-labeled-1.svg" title="plot of chunk mean-work-travel-cdf-visualization-labeled" alt="plot of chunk mean-work-travel-cdf-visualization-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;Now we can easily specify an average work travel time percentile and read the associated time from the plot and&amp;nbsp;vice-versa.&lt;/p&gt;
 &lt;p&gt;It takes some time to get used to CDFs, but over time it should become clear that they show more information, more clearly, than&amp;nbsp;PMFs.&lt;/p&gt;
 &lt;h2 id="comparing-cdfs"&gt;Comparing&amp;nbsp;CDFs&lt;/h2&gt;
@@ -1041,7 +1053,7 @@ ia_ne_mean_work_travel_cdfs &amp;lt;- data_frame(
 &lt;pre class="r"&gt;&lt;code&gt;ggplot(data = ia_ne_mean_work_travel_cdfs,
        mapping = aes(x = mean_work_travel, y = CDF)) +
   geom_line(mapping = aes(color = state))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_cdf-compare-cdf-of-ne-ia-travel-times-plot-labeled-1.svg" title="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" alt="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_cdf-compare-cdf-of-ne-ia-travel-times-plot-labeled-1.svg" title="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" alt="plot of chunk compare-cdf-of-ne-ia-travel-times-plot-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;This visualization makes the shapes of the distributions and the relative differences between them much clearer. We see that Nebraska has shorter average work travel times for most of the distribution, at least until you reach an average time of 25 minutes, after which the Nebraska and Iowa distributions become similar to one&amp;nbsp;another.&lt;/p&gt;
 &lt;h2 id="credits"&gt;Credits&lt;/h2&gt;
 &lt;div class="license"&gt;
@@ -1062,22 +1074,22 @@ county_complete &amp;lt;- read_rds(
 &lt;pre class="r"&gt;&lt;code&gt;county_complete %&amp;gt;%
   ggplot(mapping = aes(x = mean_work_travel)) +
   geom_histogram(binwidth = 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-mean-travel-time-freq-hist-labeled-1.svg" title="plot of chunk mean-travel-time-freq-hist-labeled" alt="plot of chunk mean-travel-time-freq-hist-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-mean-travel-time-freq-hist-labeled-1.svg" title="plot of chunk mean-travel-time-freq-hist-labeled" alt="plot of chunk mean-travel-time-freq-hist-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;h2 id="pmfs"&gt;PMFs&lt;/h2&gt;
 &lt;p&gt;The &lt;strong&gt;probability mass function&lt;/strong&gt; (&lt;span class="caps"&gt;PMF&lt;/span&gt;) represents a distribution by sorting the data into bins (much like the frequency histogram) and then associates a probability with each bin in the distribution. A &lt;strong&gt;probability&lt;/strong&gt; is a frequency expressed as a fraction of the sample size &lt;em&gt;n&lt;/em&gt;. Therefore we can directly convert a frequency histogram to a &lt;span class="caps"&gt;PMF&lt;/span&gt; by dividing the count in each bin by the sample size &lt;em&gt;n&lt;/em&gt;. This process is called &lt;strong&gt;normalization&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;As an example, consider the following short&amp;nbsp;sample,&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1  2  2  3  5&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If we choose a binwidth of 1, then we get a frequency histogram that looks like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-simple-freq-hist-1.svg" title="plot of chunk simple-freq-hist" alt="plot of chunk simple-freq-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-simple-freq-hist-1.svg" title="plot of chunk simple-freq-hist" alt="plot of chunk simple-freq-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;There are 5 observations in this sample. So, we can convert to a &lt;span class="caps"&gt;PMF&lt;/span&gt; by dividing the count within each bin by 5, getting a histogram that looks like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-simple-pmf-hist-1.svg" title="plot of chunk simple-pmf-hist" alt="plot of chunk simple-pmf-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-simple-pmf-hist-1.svg" title="plot of chunk simple-pmf-hist" alt="plot of chunk simple-pmf-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The relative shape stays the same, but compare the values along the vertical axis between the two figures. You’ll find that they are no longer integers and are instead probabilities. The normalization procedure (dividing by 5) guarantees that adding together the probabilities of all bins will equal 1. For this example, we find that the probability of drawing the number 1 is 0.2, drawing 2 is 0.4, drawing 3 is 0.2, drawing 4 is 0, and drawing 5 is 0.2. That is the biggest difference between a frequency histogram and a &lt;span class="caps"&gt;PMF&lt;/span&gt;, the frequency histogram maps from values to integer counters, while the &lt;span class="caps"&gt;PMF&lt;/span&gt; maps from values to fractional&amp;nbsp;probabilities.&lt;/p&gt;
 &lt;h2 id="plotting-pmfs"&gt;Plotting&amp;nbsp;PMFs&lt;/h2&gt;
 &lt;p&gt;The syntax for plotting a &lt;span class="caps"&gt;PMF&lt;/span&gt; using &lt;code&gt;ggplot2&lt;/code&gt; is nearly identical to what you would use to create a frequency histogram. The one modification is that you need to include &lt;code&gt;y = ..density..&lt;/code&gt; inside &lt;code&gt;aes()&lt;/code&gt;. As a simple example, let’s take the full distribution of the average work travel times from earlier and plot it as a &lt;span class="caps"&gt;PMF&lt;/span&gt;:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;county_complete %&amp;gt;%
   ggplot(mapping = aes(x = mean_work_travel, y = ..density..)) +
   geom_histogram(binwidth = 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-mean-travel-time-pmf-labeled-1.svg" title="plot of chunk mean-travel-time-pmf-labeled" alt="plot of chunk mean-travel-time-pmf-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-mean-travel-time-pmf-labeled-1.svg" title="plot of chunk mean-travel-time-pmf-labeled" alt="plot of chunk mean-travel-time-pmf-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;Let’s do a comparison to show how one might use a &lt;span class="caps"&gt;PMF&lt;/span&gt; for analysis. For example, we could ask if two midwestern states such as Nebraska and Iowa have the same distribution of work travel times, or if there is a meaningful difference between the two. First, let’s filter the dataset to only include these two&amp;nbsp;states:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;nebraska_iowa &amp;lt;- county_complete %&amp;gt;%
   filter(state == &amp;quot;Iowa&amp;quot; | state == &amp;quot;Nebraska&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -1087,7 +1099,7 @@ county_complete &amp;lt;- read_rds(
   geom_histogram(
     mapping = aes(x = mean_work_travel, fill = state, color = state),
     position = &amp;quot;identity&amp;quot;, alpha = 0.5, binwidth = 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-ia-ne-travel-times-freq-hist-labeled-1.svg" title="plot of chunk ia-ne-travel-times-freq-hist-labeled" alt="plot of chunk ia-ne-travel-times-freq-hist-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-ia-ne-travel-times-freq-hist-labeled-1.svg" title="plot of chunk ia-ne-travel-times-freq-hist-labeled" alt="plot of chunk ia-ne-travel-times-freq-hist-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;position = &amp;quot;identity&amp;quot;&lt;/code&gt; input overlaps the two distributions (instead of stacking them) and &lt;code&gt;alpha = 0.5&lt;/code&gt; makes the distributions translucent, so that you can see both despite the overlap. On our first glance, it looks like the center of the Nebraska times is lower than the center of the Iowa times, and that both have a long tail on the right-hand side. However, if we do a count&amp;nbsp;summary,&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;nebraska_iowa %&amp;gt;%
   count(state)&lt;/code&gt;&lt;/pre&gt;
@@ -1098,14 +1110,14 @@ county_complete &amp;lt;- read_rds(
     mapping = aes(x = mean_work_travel, y = ..density..,
                   fill = state, color = state),
     position = &amp;quot;identity&amp;quot;, alpha = 0.5, binwidth = 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-ia-ne-travel-times-pmf-labeled-1.svg" title="plot of chunk ia-ne-travel-times-pmf-labeled" alt="plot of chunk ia-ne-travel-times-pmf-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-ia-ne-travel-times-pmf-labeled-1.svg" title="plot of chunk ia-ne-travel-times-pmf-labeled" alt="plot of chunk ia-ne-travel-times-pmf-labeled" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The trend that the center of the travel times in Nebraska is slightly smaller than in Iowa continues to hold even after converting to a &lt;span class="caps"&gt;PMF&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;To provide an example where a &lt;span class="caps"&gt;PMF&lt;/span&gt; is clearly necessary, what if we compare New Jersey with Virginia? Virginia has many more counties than New&amp;nbsp;Jersey:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;county_complete %&amp;gt;%
   filter(state == &amp;quot;New Jersey&amp;quot; | state == &amp;quot;Virginia&amp;quot;) %&amp;gt;%
   count(state)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;As a result, comparing their frequency histograms gives you&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-va-nj-travel-times-freq-hist-1.svg" title="plot of chunk va-nj-travel-times-freq-hist" alt="plot of chunk va-nj-travel-times-freq-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/Materials/representing_distributions_pmf-va-nj-travel-times-freq-hist-1.svg" title="plot of chunk va-nj-travel-times-freq-hist" alt="plot of chunk va-nj-travel-times-freq-hist" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;The New Jersey distribution is dwarfed by the Virginia distribution and it makes it difficult to make comparisons. However, if we instead compare PMFs, we get&amp;nbsp;this:&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://spring18.cds101.com/img/Materials/representing_distributions_pmf-va-nj-travel-times-pmf-1.svg" title="plot of chunk va-nj-travel-times-pmf" alt="plot of chunk va-nj-travel-times-pmf" width="60%" style="display: block; margin: auto;" /&gt;&lt;/p&gt;
 &lt;p&gt;So, for example, we can now make statements like “a randomly selected resident in New Jersey is twice as likely as a randomly chosen resident in Virginia to have an average work travel time of 30 minutes.” The &lt;span class="caps"&gt;PMF&lt;/span&gt; allows for an “apples-to-apples” comparison of the average travel&amp;nbsp;times.&lt;/p&gt;
@@ -1989,7 +2001,7 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;p&gt;Finish reading the editorial and skimming the white paper from the &lt;a href="/materials/class-1-twitter-activity/"&gt;Can Twitter predict election results?&lt;/a&gt; activity we started during class on January 23rd. Then, post your answer to question 1 in the &lt;code&gt;#5-discussion&lt;/code&gt; channel on &lt;a href="https://masoncds101.slack.com"&gt;Slack&lt;/a&gt;, using the hashtag &lt;code&gt;#class01&lt;/code&gt; somewhere in your&amp;nbsp;message.&lt;/p&gt;
 &lt;p&gt;&lt;span class="h3"&gt;Github&amp;nbsp;account&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Sign up for an account on Github: &lt;a href="http://github.com" class="uri"&gt;http://github.com&lt;/a&gt; using your &lt;code&gt;@gmu.edu&lt;/code&gt; email address. &lt;em&gt;After you signup, send me your username in a Direct Message&lt;/em&gt;.&lt;/p&gt;
-</content><category term="mini-assignment"></category></entry><entry><title>Spring 2018 Schedule</title><link href="http://spring18.cds101.com//index.html" rel="alternate"></link><published>2018-01-23T15:00:00-05:00</published><updated>2018-04-10T16:25:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-01-23://index.html</id><summary type="html">&lt;table&gt;
+</content><category term="mini-assignment"></category></entry><entry><title>Spring 2018 Schedule</title><link href="http://spring18.cds101.com//index.html" rel="alternate"></link><published>2018-01-23T15:00:00-05:00</published><updated>2018-04-19T16:15:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-01-23://index.html</id><summary type="html">&lt;table&gt;
 &lt;colgroup&gt;
 &lt;col style="width: 12%" /&gt;
 &lt;col style="width: 4%" /&gt;
@@ -2265,7 +2277,7 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;td style="text-align: left;"&gt;&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;24&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;Apr-19&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;Inference and simulations &lt;span class="caps"&gt;III&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;a href="/materials/class-24/"&gt;Inference and simulations &lt;span class="caps"&gt;III&lt;/span&gt;&lt;/a&gt; &lt;a href="/doc/class24_slides.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-8"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;&lt;a href="/assignments/reading-14/"&gt;Reading 14&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="even"&gt;
