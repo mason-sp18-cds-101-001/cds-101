@@ -2,7 +2,7 @@ Title: Spring 2018 Schedule
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-23 15:00
-Modified: 2018-04-10 16:25
+Modified: 2018-04-19 16:15
 Index_save_as: index.html
 Url: /index.html
 
@@ -89,7 +89,8 @@ Week 12             23      Apr-17        [Inference and simulations II]        
                                           [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-23-github], 
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class23_slides.pdf)
 
-                    24      Apr-19        Inference and simulations III                                                           [Reading 14]
+                    24      Apr-19        [Inference and simulations III]                                                         [Reading 14]
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class24_slides.pdf)
 
 Week 13             25      Apr-24        Statistical modeling I                                                                  [Reading 15]
 
@@ -145,6 +146,7 @@ Week 14             27      May-01        Statistical modeling III
 [Statistical distributions II]:                                  /materials/class-21/
 [Inference and simulations I]:                                   /materials/class-22/
 [Inference and simulations II]:                                  /materials/class-23/
+[Inference and simulations III]:                                 /materials/class-24/
 [cl-8-github]:                                                   https://classroom.github.com/a/xku1H3sP
 [cl-11-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1519755978000359
 [cl-13-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1520361454000399
