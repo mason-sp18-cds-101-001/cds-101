@@ -2,7 +2,7 @@ Title: Spring 2018 Schedule
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-23 15:00
-Modified: 2018-04-19 16:15
+Modified: 2018-04-24 15:45
 Index_save_as: index.html
 Url: /index.html
 
@@ -22,7 +22,7 @@ Week 3              5       Feb-06        Introduction to data/Data visualizatio
                                                                                                                                   [RMarkdown mini-assignment]
 
                     6       Feb-08        Data visualization II                                                                   [Reading 3]
-                    
+
                             Feb-09                                                                                                [Visualization mini-assignment]
 
 Week 4              7       Feb-13        [Data visualization III] &emsp;                                                         [Reading 4]
@@ -38,7 +38,7 @@ Week 5              9       Feb-20        [Data wrangling II] &emsp;            
 
                     10      Feb-22        [Data wrangling III]                                                                    [Reading 6]
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class10_slides.pdf)
-                    
+
                             Feb-23                                                                                                [Homework 1]
 
 Week 6              11      Feb-27        [Data wrangling IV]                                                                     [Reading 7]
@@ -92,16 +92,17 @@ Week 12             23      Apr-17        [Inference and simulations II]        
                     24      Apr-19        [Inference and simulations III]                                                         [Reading 14]
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class24_slides.pdf)
 
-Week 13             25      Apr-24        Statistical modeling I                                                                  [Reading 15]
+Week 13             25      Apr-24        [Inference and simulations IV/Modeling I]                                               [Reading 15]
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class25_slides.pdf)
 
-                    26      Apr-26        Statistical modeling II                                                                 [Reading 16]
+                    26      Apr-26        Modeling II                                                                             [Reading 16]
 
                             Apr-27                                                                                                [Homework 4]
 
-Week 14             27      May-01        Statistical modeling III
+Week 14             27      May-01        Modeling III
 
-                    28      May-03        Statistical modeling IV
-                    
+                    28      May-03        Modeling IV
+
                             May-04                                                                                                Homework 5
 
                             May-08        **[Reading Day]{.smallcaps}**
@@ -147,6 +148,7 @@ Week 14             27      May-01        Statistical modeling III
 [Inference and simulations I]:                                   /materials/class-22/
 [Inference and simulations II]:                                  /materials/class-23/
 [Inference and simulations III]:                                 /materials/class-24/
+[Inference and simulations IV/Modeling I]:                       /materials/class-25/
 [cl-8-github]:                                                   https://classroom.github.com/a/xku1H3sP
 [cl-11-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1519755978000359
 [cl-13-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1520361454000399
