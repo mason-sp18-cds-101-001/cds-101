@@ -1,0 +1,393 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS-101: Introduction to Computational and Data Sciences</title>
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/cds101.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/katex/katex.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/highlightjs/default.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/fontawesome/fa-svg-with-js.css">
+    <link href="http://spring18.cds101.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CDS-101: Introduction to Computational and Data Sciences Full Atom Feed" />
+  </head>
+
+  <body>
+    <div class="header-grid-container">
+      <div class="banner-container">
+        <header>
+          <div class="banner">
+            <div class="course-logo">
+              <a href="http://spring18.cds101.com/">
+                <img src="http://spring18.cds101.com/theme/img/course-logo.svg">
+              </a>
+            </div>
+            <div class="university-logo">
+              <a href="https://gmu.edu">
+                <img src="http://spring18.cds101.com/theme/img/university-logo.svg">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-mobile" data-responsive-toggle="main-menu" data-hide-for="large">
+          <button type="button" data-toggle="main-menu">
+            <i class="fas fa-bars"></i><span class="navbar-mobile-title">Menu</span></button>
+        </div>
+
+        <div class="navbar-menu" id="main-menu">
+          <ul class="navbar-menu-list">
+            <li>
+              <a class="navbar-home-item" href="http://spring18.cds101.com/">
+                <i class="fas fa-home" data-fa-transform="grow-8"></i>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/materials.html">Materials</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/assignments.html">Assignments</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/datasets.html">Datasets</a>
+            </li>
+            <li class="navbar-social">
+              <ul class="navbar-social-list">
+                <li>
+                  <a class="navbar-social-item" href="https://github.com/mason-sp18-cds-101-001/cds-101">
+                    <i class="fab fa-github" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="http://masoncds101.slack.com">
+                    <i class="fab fa-slack" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="feeds/all.atom.xml">
+                    <i class="fas fa-rss-square" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content-grid-container">
+      <article class="static-page">
+        <header class="static-page-header">
+          <h1 class="static-page-title">Homework&nbsp;5</h1>
+        </header>
+        <div class="static-page-body">
+          <p><span class="h3"><strong>Due:</strong> May 4, 2018 @&nbsp;11:59pm</span></p>
+          <div class="no-bullets">
+            <ul>
+              <li>
+                <p>
+                  <a href="/doc/cds101_homework5.pdf">
+                    <i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>  Offline copy of&nbsp;instructions</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://classroom.github.com/a/nFgO_ZG6">
+                    <i class="fab fa-github-alt" data-fa-transform="grow-8"></i>  Github Classroom repo for <strong>Homework&nbsp;5</strong></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <h2 id="instructions">Instructions</h2>
+          <p>For this homework assignment, you will be guided through the process of building a regression model that predicts the market value of condominiums in New York City using a dataset published by the New York City Department of&nbsp;Finance.</p>
+          <p>
+            <a href="https://classroom.github.com/a/nFgO_ZG6">Obtain the Github repository you will use to complete homework 5</a> that contains a starter RMarkdown file named <span class="monospace">homework_5.Rmd</span>, which you will use to do your work and write-up when completing the questions
+            below. Remember to fill in your name at the top of the RMarkdown document and be sure to save, commit, and push (upload) frequently to Github so that you have incremental snapshots of your work. When you’re done, follow the
+            <a href="#how-to-submit">How to submit</a> section below to setup a Pull Request, which will be used for&nbsp;feedback.</p>
+          <h2 id="about-the-dataset">About the&nbsp;dataset</h2>
+          <p>This dataset reports on the market valuations of condominiums in New York City for Fiscal Year 2011/2012. The data
+            <a href="#fn1" class="footnote-ref" id="fnref1">
+              <sup>1</sup>
+            </a> comes from the New York City Department of Finance and was made available to the general public on the
+            <a href="https://opendata.cityofnewyork.us/"><span class="caps">NYC</span> OpenData website</a> (
+            <a href="https://opendata.cityofnewyork.us/" class="uri">https://opendata.cityofnewyork.us/</a>). The official description for the dataset is as&nbsp;follows:</p>
+          <blockquote>
+            <p>Condominiums and cooperatives are valued as if they were residential rental apartments. Income information from similar rental properties is applied to determine value. The Department of Finance (<span class="caps">DOF</span>) chooses similar
+              properties to value condos and coops. Properties are selected based on a combination of factors such as: land location, income levels, building age and construction and exemptions and&nbsp;subsidies.</p>
+          </blockquote>
+          <p>The data in the files <span class="monospace">housing_train.rds</span> and <span class="monospace">housing_test.rds</span> was adapted from the
+            <a href="https://www.jaredlander.com/data/">cleaned and aggregated version by data scientist Jared Lander</a> (
+            <a href="https://www.jaredlander.com/data" class="uri">https://www.jaredlander.com/data</a>).</p>
+          <table>
+            <colgroup>
+              <col style="width: 22%" />
+              <col style="width: 77%" />
+            </colgroup>
+            <thead>
+              <tr class="header">
+                <th style="text-align: left;">Variable</th>
+                <th style="text-align: left;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">boro</span></td>
+                <td style="text-align: left;">Borough where building is located. New York City is divided into 5 boroughs, Manhattan, The Bronx, Brooklyn, Queens, and Staten Island.</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">neighborhood</span></td>
+                <td style="text-align: left;">Neighborhood of building location. The neighborhood name is assigned by the New York City Department of Finance, and in most cases is the same as the neighborhood’s common name.</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">class</span></td>
+                <td style="text-align: left;">
+                  <a href="http://www1.nyc.gov/assets/finance/jump/hlpbldgcode.html">Building classification code</a> assigned by the New York City Department of Finance. There are four building classifications for the condominiums in the dataset, rental, walk-up, elevator, and co-op.</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">year_build</span></td>
+                <td style="text-align: left;">Year the building was built</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">units</span></td>
+                <td style="text-align: left;">Total number of units in the building</td>
+              </tr>
+              <tr class="even">
+                <td style="text-align: left;"><span class="monospace">sqft</span></td>
+                <td style="text-align: left;">Gross square footage of the building</td>
+              </tr>
+              <tr class="odd">
+                <td style="text-align: left;"><span class="monospace">value_per_sqft</span></td>
+                <td style="text-align: left;">Total market value per squarefoot of the land and building</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 id="questions">Questions</h2>
+          <p>The main goal of this homework assignment is to build a model that predicts the market value per squarefoot — the variable <code>value_per_sqft</code> — of condominiums in New York City. We should not expect to be able to construct a model with
+            100% precision, but we would like to uncover trends in the data. This allows us to pose the driving question for our analysis as&nbsp;follows:</p>
+          <blockquote>
+            <p>What are key factors that affect the overall price of condominiums in New York&nbsp;City?</p>
+          </blockquote>
+          <p>When building and evaluating predictive models, it is standard protocol to split your dataset into a <strong>training dataset</strong> and a <strong>test dataset</strong>. This has already been done for you, with the training dataset loaded
+            into the variable <code>housing_train</code> and the testing dataset loaded into <code>housing_test</code>. You will be using <code>housing_train</code> for most of the homework to build and cross-validate your models. Once you’ve selected
+            your model, as a final step you will use it to predict the <code>value_per_sqft</code> column in the dataset stored in <code>housing_test</code>.</p>
+          <p>For your convenience, the helper function <code>rep_kfold_cv(data, k, model, cv_reps)</code> is loaded into your R environment and will run the code that cross-validates your models.
+            <a href="#fn2" class="footnote-ref" id="fnref2">
+              <sup>2</sup>
+            </a> This function requires four&nbsp;inputs:</p>
+          <table>
+            <colgroup>
+              <col style="width: 10%" />
+              <col style="width: 89%" />
+            </colgroup>
+            <thead>
+              <tr class="header">
+                <th>Input</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd">
+                <td><span class="monospace">data</span></td>
+                <td>The training dataset</td>
+              </tr>
+              <tr class="even">
+                <td><span class="monospace">k</span></td>
+                <td>the number of folds to use for cross-validation</td>
+              </tr>
+              <tr class="odd">
+                <td><span class="monospace">model</span></td>
+                <td>Model to cross-validate written in the <span class="monospace">lm()</span> formula syntax (<span class="monospace">money ~ work + time</span>)</td>
+              </tr>
+              <tr class="even">
+                <td><span class="monospace">cv_reps</span></td>
+                <td>Number of times to repeat cross-validation sequence to improve statistical averaging</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr />
+          <ol class="example" type="1">
+            <li>
+              <p>Create the following visualizations to explore the&nbsp;dataset:</p>
+              <ul>
+                <li>
+                  <p>A histogram of <code>value_per_sqft</code> faceted over boroughs of New York&nbsp;City</p>
+                </li>
+                <li>
+                  <p>Box plots of <code>units</code> (y axis) for the different boroughs (x axis) plotted two different ways: in a normal scale and in a <code>log10()</code> scale along the y axis (see
+                    <a href="http://r4ds.had.co.nz/graphics-for-communication.html#replacing-a-scale"
+                      class="uri">http://r4ds.had.co.nz/graphics-for-communication.html#replacing-a-scale</a> for how to scale the&nbsp;axes)</p>
+                </li>
+                <li>
+                  <p>Box plots of <code>sqft</code> (y axis) for the different boroughs (x axis) plotted two different ways: in a normal scale and in a <code>log10()</code> scale along the y&nbsp;axis</p>
+                </li>
+                <li>
+                  <p>Scatterplots of <code>value_per_sqft</code> (y axis) versus <code>units</code> (x axis) using <code>log10()</code> scaling for <code>units</code>. Facet over two variables: boroughs <strong>and</strong> condominium&nbsp;classification.</p>
+                </li>
+              </ul>
+              <p>Based on your plots so far, which variables (columns) in the dataset seem to have the strongest overall impact on the condominium&nbsp;values?</p>
+            </li>
+            <li>
+              <p>The box plots of <code>units</code> in the previous question should reveal extreme outliers in the plot. Since our goal is to model general trends and not precise values, fitting to these data points may skew our model in an unhelpful way.
+                Filter the dataset to remove these outliers (there are 3 in&nbsp;all).</p>
+              <p><strong>Note: Besides these 3 extreme points, there are other potential outliers that you might consider removing.</strong> <strong>If you detect others, you are welcome to remove them to see if it helps you build your model, provided you explain why you’re removing&nbsp;them.</strong></p>
+            </li>
+            <li>
+              <p>To begin, try building univariate (single variable) models and see how they compare with each other. Use <code>value_per_sqft</code> as your response variable and then try <code>boro</code>, <code>class</code>, <code>units</code>, and <code>sqft</code>                for your explanatory variable (this means you will try out 4 different models). Plug these models into the k-fold cross-validation function <code>rep_kfold_cv()</code> with <span class="monospace">k = 10</span> and <span class="monospace">cv_reps = 3</span>.
+                Compare the mean-square error (<span class="caps">MSE</span>), both unadjusted and adjusted, and <span class="math inline">\(R^2\)</span> for these models, noting that models with better predictive power will have lower <span class="caps">MSE</span>                and higher <span class="math inline">\(R^2\)</span> scores. Which model did the best so&nbsp;far?</p>
+            </li>
+          </ol>
+          <hr />
+          <p>These next three questions can be completed for extra credit, provided you’ve already completed the first three questions in full. These will guide you through building a more complicated multivariate model and making predictions with your final
+            model on the <code>housing_test</code> dataset.</p>
+          <p><strong>Answering each question correctly will give you some extra credit, but you must complete them in order.</strong> <strong>This means you shouldn’t skip question 4 and just try and answer questions 5 and 6.</strong> <strong>Submissions that skip over or provide incomplete answers for these questions will not receive any extra&nbsp;credit.</strong></p>
+          <ol start="4" class="example" type="1">
+            <li>
+              <p>Build and cross-validate at least 3 multivariate models that predict <code>value_per_sqft</code>, using the k-fold cross-validation parameters <span class="monospace">k = 10</span> and <span class="monospace">cv_reps = 3</span>. An example
+                of a multivariate model is <code>value_per_sqft ~ boro + units</code>. You may also want to consider including interaction terms (see
+                <a href="http://r4ds.had.co.nz/model-basics.html#interactions-continuous-and-categorical" class="uri">http://r4ds.had.co.nz/model-basics.html#interactions-continuous-and-categorical</a> for a quick review). For example, you might try <code>value_per_sqft ~ boro + class * sqft</code>. Which of your models performs the best? Is it significantly
+                better than your best model in the last&nbsp;question?</p>
+            </li>
+            <li>
+              <p>Now that you’ve selected your model, train it on the full&nbsp;dataset:</p>
+              <pre class="r"><code>final_model &lt;- lm(model_formula, data = housing_train) </code></pre>
+              <p>where <code>model_formula</code> is the best performing model from the previous&nbsp;question.</p>
+              <p>To predict values in the testing set, use <code>add_predictions()</code> from the <span class="monospace">modelr</span> package to put the model predictions directly into your testing dataset. Then calculate the mean-square error for the&nbsp;predictions:</p>
+              <pre class="r"><code>test_predictions %&gt;%
+  summarize(mse = sum((value_per_sqft - pred)^2) / n())</code></pre>
+              <p>This score is useful because it is absolute and allows you to compare how well your model performs against all other model types. Can you do better than a <span class="caps">MSE</span> score of&nbsp;2030.34?</p>
+            </li>
+            <li>
+              <p>To wrap up, evaluate how well your model obeys the conditions for least squares linear regression, which are summarized on page 238 of the
+                <a href="http://spring18.cds101.com/doc/Diez_Barr_%C3%87etinkaya-Rundel_IntroductoryStatisticsWithRandomizationAndSimulation.pdf"><em>Introductory Statistics with Randomization and Simulation</em></a> textbook. Make two plots to inspect how well your model conforms to the requirements for linear&nbsp;regression:</p>
+              <ul>
+                <li>
+                  <p>To evaluate the residual spread, make a scatterplot of <code>(value_per_sqft - pred)</code> (y axis) versus <code>pred</code> (x&nbsp;axis)</p>
+                </li>
+                <li>
+                  <p>To inspect whether the residual distribution is nearly normal, make a Q-Q plot of <code>(value_per_sqft - pred)</code>.</p>
+                </li>
+              </ul>
+              <p>Explain whether your model obeys the conditions for least squares linear&nbsp;regression.</p>
+            </li>
+          </ol>
+          <h2 id="how-to-submit">How to&nbsp;submit</h2>
+          <p>When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github. Then, navigate to <strong>your copy</strong> of the
+            <a href="https://classroom.github.com/a/nFgO_ZG6">Github repository</a> you used for this assignment. You should see your repository, along with the updated files that you just synchronized to Github. Confirm that your files are up-to-date, and then do the following&nbsp;steps:</p>
+          <ol type="1">
+            <li>
+              <p>Click the <em>Pull Requests</em> tab near the top of the&nbsp;page.</p>
+            </li>
+            <li>
+              <p>Click the green button that says “New pull&nbsp;request”.</p>
+            </li>
+            <li>
+              <p>Click the dropdown menu button labeled “base:”, and select the option <code>starting</code>.</p>
+            </li>
+            <li>
+              <p>Confirm that the dropdown menu button labeled “compare:” is set to <code>master</code>.</p>
+            </li>
+            <li>
+              <p>Click the green button that says “Create pull&nbsp;request”.</p>
+            </li>
+            <li>
+              <p>Give the <em>pull request</em> the following title: <span class="monospace">Submission: Homework 5, FirstName LastName</span>, replacing <span class="monospace">FirstName</span> and <span class="monospace">LastName</span> with your actual
+                first and last&nbsp;name.</p>
+            </li>
+            <li>
+              <p>In the messagebox, write: <span class="monospace">My homework submission is ready for grading @shuaibm @jkglasbrenner</span>.</p>
+            </li>
+            <li>
+              <p>Click “Create pull request” to lock in your&nbsp;submission.</p>
+            </li>
+          </ol>
+          <h2 id="cheatsheets">Cheatsheets</h2>
+          <p>You are encouraged to review and keep the following cheatsheets handy while working on this&nbsp;assignment:</p>
+          <ul>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/rstudio-IDE-cheatsheet.pdf">RStudio&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/rmarkdown-cheatsheet.pdf">RMarkdown&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/rmarkdown-reference.pdf">RMarkdown&nbsp;reference</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/ggplot2-cheatsheet.pdf"><span class="monospace">ggplot2</span>&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/data-transformation-cheatsheet.pdf">Data transformation&nbsp;cheatsheet</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="http://spring18.cds101.com/doc/data-import-cheatsheet.pdf">Data import&nbsp;cheatsheet</a>
+              </p>
+            </li>
+          </ul>
+          <section class="footnotes">
+            <hr />
+            <ol>
+              <li id="fn1">
+                <p>Data set aggregated from the following sources:
+                  <br />
+                  <a href="https://data.cityofnewyork.us/Finances/DOF-Condominium-Comparable-Rental-Income-Manhattan/dvzp-h4k9" class="uri">https://data.cityofnewyork.us/Finances/<span class="caps">DOF</span>-Condominium-Comparable-Rental-Income-Manhattan/dvzp-h4k9</a>
+                  <br />
+                  <a href="https://data.cityofnewyork.us/Finances/DOF-Condominium-Comparable-Rental-Income-Brooklyn-/bss9-579f" class="uri">https://data.cityofnewyork.us/Finances/<span class="caps">DOF</span>-Condominium-Comparable-Rental-Income-Brooklyn-/bss9-579f</a>
+                  <br />
+                  <a href="https://data.cityofnewyork.us/Finances/DOF-Condominium-Comparable-Rental-Income-Queens-FY/jcih-dj9q" class="uri">https://data.cityofnewyork.us/Finances/<span class="caps">DOF</span>-Condominium-Comparable-Rental-Income-Queens-<span class="caps">FY</span>/jcih-dj9q</a>
+                  <br />
+                  <a href="https://data.cityofnewyork.us/Property/DOF-Condominium-Comparable-Rental-Income-Bronx-FY-/3qfc-4tta" class="uri">https://data.cityofnewyork.us/Property/<span class="caps">DOF</span>-Condominium-Comparable-Rental-Income-Bronx-<span class="caps">FY</span>-/3qfc-4tta</a>
+                  <br />
+                  <a href="https://data.cityofnewyork.us/Finances/DOF-Condominium-Comparable-Rental-Income-Staten-Is/tkdy-59zg" class="uri">https://data.cityofnewyork.us/Finances/<span class="caps">DOF</span>-Condominium-Comparable-Rental-Income-Staten-Is/tkdy-59zg</a>
+                  <a href="#fnref1" class="footnote-back">↩</a>
+                </p>
+              </li>
+              <li id="fn2">
+                <p>For those that are interested in seeing how you would implement k-fold cross-validation using the <code>tidyverse</code> packages, the code for the function <code>rep_kfold_cv()</code> can be found in the file <code>repeated_kfold_cross_validation.R</code>                  distributed with your Github repo.
+                  <a href="#fnref2" class="footnote-back">↩</a>
+                </p>
+              </li>
+            </ol>
+          </section>
+
+        </div>
+      </article>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-grid-container">
+        Except where otherwise noted, site materials are created by
+        <a href="https://cos.gmu.edu/cds/faculty-profile-james-glasbrenner/">
+          James K. Glasbrenner
+        </a>
+        and licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </div>
+    </footer>
+    <script src="http://spring18.cds101.com/theme/js/cds101.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/highlightjs/highlight.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/katex.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/wookmark/wookmark.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/fontawesome/fontawesome-all.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/vendorInit.js"></script>
+  </body>
+
+</html>
