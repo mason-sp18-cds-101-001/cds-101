@@ -18,10 +18,11 @@ Week 2              3       Jan-30        The data scientist's toolbox II       
 
                     4       Feb-01        The data scientist's toolbox III                                                        [Reading 1]
 
-Week 3              5       Feb-06        Introduction to data/Data visualization I                                               [Reading 2]<br>
-                                                                                                                                  [RMarkdown mini-assignment]
+Week 3              5       Feb-06        [Introduction to data/Data visualization I]                                             [Reading 2]<br>
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class05_slides.pdf)   [RMarkdown mini-assignment]
 
-                    6       Feb-08        Data visualization II                                                                   [Reading 3]
+                    6       Feb-08        [Data visualization II]                                                                 [Reading 3]
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class06_slides.pdf)
 
                             Feb-09                                                                                                [Visualization mini-assignment]
 
@@ -143,6 +144,8 @@ Week 14             27      May-01        [Modeling III]
 [RMarkdown mini-assignment]:                                     /assignments/rmarkdown-mini-assignment/
 [Visualization mini-assignment]:                                 /assignments/visualization-mini-assignment/
 [The data scientist's toolbox I]:                                /materials/class-2/ 
+[Introduction to data/Data visualization I]:                     /materials/class-5/
+[Data visualization II]:                                         /materials/class-6/
 [Data visualization III]:                                        /materials/class-7/
 [Data wrangling I]:                                              /materials/class-8/
 [Data wrangling II]:                                             /materials/class-9/
