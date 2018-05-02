@@ -4,8 +4,7 @@ Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-03-27 13:30
 Tags: midterm
 Slug: midterm-project
-Summary: In lieu of a written final exam, you will construct a course portfolio of three RMarkdown files containing annotated R functions, topic suggestions for a follow-up course to CDS-101, and a comparative discussion of two simulations.
-For the midterm, you will conduct an exploratory data analysis of the U.S. Department of Education's <emph>College Scorecard</emph> dataset in teams.
+Summary: For the midterm, you will conduct an exploratory data analysis of the U.S. Department of Education's <emph>College Scorecard</emph> dataset in teams.
 Show_summary: true
 Show_link: true
 
