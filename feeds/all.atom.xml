@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>CDS-101: Introduction to Computational and Data Sciences</title><link href="http://spring18.cds101.com/" rel="alternate"></link><link href="http://spring18.cds101.com/feeds/all.atom.xml" rel="self"></link><id>http://spring18.cds101.com/</id><updated>2018-04-27T23:59:00-04:00</updated><entry><title>Homework 4</title><link href="http://spring18.cds101.com/assignments/homework-4/" rel="alternate"></link><published>2018-04-27T23:59:00-04:00</published><updated>2018-04-27T23:59:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-27:/assignments/homework-4/</id><summary type="html">For this homework assignment, you will use statistical inference to answer a question about the National Survey of Family Growth, Cycle 6 dataset published by the National Center for Health&amp;nbsp;Statistics.</summary><content type="html">&lt;p&gt;&lt;span class="h3"&gt;&lt;strong&gt;Due:&lt;/strong&gt; April 27, 2018 @&amp;nbsp;11:59pm&lt;/span&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CDS-101: Introduction to Computational and Data Sciences</title><link href="http://spring18.cds101.com/" rel="alternate"></link><link href="http://spring18.cds101.com/feeds/all.atom.xml" rel="self"></link><id>http://spring18.cds101.com/</id><updated>2018-05-02T13:40:00-04:00</updated><entry><title>Class 27: Modeling III</title><link href="http://spring18.cds101.com/materials/class-27/" rel="alternate"></link><published>2018-05-01T13:30:00-04:00</published><updated>2018-05-01T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-05-01:/materials/class-27/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;Slides&lt;/span&gt;&lt;/p&gt;
+&lt;div class="no-bullets"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/doc/class27_slides.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-16"&gt;&lt;/i&gt;    &lt;span class="card-downloads-format"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><content type="html">&lt;p&gt;&lt;span class="h3"&gt;Slides&lt;/span&gt;&lt;/p&gt;
+&lt;div class="no-bullets"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/doc/class27_slides.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-16"&gt;&lt;/i&gt;    &lt;span class="card-downloads-format"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="class notes"></category></entry><entry><title>Homework 4</title><link href="http://spring18.cds101.com/assignments/homework-4/" rel="alternate"></link><published>2018-04-27T23:59:00-04:00</published><updated>2018-04-27T23:59:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-27:/assignments/homework-4/</id><summary type="html">For this homework assignment, you will use statistical inference to answer a question about the National Survey of Family Growth, Cycle 6 dataset published by the National Center for Health&amp;nbsp;Statistics.</summary><content type="html">&lt;p&gt;&lt;span class="h3"&gt;&lt;strong&gt;Due:&lt;/strong&gt; April 27, 2018 @&amp;nbsp;11:59pm&lt;/span&gt;&lt;/p&gt;
 &lt;div class="no-bullets"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href="/doc/cds101_homework4.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-8"&gt;&lt;/i&gt;  Offline copy of&amp;nbsp;instructions&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -140,7 +152,19 @@ qq_int &amp;lt;- pluck(qq_y, 1) - qq_slope * pluck(qq_x, 1)&lt;/code&gt;&lt;/pre
 &lt;li&gt;&lt;p&gt;&lt;a href="http://spring18.cds101.com/doc/data-transformation-cheatsheet.pdf"&gt;Data transformation&amp;nbsp;cheatsheet&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href="http://spring18.cds101.com/doc/data-import-cheatsheet.pdf"&gt;Data import&amp;nbsp;cheatsheet&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="homework"></category></entry><entry><title>Reading 16</title><link href="http://spring18.cds101.com/assignments/reading-16/" rel="alternate"></link><published>2018-04-26T13:30:00-04:00</published><updated>2018-04-26T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-26:/assignments/reading-16/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;&lt;a href="http://r4ds.had.co.nz/"&gt;R for Data&amp;nbsp;Science&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+</content><category term="homework"></category></entry><entry><title>Class 26: Modeling II</title><link href="http://spring18.cds101.com/materials/class-26/" rel="alternate"></link><published>2018-04-26T13:30:00-04:00</published><updated>2018-04-26T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-26:/materials/class-26/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;Slides&lt;/span&gt;&lt;/p&gt;
+&lt;div class="no-bullets"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/doc/class26_slides.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-16"&gt;&lt;/i&gt;    &lt;span class="card-downloads-format"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><content type="html">&lt;p&gt;&lt;span class="h3"&gt;Slides&lt;/span&gt;&lt;/p&gt;
+&lt;div class="no-bullets"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/doc/class26_slides.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-16"&gt;&lt;/i&gt;    &lt;span class="card-downloads-format"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="class notes"></category></entry><entry><title>Reading 16</title><link href="http://spring18.cds101.com/assignments/reading-16/" rel="alternate"></link><published>2018-04-26T13:30:00-04:00</published><updated>2018-04-26T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-04-26:/assignments/reading-16/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;&lt;a href="http://r4ds.had.co.nz/"&gt;R for Data&amp;nbsp;Science&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Read the&amp;nbsp;following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;From &lt;a href="http://r4ds.had.co.nz/model-basics.html"&gt;chapter 23&lt;/a&gt;: section &lt;a href="http://r4ds.had.co.nz/model-basics.html#formulas-and-model-families"&gt;23.4&lt;/a&gt; through to the end of section &lt;a href="http://r4ds.had.co.nz/model-basics.html#other-model-families"&gt;23.6&lt;/a&gt;&lt;/li&gt;
@@ -2013,7 +2037,7 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;p&gt;Finish reading the editorial and skimming the white paper from the &lt;a href="/materials/class-1-twitter-activity/"&gt;Can Twitter predict election results?&lt;/a&gt; activity we started during class on January 23rd. Then, post your answer to question 1 in the &lt;code&gt;#5-discussion&lt;/code&gt; channel on &lt;a href="https://masoncds101.slack.com"&gt;Slack&lt;/a&gt;, using the hashtag &lt;code&gt;#class01&lt;/code&gt; somewhere in your&amp;nbsp;message.&lt;/p&gt;
 &lt;p&gt;&lt;span class="h3"&gt;Github&amp;nbsp;account&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Sign up for an account on Github: &lt;a href="http://github.com" class="uri"&gt;http://github.com&lt;/a&gt; using your &lt;code&gt;@gmu.edu&lt;/code&gt; email address. &lt;em&gt;After you signup, send me your username in a Direct Message&lt;/em&gt;.&lt;/p&gt;
-</content><category term="mini-assignment"></category></entry><entry><title>Spring 2018 Schedule</title><link href="http://spring18.cds101.com//index.html" rel="alternate"></link><published>2018-01-23T15:00:00-05:00</published><updated>2018-04-24T15:45:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-01-23://index.html</id><summary type="html">&lt;table&gt;
+</content><category term="mini-assignment"></category></entry><entry><title>Spring 2018 Schedule</title><link href="http://spring18.cds101.com//index.html" rel="alternate"></link><published>2018-01-23T15:00:00-05:00</published><updated>2018-05-02T13:40:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-01-23://index.html</id><summary type="html">&lt;table&gt;
 &lt;colgroup&gt;
 &lt;col style="width: 12%" /&gt;
 &lt;col style="width: 4%" /&gt;
@@ -2303,7 +2327,7 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;td style="text-align: left;"&gt;&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;26&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;Apr-26&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;Modeling &lt;span class="caps"&gt;II&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;a href="/materials/class-26/"&gt;Modeling &lt;span class="caps"&gt;II&lt;/span&gt;&lt;/a&gt; &lt;a href="/doc/class26_slides.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-8"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;&lt;a href="/assignments/reading-16/"&gt;Reading 16&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="even"&gt;
@@ -2317,7 +2341,7 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;td style="text-align: left;"&gt;Week 14&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;27&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;May-01&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;Modeling &lt;span class="caps"&gt;III&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;a href="/materials/class-27/"&gt;Modeling &lt;span class="caps"&gt;III&lt;/span&gt;&lt;/a&gt; &lt;a href="/doc/class27_slides.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-8"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="even"&gt;
