@@ -30,6 +30,15 @@ icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbs
 
 ## Instructions
 
+For the midterm, you will be assigned into teams that will conduct an exploratory data analysis using the skills you've developed over the first half of the semester.
+Teams will be responsible for creating a report that summarizes their exploratory data analysis and for giving an in-class presentation of their results.
+Each team will motivate their exploration by formulating interesting questions that can be answered with the dataset, which are then answered by wrangling the data into a form that allows you to visualize it.
+The key word here is **visualize**; all data transformations should be in service of creating visualizations that answer your team's questions.
+Teams are welcome to supplement their work by performing basic statistics calculations, but it is not a requirement.
+Teams may also bring in additional data to strengthen the analysis, but please note that any additional data must be documented, which includes describing how you obtained it and how you've integrated it with the main dataset to further your analysis.
+
+## The Dataset
+
 All teams will be working with the [College Scorecard][college-scorecard-link] dataset started by The Obama Administration in September 2015.
 The dataset is available at <https://collegescorecard.ed.gov/data/>.
 **The primary data file that you will be using is labeled as *Most recent data***.
