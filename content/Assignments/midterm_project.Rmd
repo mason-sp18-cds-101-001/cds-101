@@ -164,10 +164,10 @@ After analyzing the various outputs, synthesize it and provide a formal answer t
 
 ## How to submit
 
-When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github.
-Then, navigate to **your copy** of the [Github repository][github-classroom] you used for this assignment.
-You should see your repository, along with the updated files that you just synchronized to Github.
-Confirm that your files are up-to-date, and then do the following steps:
+When your team is ready to submit, first confirm that everything has been saved, committed, and pushed to Github.
+Then, have one of your team members navigate to **team's copy** of the [Github repository][github-classroom] you used for this project.
+He/she should confirm that the repository webpage contains the final version of report and Powerpoint slides.
+After confirming that the files are up-to-date, then follow these steps:
 
 1.  Click the *Pull Requests* tab near the top of the page.
 
@@ -179,14 +179,14 @@ Confirm that your files are up-to-date, and then do the following steps:
 
 5.  Click the green button that says "Create pull request".
 
-6.  Give the *pull request* the following title: [Submission: Midterm Project, FirstName LastName]{.monospace}, replacing [FirstName]{.monospace} and [LastName]{.monospace} with your actual first and last name.
+6.  Give the *pull request* the following title: [Submission: Final Portfolio, Team \#]{.monospace}, replacing [\#]{.monospace} with your assigned team number.
 
-7.  In the messagebox, write: [My homework submission is ready for grading \@jkglasbrenner]{.monospace}.
+7.  In the messagebox, write: [Our team's midterm project report is ready for grading \@jkglasbrenner]{.monospace}.
 
 8.  Click "Create pull request" to lock in your submission.
 
 [r4ds-book]:              http://r4ds.had.co.nz/
-[grade-weights]:          http://spring18.cds101.com/syllabus.html#breakdown
+[grade-weights]:          /syllabus.html#breakdown
 [github-classroom]:       https://classroom.github.com/g/dA9B0Qw5
 [midterm-project-pdf]:    /doc/midterm_project.pdf
 [hadley-r-style-guide]:   http://r-pkgs.had.co.nz/style.html
