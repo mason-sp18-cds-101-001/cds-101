@@ -179,7 +179,7 @@ After confirming that the files are up-to-date, then follow these steps:
 
 5.  Click the green button that says "Create pull request".
 
-6.  Give the *pull request* the following title: [Submission: Final Portfolio, Team \#]{.monospace}, replacing [\#]{.monospace} with your assigned team number.
+6.  Give the *pull request* the following title: [Submission: Midterm Project, Team \#]{.monospace}, replacing [\#]{.monospace} with your assigned team number.
 
 7.  In the messagebox, write: [Our team's midterm project report is ready for grading \@jkglasbrenner]{.monospace}.
 
