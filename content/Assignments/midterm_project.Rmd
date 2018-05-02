@@ -1,0 +1,186 @@
+Title: Midterm Project
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-03-27 13:30
+Tags: midterm
+Slug: midterm-project
+Summary: In lieu of a written final exam, you will construct a course portfolio of three RMarkdown files containing annotated R functions, topic suggestions for a follow-up course to CDS-101, and a comparative discussion of two simulations.
+For the midterm, you will conduct an exploratory data analysis of the U.S. Department of Education's <emph>College Scorecard</emph> dataset in teams.
+Show_summary: true
+Show_link: true
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, fig.width = 5, dev = "svg",
+                      fig.asp = 0.618, out.width = "70%", dpi = 120,
+                      fig.align = "center", cache = TRUE)
+
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
+icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbsp;'
+```
+
+[**Due:** March 27, 2018 @ 11:59pm]{.h3}
+
+::: {.no-bullets}
+
+*   [`r icon_pdf` Offline copy of instructions][midterm-project-pdf]
+
+*   [`r icon_github` Github Classroom repo for **Midterm Project**][github-classroom]
+
+:::
+
+## Instructions
+
+All teams will be working with the [College Scorecard][college-scorecard-link] dataset started by The Obama Administration in September 2015.
+The dataset is available at <https://collegescorecard.ed.gov/data/>.
+**The primary data file that you will be using is labeled as *Most recent data***.
+The direct link to the dataset is <https://ed-public-download.app.cloud.gov/downloads/Most-Recent-Cohorts-All-Data-Elements.csv>.
+
+**The data code-book** is available at <https://collegescorecard.ed.gov/assets/CollegeScorecardDataDictionary.xlsx>, which describes all of the variables that are in the dataset.
+You will have to look through the code-book to understand the meaning of the variables, and this should be your starting point before you start running an analysis on the dataset.
+
+For further information about the dataset, consult the documentation pages at <https://collegescorecard.ed.gov/data/documentation/>.
+
+Finally, loading the dataset, you will need to specify values that will count as `NA` entries, otherwise it will give you errors.
+The simplest way to load without errors is to run
+
+```r
+college <- read_csv("Most-Recent-Cohorts-All-Data-Elements.csv", na = c("NA", "NULL"))
+```
+
+For your convenience, this command is included in the setup block in your team's project template.
+
+**This is a large dataset that is over 100 megabytes in size and contains millions of individual cells.**
+**As such, there is no one right way to approach this project.**
+**There are many different avenues that you can take, so have fun with it!**
+
+## Submission guidelines
+
+Your Midterm Project submission is expected to meet the following guidelines:
+
+*   **Your team submission will only be graded if it is on Github and in your team's copy of the midterm project repository.**
+    **Your team must also submit a Pull Request against the [starting]{.monospace} branch.**
+
+*   Your submission must contain the team's RMarkdown file for the final report and a copy of your team's presentation slides.
+    The RMarkdown report file must knit to HTML and PDF without error.
+
+*   The report is to have two sections, **Cleaning and tidying the dataset**, and **Exploratory data analysis**, see further down the document for a description.
+
+*   The data analysis must be completed using the [tidyverse]{.monospace} tools described in [*R for Data Science*][r4ds-book] and the plots must be generated using [ggplot2]{.monospace}.
+
+*   Each team member is expected to formulate one question that he/she then answers in the final report.
+
+*   Each team member must contribute substantive commits to the team repository on Github that reflect his/her own work.
+
+*   The report represents your team's final results and should only contain the methods used to obtain them.
+    **Do not include questions in the report that you cannot answer.**
+    
+*   Your R code should be clean and readable.
+    For guidelines, take a look at [Google's R Style Guide][google-r-style-guide] and [Hadley Wickham's R Style Guide][hadley-r-style-guide].
+
+*   Your work is to be documented using Markdown blocks.
+    Each block of R code should have Markdown text above it that explains the code's purpose and what is being done.
+
+*   **Teams must do a final edit on the report so that the final submission has a coherent writing style and structure.**
+    Each student has a different writing style, and it is distracting if the writing style changes from question to question, so select an editor for the team to make it uniform before submission.
+    In addition, the code blocks should look uniform and clean upon knitting, and any spelling and grammar errors need to be fixed.
+
+*   **The report's tone should be professional and should not read like a social media feed or personal blog**.
+    Refrain from editorializing about the project as a whole or about a specific question, this is not an opinion paper.
+    Do not speculate, instead support your claims and explanations using data and analysis.
+    Avoid self-narration or writing about how you felt or what you were thinking as you complete each question, instead write as if you are constructing a step-by-step tutorial for others to use.
+
+*   **Late submissions for the midterm project will not be accepted and your presentation must be given on the scheduled date, no exceptions.**
+
+## Presentation guidelines
+
+Your presentation is expected to meet the following guidelines:
+
+*   For teams of three, the presentation must be between 8 to 10 minutes in length.
+    For teams of four, the presentation must be between 12 to 14 minutes in length.
+
+*   The presentation summarizes key aspects of your report, such as what your questions are, what you needed to find that would answer them, and the choices you made that led to answers.
+    The presentation should **not** be a laundry list of everything you tried to do that didn't work.
+    It also shouldn't contain much R code, only include the most important snippets.
+    
+*   The presentation must include slides that you created using either PowerPoint or Google Slides.
+    Teams that are interested in using the R package I use to create the HTML5 slides from class can talk to me separately.
+
+*   Each team member must speak during the presentation.
+    Also, while it is understood that each team member will offer different contributions, every team member should be able to speak independently about the steps taken in your project and answer basic questions.
+    
+*   The team should be able to explain the reasoning for taking any particular step during the project.
+
+## Grade
+
+The submitted write-up is worth 60% of your midterm project grade and your in-class presentation is worth the remaining 40%.
+Grading criteria for the written submission will be based on the correctness and readability of your R code, if your write-up is structured, coherent, and has proper spelling and follows standard rules of grammar, and the general quality of how you answer each of your presented questions.
+Grading criteria for the presentation will be based on falling within the time length, how long each team member speaks during the presentation, whether the spoken content is substantive, and the general quality of how the group presents questions and shows how they arrived at their answers.
+Finally, your classmates will peer review your presentations using a form, which will be averaged together and factored into the presentation grade.
+
+You will be graded as an individual, even though this is a team project.
+Any team members that are judged to have not sufficiently contributed to the final product will have their grade penalized.
+
+[As stated in the class syllabus][grade-weights], this project is worth 25% of your class grade.
+
+## Cleaning and tidying the dataset section
+
+This dataset is semi-structured and at least somewhat clean, but it is likely that you will have to perform a small amount of cleaning and/or tidying.
+A simple example are cell entries containing "PrivacySuppressed", which may reside in columns that otherwise contain numerical data.
+You may need to fix the data type for some columns after dealing with the "PrivacySuppressed" entries.
+Also, some of the columns don't follow the "each variable must have its own column" rule, so you will likely have to do some data reshaping before starting your analysis.
+
+Attempting to reshape the full dataset so that it is tidy would be an involved task.
+To keep things manageable, it is recommended that, after you've written down your questions and decided on the variables you will be analyzing and visualizing, that you extract those columns using `select()` in order to reduce the size of the dataset.
+Assign the reduced dataset to a different variable (don't overwrite the original dataset).
+Afterwards you can perform your tidying and cleaning operations on the **reduced** dataset.
+
+In your write-up, the data cleaning and tidying section should include documentation of your procedure.
+This would be in the form of code blocks with explanations for why the cleaning/tidying is necessary (for example, cite the tidy data rule that you're addressing).
+
+## Exploratory data analysis section
+
+**Each team member will construct and answer 1 question about the dataset in this section**.
+So, for example, a team of three members will have 3 questions in total.
+Each question must involve one or more visualizations.
+**Your questions must be about comparing relationships between two or more variables in the dataset**, which can include how a variable is distributed across several different categories.
+In addition, answering the question must require that you make use of both *data transformation* ([dplyr]{.monospace}) and *data visualization* ([ggplot2]{.monospace}).
+Running visualizations on different columns "out of the box" without any kind of filtering or grouping/summarizing is not sufficient for this project.
+
+In the report, each question should be clearly stated and followed by the procedure used to answer it.
+The procedure takes the form of both code blocks and plain text.
+Then, after you obtain your final result in the form of a visualization, **be sure to interpret it for the reader**.
+For example, if it's a distribution, what is it's shape and center?
+If it's a scatter plot, what is the trend of the points?
+After analyzing the various outputs, synthesize it and provide a formal answer to your stated question.
+
+## How to submit
+
+When you are ready to submit, be sure to save, commit, and push your final result so that everything is synchronized to Github.
+Then, navigate to **your copy** of the [Github repository][github-classroom] you used for this assignment.
+You should see your repository, along with the updated files that you just synchronized to Github.
+Confirm that your files are up-to-date, and then do the following steps:
+
+1.  Click the *Pull Requests* tab near the top of the page.
+
+2.  Click the green button that says "New pull request".
+
+3.  Click the dropdown menu button labeled "base:", and select the option `starting`.
+
+4.  Confirm that the dropdown menu button labeled "compare:" is set to `master`.
+
+5.  Click the green button that says "Create pull request".
+
+6.  Give the *pull request* the following title: [Submission: Midterm Project, FirstName LastName]{.monospace}, replacing [FirstName]{.monospace} and [LastName]{.monospace} with your actual first and last name.
+
+7.  In the messagebox, write: [My homework submission is ready for grading \@jkglasbrenner]{.monospace}.
+
+8.  Click "Create pull request" to lock in your submission.
+
+[r4ds-book]:              http://r4ds.had.co.nz/
+[grade-weights]:          http://spring18.cds101.com/syllabus.html#breakdown
+[github-classroom]:       https://classroom.github.com/g/dA9B0Qw5
+[midterm-project-pdf]:    /doc/midterm_project.pdf
+[hadley-r-style-guide]:   http://r-pkgs.had.co.nz/style.html
+[google-r-style-guide]:   https://google.github.io/styleguide/Rguide.xml
+[college-scorecard-link]: https://collegescorecard.ed.gov
