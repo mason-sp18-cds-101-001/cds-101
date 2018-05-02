@@ -1,0 +1,272 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS-101: Introduction to Computational and Data Sciences</title>
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/cds101.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/katex/katex.min.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/highlightjs/default.css">
+    <link rel="stylesheet" href="http://spring18.cds101.com/theme/css/vendor/fontawesome/fa-svg-with-js.css">
+    <link href="http://spring18.cds101.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CDS-101: Introduction to Computational and Data Sciences Full Atom Feed" />
+  </head>
+
+  <body>
+    <div class="header-grid-container">
+      <div class="banner-container">
+        <header>
+          <div class="banner">
+            <div class="course-logo">
+              <a href="http://spring18.cds101.com/">
+                <img src="http://spring18.cds101.com/theme/img/course-logo.svg">
+              </a>
+            </div>
+            <div class="university-logo">
+              <a href="https://gmu.edu">
+                <img src="http://spring18.cds101.com/theme/img/university-logo.svg">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-mobile" data-responsive-toggle="main-menu" data-hide-for="large">
+          <button type="button" data-toggle="main-menu">
+            <i class="fas fa-bars"></i><span class="navbar-mobile-title">Menu</span></button>
+        </div>
+
+        <div class="navbar-menu" id="main-menu">
+          <ul class="navbar-menu-list">
+            <li>
+              <a class="navbar-home-item" href="http://spring18.cds101.com/">
+                <i class="fas fa-home" data-fa-transform="grow-8"></i>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/materials.html">Materials</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/assignments.html">Assignments</a>
+            </li>
+            <li>
+              <a class="navbar-menu-item" href="http://spring18.cds101.com/datasets.html">Datasets</a>
+            </li>
+            <li class="navbar-social">
+              <ul class="navbar-social-list">
+                <li>
+                  <a class="navbar-social-item" href="https://github.com/mason-sp18-cds-101-001/cds-101">
+                    <i class="fab fa-github" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="http://masoncds101.slack.com">
+                    <i class="fab fa-slack" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="navbar-social-item" href="feeds/all.atom.xml">
+                    <i class="fas fa-rss-square" data-fa-transform="grow-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content-grid-container">
+      <article class="static-page">
+        <header class="static-page-header">
+          <h1 class="static-page-title">Midterm&nbsp;Project</h1>
+        </header>
+        <div class="static-page-body">
+          <p><span class="h3"><strong>Due:</strong> March 27, 2018 @&nbsp;11:59pm</span></p>
+          <div class="no-bullets">
+            <ul>
+              <li>
+                <p>
+                  <a href="/doc/midterm_project.pdf">
+                    <i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>  Offline copy of&nbsp;instructions</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://classroom.github.com/g/dA9B0Qw5">
+                    <i class="fab fa-github-alt" data-fa-transform="grow-8"></i>  Github Classroom repo for <strong>Midterm&nbsp;Project</strong></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <h2 id="instructions">Instructions</h2>
+          <p>For the midterm, you will be assigned into teams that will conduct an exploratory data analysis using the skills you’ve developed over the first half of the semester. Teams will be responsible for creating a report that summarizes their exploratory
+            data analysis and for giving an in-class presentation of their results. Each team will motivate their exploration by formulating interesting questions that can be answered with the dataset, which are then answered by wrangling the data into
+            a form that allows you to visualize it. The key word here is <strong>visualize</strong>; all data transformations should be in service of creating visualizations that answer your team’s questions. Teams are welcome to supplement their work
+            by performing basic statistics calculations, but it is not a requirement. Teams may also bring in additional data to strengthen the analysis, but please note that any additional data must be documented, which includes describing how you obtained
+            it and how you’ve integrated it with the main dataset to further your&nbsp;analysis.</p>
+          <h2 id="the-dataset">The&nbsp;Dataset</h2>
+          <p>All teams will be working with the
+            <a href="https://collegescorecard.ed.gov">College Scorecard</a> dataset started by The Obama Administration in September 2015. The dataset is available at
+            <a href="https://collegescorecard.ed.gov/data/" class="uri">https://collegescorecard.ed.gov/data/</a>. <strong>The primary data file that you will be using is labeled as <em>Most recent data</em></strong>. The direct link to the dataset is
+            <a href="https://ed-public-download.app.cloud.gov/downloads/Most-Recent-Cohorts-All-Data-Elements.csv"
+              class="uri">https://ed-public-download.app.cloud.gov/downloads/Most-Recent-Cohorts-All-Data-Elements.csv</a>.</p>
+          <p><strong>The data code-book</strong> is available at
+            <a href="https://collegescorecard.ed.gov/assets/CollegeScorecardDataDictionary.xlsx" class="uri">https://collegescorecard.ed.gov/assets/CollegeScorecardDataDictionary.xlsx</a>, which describes all of the variables that are in the dataset. You will have to look through the code-book to understand the meaning of the variables, and this
+            should be your starting point before you start running an analysis on the&nbsp;dataset.</p>
+          <p>For further information about the dataset, consult the documentation pages at
+            <a href="https://collegescorecard.ed.gov/data/documentation/" class="uri">https://collegescorecard.ed.gov/data/documentation/</a>.</p>
+          <p>Finally, loading the dataset, you will need to specify values that will count as <code>NA</code> entries, otherwise it will give you errors. The simplest way to load without errors is to&nbsp;run</p>
+          <pre class="r"><code>college &lt;- read_csv(&quot;Most-Recent-Cohorts-All-Data-Elements.csv&quot;, na = c(&quot;NA&quot;, &quot;NULL&quot;))</code></pre>
+          <p>For your convenience, this command is included in the setup block in your team’s project&nbsp;template.</p>
+          <p><strong>This is a large dataset that is over 100 megabytes in size and contains millions of individual cells.</strong> <strong>As such, there is no one right way to approach this project.</strong> <strong>There are many different avenues that you can take, so have fun with&nbsp;it!</strong></p>
+          <h2 id="submission-guidelines">Submission&nbsp;guidelines</h2>
+          <p>Your Midterm Project submission is expected to meet the following&nbsp;guidelines:</p>
+          <ul>
+            <li>
+              <p><strong>Your team submission will only be graded if it is on Github and in your team’s copy of the midterm project repository.</strong> <strong>Your team must also submit a Pull Request against the <span class="monospace">starting</span>&nbsp;branch.</strong></p>
+            </li>
+            <li>
+              <p>Your submission must contain the team’s RMarkdown file for the final report and a copy of your team’s presentation slides. The RMarkdown report file must knit to <span class="caps">HTML</span> and <span class="caps">PDF</span> without&nbsp;error.</p>
+            </li>
+            <li>
+              <p>The report is to have two sections, <strong>Cleaning and tidying the dataset</strong>, and <strong>Exploratory data analysis</strong>, see further down the document for a&nbsp;description.</p>
+            </li>
+            <li>
+              <p>The data analysis must be completed using the <span class="monospace">tidyverse</span> tools described in
+                <a href="http://r4ds.had.co.nz/"><em>R for Data Science</em></a> and the plots must be generated using <span class="monospace">ggplot2</span>.</p>
+            </li>
+            <li>
+              <p>Each team member is expected to formulate one question that he/she then answers in the final&nbsp;report.</p>
+            </li>
+            <li>
+              <p>Each team member must contribute substantive commits to the team repository on Github that reflect his/her own&nbsp;work.</p>
+            </li>
+            <li>
+              <p>The report represents your team’s final results and should only contain the methods used to obtain them. <strong>Do not include questions in the report that you cannot&nbsp;answer.</strong></p>
+            </li>
+            <li>
+              <p>Your R code should be clean and readable. For guidelines, take a look at
+                <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R Style Guide</a> and
+                <a href="http://r-pkgs.had.co.nz/style.html">Hadley Wickham’s R Style Guide</a>.</p>
+            </li>
+            <li>
+              <p>Your work is to be documented using Markdown blocks. Each block of R code should have Markdown text above it that explains the code’s purpose and what is being&nbsp;done.</p>
+            </li>
+            <li>
+              <p><strong>Teams must do a final edit on the report so that the final submission has a coherent writing style and structure.</strong> Each student has a different writing style, and it is distracting if the writing style changes from question
+                to question, so select an editor for the team to make it uniform before submission. In addition, the code blocks should look uniform and clean upon knitting, and any spelling and grammar errors need to be&nbsp;fixed.</p>
+            </li>
+            <li>
+              <p><strong>The report’s tone should be professional and should not read like a social media feed or personal blog</strong>. Refrain from editorializing about the project as a whole or about a specific question, this is not an opinion paper.
+                Do not speculate, instead support your claims and explanations using data and analysis. Avoid self-narration or writing about how you felt or what you were thinking as you complete each question, instead write as if you are constructing
+                a step-by-step tutorial for others to&nbsp;use.</p>
+            </li>
+            <li>
+              <p><strong>Late submissions for the midterm project will not be accepted and your presentation must be given on the scheduled date, no&nbsp;exceptions.</strong></p>
+            </li>
+          </ul>
+          <h2 id="presentation-guidelines">Presentation&nbsp;guidelines</h2>
+          <p>Your presentation is expected to meet the following&nbsp;guidelines:</p>
+          <ul>
+            <li>
+              <p>For teams of three, the presentation must be between 8 to 10 minutes in length. For teams of four, the presentation must be between 12 to 14 minutes in&nbsp;length.</p>
+            </li>
+            <li>
+              <p>The presentation summarizes key aspects of your report, such as what your questions are, what you needed to find that would answer them, and the choices you made that led to answers. The presentation should <strong>not</strong> be a laundry
+                list of everything you tried to do that didn’t work. It also shouldn’t contain much R code, only include the most important&nbsp;snippets.</p>
+            </li>
+            <li>
+              <p>The presentation must include slides that you created using either PowerPoint or Google Slides. Teams that are interested in using the R package I use to create the <span class="caps">HTML5</span> slides from class can talk to me&nbsp;separately.</p>
+            </li>
+            <li>
+              <p>Each team member must speak during the presentation. Also, while it is understood that each team member will offer different contributions, every team member should be able to speak independently about the steps taken in your project and
+                answer basic&nbsp;questions.</p>
+            </li>
+            <li>
+              <p>The team should be able to explain the reasoning for taking any particular step during the&nbsp;project.</p>
+            </li>
+          </ul>
+          <h2 id="grade">Grade</h2>
+          <p>The submitted write-up is worth 60% of your midterm project grade and your in-class presentation is worth the remaining 40%. Grading criteria for the written submission will be based on the correctness and readability of your R code, if your
+            write-up is structured, coherent, and has proper spelling and follows standard rules of grammar, and the general quality of how you answer each of your presented questions. Grading criteria for the presentation will be based on falling within
+            the time length, how long each team member speaks during the presentation, whether the spoken content is substantive, and the general quality of how the group presents questions and shows how they arrived at their answers. Finally, your classmates
+            will peer review your presentations using a form, which will be averaged together and factored into the presentation&nbsp;grade.</p>
+          <p>You will be graded as an individual, even though this is a team project. Any team members that are judged to have not sufficiently contributed to the final product will have their grade&nbsp;penalized.</p>
+          <p>
+            <a href="/syllabus.html#breakdown">As stated in the class syllabus</a>, this project is worth 25% of your class&nbsp;grade.</p>
+          <h2 id="cleaning-and-tidying-the-dataset-section">Cleaning and tidying the dataset&nbsp;section</h2>
+          <p>This dataset is semi-structured and at least somewhat clean, but it is likely that you will have to perform a small amount of cleaning and/or tidying. A simple example are cell entries containing “PrivacySuppressed”, which may reside in columns
+            that otherwise contain numerical data. You may need to fix the data type for some columns after dealing with the “PrivacySuppressed” entries. Also, some of the columns don’t follow the “each variable must have its own column” rule, so you
+            will likely have to do some data reshaping before starting your&nbsp;analysis.</p>
+          <p>Attempting to reshape the full dataset so that it is tidy would be an involved task. To keep things manageable, it is recommended that, after you’ve written down your questions and decided on the variables you will be analyzing and visualizing,
+            that you extract those columns using <code>select()</code> in order to reduce the size of the dataset. Assign the reduced dataset to a different variable (don’t overwrite the original dataset). Afterwards you can perform your tidying and cleaning
+            operations on the <strong>reduced</strong>&nbsp;dataset.</p>
+          <p>In your write-up, the data cleaning and tidying section should include documentation of your procedure. This would be in the form of code blocks with explanations for why the cleaning/tidying is necessary (for example, cite the tidy data rule
+            that you’re&nbsp;addressing).</p>
+          <h2 id="exploratory-data-analysis-section">Exploratory data analysis&nbsp;section</h2>
+          <p><strong>Each team member will construct and answer 1 question about the dataset in this section</strong>. So, for example, a team of three members will have 3 questions in total. Each question must involve one or more visualizations. <strong>Your questions must be about comparing relationships between two or more variables in the dataset</strong>,
+            which can include how a variable is distributed across several different categories. In addition, answering the question must require that you make use of both <em>data transformation</em> (<span class="monospace">dplyr</span>) and <em>data visualization</em>            (<span class="monospace">ggplot2</span>). Running visualizations on different columns “out of the box” without any kind of filtering or grouping/summarizing is not sufficient for this&nbsp;project.</p>
+          <p>In the report, each question should be clearly stated and followed by the procedure used to answer it. The procedure takes the form of both code blocks and plain text. Then, after you obtain your final result in the form of a visualization,
+            <strong>be sure to interpret it for the reader</strong>. For example, if it’s a distribution, what is it’s shape and center? If it’s a scatter plot, what is the trend of the points? After analyzing the various outputs, synthesize it and provide
+            a formal answer to your stated&nbsp;question.</p>
+          <h2 id="how-to-submit">How to&nbsp;submit</h2>
+          <p>When your team is ready to submit, first confirm that everything has been saved, committed, and pushed to Github. Then, have one of your team members navigate to <strong>team’s copy</strong> of the
+            <a href="https://classroom.github.com/g/dA9B0Qw5">Github repository</a> you used for this project. He/she should confirm that the repository webpage contains the final version of report and Powerpoint slides. After confirming that the files are up-to-date, then follow these&nbsp;steps:</p>
+          <ol type="1">
+            <li>
+              <p>Click the <em>Pull Requests</em> tab near the top of the&nbsp;page.</p>
+            </li>
+            <li>
+              <p>Click the green button that says “New pull&nbsp;request”.</p>
+            </li>
+            <li>
+              <p>Click the dropdown menu button labeled “base:”, and select the option <code>starting</code>.</p>
+            </li>
+            <li>
+              <p>Confirm that the dropdown menu button labeled “compare:” is set to <code>master</code>.</p>
+            </li>
+            <li>
+              <p>Click the green button that says “Create pull&nbsp;request”.</p>
+            </li>
+            <li>
+              <p>Give the <em>pull request</em> the following title: <span class="monospace">Submission: Midterm Project, Team #</span>, replacing <span class="monospace">#</span> with your assigned team&nbsp;number.</p>
+            </li>
+            <li>
+              <p>In the messagebox, write: <span class="monospace">Our team’s midterm project report is ready for grading @jkglasbrenner</span>.</p>
+            </li>
+            <li>
+              <p>Click “Create pull request” to lock in your&nbsp;submission.</p>
+            </li>
+          </ol>
+
+        </div>
+      </article>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-grid-container">
+        Except where otherwise noted, site materials are created by
+        <a href="https://cos.gmu.edu/cds/faculty-profile-james-glasbrenner/">
+          James K. Glasbrenner
+        </a>
+        and licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </div>
+    </footer>
+    <script src="http://spring18.cds101.com/theme/js/cds101.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/highlightjs/highlight.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/katex.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/wookmark/wookmark.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/fontawesome/fontawesome-all.min.js"></script>
+    <script src="http://spring18.cds101.com/theme/js/vendor/vendorInit.js"></script>
+  </body>
+
+</html>
