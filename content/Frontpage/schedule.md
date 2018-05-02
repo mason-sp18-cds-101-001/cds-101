@@ -2,7 +2,7 @@ Title: Spring 2018 Schedule
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-23 15:00
-Modified: 2018-05-02 14:40
+Modified: 2018-05-02 15:00
 Index_save_as: index.html
 Url: /index.html
 
@@ -64,7 +64,7 @@ Week 8              15      Mar-20        Midterm project group conferences
                     16      Mar-22        [Introduction to Web Scraping I]
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class16_slides.pdf)
 
-Week 9              17      Mar-27        Midterm project presentations I/Web scraping group activity                             Midterm Project
+Week 9              17      Mar-27        Midterm project presentations I/Web scraping group activity                             [Midterm Project]
 
                     18      Mar-29        Midterm project presentations II/Web scraping group activity
                                           [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-18-github]
@@ -136,6 +136,7 @@ Week 14             27      May-01        [Modeling III]
 [Homework 3]:                                                    /assignments/homework-3/
 [Homework 4]:                                                    /assignments/homework-4/
 [Homework 5]:                                                    /assignments/homework-5/
+[Midterm Project]:                                               /assignments/midterm-project/
 [Final Portfolio]:                                               /assignments/final-portfolio/
 [Try R Tutorial]:                                                /assignments/try-r-tutorial-mini-assignment/
 [Twitter Study Article]:                                         /assignments/introductions-and-twitter-election-mini-assignment/
