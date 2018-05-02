@@ -2,7 +2,7 @@ Title: Spring 2018 Schedule
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-23 15:00
-Modified: 2018-05-02 13:40
+Modified: 2018-05-02 14:00
 Index_save_as: index.html
 Url: /index.html
 
@@ -105,7 +105,7 @@ Week 14             27      May-01        [Modeling III]
 
                     28      May-03        Modeling IV
 
-                            May-04                                                                                                Homework 5
+                            May-04                                                                                                [Homework 5]
 
                             May-08        **[Reading Day]{.smallcaps}**
 
@@ -133,6 +133,7 @@ Week 14             27      May-01        [Modeling III]
 [Homework 2]:                                                    /assignments/homework-2/
 [Homework 3]:                                                    /assignments/homework-3/
 [Homework 4]:                                                    /assignments/homework-4/
+[Homework 5]:                                                    /assignments/homework-5/
 [Try R Tutorial]:                                                /assignments/try-r-tutorial-mini-assignment/
 [Twitter Study Article]:                                         /assignments/introductions-and-twitter-election-mini-assignment/
 [RMarkdown mini-assignment]:                                     /assignments/rmarkdown-mini-assignment/
