@@ -295,7 +295,19 @@
 &lt;li id="fn2"&gt;&lt;p&gt;For those that are interested in seeing how you would implement k-fold cross-validation using the &lt;code&gt;tidyverse&lt;/code&gt; packages, the code for the function &lt;code&gt;rep_kfold_cv()&lt;/code&gt; can be found in the file &lt;code&gt;repeated_kfold_cross_validation.R&lt;/code&gt; distributed with your Github repo.&lt;a href="#fnref2" class="footnote-back"&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
-</content><category term="homework"></category></entry><entry><title>Class 27: Modeling III</title><link href="http://spring18.cds101.com/materials/class-27/" rel="alternate"></link><published>2018-05-01T13:30:00-04:00</published><updated>2018-05-01T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-05-01:/materials/class-27/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;Slides&lt;/span&gt;&lt;/p&gt;
+</content><category term="homework"></category></entry><entry><title>Cross-validation activity</title><link href="http://spring18.cds101.com/materials/cross-validation-activity/" rel="alternate"></link><published>2018-05-03T13:30:00-04:00</published><updated>2018-05-03T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-05-03:/materials/cross-validation-activity/</id><summary type="html">&lt;p&gt;Activity on building and cross-validating models that predict the total price &lt;code&gt;totalPr&lt;/code&gt; of copies of &lt;em&gt;Mario Kart Wii&lt;/em&gt; sold on&amp;nbsp;eBay.&lt;/p&gt;
+&lt;div class="no-bullets"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://classroom.github.com/a/Ce_Ci3HZ"&gt;&lt;i class="fab fa-github-alt" data-fa-transform="grow-16"&gt;&lt;/i&gt;    &lt;span class="card-downloads-format"&gt;&lt;strong&gt;Cross-validation activity&lt;/strong&gt;&amp;nbsp;repo&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><content type="html">&lt;p&gt;Activity on building and cross-validating models that predict the total price &lt;code&gt;totalPr&lt;/code&gt; of copies of &lt;em&gt;Mario Kart Wii&lt;/em&gt; sold on&amp;nbsp;eBay.&lt;/p&gt;
+&lt;div class="no-bullets"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://classroom.github.com/a/Ce_Ci3HZ"&gt;&lt;i class="fab fa-github-alt" data-fa-transform="grow-16"&gt;&lt;/i&gt;    &lt;span class="card-downloads-format"&gt;&lt;strong&gt;Cross-validation activity&lt;/strong&gt;&amp;nbsp;repo&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="activity"></category></entry><entry><title>Class 27: Modeling III</title><link href="http://spring18.cds101.com/materials/class-27/" rel="alternate"></link><published>2018-05-01T13:30:00-04:00</published><updated>2018-05-01T13:30:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-05-01:/materials/class-27/</id><summary type="html">&lt;p&gt;&lt;span class="h3"&gt;Slides&lt;/span&gt;&lt;/p&gt;
 &lt;div class="no-bullets"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="/doc/class27_slides.pdf"&gt;&lt;i class="fas fa-file-pdf" data-fa-transform="grow-16"&gt;&lt;/i&gt;    &lt;span class="card-downloads-format"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
@@ -2422,7 +2434,7 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;p&gt;Finish reading the editorial and skimming the white paper from the &lt;a href="/materials/class-1-twitter-activity/"&gt;Can Twitter predict election results?&lt;/a&gt; activity we started during class on January 23rd. Then, post your answer to question 1 in the &lt;code&gt;#5-discussion&lt;/code&gt; channel on &lt;a href="https://masoncds101.slack.com"&gt;Slack&lt;/a&gt;, using the hashtag &lt;code&gt;#class01&lt;/code&gt; somewhere in your&amp;nbsp;message.&lt;/p&gt;
 &lt;p&gt;&lt;span class="h3"&gt;Github&amp;nbsp;account&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Sign up for an account on Github: &lt;a href="http://github.com" class="uri"&gt;http://github.com&lt;/a&gt; using your &lt;code&gt;@gmu.edu&lt;/code&gt; email address. &lt;em&gt;After you signup, send me your username in a Direct Message&lt;/em&gt;.&lt;/p&gt;
-</content><category term="mini-assignment"></category></entry><entry><title>Spring 2018 Schedule</title><link href="http://spring18.cds101.com//index.html" rel="alternate"></link><published>2018-01-23T15:00:00-05:00</published><updated>2018-05-02T15:00:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-01-23://index.html</id><summary type="html">&lt;table&gt;
+</content><category term="mini-assignment"></category></entry><entry><title>Spring 2018 Schedule</title><link href="http://spring18.cds101.com//index.html" rel="alternate"></link><published>2018-01-23T15:00:00-05:00</published><updated>2018-05-03T13:10:00-04:00</updated><author><name>Dr. Glasbrenner</name></author><id>tag:spring18.cds101.com,2018-01-23://index.html</id><summary type="html">&lt;table&gt;
 &lt;colgroup&gt;
 &lt;col style="width: 12%" /&gt;
 &lt;col style="width: 4%" /&gt;
@@ -2733,7 +2745,7 @@ A photograph of the &lt;em&gt;Titanic&lt;/em&gt; leaving Southampton on April 10
 &lt;td style="text-align: left;"&gt;&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;28&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;May-03&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;Modeling &lt;span class="caps"&gt;IV&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;Modeling &lt;span class="caps"&gt;IV&lt;/span&gt; &lt;a href="https://classroom.github.com/a/Ce_Ci3HZ"&gt;&lt;i class="fab fa-github-alt" data-fa-transform="grow-8"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td style="text-align: left;"&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="odd"&gt;
