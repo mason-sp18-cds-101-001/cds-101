@@ -2,7 +2,7 @@ Title: Spring 2018 Schedule
 Author: Dr. Glasbrenner
 Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
 Date: 2018-01-23 15:00
-Modified: 2018-05-03 13:10
+Modified: 2018-05-03 18:40
 Index_save_as: index.html
 Url: /index.html
 
@@ -104,7 +104,7 @@ Week 13             25      Apr-24        [Inference and simulations IV/Modeling
 Week 14             27      May-01        [Modeling III]
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class27_slides.pdf)
 
-                    28      May-03        Modeling IV
+                    28      May-03        [Modeling IV]
                                           [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-28-github]
 
                             May-04                                                                                                [Homework 5]
@@ -162,6 +162,7 @@ Week 14             27      May-01        [Modeling III]
 [Inference and simulations IV/Modeling I]:                       /materials/class-25/
 [Modeling II]:                                                   /materials/class-26/
 [Modeling III]:                                                  /materials/class-27/
+[Modeling IV]:                                                   /materials/class-28/
 [cl-8-github]:                                                   https://classroom.github.com/a/xku1H3sP
 [cl-11-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1519755978000359
 [cl-13-github]:                                                  https://masoncds101.slack.com/archives/C8WQJ0GTB/p1520361454000399
