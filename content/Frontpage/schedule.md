@@ -105,6 +105,7 @@ Week 14             27      May-01        [Modeling III]
                                           [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class27_slides.pdf)
 
                     28      May-03        [Modeling IV]
+                                          [<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>](/doc/class28_slides.pdf), 
                                           [<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>][cl-28-github]
 
                             May-04                                                                                                [Homework 5]
