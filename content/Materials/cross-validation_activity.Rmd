@@ -1,0 +1,24 @@
+Title: Cross-validation activity
+Author: Dr. Glasbrenner
+Author_Image: https://www.gravatar.com/avatar/49802fdfa5a0e63b3d932a5179d41c1e
+Date: 2018-05-03 13:30
+Tags: activity
+Slug: cross-validation-activity
+Show_summary: false
+Show_link: false
+
+```{r setup, include = FALSE}
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-16"></i>&nbsp;'
+icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-16"></i>&nbsp;'
+```
+
+Activity on building and cross-validating models that predict the total price `totalPr` of copies of *Mario Kart Wii* sold on eBay.
+
+::: {.no-bullets}
+
+*   [`r icon_github` &nbsp; [**Cross-validation activity** repo]{.card-downloads-format}][github-classroom-repo]
+
+:::
+
+[github-classroom-repo]: https://classroom.github.com/a/Ce_Ci3HZ
+
